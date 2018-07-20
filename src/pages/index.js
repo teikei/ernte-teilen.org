@@ -1,3 +1,4 @@
-import React from "react"
+import React from "react";
+import "../index.scss";
 
-export default () => <div>Hello world!</div>
+export default () => <div>Hello world!</div>;
