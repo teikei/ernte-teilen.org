@@ -8,6 +8,8 @@
     "serve": "gatsby serve"
   },
   "dependencies": {
+    "autoprefixer": "^9.0.1",
+    "browserslist": "^4.0.1",
     "gatsby": "next",
     "gatsby-plugin-sass": "next",
     "node-sass": "^4.9.0",

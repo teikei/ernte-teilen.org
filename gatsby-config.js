@@ -1,3 +1,13 @@
+const browserslist = require("browserslist");
+const autoprefixer = require("autoprefixer");
+
 module.exports = {
-  plugins: [`gatsby-plugin-sass`]
+  plugins: [
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        postCssPlugins: [autoprefixer({ browsers: browserslist() })]
+      }
+    }
+  ]
 };
