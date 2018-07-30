@@ -1,9 +1,9 @@
-import React from "react";
-import "../index.scss";
-import { Tile } from "carbon-components-react";
+import React from 'react'
+import { Tile } from 'carbon-components-react'
+import '../styles/index.scss'
 
 export default () => (
   <div>
-    <Tile>Default tile</Tile>
+    <Tile />
   </div>
-);
+)
