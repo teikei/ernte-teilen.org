@@ -1,0 +1,31 @@
+@import '../../styles/variables';
+@import '../../../node_modules/carbon-components/scss/globals/grid/grid';
+@import '../../../node_modules/carbon-components/scss/globals/scss/typography';
+
+.hero {
+  display: bold;
+  background-color: $green-dark;
+  color: $white;
+
+  @media (min-width: breakpoint('md')) {
+    min-height: 80vh;
+    max-height: 600px;
+  }
+}
+
+.hero__claim {
+  max-width: 800px;
+  font-family: $font-family-serif;
+  color: $white;
+  text-align: center;
+  margin: 5vh auto;
+  padding-top: 40vh;
+  @include typescale('beta');
+  @include line-height('heading');
+
+  strong {
+    color: $pink-light;
+    display: block;
+    font-weight: normal;
+  }
+}
