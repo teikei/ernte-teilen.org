@@ -1,0 +1,8 @@
+@import '../../styles/variables';
+@import '../../../node_modules/carbon-components/scss/globals/grid/grid';
+
+.et--footer {
+  background: $green;
+  min-height: 80vh;
+  display: block;
+}
