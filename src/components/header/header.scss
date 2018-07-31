@@ -1,0 +1,56 @@
+@import '../../styles/variables';
+@import '../../../node_modules/carbon-components/scss/globals/grid/grid';
+@import '../../../node_modules/carbon-components/scss/globals/scss/typography';
+@import '../../../node_modules/carbon-components/scss/globals/scss/css--reset';
+@import '../../../node_modules/carbon-components/scss/components/button/mixins';
+
+.et--header {
+  background-color: $green-dark;
+  color: $white;
+  padding: 2rem 0;
+}
+
+.et--header__container {
+  justify-content: space-between;
+}
+
+.et--header__logo {
+  text-decoration: none;
+  color: $white;
+}
+
+.et--header__nav {
+  li {
+    display: inline;
+  }
+}
+
+.et--header__nav-item {
+  @include button-base;
+  @include button-theme(
+    transparent,
+    transparent,
+    $white,
+    transparent,
+    transparent
+  );
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: underline;
+  }
+}
+
+.et--header__btn {
+  @include button-base;
+  @include button-theme(transparent, $white, $white, $white, $white);
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $green-dark;
+  }
+
+  margin-left: 1rem;
+}
