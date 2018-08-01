@@ -15,8 +15,15 @@
 }
 
 .et--header__logo {
+  display: block;
+  width: 203px;
+  height: 68px;
   text-decoration: none;
   color: $white;
+  background: url('../../assets/img/logo.svg') no-repeat;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .et--header__nav {
