@@ -3,12 +3,13 @@
 @import '../../../node_modules/carbon-components/scss/globals/scss/typography';
 
 .hero {
-  display: bold;
-  background-color: $green-dark;
+  display: block;
   color: $white;
+  background: $green-dark url('../../assets/img/hero.png') no-repeat center 0;
+  background-size: 511px 221px;
 
   @media (min-width: breakpoint('md')) {
-    min-height: 80vh;
+    min-height: 70vh;
     max-height: 600px;
   }
 }
@@ -20,7 +21,7 @@
   text-align: center;
   margin: 5vh auto;
   padding-top: 40vh;
-  @include typescale('beta');
+  font-size: 1.5rem;
   @include line-height('heading');
 
   strong {
