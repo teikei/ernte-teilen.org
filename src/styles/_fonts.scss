@@ -1,0 +1,47 @@
+/* noto-serif-400normal - latin */
+@font-face {
+  font-family: 'Noto Serif';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: local('Noto Serif Regular '), local('Noto Serif-Regular'),
+    url('~typeface-noto-serif/files/noto-serif-latin-400.woff2') format('woff2'),
+    url('~typeface-noto-serif/files/noto-serif-latin-400.woff') format('woff');
+}
+
+/* noto-serif-400italic - latin */
+@font-face {
+  font-family: 'Noto Serif';
+  font-style: italic;
+  font-display: swap;
+  font-weight: 400;
+  src: local('Noto Serif Regular italic'), local('Noto Serif-Regularitalic'),
+    url('~typeface-noto-serif/files/noto-serif-latin-400italic.woff2')
+      format('woff2'),
+    url('~typeface-noto-serif/files/noto-serif-latin-400italic.woff')
+      format('woff');
+}
+
+/* roboto-400normal - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-display: swap;
+  font-weight: normal;
+  src: local('Roboto Regular '), local('Roboto-Regular'),
+    url('~typeface-roboto/files/roboto-latin-400.woff2') format('woff2'),
+    url('~typeface-roboto/files/roboto-latin-400.woff') format('woff');
+}
+
+/* roboto-condensed-700normal - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-display: swap;
+  font-weight: bold;
+  src: local('Roboto Condensed Bold '), local('Roboto Condensed-Bold'),
+    url('~typeface-roboto-condensed/files/roboto-condensed-latin-700.woff2')
+      format('woff2'),
+    url('~typeface-roboto-condensed/files/roboto-condensed-latin-700.woff')
+      format('woff');
+}
