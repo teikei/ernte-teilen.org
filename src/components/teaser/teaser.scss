@@ -2,7 +2,7 @@
 @import '../../../node_modules/carbon-components/scss/globals/grid/grid';
 @import '../../../node_modules/carbon-components/scss/globals/scss/typography';
 
-.teaser {
+.et--teaser {
   background: $beige;
   min-height: 30vh;
   display: block;
@@ -11,13 +11,13 @@
   text-decoration: none;
 }
 
-.teaser__claim {
+.et--teaser__claim {
   font-family: $font-family-serif;
   @include font-size(16);
   @include line-height('heading');
 }
 
-.teaser__title {
+.et--teaser__title {
   font-family: $font-family-sans-serif;
   font-weight: bold;
   @include font-size(16);

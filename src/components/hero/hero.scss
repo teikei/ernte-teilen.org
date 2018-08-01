@@ -2,7 +2,7 @@
 @import '../../../node_modules/carbon-components/scss/globals/grid/grid';
 @import '../../../node_modules/carbon-components/scss/globals/scss/typography';
 
-.hero {
+.et--hero {
   display: block;
   color: $white;
   background: $green-dark url('../../assets/img/hero.png') no-repeat center 0;
@@ -14,7 +14,7 @@
   }
 }
 
-.hero__claim {
+.et--hero__claim {
   max-width: 800px;
   font-family: $font-family-serif;
   color: $white;
