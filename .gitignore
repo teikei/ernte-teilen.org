@@ -6,6 +6,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # Runtime data
+.cache/
 pids
 *.pid
 *.seed
@@ -57,7 +58,11 @@ typings/
 # dotenv environment variables file
 .env
 
-.cache/
+# gatsby exports
 public
-yarn-error.log
+
+# vscode configuration
 .vscode/
+
+# funny mac filesystem stuff
+.DS_Store
