@@ -11,13 +11,13 @@ export default () => (
     <Hero />
     <div className="bx--grid">
       <div className="bx--row">
-        <div className="bx--col-md-4">
+        <div className="bx--col-sm-4">
           <Teaser title="Beitreten" />
         </div>
-        <div className="bx--col-md-4">
+        <div className="bx--col-sm-4">
           <Teaser title="Mitglieder finden" />
         </div>
-        <div className="bx--col-md-4">
+        <div className="bx--col-sm-4">
           <Teaser title="Gründen" />
         </div>
       </div>

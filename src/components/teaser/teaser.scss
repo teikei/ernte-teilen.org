@@ -3,11 +3,11 @@
 @import '../../../node_modules/carbon-components/scss/globals/scss/typography';
 
 .et--teaser {
-  background: $beige;
-  min-height: 30vh;
   display: block;
+  position: relative;
+  padding-bottom: 133%;
   margin: 3rem 0;
-  padding: 1rem;
+  background: $beige;
   text-decoration: none;
 }
 
@@ -18,6 +18,9 @@
 }
 
 .et--teaser__title {
+  position: absolute;
+  bottom: 1rem;
+  left: 2rem;
   font-family: $font-family-sans-serif;
   font-weight: bold;
   @include font-size(16);
