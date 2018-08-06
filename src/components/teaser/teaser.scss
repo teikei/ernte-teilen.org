@@ -11,18 +11,29 @@
   text-decoration: none;
 }
 
-.et--teaser__claim {
-  font-family: $font-family-serif;
+.et--teaser__title {
+  position: absolute;
+  bottom: 0;
+  left: 1.5rem;
+  font-family: $font-family-sans-serif;
+  font-weight: bold;
+  z-index: 1;
   @include font-size(16);
   @include line-height('heading');
 }
 
-.et--teaser__title {
+.et--teaser__text {
   position: absolute;
-  bottom: 1rem;
-  left: 2rem;
-  font-family: $font-family-sans-serif;
-  font-weight: bold;
+  top: 1.5rem;
+  left: 1.5rem;
+  z-index: 1;
+  font-family: $font-family-serif;
   @include font-size(16);
-  @include line-height('heading');
+}
+
+.et--teaser__image {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  left: 0;
 }

@@ -12,13 +12,13 @@ export default () => (
     <div className="bx--grid">
       <div className="bx--row">
         <div className="bx--col-sm-4">
-          <Teaser title="Beitreten" />
+          <Teaser title="Beitreten" text="Du möchtest bei einer Solawi mitmachen?" />
         </div>
         <div className="bx--col-sm-4">
-          <Teaser title="Mitglieder finden" />
+          <Teaser title="Mitglieder finden" text="Du suchst nach Mitgliedern für deinen Betrieb?" />
         </div>
         <div className="bx--col-sm-4">
-          <Teaser title="Gründen" />
+          <Teaser title="Gründen" text="Du möchtest selbst eine Solawi gründen?" />
         </div>
       </div>
     </div>
