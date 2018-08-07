@@ -1,4 +1,5 @@
 import React from 'react'
+import { graphql } from 'gatsby'
 import Header from '../components/header/header'
 import Hero from '../components/hero/hero'
 import Teaser from '../components/teaser/teaser'
