@@ -1,12 +1,14 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
+
 import Header from '../components/header/header'
 import Hero from '../components/hero/hero'
 import Teaser from '../components/teaser/teaser'
 import Footer from '../components/footer/footer'
 import '../styles/index.scss'
 
-export default ({ data }) => {
+const IndexTemplate = ({ data }) => {
   const post = data.markdownRemark
 
   return (
@@ -37,6 +39,12 @@ export default ({ data }) => {
     </div>
   )
 }
+
+IndexTemplate.propTypes = {
+  data: PropTypes.shape.isRequired,
+}
+
+export default IndexTemplate
 
 export const query = graphql`
   query($slug: String!) {
