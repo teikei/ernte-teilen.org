@@ -1,19 +1,26 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+
 import './hero.scss'
 
-export default () => (
+const Hero = ({ content, claim }) => (
   <header className="et--hero">
     <div className="bx--grid">
       <div className="bx--row">
-        <p className="et--hero__claim">
-          {
-            'Wir bringen Menschen zusammen, die sich gemeinsam in einer Solawi mit regionalen Lebensmitteln versorgen möchten.'
-          }
+        <div className="et--hero__claim">
+          <div dangerouslySetInnerHTML={{ __html: content }} />
           <strong>
-            {'Fair, ökologisch, nachhaltig'}
+            {claim}
           </strong>
-        </p>
+        </div>
       </div>
     </div>
   </header>
 )
+
+Hero.propTypes = {
+  claim: PropTypes.string.isRequired,
+  content: PropTypes.string.isRequired,
+}
+
+export default Hero

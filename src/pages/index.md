@@ -1,8 +1,13 @@
 ---
-title: Ernte teilen
-claim:
-  Wir bringen Menschen zusammen, die sich gemeinsam in einer Solawi mit regionalen Lebensmitteln versorgen möchten.
-claim_sub: Fair, ökologisch, nachhaltig
+title: 'Ernte teilen'
+claim: 'Fair, ökologisch, nachhaltig'
+teasers:
+  - title: 'Beitreten'
+    text: 'Du möchtest bei einer Solawi mitmachen?'
+  - title: 'Mitglieder finden'
+    text: 'Du suchst nach Mitgliedern für deinen Betrieb?'
+  - title: 'Gründen'
+    text: 'Du möchtest selbst eine Solawi gründen?'
 ---
 
-Lorem Ipsum dolor sit amet.
+Wir bringen Menschen zusammen, die sich gemeinsam in einer [Solawi](/#) mit regionalen Lebensmitteln versorgen möchten.

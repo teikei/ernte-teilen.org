@@ -4,44 +4,35 @@ import { graphql } from 'gatsby'
 
 import Header from '../components/header/header'
 import Hero from '../components/hero/hero'
-import Teaser from '../components/teaser/teaser'
+import TeaserGroup from '../components/TeaserGroup'
 import Footer from '../components/footer/footer'
 import '../styles/index.scss'
 
 const IndexTemplate = ({ data }) => {
-  const post = data.markdownRemark
+  const { frontmatter, html } = data.markdownRemark
 
   return (
     <div>
       <h1>
-        {post.frontmatter.title}
+        {frontmatter.title}
       </h1>
-      <div dangerouslySetInnerHTML={{ __html: post.html }} />
       <Header />
-      <Hero />
-      <div className="bx--grid">
-        <div className="bx--row">
-          <div className="bx--col-sm-4">
-            <Teaser title="Beitreten" text="Du möchtest bei einer Solawi mitmachen?" />
-          </div>
-          <div className="bx--col-sm-4">
-            <Teaser
-              title="Mitglieder finden"
-              text="Du suchst nach Mitgliedern für deinen Betrieb?"
-            />
-          </div>
-          <div className="bx--col-sm-4">
-            <Teaser title="Gründen" text="Du möchtest selbst eine Solawi gründen?" />
-          </div>
-        </div>
-      </div>
+      <Hero content={html} claim={frontmatter.claim} />
+      <TeaserGroup teasers={frontmatter.teasers} />
       <Footer />
     </div>
   )
 }
 
 IndexTemplate.propTypes = {
-  data: PropTypes.shape.isRequired,
+  data: PropTypes.shape({
+    html: PropTypes.string,
+    frontmatter: PropTypes.shape({
+      title: PropTypes.string,
+      claim: PropTypes.string,
+      teasers: PropTypes.array,
+    }),
+  }).isRequired,
 }
 
 export default IndexTemplate
@@ -52,6 +43,11 @@ export const query = graphql`
       html
       frontmatter {
         title
+        claim
+        teasers {
+          title
+          text
+        }
       }
     }
   }
