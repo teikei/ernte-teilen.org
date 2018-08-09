@@ -13,9 +13,6 @@ const IndexTemplate = ({ data }) => {
 
   return (
     <div>
-      <h1>
-        {frontmatter.title}
-      </h1>
       <Header />
       <Hero content={html} claim={frontmatter.claim} />
       <TeaserGroup teasers={frontmatter.teasers} />
@@ -28,7 +25,6 @@ IndexTemplate.propTypes = {
   data: PropTypes.shape({
     html: PropTypes.string,
     frontmatter: PropTypes.shape({
-      title: PropTypes.string,
       claim: PropTypes.string,
       teasers: PropTypes.array,
     }),
@@ -42,7 +38,6 @@ export const query = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
-        title
         claim
         teasers {
           title
