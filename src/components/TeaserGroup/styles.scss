@@ -2,65 +2,6 @@
 @import '../../../node_modules/carbon-components/scss/globals/grid/grid';
 @import '../../../node_modules/carbon-components/scss/globals/scss/typography';
 
-.et--teaser {
-  display: block;
-  position: relative;
-  padding-bottom: 133.333%;
-  margin: 1.5rem 0;
-  background: $beige;
-  text-decoration: none;
-
-  &:after {
-    content: '';
-    transition: bottom 300ms;
-    position: absolute;
-    bottom: -1.5rem;
-    right: 1.5rem;
-    display: block;
-    width: 70px;
-    height: 70px;
-    background: $pink-light url('~/img/arrow.svg');
-  }
-
-  &:hover:after {
-    bottom: 0;
-  }
-}
-
-.et--teaser__title {
-  position: absolute;
-  bottom: 0;
-  left: 1.5rem;
-  right: 1.5rem;
-  font-family: $font-family-sans-serif;
-  font-weight: bold;
-  z-index: 1;
-  @include font-size('16');
-  @include line-height('heading');
-
-  @media (min-width: breakpoint('sm')) and (max-width: breakpoint('lg')) {
-    top: 1rem;
-    bottom: auto;
-  }
-}
-
-.et--teaser__text {
-  position: absolute;
-  top: 1.5rem;
-  left: 1.5rem;
-  z-index: 1;
-  font-family: $font-family-serif;
-  @include font-size('16');
-
-  @media (min-width: breakpoint('sm')) and (max-width: breakpoint('lg')) {
-    display: none;
-  }
-}
-
-.et--teaser__image {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  left: 0;
-  object-fit: contain;
+.et--teaser-group {
+  margin-bottom: 1rem;
 }
