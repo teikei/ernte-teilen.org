@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import './hero.scss'
+import './styles.scss'
 
 const Hero = ({ content, claim }) => (
   <header className="et--hero">

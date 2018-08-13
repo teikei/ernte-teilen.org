@@ -1,5 +1,5 @@
 import React from 'react'
-import './header.scss'
+import './styles.scss'
 
 export default () => (
   <header className="et--header">

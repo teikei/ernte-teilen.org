@@ -1,4 +1,4 @@
 import React from 'react'
-import './footer.scss'
+import './styles.scss'
 
 export default () => <footer href="/" className="et--footer" />

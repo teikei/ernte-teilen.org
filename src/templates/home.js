@@ -2,10 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
-import Header from '../components/header/header'
-import Hero from '../components/hero/hero'
+import Header from '../components/header'
+import Hero from '../components/hero'
 import TeaserGroup from '../components/TeaserGroup'
-import Footer from '../components/footer/footer'
+import Footer from '../components/footer'
 import '../styles/index.scss'
 
 const IndexTemplate = ({ data }) => {
