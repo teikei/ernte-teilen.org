@@ -7,11 +7,8 @@ const Hero = ({ content, claim }) => (
   <header className="et--hero">
     <div className="bx--grid">
       <div className="bx--row">
-        <div className="et--hero__claim">
+        <div className="et--hero__content">
           <div dangerouslySetInnerHTML={{ __html: content }} />
-          <strong>
-            {claim}
-          </strong>
         </div>
       </div>
     </div>

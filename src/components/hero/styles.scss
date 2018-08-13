@@ -5,8 +5,7 @@
 .et--hero {
   display: block;
   color: $white;
-  background: $green-dark url('~/img/hero.png') no-repeat center 0;
-  background-size: 511px 221px;
+  background: $green-dark;
 
   @media (min-width: breakpoint('md')) {
     min-height: 70vh;
@@ -14,19 +13,44 @@
   }
 }
 
-.et--hero__claim {
-  max-width: 800px;
-  font-family: $font-family-serif;
+.et--hero__content {
+  max-width: 500px;
+  margin: 0 auto 5vh auto;
+  padding-top: 12rem;
+  background: url('~/img/hero.png') no-repeat center 0;
+  background-size: 400px 150px;
   color: $white;
+  font-size: 1.25rem;
+  font-family: $font-family-serif;
   text-align: center;
-  margin: 5vh auto;
-  padding-top: 40vh;
-  font-size: 1.5rem;
-  @include line-height('heading');
+
+  @media (min-width: breakpoint('sm')) {
+    padding-top: 42vh;
+    background-size: 510px 220px;
+    font-size: 1.5rem;
+  }
+
+  @media (min-width: breakpoint('md')) {
+    max-width: 800px;
+  }
+
+  p {
+    font-size: inherit;
+  }
 
   strong {
-    color: $pink-light;
     display: block;
     font-weight: normal;
+    color: $pink-light;
+  }
+
+  a {
+    color: $white;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $pink-light;
+    }
   }
 }

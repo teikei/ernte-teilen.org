@@ -44,7 +44,7 @@ exports.createPages = ({ graphql, actions }) => {
       }
     `).then((result) => {
       result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-        const template = node.frontmatter.template
+        const { template } = node.frontmatter
         const customTemplate = template && getTemplate(template)
 
         createPage({
