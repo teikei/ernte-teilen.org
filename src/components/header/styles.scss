@@ -5,7 +5,7 @@
 @import '../../../node_modules/carbon-components/scss/components/button/mixins';
 
 .et--header {
-  background-color: $green-dark;
+  background-color: $green;
   color: $white;
   padding: 2rem 0;
 }
@@ -62,7 +62,7 @@
   &:hover,
   &:focus,
   &:active {
-    color: $green-dark;
+    color: $green;
   }
 
   font-size: 1.125rem;

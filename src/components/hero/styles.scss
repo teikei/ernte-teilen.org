@@ -5,7 +5,7 @@
 .et--hero {
   display: block;
   color: $white;
-  background: $green-dark;
+  background: $green;
 
   @media (min-width: breakpoint('md')) {
     min-height: 70vh;
@@ -41,7 +41,7 @@
   strong {
     display: block;
     font-weight: normal;
-    color: $pink-light;
+    color: $piggy-light;
   }
 
   a {
@@ -50,7 +50,7 @@
     &:hover,
     &:active,
     &:focus {
-      color: $pink-light;
+      color: $piggy-light;
     }
   }
 }

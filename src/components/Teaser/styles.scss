@@ -7,7 +7,7 @@
   position: relative;
   padding-bottom: 133.333%;
   margin: 1.5rem 0;
-  background: $beige;
+  background: $grey-light;
   text-decoration: none;
 
   &:after {
@@ -19,7 +19,7 @@
     display: block;
     width: 70px;
     height: 70px;
-    background: $pink-light url('~/img/arrow.svg');
+    background: $piggy-light url('~/img/arrow.svg');
   }
 
   &:hover:after {
