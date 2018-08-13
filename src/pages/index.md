@@ -1,5 +1,6 @@
 ---
 title: 'Ernte teilen'
+template: 'home'
 claim: 'Fair, ökologisch, nachhaltig'
 teasers:
   - title: 'Beitreten'

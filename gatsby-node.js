@@ -1,6 +1,8 @@
 const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
 
+const getTemplate = slug => path.resolve(`./src/templates/${slug}.js`)
+
 exports.onCreateWebpackConfig = ({ stage, actions }) => {
   if (stage === 'develop') {
     actions.setWebpackConfig({
@@ -23,12 +25,16 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
+
   return new Promise((resolve) => {
     graphql(`
       {
         allMarkdownRemark {
           edges {
             node {
+              frontmatter {
+                template
+              }
               fields {
                 slug
               }
@@ -38,9 +44,12 @@ exports.createPages = ({ graphql, actions }) => {
       }
     `).then((result) => {
       result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+        const template = node.frontmatter.template
+        const customTemplate = template && getTemplate(template)
+
         createPage({
           path: node.fields.slug,
-          component: path.resolve('./src/templates/index.js'),
+          component: customTemplate || getTemplate('default'),
           context: {
             // Data passed to context is available
             // in page queries as GraphQL variables.
