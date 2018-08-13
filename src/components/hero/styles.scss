@@ -5,7 +5,7 @@
 .et--hero {
   display: block;
   color: $white;
-  background: $green-dark url('../../assets/img/hero.png') no-repeat center 0;
+  background: $green-dark url('~/img/hero.png') no-repeat center 0;
   background-size: 511px 221px;
 
   @media (min-width: breakpoint('md')) {

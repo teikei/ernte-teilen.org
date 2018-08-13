@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import './styles.scss'
 
-import logo from '../../assets/img/teaser_membership.png'
+import logo from '../../../static/img/teaser_membership.png'
 
 const Teaser = ({ title, text }) => (
   <a href="/" className="et--teaser">
