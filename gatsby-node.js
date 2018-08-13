@@ -1,10 +1,12 @@
 const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
 
-exports.onCreateWebpackConfig = ({ actions }) => {
-  actions.setWebpackConfig({
-    devtool: 'eval-source-map',
-  })
+exports.onCreateWebpackConfig = ({ stage, actions }) => {
+  if (stage === 'develop') {
+    actions.setWebpackConfig({
+      devtool: 'cheap-module-source-map',
+    })
+  }
 }
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
