@@ -4,5 +4,19 @@
 .et--footer {
   background: $green;
   min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.et--footer__logo {
   display: block;
+  width: 203px;
+  height: 68px;
+  text-decoration: none;
+  color: $white;
+  background: url('~/img/logo.svg') no-repeat;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
 }
