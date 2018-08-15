@@ -5,11 +5,13 @@ import { Carousel } from 'react-responsive-carousel'
 import './styles.scss'
 
 const CardCarousel = ({ cards }) => (
-  <Carousel showArrows={false} showThumbs={false} infiniteLoop>
-    {cards.map(card => (
-      <img alt="" src={card.img} />
-    ))}
-  </Carousel>
+  <div className="et--cards-carousel">
+    <Carousel showArrows={false} showThumbs={false} infiniteLoop>
+      {cards.map(card => (
+        <img alt="" src={card.img} />
+      ))}
+    </Carousel>
+  </div>
 )
 
 CardCarousel.propTypes = {

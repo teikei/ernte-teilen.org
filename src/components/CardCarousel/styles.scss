@@ -1,1 +1,7 @@
+@import '../../styles/variables';
 @import '~react-responsive-carousel/lib/styles/carousel.min.css';
+
+.et--cards-carousel {
+  max-width: $grid-max-width;
+  margin: 0 auto;
+}
