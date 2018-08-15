@@ -12,10 +12,16 @@ const IndexTemplate = ({ data }) => {
   return (
     <div>
       <Header />
-      <h1>
-        {frontmatter.title}
-      </h1>
-      <div dangerouslySetInnerHTML={{ __html: html }} />
+      <main className="et--main">
+        <div className="bx--grid">
+          <div className="bx--row">
+            <h1>
+              {frontmatter.title}
+            </h1>
+            <div dangerouslySetInnerHTML={{ __html: html }} />
+          </div>
+        </div>
+      </main>
       <Footer />
     </div>
   )
