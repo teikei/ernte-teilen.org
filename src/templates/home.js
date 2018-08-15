@@ -5,6 +5,7 @@ import { graphql } from 'gatsby'
 import Header from '../components/header'
 import Hero from '../components/hero'
 import TeaserGroup from '../components/TeaserGroup'
+import CardCarousel from '../components/CardCarousel'
 import Footer from '../components/footer'
 import '../styles/index.scss'
 
@@ -16,6 +17,7 @@ const IndexTemplate = ({ data }) => {
       <Header />
       <Hero content={html} claim={frontmatter.claim} />
       <TeaserGroup teasers={frontmatter.teasers} />
+      <CardCarousel cards={frontmatter.cards} />
       <Footer />
     </div>
   )
@@ -25,8 +27,8 @@ IndexTemplate.propTypes = {
   data: PropTypes.shape({
     html: PropTypes.string,
     frontmatter: PropTypes.shape({
-      claim: PropTypes.string,
       teasers: PropTypes.array,
+      cards: PropTypes.array,
     }),
   }).isRequired,
 }
@@ -38,10 +40,12 @@ export const query = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
-        claim
         teasers {
           title
           text
+        }
+        cards {
+          img
         }
       }
     }

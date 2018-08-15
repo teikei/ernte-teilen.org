@@ -8,6 +8,19 @@ teasers:
     text: 'Du suchst nach Mitgliedern für deinen Betrieb?'
   - title: 'Gründen'
     text: 'Du möchtest selbst eine Solawi gründen?'
+cards:
+  - tagline: Cupidatat magna veniam...
+    title: et proident aliqua in sint est excepteur nisi minim exercitation.
+    text: Esse consequat exercitation eiusmod esse proident tempor nisi cillum. Officia irure do laborum nisi excepteur aliquip duis ea commodo. Pariatur ut amet id et nostrud.
+    img: '/img/environment.jpg'
+  - tagline: Cupidatat magna veniam...
+    title: et proident aliqua in sint est excepteur nisi minim exercitation.
+    text: Esse consequat exercitation eiusmod esse proident tempor nisi cillum. Officia irure do laborum nisi excepteur aliquip duis ea commodo. Pariatur ut amet id et nostrud.
+    img: '/img/environment.jpg'
+  - tagline: Cupidatat magna veniam...
+    title: et proident aliqua in sint est excepteur nisi minim exercitation.
+    text: Esse consequat exercitation eiusmod esse proident tempor nisi cillum. Officia irure do laborum nisi excepteur aliquip duis ea commodo. Pariatur ut amet id et nostrud.
+    img: '/img/environment.jpg'
 ---
 
 Wir bringen Menschen zusammen, die sich gemeinsam in einer [Solawi](/was-ist-solawi) mit regionalen Lebensmitteln versorgen möchten.
