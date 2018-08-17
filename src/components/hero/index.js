@@ -16,7 +16,6 @@ const Hero = ({ content, claim }) => (
 )
 
 Hero.propTypes = {
-  claim: PropTypes.string.isRequired,
   content: PropTypes.string.isRequired,
 }
 

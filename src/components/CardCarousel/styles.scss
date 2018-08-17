@@ -1,7 +1,30 @@
 @import '../../styles/variables';
 @import '~react-responsive-carousel/lib/styles/carousel.min.css';
 
-.et--cards-carousel {
+.et--card-carousel {
   max-width: $grid-max-width;
   margin: 0 auto;
+}
+
+.et--card-carousel__slide {
+  background: $green;
+}
+
+.et--card-carousel__image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.et--card {
+  display: block;
+  margin: 4rem 0;
+  top: 0;
+  right: 10px;
+  padding: 4rem 50px;
+  background: $grey-light;
+  color: $green-dark;
+  text-align: left;
 }
