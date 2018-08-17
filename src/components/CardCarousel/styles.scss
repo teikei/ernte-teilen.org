@@ -25,22 +25,3 @@
   bottom: 0;
   left: 0;
 }
-
-.et--card {
-  display: block;
-  margin: 25vh 0 3rem 0;
-  top: 0;
-  right: 10px;
-  padding: 4rem 50px;
-  background: $grey-light;
-  color: $green-dark;
-  text-align: left;
-
-  @media (min-width: breakpoint('sm')) {
-    margin: 60vh 0 3rem 0;
-  }
-
-  @media (min-width: breakpoint('md')) {
-    margin: 4rem 0;
-  }
-}

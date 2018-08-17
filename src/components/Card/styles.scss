@@ -1,0 +1,22 @@
+@import '../../styles/variables';
+@import '../../../node_modules/carbon-components/scss/globals/grid/grid';
+@import '../../../node_modules/carbon-components/scss/globals/scss/typography';
+
+.et--card {
+  display: block;
+  margin: 25vh 0 3rem 0;
+  top: 0;
+  right: 10px;
+  padding: 4rem 50px;
+  background: $grey-light;
+  color: $green-dark;
+  text-align: left;
+
+  @media (min-width: breakpoint('sm')) {
+    margin: 30vh 0 3rem 0;
+  }
+
+  @media (min-width: breakpoint('md')) {
+    margin: 4rem 0;
+  }
+}

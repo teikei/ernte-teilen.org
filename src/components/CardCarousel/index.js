@@ -4,6 +4,7 @@ import { Carousel } from 'react-responsive-carousel'
 import Img from 'gatsby-image'
 import zipObject from 'lodash/zipObject'
 
+import Card from '../Card'
 import './styles.scss'
 
 const CardCarousel = ({ cards, cardImages }) => {
@@ -23,19 +24,7 @@ const CardCarousel = ({ cards, cardImages }) => {
             <div className="bx--grid">
               <div className="bx--row">
                 <div className="bx--offset-md-5 bx--col-md-7 bx--offset-lg-7 bx--col-lg-5">
-                  <article className="et--card">
-                    <h2>
-                      <span className="et--card__tagline">
-                        {card.tagline}
-                      </span>
-                      <span className="et--card__title">
-                        {card.title}
-                      </span>
-                    </h2>
-                    <p className="et--card__text">
-                      {card.text}
-                    </p>
-                  </article>
+                  <Card title={card.title} tagline={card.tagline} text={card.text} />
                 </div>
               </div>
             </div>
