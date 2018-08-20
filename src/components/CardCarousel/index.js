@@ -15,7 +15,7 @@ const CardCarousel = ({ cards, cardImages }) => {
 
   return (
     <div className="et--card-carousel">
-      <Carousel showThumbs={false} infiniteLoop>
+      <Carousel infiniteLoop showThumbs={false} autoPlay interval={10000}>
         {cards.map(card => (
           <div className="et--card-carousel__slide" key={card.slug}>
             <div className="et--card-carousel__image">
