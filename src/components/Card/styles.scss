@@ -4,7 +4,7 @@
 
 .et--card {
   display: block;
-  margin: 25vh 0 3rem 0;
+  margin: 33vw 0 3rem 0;
   top: 0;
   right: 10px;
   padding: 4rem 50px;
@@ -13,10 +13,32 @@
   text-align: left;
 
   @media (min-width: breakpoint('sm')) {
-    margin: 30vh 0 3rem 0;
+    margin: 25vw 0 3rem 0;
   }
 
   @media (min-width: breakpoint('md')) {
     margin: 4rem 0;
   }
+}
+
+.et--card__tagline {
+  color: $green;
+  font-family: $font-family-serif;
+  font-size: 1.125rem;
+}
+
+.et--card__title {
+  display: block;
+  color: $green;
+  font-family: $font-family-sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.75rem;
+}
+
+.et--card__text {
+  color: $green-dark;
+  font-family: $font-family-serif;
+  font-size: 1.25rem;
+  margin: 1.75rem 0;
 }

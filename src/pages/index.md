@@ -10,16 +10,16 @@ teasers:
     text: 'Du möchtest selbst eine Solawi gründen?'
 cards:
   - slug: environment
-    tagline: Cupidatat magna veniam...
-    title: et proident aliqua in sint est excepteur nisi minim exercitation.
+    tagline: Solawi ist...
+    title: Gut für die Umwelt
     text: Esse consequat exercitation eiusmod esse proident tempor nisi cillum. Officia irure do laborum nisi excepteur aliquip duis ea commodo. Pariatur ut amet id et nostrud.
   - slug: consumers
-    tagline: Cupidatat magna veniam...
-    title: et proident aliqua in sint est excepteur nisi minim exercitation.
+    tagline: Solawi ist...
+    title: Gut für Verbraucher*innen
     text: Esse consequat exercitation eiusmod esse proident tempor nisi cillum. Officia irure do laborum nisi excepteur aliquip duis ea commodo. Pariatur ut amet id et nostrud.
   - slug: farmers
-    tagline: Cupidatat magna veniam...
-    title: et proident aliqua in sint est excepteur nisi minim exercitation.
+    tagline: Solawi ist...
+    title: Gut für die Landwirtschaft
     text: Esse consequat exercitation eiusmod esse proident tempor nisi cillum. Officia irure do laborum nisi excepteur aliquip duis ea commodo. Pariatur ut amet id et nostrud.
 ---
 
