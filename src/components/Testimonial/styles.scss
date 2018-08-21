@@ -2,6 +2,10 @@
 @import '../../../node_modules/carbon-components/scss/globals/grid/grid';
 @import '../../../node_modules/carbon-components/scss/globals/scss/typography';
 
+.et--testimonial {
+  margin-top: 4rem;
+}
+
 .et--testimonial__quote {
   display: block;
   min-height: 380px;
@@ -9,7 +13,9 @@
   background-image: url('~/img/quote_left.png');
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
+  line-height: 1.15;
+  font-family: $font-family-sans-serif;
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
@@ -17,4 +23,44 @@
   .et--testimonial:nth-child(even) & {
     background-image: url('~/img/quote_right.png');
   }
+
+  @media (min-width: breakpoint('md')) {
+    width: 110%;
+  }
+}
+
+.et--testimonial__figure {
+  position: relative;
+  margin: 3rem 0;
+
+  @media (min-width: breakpoint('md')) {
+    left: -5%;
+  }
+}
+
+.et--testimonial__name {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  font-family: $font-family-sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.et--testimonial__description {
+  font-size: 0.875rem;
+  line-height: 1;
+  font-family: $font-family-serif;
+}
+
+.et--testimonial__title {
+  margin-top: 3rem;
+  font-size: 1rem;
+  font-family: $font-family-sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.et--testimonial__text {
+  font-size: 1rem;
+  font-family: $font-family-serif;
 }

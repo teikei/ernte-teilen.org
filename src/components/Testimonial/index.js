@@ -10,27 +10,32 @@ const Testimonial = ({
   <article className="et--testimonial bx--grid">
     <div className="bx--row">
       <div className="bx--col-sm-5">
-        <quote className="et--testimonial__quote">
+        <blockquote className="et--testimonial__quote">
           {quote}
-        </quote>
+        </blockquote>
       </div>
 
-      <div className="bx--col-sm-3" key={title}>
-        <Img sizes={image.sizes} alt="" />
-
-        <h3 className="et--testimonial__name">
-          {name}
-          {description}
+      <div className="bx--col-sm-3">
+        <figure className="et--testimonial__figure">
+          <Img sizes={image.sizes} alt="" />
+          <figcaption>
+            <p className="et--testimonial__name">
+              {name}
+            </p>
+            <p className="et--testimonial__description">
+              {description}
+            </p>
+          </figcaption>
+        </figure>
+      </div>
+      <div className="bx--col-sm-4">
+        <h3 className="et--testimonial__title">
+          {title}
         </h3>
+        <p className="et--testimonial__text">
+          {text}
+        </p>
       </div>
-    </div>
-    <div className="bx--col-sm-4" key={title}>
-      <h3 className="et--testimonial__title">
-        {title}
-      </h3>
-      <p className="et--testimonial__text">
-        {text}
-      </p>
     </div>
   </article>
 )
@@ -41,7 +46,7 @@ Testimonial.propTypes = {
   quote: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  image: PropTypes.shape.isRequired,
+  image: PropTypes.shape({ sizes: PropTypes.object }).isRequired,
 }
 
 export default Testimonial
