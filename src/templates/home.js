@@ -6,6 +6,7 @@ import Header from '../components/header'
 import Hero from '../components/hero'
 import TeaserGroup from '../components/TeaserGroup'
 import CardCarousel from '../components/CardCarousel'
+import TestimonialGroup from '../components/TestimonialGroup'
 import Footer from '../components/footer'
 import '../styles/index.scss'
 
@@ -19,6 +20,7 @@ const IndexTemplate = ({ data }) => {
       <Hero content={html} claim={frontmatter.claim} />
       <TeaserGroup teasers={frontmatter.teasers} />
       <CardCarousel cards={frontmatter.cards} cardImages={cardImages} />
+      <TestimonialGroup testimonials={frontmatter.testimonials} />
       <Footer />
     </div>
   )
@@ -47,6 +49,14 @@ export const query = graphql`
           tagline
           title
           text
+        }
+        testimonials {
+          slug
+          title
+          text
+          quote
+          name
+          description
         }
       }
     }

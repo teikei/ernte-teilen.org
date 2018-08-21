@@ -21,6 +21,19 @@ cards:
     tagline: Solawi ist...
     title: Gut für die Landwirtschaft
     text: Esse consequat exercitation eiusmod esse proident tempor nisi cillum. Officia irure do laborum nisi excepteur aliquip duis ea commodo. Pariatur ut amet id et nostrud.
+testimonials:
+  - slug: grower
+    quote: Pariatur ut amet id et nostrud.
+    name: Meike Musterfrau
+    description: Pariatur ut amet id et nostrud.
+    title: Warum Solawi?
+    text: Esse consequat exercitation eiusmod esse proident tempor nisi cillum. Officia irure do laborum nisi excepteur aliquip duis ea commodo. Pariatur ut amet id et nostrud.
+  - slug: consumer
+    quote: Pariatur ut amet id et nostrud.
+    name: Meike Musterfrau
+    description: Pariatur ut amet id et nostrud.
+    title: Warum Solawi?
+    text: Esse consequat exercitation eiusmod esse proident tempor nisi cillum. Officia irure do laborum nisi excepteur aliquip duis ea commodo. Pariatur ut amet id et nostrud.
 ---
 
 Wir bringen Menschen zusammen, die sich gemeinsam in einer [Solawi](/was-ist-solawi) mit regionalen Lebensmitteln versorgen möchten.
