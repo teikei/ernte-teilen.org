@@ -7,9 +7,19 @@
   max-width: $grid-max-width;
   margin: 0 auto;
 
-  @media (min-width: breakpoint('md')) {
-    .control-dots {
+  .control-dots {
+    top: 0;
+
+    @media (min-width: breakpoint('md')) {
       display: none;
+    }
+  }
+
+  .control-arrow {
+    display: none;
+
+    @media (min-width: breakpoint('md')) {
+      display: block;
     }
   }
 }
