@@ -1,9 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import Img from 'gatsby-image'
+
 import './styles.scss'
 
 const Testimonial = ({
-  title, text, name, description, quote,
+  title, text, name, description, quote, image,
 }) => (
   <article className="et--testimonial bx--grid">
     <div className="bx--row">
@@ -16,6 +18,8 @@ const Testimonial = ({
         </p>
       </div>
       <div className="bx--col-sm-4" key={title}>
+        <Img sizes={image.sizes} alt="" />
+
         <h3 className="et--testimonial__name">
           {name}
           {description}
@@ -34,6 +38,7 @@ Testimonial.propTypes = {
   quote: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
+  image: PropTypes.shape.isRequired,
 }
 
 export default Testimonial

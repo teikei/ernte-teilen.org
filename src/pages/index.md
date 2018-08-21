@@ -22,13 +22,13 @@ cards:
     title: Gut für die Landwirtschaft
     text: Esse consequat exercitation eiusmod esse proident tempor nisi cillum. Officia irure do laborum nisi excepteur aliquip duis ea commodo. Pariatur ut amet id et nostrud.
 testimonials:
-  - slug: grower
+  - slug: heike
     quote: Pariatur ut amet id et nostrud.
     name: Meike Musterfrau
     description: Pariatur ut amet id et nostrud.
     title: Warum Solawi?
     text: Esse consequat exercitation eiusmod esse proident tempor nisi cillum. Officia irure do laborum nisi excepteur aliquip duis ea commodo. Pariatur ut amet id et nostrud.
-  - slug: consumer
+  - slug: johannes
     quote: Pariatur ut amet id et nostrud.
     name: Meike Musterfrau
     description: Pariatur ut amet id et nostrud.

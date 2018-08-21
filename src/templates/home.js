@@ -12,15 +12,18 @@ import '../styles/index.scss'
 
 const IndexTemplate = ({ data }) => {
   const { frontmatter, html } = data.content
-  const { cardImages } = data.files
+  const { cardImages, testimonialImages } = data
 
   return (
     <div>
       <Header />
       <Hero content={html} claim={frontmatter.claim} />
       <TeaserGroup teasers={frontmatter.teasers} />
-      <CardCarousel cards={frontmatter.cards} cardImages={cardImages} />
-      <TestimonialGroup testimonials={frontmatter.testimonials} />
+      <CardCarousel cards={frontmatter.cards} cardImages={cardImages.edges} />
+      <TestimonialGroup
+        testimonials={frontmatter.testimonials}
+        testimonialImages={testimonialImages.edges}
+      />
       <Footer />
     </div>
   )
@@ -61,17 +64,29 @@ export const query = graphql`
       }
     }
 
-    files: allFile(
+    cardImages: allFile(
       filter: { relativeDirectory: { eq: "assets/cards" }, extension: { eq: "jpg" } }
     ) {
-      cardImages: edges {
+      edges {
         node {
           name
           childImageSharp {
-            # Specify the image processing specifications right in the query.
-            # Makes it trivial to update as your page's design changes.
             sizes(quality: 70) {
-              # Choose either the fragment including a small base64ed image, a traced placeholder SVG, or one without.
+              ...GatsbyImageSharpSizes
+            }
+          }
+        }
+      }
+    }
+
+    testimonialImages: allFile(
+      filter: { relativeDirectory: { eq: "assets/testimonials" }, extension: { eq: "jpg" } }
+    ) {
+      edges {
+        node {
+          name
+          childImageSharp {
+            sizes(quality: 70) {
               ...GatsbyImageSharpSizes
             }
           }
