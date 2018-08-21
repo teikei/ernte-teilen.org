@@ -7,8 +7,8 @@
 }
 
 .et--testimonial__quote {
+  position: relative;
   display: block;
-  min-height: 380px;
   padding: 3rem 4rem 5rem 3rem;
   background-image: url('~/img/quote_left.png');
   background-repeat: no-repeat;
@@ -20,12 +20,8 @@
   text-transform: uppercase;
   text-align: center;
 
-  .et--testimonial:nth-child(even) & {
-    background-image: url('~/img/quote_right.png');
-  }
-
   @media (min-width: breakpoint('md')) {
-    width: 110%;
+    width: 105%;
   }
 }
 
@@ -34,7 +30,7 @@
   margin: 3rem 0;
 
   @media (min-width: breakpoint('md')) {
-    left: -5%;
+    left: -10%;
   }
 }
 
@@ -63,4 +59,18 @@
 .et--testimonial__text {
   font-size: 1rem;
   font-family: $font-family-serif;
+}
+
+/* ---------   Alternating rows:   --------- */
+
+.et--testimonial:nth-child(even) {
+  .et--testimonial__quote {
+    left: 50%;
+    background-image: url('~/img/quote_right.png');
+    margin-left: 1rem;
+  }
+
+  .et--testimonial__figure {
+    left: -175%;
+  }
 }
