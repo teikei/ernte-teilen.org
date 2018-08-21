@@ -23,13 +23,13 @@ cards:
     text: Esse consequat exercitation eiusmod esse proident tempor nisi cillum. Officia irure do laborum nisi excepteur aliquip duis ea commodo. Pariatur ut amet id et nostrud.
 testimonials:
   - slug: heike
-    quote: Pariatur ut amet id et nostrud.
+    quote: »Viele haben erst durch die Mitgliedschaft hier bei uns biologische Lebensmittel kennengelernt und machen sich jetzt Gedanken zum Lebensmittelanbau, zur biologischen Vielfalt und sehen, dass sie was bewegen können.«
     name: Meike Musterfrau
     description: Pariatur ut amet id et nostrud.
     title: Warum Solawi?
     text: Esse consequat exercitation eiusmod esse proident tempor nisi cillum. Officia irure do laborum nisi excepteur aliquip duis ea commodo. Pariatur ut amet id et nostrud.
   - slug: johannes
-    quote: Pariatur ut amet id et nostrud.
+    quote: »Viele haben erst durch die Mitgliedschaft hier bei uns biologische Lebensmittel kennengelernt und machen sich jetzt Gedanken zum Lebensmittelanbau, zur biologischen Vielfalt und sehen, dass sie was bewegen können.«
     name: Meike Musterfrau
     description: Pariatur ut amet id et nostrud.
     title: Warum Solawi?

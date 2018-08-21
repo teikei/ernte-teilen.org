@@ -2,5 +2,19 @@
 @import '../../../node_modules/carbon-components/scss/globals/grid/grid';
 @import '../../../node_modules/carbon-components/scss/globals/scss/typography';
 
-.et--testimonial {
+.et--testimonial__quote {
+  display: block;
+  min-height: 380px;
+  padding: 3rem 4rem 5rem 3rem;
+  background-image: url('~/img/quote_left.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  font-size: 1.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+
+  .et--testimonial:nth-child(even) & {
+    background-image: url('~/img/quote_right.png');
+  }
 }
