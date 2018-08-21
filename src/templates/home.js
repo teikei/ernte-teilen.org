@@ -47,7 +47,6 @@ export const query = graphql`
           tagline
           title
           text
-          img
         }
       }
     }
