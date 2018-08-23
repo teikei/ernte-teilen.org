@@ -32,6 +32,7 @@ const TestimonialGroup = ({ testimonials, testimonialImages }) => {
 
 TestimonialGroup.propTypes = {
   testimonials: PropTypes.arrayOf(PropTypes.object).isRequired,
+  testimonialImages: PropTypes.arrayOf(PropTypes.object).isRequired,
 }
 
 export default TestimonialGroup
