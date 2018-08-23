@@ -3,33 +3,44 @@
 @import '../../../node_modules/carbon-components/scss/globals/scss/typography';
 
 .et--testimonial {
-  margin-top: 4rem;
+  margin: 2rem 0;
+
+  @media (min-width: breakpoint('sm')) {
+    margin: 4rem 0;
+  }
 }
 
 .et--testimonial__quote {
   position: relative;
   display: block;
-  padding: 3rem 4rem 5rem 3rem;
+  box-sizing: border-box;
+  padding: 3rem 2rem 5rem 2rem;
+  margin-bottom: 2rem;
   background-image: url('~/img/quote_left.png');
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  font-size: 1.5rem;
   line-height: 1.15;
   font-family: $font-family-sans-serif;
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
+  font-size: 1.25rem;
 
-  @media (min-width: breakpoint('md')) {
+  @media (min-width: breakpoint('sm')) {
     width: 105%;
+  }
+
+  @media (min-width: breakpoint('lg')) {
+    padding: 3rem 4rem 5rem 4rem;
+    font-size: 1.5rem;
   }
 }
 
 .et--testimonial__figure {
   position: relative;
-  margin: 3rem 0;
 
   @media (min-width: breakpoint('md')) {
+    margin: 3rem 0;
     left: -10%;
   }
 }
@@ -49,11 +60,15 @@
 }
 
 .et--testimonial__title {
-  margin-top: 3rem;
+  margin-top: 2rem;
   font-size: 1rem;
   font-family: $font-family-sans-serif;
   font-weight: bold;
   text-transform: uppercase;
+
+  @media (min-width: breakpoint('md')) {
+    margin-top: 3rem;
+  }
 }
 
 .et--testimonial__text {
@@ -63,14 +78,16 @@
 
 /* ---------   Alternating rows:   --------- */
 
-.et--testimonial:nth-child(even) {
-  .et--testimonial__quote {
-    left: 50%;
-    background-image: url('~/img/quote_right.png');
-    margin-left: 1rem;
-  }
+@media (min-width: breakpoint('md')) {
+  .et--testimonial:nth-child(even) {
+    .et--testimonial__quote {
+      left: 50%;
+      background-image: url('~/img/quote_right.png');
+      margin-left: 1rem;
+    }
 
-  .et--testimonial__figure {
-    left: -175%;
+    .et--testimonial__figure {
+      left: -175%;
+    }
   }
 }
