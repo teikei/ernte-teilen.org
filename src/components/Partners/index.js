@@ -5,6 +5,19 @@ import Img from 'gatsby-image'
 
 import './styles.scss'
 
+const PartnerGroup = ({ title, items, images }) => (
+  <div>
+    <h3>
+      {title}
+    </h3>
+    {items.map(({ slug, name, url }) => (
+      <a key={slug} href={url} className="et--partners__link">
+        <Img sizes={images[slug].sizes} alt={name} />
+      </a>
+    ))}
+  </div>
+)
+
 const Partners = ({ partners, partnerImages }) => {
   const images = zipObject(
     partnerImages.map(({ node }) => node.name),
@@ -13,14 +26,7 @@ const Partners = ({ partners, partnerImages }) => {
 
   return (
     <div className="et--partners">
-      <h3>
-        {partners[0].title}
-      </h3>
-      {partners[0].items.map(({ slug, name, url }) => (
-        <a key={slug} href={url} className="et--partners__link">
-          <Img sizes={images[slug].sizes} alt={name} />
-        </a>
-      ))}
+      {partners.map(({ title, items }) => PartnerGroup({ title, items, images }))}
     </div>
   )
 }

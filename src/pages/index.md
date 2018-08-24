@@ -37,12 +37,23 @@ testimonials:
 partners:
   - title: Partner
     items:
-      - url: https://solawi.ch
+      - slug: solawi_ch
+        url: https://solawi.ch
         name: Kooperationsstelle für solidarische Landwirtschaft
-        slug: solawi_ch
-      - url: https://solidarische-landwirtschaft.org
+      - slug: solawi_de
+        url: https://solidarische-landwirtschaft.org
         name: Netzwerk Solidarische Landwirtschaft
-        slug: solawi_de
+  - title: Förderer
+    items:
+      - slug: bmbf
+        url: https://www.bmbf.de/
+        name: Bundesministerium für Bildung und Forschung
+      - slug: prototypefund
+        url: https://prototypefund.org
+        name: Protototype Fund
+      - slug: okfn
+        url: https://okfn.de
+        name: Open Knowledge Foundation Deutschland
 ---
 
 Wir bringen Menschen zusammen, die sich gemeinsam in einer [Solawi](/was-ist-solawi) mit regionalen Lebensmitteln versorgen möchten.
