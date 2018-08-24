@@ -3,11 +3,7 @@
 @import '../../../node_modules/carbon-components/scss/globals/scss/typography';
 
 .et--testimonial {
-  margin: 2rem 0;
-
-  @media (min-width: breakpoint('sm')) {
-    margin: 4rem 0;
-  }
+  margin-bottom: 4rem;
 }
 
 .et--testimonial__quote {
@@ -15,7 +11,6 @@
   display: block;
   box-sizing: border-box;
   padding: 3rem 2rem 5rem 2rem;
-  margin-bottom: 2rem;
   background-image: url('~/img/quote_left.png');
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -26,7 +21,8 @@
   text-align: center;
   font-size: 1.25rem;
 
-  @media (min-width: breakpoint('sm')) {
+  @media (min-width: breakpoint('md')) {
+    margin-bottom: 2rem;
     width: 105%;
   }
 
@@ -38,10 +34,30 @@
 
 .et--testimonial__figure {
   position: relative;
+  margin: 1rem 0;
+
+  @media (min-width: breakpoint('sm')) {
+    text-align: right;
+  }
 
   @media (min-width: breakpoint('md')) {
     margin: 3rem 0;
     left: -10%;
+    text-align: left;
+  }
+}
+
+.et--testimonial__figure__image {
+  @media (max-width: breakpoint('md')) {
+    width: 8rem;
+    margin: -7rem 0 0 1rem;
+    float: right;
+  }
+
+  @media (max-width: breakpoint('sm')) {
+    width: 8rem;
+    margin: -4rem 1rem 0 0;
+    float: left;
   }
 }
 

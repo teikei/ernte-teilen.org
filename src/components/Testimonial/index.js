@@ -9,15 +9,14 @@ const Testimonial = ({
 }) => (
   <article className="et--testimonial bx--grid">
     <div className="bx--row">
-      <div className="bx--col-md-5">
+      <div className="bx--col-sm-10 bx--col-md-5">
         <blockquote className="et--testimonial__quote">
           {quote}
         </blockquote>
       </div>
-
       <div className="bx--col-md-3">
         <figure className="et--testimonial__figure">
-          <Img sizes={image.sizes} alt="" />
+          <Img className="et--testimonial__figure__image" sizes={image.sizes} alt="" />
           <figcaption>
             <p className="et--testimonial__name">
               {name}

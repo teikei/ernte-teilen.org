@@ -12,7 +12,7 @@ const TestimonialGroup = ({ testimonials, testimonialImages }) => {
   )
 
   return (
-    <div className="et--testimonials-group">
+    <div className="et--testimonial-group">
       {testimonials.map(({
         slug, title, text, quote, name, description,
       }) => (
