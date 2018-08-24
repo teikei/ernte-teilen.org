@@ -34,6 +34,15 @@ testimonials:
     description: Pariatur ut amet id et nostrud.
     title: Warum Solawi?
     text: Esse consequat exercitation eiusmod esse proident tempor nisi cillum. Officia irure do laborum nisi excepteur aliquip duis ea commodo. Pariatur ut amet id et nostrud.
+partners:
+  - title: Partner
+    items:
+      - url: https://solawi.ch
+        name: Kooperationsstelle für solidarische Landwirtschaft
+        slug: solawi_ch
+      - url: https://solidarische-landwirtschaft.org
+        name: Netzwerk Solidarische Landwirtschaft
+        slug: solawi_de
 ---
 
 Wir bringen Menschen zusammen, die sich gemeinsam in einer [Solawi](/was-ist-solawi) mit regionalen Lebensmitteln versorgen möchten.

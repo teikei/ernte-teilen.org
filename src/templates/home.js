@@ -7,12 +7,13 @@ import Hero from '../components/hero'
 import TeaserGroup from '../components/TeaserGroup'
 import CardCarousel from '../components/CardCarousel'
 import TestimonialGroup from '../components/TestimonialGroup'
+import Partners from '../components/Partners'
 import Footer from '../components/footer'
 import '../styles/index.scss'
 
 const IndexTemplate = ({ data }) => {
   const { frontmatter, html } = data.content
-  const { cardImages, testimonialImages } = data
+  const { cardImages, testimonialImages, partnerImages } = data
 
   return (
     <div>
@@ -24,6 +25,9 @@ const IndexTemplate = ({ data }) => {
         testimonials={frontmatter.testimonials}
         testimonialImages={testimonialImages.edges}
       />
+
+      <Partners partners={frontmatter.partners} partnerImages={partnerImages.edges} />
+
       <Footer />
     </div>
   )
@@ -61,6 +65,14 @@ export const query = graphql`
           name
           description
         }
+        partners {
+          title
+          items {
+            slug
+            name
+            url
+          }
+        }
       }
     }
 
@@ -81,6 +93,21 @@ export const query = graphql`
 
     testimonialImages: allFile(
       filter: { relativeDirectory: { eq: "assets/testimonials" }, extension: { eq: "jpg" } }
+    ) {
+      edges {
+        node {
+          name
+          childImageSharp {
+            sizes(quality: 70) {
+              ...GatsbyImageSharpSizes
+            }
+          }
+        }
+      }
+    }
+
+    partnerImages: allFile(
+      filter: { relativeDirectory: { eq: "assets/partners" }, extension: { eq: "png" } }
     ) {
       edges {
         node {
