@@ -12,6 +12,8 @@
 
 .et--partners__title {
   padding-bottom: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
 
   @media (min-width: breakpoint('lg')) {
     padding-left: 3rem;
