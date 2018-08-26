@@ -3,24 +3,32 @@
 @import '../../../node_modules/carbon-components/scss/globals/scss/typography';
 
 .et--partners {
-  padding-top: 2rem;
+  padding-bottom: 2rem;
 
-  @media (min-width: breakpoint('md')) {
+  @media (min-width: breakpoint('lg')) {
     display: flex;
   }
 }
 
 .et--partners__title {
-  @media (min-width: breakpoint('md')) {
+  padding-bottom: 1rem;
+
+  @media (min-width: breakpoint('lg')) {
     padding-left: 3rem;
   }
 }
 
 .et--partners__group {
+  padding: 2rem 2rem 0 0;
+
+  @media (min-width: breakpoint('lg')) {
+    flex-grow: 1;
+  }
+
   ul {
     display: flex;
-    align-items: center;
     flex-flow: row wrap;
+    justify-content: space-around;
   }
 
   li {
@@ -31,9 +39,9 @@
 
 .et--partners__logo {
   width: 100%;
-  height: 90px;
+  height: 80px;
 
-  @media (min-width: breakpoint('md')) {
-    width: 180px;
+  @media (min-width: breakpoint('lg')) {
+    width: 190px;
   }
 }
