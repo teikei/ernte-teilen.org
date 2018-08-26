@@ -113,8 +113,8 @@ export const query = graphql`
         node {
           name
           childImageSharp {
-            sizes(quality: 70) {
-              ...GatsbyImageSharpSizes
+            resolutions(width: 400) {
+              ...GatsbyImageSharpResolutions_tracedSVG
             }
           }
         }
