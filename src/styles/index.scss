@@ -2,6 +2,14 @@
 @import 'fonts';
 @import '~carbon-components/scss/globals/scss/styles';
 
+body {
+  background: $green;
+}
+
+main {
+  background: $white;
+}
+
 .et--main {
   margin: 3rem auto;
 }
