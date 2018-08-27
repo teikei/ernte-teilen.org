@@ -97,9 +97,8 @@
 @media (min-width: breakpoint('md')) {
   .et--testimonial:nth-child(even) {
     .et--testimonial__quote {
-      left: 50%;
+      left: 55%;
       background-image: url('~/img/quote_right.png');
-      margin-left: 1rem;
     }
 
     .et--testimonial__figure {
