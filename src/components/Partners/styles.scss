@@ -7,6 +7,7 @@
 
   @media (min-width: breakpoint('lg')) {
     display: flex;
+    justify-content: space-around;
   }
 }
 
@@ -36,6 +37,10 @@
   li {
     padding: 0 1rem 1rem 0;
     flex-grow: 1;
+
+    @media (min-width: breakpoint('lg')) {
+      flex-grow: 0;
+    }
   }
 }
 
@@ -44,6 +49,10 @@
   height: 80px;
 
   @media (min-width: breakpoint('lg')) {
-    width: 190px;
+    width: 120px;
+  }
+
+  @media (min-width: breakpoint('xl')) {
+    width: 180px;
   }
 }
