@@ -21,7 +21,12 @@ const Partners = ({ partners, partnerImages }) => {
           <ul>
             {items.map(({ slug, name, url }) => (
               <li key={slug}>
-                <a className="et--partners__link" href={url}>
+                <a
+                  className="et--partners__link"
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Img
                     className="et--partners__logo"
                     sizes={images[slug].resolutions}
