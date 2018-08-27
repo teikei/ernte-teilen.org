@@ -27,7 +27,7 @@ const IndexTemplate = ({ data }) => {
           testimonials={frontmatter.testimonials}
           testimonialImages={testimonialImages.edges}
         />
-        <Partners partners={frontmatter.partners} partnerImages={partnerImages.edges} />
+        <Partners partners={frontmatter.partners} partnerImages={partnerImages} />
       </main>
 
       <Footer />
@@ -67,16 +67,8 @@ export const query = graphql`
           name
           description
         }
-        partners {
-          id
-          title
-          items {
-            slug
-            name
-            url
-          }
-        }
       }
+      ...partners
     }
 
     cardImages: allFile(
@@ -109,19 +101,6 @@ export const query = graphql`
       }
     }
 
-    partnerImages: allFile(
-      filter: { relativeDirectory: { eq: "assets/partners" }, extension: { eq: "png" } }
-    ) {
-      edges {
-        node {
-          name
-          childImageSharp {
-            resolutions(width: 400) {
-              ...GatsbyImageSharpResolutions_tracedSVG
-            }
-          }
-        }
-      }
-    }
+    ...partnerImages
   }
 `

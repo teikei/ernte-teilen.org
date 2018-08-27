@@ -1,14 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import zipObject from 'lodash/zipObject'
+import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
 import './styles.scss'
 
 const Partners = ({ partners, partnerImages }) => {
   const images = zipObject(
-    partnerImages.map(({ node }) => node.name),
-    partnerImages.map(({ node }) => node.childImageSharp),
+    partnerImages.edges.map(({ node }) => node.name),
+    partnerImages.edges.map(({ node }) => node.childImageSharp),
   )
 
   return (
@@ -45,7 +46,39 @@ const Partners = ({ partners, partnerImages }) => {
 
 Partners.propTypes = {
   partners: PropTypes.arrayOf(PropTypes.object).isRequired,
-  partnerImages: PropTypes.arrayOf(PropTypes.object).isRequired,
+  partnerImages: PropTypes.shape({ edges: PropTypes.array }).isRequired,
 }
 
 export default Partners
+
+export const query = graphql`
+  fragment partners on MarkdownRemark {
+    frontmatter {
+      partners {
+        id
+        title
+        items {
+          slug
+          name
+          url
+        }
+      }
+    }
+  }
+  fragment partnerImages on Query {
+    partnerImages: allFile(
+      filter: { relativeDirectory: { eq: "assets/partners" }, extension: { eq: "png" } }
+    ) {
+      edges {
+        node {
+          name
+          childImageSharp {
+            resolutions(width: 400) {
+              ...GatsbyImageSharpResolutions_tracedSVG
+            }
+          }
+        }
+      }
+    }
+  }
+`
