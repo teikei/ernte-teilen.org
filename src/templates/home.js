@@ -9,6 +9,7 @@ import CardCarousel from '../components/CardCarousel'
 import TestimonialGroup from '../components/TestimonialGroup'
 import Partners from '../components/Partners'
 import Footer from '../components/footer'
+
 import '../styles/index.scss'
 
 const IndexTemplate = ({ data }) => {
@@ -30,7 +31,7 @@ const IndexTemplate = ({ data }) => {
         <Partners partners={frontmatter.partners} partnerImages={partnerImages} />
       </main>
 
-      <Footer />
+      <Footer t={data.t} />
     </div>
   )
 }
@@ -69,6 +70,10 @@ export const query = graphql`
         }
       }
       ...partners
+    }
+
+    t: localesYaml(locale: { eq: "de" }) {
+      ...footer
     }
 
     cardImages: allFile(

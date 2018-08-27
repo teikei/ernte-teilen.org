@@ -22,7 +22,7 @@ const IndexTemplate = ({ data }) => {
           </div>
         </div>
       </main>
-      <Footer />
+      <Footer t={data.t} />
     </div>
   )
 }
@@ -45,6 +45,10 @@ export const query = graphql`
       frontmatter {
         title
       }
+    }
+
+    t: localesYaml(locale: { eq: "de" }) {
+      ...footer
     }
   }
 `

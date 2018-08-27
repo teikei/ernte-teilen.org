@@ -4684,6 +4684,15 @@ gatsby-transformer-sharp@^2.1.1-beta.7:
     probe-image-size "^4.0.0"
     sharp "^0.20.2"
 
+gatsby-transformer-yaml@^2.1.1-rc.0:
+  version "2.1.1-rc.0"
+  resolved "https://registry.yarnpkg.com/gatsby-transformer-yaml/-/gatsby-transformer-yaml-2.1.1-rc.0.tgz#13519cb00889d29130656b93a65eb7b12c7f4a66"
+  dependencies:
+    "@babel/runtime" "7.0.0-beta.52"
+    js-yaml "3.11.0"
+    lodash "^4.17.4"
+    unist-util-select "^1.5.0"
+
 gatsby@^2.0.0-beta.92:
   version "2.0.0-beta.92"
   resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.0.0-beta.92.tgz#4a39e1d8a3b8b896c1c2900bb932f9f5d4477a46"
@@ -6286,6 +6295,13 @@ js-tokens@^3.0.0, js-tokens@^3.0.2:
 "js-tokens@^3.0.0 || ^4.0.0":
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-4.0.0.tgz#19203fb59991df98e3a287050d4647cdeaf32499"
+
+js-yaml@3.11.0:
+  version "3.11.0"
+  resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.11.0.tgz#597c1a8bd57152f26d622ce4117851a51f5ebaef"
+  dependencies:
+    argparse "^1.0.7"
+    esprima "^4.0.0"
 
 js-yaml@^3.10.0, js-yaml@^3.11.0, js-yaml@^3.5.2, js-yaml@^3.9.0, js-yaml@^3.9.1:
   version "3.12.0"
