@@ -5,28 +5,6 @@ import Img from 'gatsby-image'
 
 import './styles.scss'
 
-const PartnersGroup = ({ title, items, images }) => (
-  <div className="et--partners__group">
-    <h3 className="et--partners__title">
-      {title}
-    </h3>
-    <ul>
-      {items.map(({ slug, name, url }) => (
-        <li>
-          <a className="et--partners__link" key={slug} href={url}>
-            <Img
-              className="et--partners__logo"
-              sizes={images[slug].resolutions}
-              imgStyle={{ 'object-fit': 'contain' }}
-              alt={name}
-            />
-          </a>
-        </li>
-      ))}
-    </ul>
-  </div>
-)
-
 const Partners = ({ partners, partnerImages }) => {
   const images = zipObject(
     partnerImages.map(({ node }) => node.name),
@@ -34,9 +12,29 @@ const Partners = ({ partners, partnerImages }) => {
   )
 
   return (
-    <div className="et--partners bx--grid">
-      {partners.map(({ title, items }) => PartnersGroup({ title, items, images }))}
-    </div>
+    <section className="et--partners bx--grid">
+      {partners.map(({ title, items, id }) => (
+        <div id={id} key={id} className="et--partners__group">
+          <h3 className="et--partners__title">
+            {title}
+          </h3>
+          <ul>
+            {items.map(({ slug, name, url }) => (
+              <li key={slug}>
+                <a className="et--partners__link" href={url}>
+                  <Img
+                    className="et--partners__logo"
+                    sizes={images[slug].resolutions}
+                    imgStyle={{ objectFit: 'contain' }}
+                    alt={name}
+                  />
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </section>
   )
 }
 

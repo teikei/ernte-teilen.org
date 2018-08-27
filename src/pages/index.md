@@ -36,6 +36,7 @@ testimonials:
     text: Esse consequat exercitation eiusmod esse proident tempor nisi cillum. Officia irure do laborum nisi excepteur aliquip duis ea commodo. Pariatur ut amet id et nostrud.
 partners:
   - title: Partner
+    id: partners
     items:
       - slug: solawi_ch
         url: https://solawi.ch
@@ -44,6 +45,7 @@ partners:
         url: https://solidarische-landwirtschaft.org
         name: Netzwerk Solidarische Landwirtschaft
   - title: Förderer
+    id: funders
     items:
       - slug: bmbf
         url: https://www.bmbf.de/

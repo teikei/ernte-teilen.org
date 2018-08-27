@@ -19,14 +19,16 @@ const IndexTemplate = ({ data }) => {
     <div>
       <Header />
       <Hero content={html} claim={frontmatter.claim} />
-      <TeaserGroup teasers={frontmatter.teasers} />
-      <CardCarousel cards={frontmatter.cards} cardImages={cardImages.edges} />
-      <TestimonialGroup
-        testimonials={frontmatter.testimonials}
-        testimonialImages={testimonialImages.edges}
-      />
 
-      <Partners partners={frontmatter.partners} partnerImages={partnerImages.edges} />
+      <main>
+        <TeaserGroup teasers={frontmatter.teasers} />
+        <CardCarousel cards={frontmatter.cards} cardImages={cardImages.edges} />
+        <TestimonialGroup
+          testimonials={frontmatter.testimonials}
+          testimonialImages={testimonialImages.edges}
+        />
+        <Partners partners={frontmatter.partners} partnerImages={partnerImages.edges} />
+      </main>
 
       <Footer />
     </div>
@@ -66,6 +68,7 @@ export const query = graphql`
           description
         }
         partners {
+          id
           title
           items {
             slug
