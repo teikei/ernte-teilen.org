@@ -51,7 +51,7 @@ partners:
         url: https://www.bmbf.de/
         name: Bundesministerium für Bildung und Forschung
       - slug: prototypefund
-        url: https://prototypefund.org
+        url: https://prototypefund.de
         name: Protototype Fund
       - slug: okfn
         url: https://okfn.de
