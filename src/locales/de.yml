@@ -1,3 +1,12 @@
 locale: 'de'
 footer:
-  logo: 'Ernte teilen!'
+  logo_alt: 'Ernte teilen!'
+  nav:
+    - text: 'Über Solidarische Landwirtschaft'
+      href: 'was-ist-solawi'
+    - text: 'Über diese Website'
+      href: 'ueber-uns'
+    - text: 'Datenschutz'
+      href: 'datenschutz'
+    - text: 'Impressum'
+      href: 'impressum'

@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 
 import './styles.scss'
 
@@ -8,8 +8,17 @@ const Footer = ({ t }) => (
   <footer href="/" className="et--footer">
     <div className="bx--grid">
       <div className="bx--row">
+        <ul className="et--footer__nav">
+          {t.footer.nav.map(({ text, href }) => (
+            <li className="et--footer__nav__item" key={href}>
+              <Link className="et--footer__link" to={href}>
+                {text}
+              </Link>
+            </li>
+          ))}
+        </ul>
         <a className="et--footer__logo" href="/">
-          {t.footer.logo}
+          {t.footer.logo_alt}
         </a>
       </div>
     </div>
@@ -27,6 +36,10 @@ export const query = graphql`
     locale
     footer {
       logo
+      nav {
+        text
+        href
+      }
     }
   }
 `
