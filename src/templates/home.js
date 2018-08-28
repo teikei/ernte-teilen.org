@@ -60,15 +60,8 @@ export const query = graphql`
           title
           text
         }
-        testimonials {
-          slug
-          title
-          text
-          quote
-          name
-          description
-        }
       }
+      ...testimonials
       ...partners
     }
 
@@ -91,21 +84,7 @@ export const query = graphql`
       }
     }
 
-    testimonialImages: allFile(
-      filter: { relativeDirectory: { eq: "assets/testimonials" }, extension: { eq: "jpg" } }
-    ) {
-      edges {
-        node {
-          name
-          childImageSharp {
-            sizes(quality: 70) {
-              ...GatsbyImageSharpSizes
-            }
-          }
-        }
-      }
-    }
-
+    ...testimonialImages
     ...partnerImages
   }
 `

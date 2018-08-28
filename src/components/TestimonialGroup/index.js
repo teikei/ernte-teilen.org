@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import zipObject from 'lodash/zipObject'
+import { graphql } from 'gatsby'
 
 import Testimonal from '../Testimonial'
 import './styles.scss'
@@ -36,3 +37,34 @@ TestimonialGroup.propTypes = {
 }
 
 export default TestimonialGroup
+
+export const query = graphql`
+  fragment testimonials on MarkdownRemark {
+    frontmatter {
+      testimonials {
+        slug
+        title
+        text
+        quote
+        name
+        description
+      }
+    }
+  }
+  fragment testimonialImages on Query {
+    testimonialImages: allFile(
+      filter: { relativeDirectory: { eq: "assets/testimonials" }, extension: { eq: "jpg" } }
+    ) {
+      edges {
+        node {
+          name
+          childImageSharp {
+            sizes(quality: 70) {
+              ...GatsbyImageSharpSizes
+            }
+          }
+        }
+      }
+    }
+  }
+`
