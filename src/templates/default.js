@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
-import Header from '../components/Header'
+import PageWrapper from '../components/PageWrapper'
 import Footer from '../components/Footer'
 import '../styles/index.scss'
 
@@ -10,8 +10,7 @@ const IndexTemplate = ({ data }) => {
   const { frontmatter, html } = data.markdownRemark
 
   return (
-    <div>
-      <Header />
+    <PageWrapper t={data.t}>
       <main className="et--main">
         <div className="bx--grid">
           <div className="bx--row">
@@ -23,7 +22,7 @@ const IndexTemplate = ({ data }) => {
         </div>
       </main>
       <Footer t={data.t} />
-    </div>
+    </PageWrapper>
   )
 }
 
@@ -48,6 +47,7 @@ export const query = graphql`
     }
 
     t: localesYaml(locale: { eq: "de" }) {
+      ...pageWrapper
       ...footer
     }
   }
