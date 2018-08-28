@@ -1,7 +1,7 @@
 import React from 'react'
 import './styles.scss'
 
-export default () => (
+export default ({ toggleMenu }) => (
   <header className="et--header">
     <div className="bx--grid">
       <div className="et--header__container bx--row">
@@ -24,6 +24,11 @@ export default () => (
             <a className="et--header__btn" href="/">
               {'Login'}
             </a>
+          </li>
+          <li>
+            <button type="button" onClick={toggleMenu} className="et--header__hamburger">
+              {'Menu'}
+            </button>
           </li>
         </ul>
       </div>

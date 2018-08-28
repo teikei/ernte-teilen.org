@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
 import Header from '../components/Header'
+import OffCanvasMenu from '../components/OffCanvasMenu'
 import Hero from '../components/Hero'
 import TeaserGroup from '../components/TeaserGroup'
 import CardCarousel from '../components/CardCarousel'
@@ -12,28 +13,48 @@ import Footer from '../components/Footer'
 
 import '../styles/index.scss'
 
-const IndexTemplate = ({ data }) => {
-  const { frontmatter, html } = data.content
-  const { cardImages, testimonialImages, partnerImages } = data
+class IndexTemplate extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = { isMenuOpen: false }
+  }
 
-  return (
-    <div>
-      <Header />
-      <Hero content={html} claim={frontmatter.claim} />
+  toggleMenu = () => {
+    this.setState(state => ({
+      isMenuOpen: !state.isMenuOpen,
+    }))
+  }
 
-      <main>
-        <TeaserGroup teasers={frontmatter.teasers} />
-        <CardCarousel cards={frontmatter.cards} cardImages={cardImages.edges} />
-        <TestimonialGroup
-          testimonials={frontmatter.testimonials}
-          testimonialImages={testimonialImages.edges}
+  render = () => {
+    const { isMenuOpen } = this.state
+    const { data } = this.props
+    const { frontmatter, html } = data.content
+
+    return (
+      <div id="outer-container">
+        <OffCanvasMenu
+          t={data.t}
+          isOpen={isMenuOpen}
+          pageWrapId="page-wrap"
+          outerContainerId="outer-container"
         />
-        <Partners partners={frontmatter.partners} partnerImages={partnerImages} />
-      </main>
-
-      <Footer t={data.t} />
-    </div>
-  )
+        <div id="page-wrap">
+          <Header toggleMenu={this.toggleMenu} />
+          <Hero content={html} claim={frontmatter.claim} />
+          <main>
+            <TeaserGroup teasers={frontmatter.teasers} />
+            <CardCarousel cards={frontmatter.cards} cardImages={data.cardImages.edges} />
+            <TestimonialGroup
+              testimonials={frontmatter.testimonials}
+              testimonialImages={data.testimonialImages.edges}
+            />
+            <Partners partners={frontmatter.partners} partnerImages={data.partnerImages} />
+          </main>
+          <Footer t={data.t} />
+        </div>
+      </div>
+    )
+  }
 }
 
 IndexTemplate.propTypes = {
@@ -56,6 +77,7 @@ export const query = graphql`
     }
 
     t: localesYaml(locale: { eq: "de" }) {
+      ...offCanvasMenu
       ...footer
     }
 
