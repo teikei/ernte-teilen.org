@@ -4,8 +4,8 @@ footer:
   nav:
     - text: 'Über Solidarische Landwirtschaft'
       href: 'was-ist-solawi'
-    - text: 'Über diese Website'
-      href: 'ueber-uns'
+    - text: 'Über uns'
+      href: 'info'
     - text: 'Datenschutz'
       href: 'datenschutz'
     - text: 'Kontakt & Impressum'
