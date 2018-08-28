@@ -1,0 +1,72 @@
+@import '../../styles/variables';
+@import '../../../node_modules/carbon-components/scss/globals/grid/grid';
+@import '../../../node_modules/carbon-components/scss/globals/scss/typography';
+@import '../../../node_modules/carbon-components/scss/globals/scss/css--reset';
+@import '../../../node_modules/carbon-components/scss/components/button/mixins';
+
+.et--header {
+  background-color: $green;
+  color: $white;
+  padding: 2rem 0;
+}
+
+.et--header__container {
+  justify-content: space-between;
+}
+
+.et--header__logo {
+  display: block;
+  width: 203px;
+  height: 68px;
+  text-decoration: none;
+  color: $white;
+  background: url('~/img/logo.svg') no-repeat;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.et--header__nav {
+  margin: 1em 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    display: inline;
+  }
+}
+
+.et--header__nav-item {
+  @include button-base;
+  @include button-theme(
+    transparent,
+    transparent,
+    $white,
+    transparent,
+    transparent
+  );
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: underline;
+  }
+
+  font-size: 1.125rem;
+}
+
+.et--header__btn {
+  @include button-base;
+  @include button-theme(transparent, $white, $white, $white, $white);
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $green;
+  }
+
+  font-size: 1.125rem;
+  padding: 0 2rem;
+  margin-left: 1rem;
+  font-weight: bold;
+}

@@ -2,13 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
-import Header from '../components/header'
-import Hero from '../components/hero'
+import Header from '../components/Header'
+import Hero from '../components/Hero'
 import TeaserGroup from '../components/TeaserGroup'
 import CardCarousel from '../components/CardCarousel'
 import TestimonialGroup from '../components/TestimonialGroup'
 import Partners from '../components/Partners'
-import Footer from '../components/footer'
+import Footer from '../components/Footer'
 
 import '../styles/index.scss'
 
