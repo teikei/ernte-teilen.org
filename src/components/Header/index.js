@@ -1,7 +1,8 @@
 import React from 'react'
+
 import './styles.scss'
 
-export default ({ toggleMenu }) => (
+export default ({ openMenu }) => (
   <header className="et--header">
     <div className="bx--grid">
       <div className="et--header__container bx--row">
@@ -26,7 +27,13 @@ export default ({ toggleMenu }) => (
             </a>
           </li>
           <li>
-            <button type="button" onClick={toggleMenu} className="et--header__hamburger">
+            <button
+              type="button"
+              onClick={openMenu}
+              className="et--header__hamburger"
+              aria-expanded="false"
+              aria-controls="menu"
+            >
               {'Menu'}
             </button>
           </li>
