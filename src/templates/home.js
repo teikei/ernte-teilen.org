@@ -49,12 +49,7 @@ export const query = graphql`
   query($slug: String!) {
     content: markdownRemark(fields: { slug: { eq: $slug } }) {
       html
-      frontmatter {
-        teasers {
-          title
-          text
-        }
-      }
+      ...teasers
       ...cards
       ...testimonials
       ...partners

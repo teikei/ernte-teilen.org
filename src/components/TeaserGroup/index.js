@@ -1,5 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { graphql } from 'gatsby'
+
 import Teaser from '../Teaser'
 import './styles.scss'
 
@@ -25,3 +27,14 @@ TeaserGroup.propTypes = {
 }
 
 export default TeaserGroup
+
+export const query = graphql`
+  fragment teasers on MarkdownRemark {
+    frontmatter {
+      teasers {
+        title
+        text
+      }
+    }
+  }
+`
