@@ -1,7 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Carousel } from 'react-responsive-carousel'
 import Img from 'gatsby-image'
+import { graphql } from 'gatsby'
+import { Carousel } from 'react-responsive-carousel'
 import zipObject from 'lodash/zipObject'
 
 import Card from '../Card'
@@ -41,3 +42,32 @@ CardCarousel.propTypes = {
 }
 
 export default CardCarousel
+
+export const query = graphql`
+  fragment cards on MarkdownRemark {
+    frontmatter {
+      cards {
+        slug
+        tagline
+        title
+        text
+      }
+    }
+  }
+  fragment cardImages on Query {
+    cardImages: allFile(
+      filter: { relativeDirectory: { eq: "assets/cards" }, extension: { eq: "jpg" } }
+    ) {
+      edges {
+        node {
+          name
+          childImageSharp {
+            sizes(quality: 70) {
+              ...GatsbyImageSharpSizes
+            }
+          }
+        }
+      }
+    }
+  }
+`
