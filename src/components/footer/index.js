@@ -35,7 +35,7 @@ export const query = graphql`
   fragment footer on LocalesYaml {
     locale
     footer {
-      logo
+      logo_alt
       nav {
         text
         href
