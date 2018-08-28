@@ -46,6 +46,10 @@
     transparent
   );
 
+  @media (max-width: breakpoint('md')) {
+    display: none;
+  }
+
   &:hover,
   &:focus,
   &:active {
@@ -58,6 +62,10 @@
 .et--header__btn {
   @include button-base;
   @include button-theme(transparent, $white, $white, $white, $white);
+
+  @media (max-width: breakpoint('md')) {
+    display: none;
+  }
 
   &:hover,
   &:focus,
