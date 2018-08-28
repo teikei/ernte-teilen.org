@@ -2,6 +2,18 @@
 @import '../../../node_modules/carbon-components/scss/globals/grid/grid';
 @import '../../../node_modules/carbon-components/scss/globals/scss/typography';
 
-.et--teaser-group {
-  margin-bottom: 1rem;
+.et--off-canvas-menu {
+  background: $green;
+}
+
+.et--off-canvas-menu__nav {
+  padding: 1.5rem 1rem;
+}
+
+.et--off-canvas-menu__link {
+  padding: 1rem;
+  display: block;
+  color: $white;
+  text-decoration: none;
+  font-weight: bold;
 }

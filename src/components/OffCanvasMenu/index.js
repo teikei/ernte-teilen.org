@@ -9,6 +9,7 @@ const OffCanvasMenu = ({
   t, isOpen, pageWrapId, outerContainerId,
 }) => (
   <Slide
+    className="et--off-canvas-menu"
     customBurgerIcon={false}
     pageWrapId={pageWrapId}
     outerContainerId={outerContainerId}
