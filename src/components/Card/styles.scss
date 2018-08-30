@@ -24,7 +24,11 @@
 .et--card__tagline {
   color: $green;
   font-family: $font-family-serif;
-  font-size: 1.125rem;
+  font-size: 1rem;
+
+  @media (min-width: breakpoint('md')) {
+    font-size: 1.25rem;
+  }
 }
 
 .et--card__title {
@@ -33,12 +37,19 @@
   font-family: $font-family-sans-serif;
   font-weight: bold;
   text-transform: uppercase;
-  font-size: 1.75rem;
+  font-size: 1.25rem;
+
+  @media (min-width: breakpoint('md')) {
+    font-size: 1.75rem;
+  }
 }
 
 .et--card__text {
   color: $green-dark;
   font-family: $font-family-serif;
-  font-size: 1.25rem;
   margin: 1.75rem 0;
+
+  @media (min-width: breakpoint('md')) {
+    font-size: 1.25rem;
+  }
 }
