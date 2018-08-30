@@ -20,6 +20,7 @@ const html = ({
       {preBodyComponents}
       <div key="body" id="___gatsby" dangerouslySetInnerHTML={{ __html: body }} />
       {postBodyComponents}
+      <script src="//map-staging.teikei.allmende.io/static/js/main.1187b2eb.js" />
     </body>
   </html>
 )
