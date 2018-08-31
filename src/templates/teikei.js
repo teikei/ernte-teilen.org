@@ -14,6 +14,7 @@ const IndexTemplate = ({ data }) => (
       data-base-url="/karte/#"
       data-country="DE"
       data-api-base-url="https://api-staging.teikei.allmende.io"
+      data-assets-base-url="https://map-staging.teikei.allmende.io/assets"
     />
   </PageWrapper>
 )
