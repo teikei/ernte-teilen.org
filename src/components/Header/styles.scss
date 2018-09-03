@@ -5,10 +5,15 @@
 @import '../../../node_modules/carbon-components/scss/components/button/mixins';
 
 .et--header {
-  height: 100px;
-  padding: 1.25rem 0;
+  height: 75px;
+  padding: 1rem 0;
   background-color: $green;
   color: $white;
+
+  @media (min-width: breakpoint('md')) {
+    height: 100px;
+    padding: 1.25rem 0;
+  }
 }
 
 .et--header__container {
@@ -17,20 +22,26 @@
 
 .et--header__logo {
   display: block;
-  width: 160px;
-  height: 60px;
+  width: 135px;
+  height: 40px;
   text-decoration: none;
   background: url('~/img/logo.svg') no-repeat;
   background-size: contain;
   text-indent: 100%;
   white-space: nowrap;
   overflow: hidden;
+
+  @media (min-width: breakpoint('md')) {
+    width: 160px;
+    height: 60px;
+  }
 }
 
 .et--header__nav {
   margin: 0.5rem 0;
   padding: 0;
   list-style: none;
+  justify-content: center;
 
   li {
     display: inline;
@@ -81,35 +92,19 @@
 }
 
 .et--header__hamburger {
-  @include button-base;
-  @include button-theme(
-    transparent,
-    transparent,
-    $white,
-    transparent,
-    transparent
-  );
-
-  position: relative;
-  top: 0.25rem;
+  margin-left: 2rem;
   width: 1.5rem;
   height: 1.5rem;
-  margin-left: 1.5rem;
-  padding: 0;
-  text-decoration: none;
-  text-indent: 100%;
+  text-indent: 1.5rem;
+  border: none;
+  background: url('~/img/hamburger-menu.svg') no-repeat;
   white-space: nowrap;
   overflow: hidden;
   text-decoration: none;
   text-align: left;
+  cursor: pointer;
 
-  &:before {
-    content: '≡';
-    display: block;
-    width: 100%;
-    height: 100%;
-    padding: 0.25rem;
-    font-size: 2rem;
-    font-weight: normal;
+  @media (max-width: breakpoint('md')) {
+    margin-top: 0.25rem;
   }
 }
