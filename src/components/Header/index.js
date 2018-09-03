@@ -30,7 +30,7 @@ export default ({ openMenu }) => (
             <button
               type="button"
               onClick={openMenu}
-              className="et--header__nav-item et--header__nav-item--menu"
+              className="et--header__hamburger"
               aria-expanded="false"
               aria-controls="menu"
             >

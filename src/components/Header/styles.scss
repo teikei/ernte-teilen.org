@@ -20,7 +20,6 @@
   width: 160px;
   height: 60px;
   text-decoration: none;
-  color: $white;
   background: url('~/img/logo.svg') no-repeat;
   background-size: contain;
   text-indent: 100%;
@@ -29,7 +28,7 @@
 }
 
 .et--header__nav {
-  margin: 0.75rem 0;
+  margin: 0.5rem 0;
   padding: 0;
   list-style: none;
 
@@ -81,6 +80,36 @@
   font-weight: bold;
 }
 
-.et--header__nav-item--menu {
-  margin-left: 1rem;
+.et--header__hamburger {
+  @include button-base;
+  @include button-theme(
+    transparent,
+    transparent,
+    $white,
+    transparent,
+    transparent
+  );
+
+  position: relative;
+  top: 0.25rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: 1.5rem;
+  padding: 0;
+  text-decoration: none;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-decoration: none;
+  text-align: left;
+
+  &:before {
+    content: '≡';
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0.25rem;
+    font-size: 2rem;
+    font-weight: normal;
+  }
 }
