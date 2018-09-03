@@ -1,15 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql, Link } from 'gatsby'
-import { slide as Slide } from 'react-burger-menu'
+import { push as Menu } from 'react-burger-menu'
 
 import './styles.scss'
 
 const OffCanvasMenu = ({
   t, isOpen, closeMenu, pageWrapId, outerContainerId,
 }) => (
-  <Slide
+  <Menu
     className="et--off-canvas-menu"
+    slide="push"
     customBurgerIcon={false}
     pageWrapId={pageWrapId}
     outerContainerId={outerContainerId}
@@ -28,7 +29,7 @@ const OffCanvasMenu = ({
         </li>
       ))}
     </ul>
-  </Slide>
+  </Menu>
 )
 
 OffCanvasMenu.propTypes = {
