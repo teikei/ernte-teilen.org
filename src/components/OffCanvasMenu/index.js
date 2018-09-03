@@ -22,7 +22,7 @@ const OffCanvasMenu = ({
     <ul className="et--off-canvas-menu__nav">
       {t.offCanvasMenu.nav.map(({ text, href }) => (
         <li className="et--off-canvas-menu__item" key={href}>
-          <Link className="et--off-canvas-menu__link" to={href}>
+          <Link className="et--off-canvas-menu__link" to={href} onClick={closeMenu}>
             {text}
           </Link>
         </li>
