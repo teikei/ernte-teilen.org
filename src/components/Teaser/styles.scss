@@ -3,50 +3,59 @@
 @import '../../../node_modules/carbon-components/scss/globals/scss/typography';
 
 .et--teaser {
-  display: block;
   position: relative;
-  padding-bottom: 133.333%;
-  margin: 1.5rem 0;
+  display: block;
   background: $grey-light;
   text-decoration: none;
+  padding-bottom: 60%;
+  margin: 1.5rem 0 0 0;
 
   &:after {
     content: '';
-    transition: bottom 300ms;
     position: absolute;
-    bottom: -1.5rem;
-    right: 1.5rem;
     display: block;
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
+    bottom: -0.75rem;
+    right: 0.75rem;
     background: $piggy-light url('~/img/arrow.svg');
+    background-size: contain;
+
+    @media (min-width: breakpoint('sm')) {
+      width: 70px;
+      height: 70px;
+      bottom: -1rem;
+      right: 1rem;
+    }
   }
 
-  &:hover:after {
-    bottom: 0;
+  @media (min-width: breakpoint('sm')) {
+    padding-bottom: 133.333%;
+    margin: 1.5rem 0;
   }
 }
 
 .et--teaser__title {
   position: absolute;
-  bottom: 0;
+  bottom: 1rem;
   left: 1.5rem;
   right: 1.5rem;
   font-family: $font-family-sans-serif;
   font-weight: bold;
   z-index: 1;
-  @include font-size('16');
   @include line-height('heading');
 
   @media (min-width: breakpoint('sm')) and (max-width: breakpoint('lg')) {
     top: 1rem;
     bottom: auto;
+    @include font-size('16');
   }
 }
 
 .et--teaser__text {
   position: absolute;
   top: 1.5rem;
+  right: 33%;
   left: 1.5rem;
   z-index: 1;
   font-family: $font-family-serif;
@@ -55,12 +64,8 @@
   @media (min-width: breakpoint('sm')) and (max-width: breakpoint('lg')) {
     display: none;
   }
-}
 
-.et--teaser__image {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  left: 0;
-  object-fit: contain;
+  @media (min-width: breakpoint('lg')) {
+    right: 1.5rem;
+  }
 }
