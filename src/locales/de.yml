@@ -1,7 +1,8 @@
 locale: 'de'
 offCanvasMenu:
+  close: 'Schließen'
   nav:
-    - text: 'Über Solidarische Landwirtschaft'
+    - text: 'Was ist Solawi?'
       href: 'was-ist-solawi'
     - text: 'Über uns'
       href: 'info'

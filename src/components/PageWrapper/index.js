@@ -16,6 +16,12 @@ class PageWrapper extends React.Component {
     })
   }
 
+  closeMenu = () => {
+    this.setState({
+      isMenuOpen: false,
+    })
+  }
+
   render = () => {
     const { isMenuOpen } = this.state
     const { children, t } = this.props
@@ -24,6 +30,7 @@ class PageWrapper extends React.Component {
       <div id="outer-container">
         <OffCanvasMenu
           t={t}
+          closeMenu={this.closeMenu}
           isOpen={isMenuOpen}
           pageWrapId="page-wrap"
           outerContainerId="outer-container"
