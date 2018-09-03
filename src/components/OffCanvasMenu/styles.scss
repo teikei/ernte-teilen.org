@@ -8,7 +8,11 @@
 }
 
 .et--off-canvas-menu__nav {
-  padding: 1.5rem 5rem 1.5rem 1.5rem;
+  padding: 1rem 3rem 1rem 0.5rem;
+
+  @media (min-width: breakpoint('md')) {
+    padding: 1.5rem 5rem 1.5rem 1.5rem;
+  }
 }
 
 .et--off-canvas-menu__link {
@@ -26,8 +30,8 @@
 
 .et--off-canvas-menu__close {
   position: absolute;
-  top: 2.25rem;
-  right: 1rem;
+  top: 1.75rem;
+  right: 0.75rem;
   width: 1.5rem;
   height: 1.5rem;
   text-indent: 1.5rem;
@@ -38,4 +42,9 @@
   text-decoration: none;
   text-align: left;
   cursor: pointer;
+
+  @media (min-width: breakpoint('md')) {
+    top: 2.25rem;
+    right: 1rem;
+  }
 }
