@@ -5,9 +5,10 @@
 @import '../../../node_modules/carbon-components/scss/components/button/mixins';
 
 .et--header {
+  height: 100px;
+  padding: 1.25rem 0;
   background-color: $green;
   color: $white;
-  padding: 2rem 0;
 }
 
 .et--header__container {
@@ -16,18 +17,19 @@
 
 .et--header__logo {
   display: block;
-  width: 203px;
-  height: 68px;
+  width: 160px;
+  height: 60px;
   text-decoration: none;
   color: $white;
   background: url('~/img/logo.svg') no-repeat;
+  background-size: contain;
   text-indent: 100%;
   white-space: nowrap;
   overflow: hidden;
 }
 
 .et--header__nav {
-  margin: 1em 0;
+  margin: 0.75rem 0;
   padding: 0;
   list-style: none;
 
