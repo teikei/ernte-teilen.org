@@ -1,12 +1,15 @@
 ---
-title: 'Ernte teilen'
-template: 'home'
+title: Ernte teilen
+template: home
 teasers:
-  - title: 'Beitreten'
-    text: 'Du möchtest bei einer Solawi mitmachen?'
-  - title: 'Mitglieder finden'
-    text: 'Du suchst nach Mitgliedern für deinen Betrieb?'
-  - title: 'Gründen'
+  - slug: consumers
+    title: Beitreten
+    text: Du möchtest bei einer Solawi mitmachen?
+  - slug: farms
+    title: Mitglieder finden
+    text: Du suchst nach Mitgliedern für deinen Betrieb?
+  - slug: initiatives
+    title: Gründen
     text: 'Du möchtest selbst eine Solawi gründen?'
 cards:
   - slug: environment

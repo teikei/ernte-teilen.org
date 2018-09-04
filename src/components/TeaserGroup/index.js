@@ -8,9 +8,9 @@ import './styles.scss'
 const TeaserGroup = ({ teasers }) => (
   <div className="et--teaser-group bx--grid">
     <div className="bx--row">
-      {teasers.map(({ title, text }) => (
+      {teasers.map(({ title, text, slug }) => (
         <div className="bx--col-sm-4" key={title}>
-          <Teaser title={title} text={text} />
+          <Teaser title={title} text={text} slug={slug} />
         </div>
       ))}
     </div>
@@ -32,6 +32,7 @@ export const query = graphql`
   fragment teasers on MarkdownRemark {
     frontmatter {
       teasers {
+        slug
         title
         text
       }
