@@ -66,3 +66,4 @@ public
 
 # funny mac filesystem stuff
 .DS_Store
+.idea

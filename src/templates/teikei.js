@@ -9,7 +9,7 @@ import '../styles/index.scss'
 const IndexTemplate = ({ data }) => (
   <PageWrapper t={data.t}>
     <div
-      id="teikei-embed"
+      id="teikei-app"
       data-locale="de"
       data-base-url="/karte/#"
       data-country="DE"
