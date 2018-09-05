@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 
 import PageWrapper from '../components/PageWrapper'
 import Hero from '../components/Hero'
+import Search from '../components/Search'
 import TeaserGroup from '../components/TeaserGroup'
 import CardCarousel from '../components/CardCarousel'
 import TestimonialGroup from '../components/TestimonialGroup'
@@ -18,6 +19,7 @@ const IndexTemplate = ({ data }) => {
   return (
     <PageWrapper t={data.t}>
       <Hero content={html} claim={frontmatter.claim} />
+      <Search t={data.t} />
       <main>
         <TeaserGroup teasers={frontmatter.teasers} />
         <CardCarousel cards={frontmatter.cards} cardImages={data.cardImages.edges} />
@@ -53,6 +55,7 @@ export const query = graphql`
 
     t: localesYaml(locale: { eq: "de" }) {
       ...pageWrapper
+      ...search
       ...footer
     }
 

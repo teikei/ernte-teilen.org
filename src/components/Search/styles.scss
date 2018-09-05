@@ -1,0 +1,14 @@
+@import '../../styles/variables';
+@import '../../../node_modules/carbon-components/scss/globals/grid/grid';
+
+.et--search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30vh;
+  background: $green-light;
+}
+
+.et--search__label {
+  color: $white;
+}

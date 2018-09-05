@@ -10,6 +10,8 @@ offCanvasMenu:
       href: 'datenschutz'
     - text: 'Kontakt & Impressum'
       href: 'impressum'
+search:
+  label: 'Suche'
 footer:
   logo_alt: 'Ernte teilen!'
   nav:
