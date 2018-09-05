@@ -11,7 +11,7 @@ const IndexTemplate = ({ data }) => (
     <div
       id="teikei-app"
       data-locale="de"
-      data-base-url="/karte/#"
+      data-base-url="/karte#"
       data-country="DE"
       data-api-base-url="https://api-staging.teikei.allmende.io"
       data-assets-base-url="https://map-staging.teikei.allmende.io/assets"

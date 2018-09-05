@@ -15,8 +15,6 @@ const html = ({
       <meta httpEquiv="x-ua-compatible" content="ie=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
       <link href="https://map-staging.teikei.allmende.io/main.css" rel="stylesheet" />
-      {/* FIXME add proper custom CSS instead of solawi.ch CSS */}
-      <link href="https://www.solawi.ch/wordpress-solawi/wp-content/themes/solawi-theme/css/vernetzungsplattform.css" rel="stylesheet" />
       {headComponents}
     </head>
     <body {...bodyAttributes}>
@@ -25,7 +23,7 @@ const html = ({
       {postBodyComponents}
     </body>
     {/* FIXME this is just a dirty hack to make the header visible */}
-    <style dangerouslySetInnerHTML={{ __html: '.teikei-embed .map-container { z-index: -1; }' }} />
+    {/* <style dangerouslySetInnerHTML={{ __html: '.teikei-embed .map-container { z-index: -1; }' }} /> */}
   </html>
 )
 

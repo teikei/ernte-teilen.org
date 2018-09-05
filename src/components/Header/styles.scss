@@ -9,6 +9,11 @@
   padding: 1rem 0;
   background-color: $green;
   color: $white;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
 
   @media (min-width: breakpoint('md')) {
     height: 100px;
