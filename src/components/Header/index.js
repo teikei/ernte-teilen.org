@@ -1,8 +1,9 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import './styles.scss'
 
-export default ({ openMenu }) => (
+const Header = ({ openMenu }) => (
   <header className="et--header">
     <div className="bx--grid">
       <div className="et--header__container bx--row">
@@ -42,3 +43,9 @@ export default ({ openMenu }) => (
     </div>
   </header>
 )
+
+Header.propTypes = {
+  openMenu: PropTypes.func.isRequired,
+}
+
+export default Header
