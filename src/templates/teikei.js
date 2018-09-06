@@ -7,13 +7,14 @@ import PageWrapper from '../components/PageWrapper'
 import '../styles/index.scss'
 
 const IndexTemplate = ({ data }) => (
-  <PageWrapper t={data.t}>
+  <PageWrapper t={data.t} fixedHeader>
     <div
-      id="teikei-embed"
+      id="teikei-app"
       data-locale="de"
-      data-base-url="/karte/#"
+      data-base-url="/karte#"
       data-country="DE"
       data-api-base-url="https://api-staging.teikei.allmende.io"
+      data-assets-base-url="https://map-staging.teikei.allmende.io/assets"
     />
   </PageWrapper>
 )

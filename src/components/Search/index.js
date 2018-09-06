@@ -7,16 +7,13 @@ import './styles.scss'
 const Search = ({ t }) => (
   <div href="/" className="et--search">
     <div className="et--search__form">
-      <label className="et--search__label" htmlFor="search">
-        {t.search.label}
-        <input type="search" id="search" />
-      </label>
+      <div id="teikei-search" data-base-url="/karte/#" />
     </div>
   </div>
 )
 
 Search.propTypes = {
-  t: PropTypes.shape().isRequired,
+  t: PropTypes.shape().isRequired
 }
 
 export default Search

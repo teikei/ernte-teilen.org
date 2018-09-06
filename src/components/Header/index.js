@@ -1,9 +1,11 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+import classNames from 'classnames'
 
 import './styles.scss'
 
-export default ({ openMenu }) => (
-  <header className="et--header">
+const Header = ({ openMenu, fixed }) => (
+  <header className={classNames({ 'et--header': true, 'et--header--fixed': fixed })}>
     <div className="bx--grid">
       <div className="et--header__container bx--row">
         <a className="et--header__logo" href="/">
@@ -42,3 +44,14 @@ export default ({ openMenu }) => (
     </div>
   </header>
 )
+
+Header.defaultProps = {
+  fixed: false,
+}
+
+Header.propTypes = {
+  openMenu: PropTypes.func.isRequired,
+  fixed: PropTypes.bool,
+}
+
+export default Header
