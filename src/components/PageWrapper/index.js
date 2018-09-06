@@ -24,7 +24,7 @@ class PageWrapper extends React.Component {
 
   render = () => {
     const { isMenuOpen } = this.state
-    const { children, t } = this.props
+    const { children, t, fixedHeader } = this.props
 
     return (
       <div id="outer-container">
@@ -36,7 +36,7 @@ class PageWrapper extends React.Component {
           outerContainerId="outer-container"
         />
         <div id="page-wrap">
-          <Header t={t} openMenu={this.openMenu} />
+          <Header t={t} openMenu={this.openMenu} fixed={fixedHeader} />
           {children}
         </div>
       </div>
@@ -44,9 +44,14 @@ class PageWrapper extends React.Component {
   }
 }
 
+PageWrapper.defaultProps = {
+  fixedHeader: false,
+}
+
 PageWrapper.propTypes = {
   t: PropTypes.shape().isRequired,
   children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]).isRequired,
+  fixedHeader: PropTypes.bool,
 }
 
 export default PageWrapper

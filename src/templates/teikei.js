@@ -7,7 +7,7 @@ import PageWrapper from '../components/PageWrapper'
 import '../styles/index.scss'
 
 const IndexTemplate = ({ data }) => (
-  <PageWrapper t={data.t}>
+  <PageWrapper t={data.t} fixedHeader>
     <div
       id="teikei-app"
       data-locale="de"
