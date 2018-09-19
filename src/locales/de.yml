@@ -11,7 +11,7 @@ offCanvasMenu:
     - text: 'Kontakt & Impressum'
       href: 'impressum'
 search:
-  label: 'Suche'
+  label: 'Finde eine Solawi in deiner Nähe'
 footer:
   logo_alt: 'Ernte teilen!'
   nav:

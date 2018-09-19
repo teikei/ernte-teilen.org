@@ -8,12 +8,23 @@
   height: 200px;
   background: $green-light url('~/img/search_background.png') no-repeat center;
   background-size: cover;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  font-family: $font-family-sans-serif;
+}
+
+.et--search__form {
+  position: relative;
 }
 
 .et--search__label {
   color: $white;
 }
 
-.et--search__form {
+.et--search__input {
+  display: inline-block;
   position: relative;
+  margin-left: 1.5rem;
+  font-size: 1.25rem;
+  color: $green;
 }
