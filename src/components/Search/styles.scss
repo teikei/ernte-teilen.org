@@ -5,26 +5,43 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 200px;
+  min-height: 140px;
   background: $green-light url('~/img/search_background.png') no-repeat center;
   background-size: cover;
-  font-size: 1.5rem;
-  line-height: 1.5rem;
   font-family: $font-family-sans-serif;
+
+  @media (min-width: breakpoint('md')) {
+    min-height: 20vh;
+  }
 }
 
 .et--search__form {
   position: relative;
+  overflow: hidden;
 }
 
 .et--search__label {
+  display: block;
+  padding: 1rem;
+  font-size: 1.25rem;
+  line-height: 1;
+  text-align: center;
   color: $white;
+
+  @media (min-width: breakpoint('md')) {
+    font-size: 1.5rem;
+  }
 }
 
 .et--search__input {
   display: inline-block;
   position: relative;
-  margin-left: 1.5rem;
   font-size: 1.25rem;
   color: $green;
+  margin: 0.5rem 1rem;
+
+  input {
+    max-width: 80vw;
+    margin: 0;
+  }
 }
