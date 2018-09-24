@@ -8,32 +8,56 @@ import zipObject from 'lodash/zipObject'
 import Card from '../Card'
 import './styles.scss'
 
-const CardCarousel = ({ cards, cardImages }) => {
-  const cardImagesOptimized = zipObject(
-    cardImages.map(({ node }) => node.name),
-    cardImages.map(({ node }) => node.childImageSharp),
-  )
+class CardCarousel extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = { currentIndex: 0 }
+  }
 
-  return (
-    <div className="et--card-carousel">
-      <Carousel infiniteLoop showThumbs={false} autoPlay interval={10000}>
-        {cards.map(card => (
-          <div className="et--card-carousel__slide" key={card.slug}>
-            <div className="et--card-carousel__image">
-              <Img sizes={cardImagesOptimized[card.slug].sizes} alt="" />
-            </div>
-            <div className="bx--grid">
-              <div className="bx--row">
-                <div className="bx--offset-md-5 bx--col-md-7 bx--offset-lg-7 bx--col-lg-5">
-                  <Card title={card.title} text={card.text} />
-                </div>
+  onChange = currentIndex => this.setState({ currentIndex })
+
+  render = () => {
+    const { cards, cardImages } = this.props
+    const { currentIndex } = this.state
+
+    const cardImagesOptimized = zipObject(
+      cardImages.map(({ node }) => node.name),
+      cardImages.map(({ node }) => node.childImageSharp),
+    )
+
+    return (
+      <div className="et--card-carousel">
+        <Carousel
+          infiniteLoop
+          showThumbs={false}
+          autoPlay
+          interval={10000}
+          onChange={this.onChange}
+        >
+          {cards.map(card => (
+            <div className="et--card-carousel__slide" key={card.slug}>
+              <div className="et--card-carousel__image">
+                <Img sizes={cardImagesOptimized[card.slug].sizes} alt="" />
               </div>
             </div>
+          ))}
+        </Carousel>
+
+        <div className="bx--grid">
+          <div className="bx--row">
+            <div className="bx--offset-md-5 bx--col-md-7 bx--offset-lg-7 bx--col-lg-5">
+              <Card
+                title={cards[currentIndex].title}
+                text={cards[currentIndex].text}
+                currentIndex={currentIndex + 1}
+                maxIndex={cards.length}
+              />
+            </div>
           </div>
-        ))}
-      </Carousel>
-    </div>
-  )
+        </div>
+      </div>
+    )
+  }
 }
 
 CardCarousel.propTypes = {
