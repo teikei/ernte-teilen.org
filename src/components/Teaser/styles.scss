@@ -5,13 +5,14 @@
 .et--teaser {
   position: relative;
   display: block;
-  padding-bottom: 55%;
+  padding-bottom: 60%;
   margin: 1.5rem 0 0 0;
   text-decoration: none;
   background-color: $grey-light;
   background-repeat: no-repeat;
-  background-size: 42% auto;
-  background-position: 100% 70%;
+  background-size: 40% auto;
+  background-position: 100% 60%;
+  color: $green;
 
   @media (min-width: breakpoint('sm')) {
     background-size: 100% auto;
