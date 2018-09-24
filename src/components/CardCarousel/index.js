@@ -25,7 +25,7 @@ const CardCarousel = ({ cards, cardImages }) => {
             <div className="bx--grid">
               <div className="bx--row">
                 <div className="bx--offset-md-5 bx--col-md-7 bx--offset-lg-7 bx--col-lg-5">
-                  <Card title={card.title} tagline={card.tagline} text={card.text} />
+                  <Card title={card.title} text={card.text} />
                 </div>
               </div>
             </div>
@@ -48,7 +48,6 @@ export const query = graphql`
     frontmatter {
       cards {
         slug
-        tagline
         title
         text
       }

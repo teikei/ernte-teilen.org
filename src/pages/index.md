@@ -13,15 +13,12 @@ teasers:
     text: 'Du möchtest selbst eine Solawi gründen?'
 cards:
   - slug: environment
-    tagline: Solawi ist...
-    title: Gut für die Umwelt
-    text: Esse consequat exercitation eiusmod esse proident tempor nisi cillum. Officia irure do laborum nisi excepteur aliquip duis ea commodo. Pariatur ut amet id et nostrud.
+    title: Bring dich mit ein bei Mitmachtagen vor Ort in deinem Betrieb
+    text: Mit Solawi bekommst du frische und hochwertige Lebensmittel direkt von deinem Betrieb. Du erhältst Einblick in die Erzeugung deiner Lebensmittel, kannst den Anbau selbst mitgestalten und lernst dabei noch gleich interessante Menschen kennen.
   - slug: consumers
-    tagline: Solawi ist...
     title: Gut für Verbraucher*innen
     text: Esse consequat exercitation eiusmod esse proident tempor nisi cillum. Officia irure do laborum nisi excepteur aliquip duis ea commodo. Pariatur ut amet id et nostrud.
   - slug: farmers
-    tagline: Solawi ist...
     title: Gut für die Landwirtschaft
     text: Esse consequat exercitation eiusmod esse proident tempor nisi cillum. Officia irure do laborum nisi excepteur aliquip duis ea commodo. Pariatur ut amet id et nostrud.
 testimonials:
