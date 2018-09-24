@@ -8,6 +8,7 @@
   align-items: center;
   justify-content: center;
   margin: 2rem;
+  font-family: $font-family-sans-serif;
 
   @media (min-width: breakpoint('md')) {
     height: 80vh;
@@ -45,18 +46,16 @@
   }
 }
 
-.et--footer__nav__item {
-}
-
 .et--footer__link {
+  display: inline-block;
   padding: 1rem;
   color: $white;
   text-decoration: none;
-  display: inline-block;
 
   &:hover,
   &:focus,
   &:active {
+    color: $white;
     text-decoration: underline;
   }
 }
