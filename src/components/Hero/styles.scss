@@ -6,36 +6,38 @@
   display: block;
   color: $white;
   background: $green;
+  min-height: 60vh;
 
-  @media (min-width: breakpoint('md')) {
-    min-height: 70vh;
-    max-height: 600px;
+  @media (min-width: breakpoint('sm')) {
+    min-height: 66vh;
+    max-height: 800px;
   }
 }
 
 .et--hero__content {
-  max-width: 500px;
-  margin: 0 auto 5vh auto;
-  padding-top: 12rem;
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 30vh 0.5rem 2rem 0.5rem;
   background: url('~/img/hero.png') no-repeat center 0;
-  background-size: 400px 150px;
+  background-size: auto 23vh;
   color: $white;
-  font-size: 1.25rem;
   font-family: $font-family-serif;
   text-align: center;
 
   @media (min-width: breakpoint('sm')) {
-    padding-top: 42vh;
-    background-size: 510px 220px;
-    font-size: 1.5rem;
-  }
-
-  @media (min-width: breakpoint('md')) {
-    max-width: 800px;
+    padding-top: 40vh;
+    background-size: auto 33vh;
+    width: 80vw;
+    max-width: 600px;
   }
 
   p {
-    font-size: inherit;
+    font-size: 1.25rem;
+    line-height: 1.375;
+
+    @media (min-width: breakpoint('md')) {
+      font-size: 1.5rem;
+    }
   }
 
   strong {
