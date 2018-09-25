@@ -87,6 +87,10 @@
   @media (min-width: breakpoint('md')) {
     @include font-size('20');
   }
+
+  @media (min-width: breakpoint('xl')) {
+    @include font-size('28');
+  }
 }
 
 .et--teaser__text {
