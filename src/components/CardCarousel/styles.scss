@@ -4,8 +4,19 @@
 @import '~react-responsive-carousel/lib/styles/carousel.min.css';
 
 .et--card-carousel {
-  max-width: $grid-max-width;
+  position: relative;
+  max-width: 1560px;
   margin: 0 auto;
+  pointer-events: none;
+
+  @media (min-width: breakpoint('md')) {
+    height: 56vw;
+  }
+
+  @media (min-width: breakpoint('xl')) {
+    height: 600px;
+    margin-bottom: 3rem;
+  }
 
   .control-dots {
     top: 0;
@@ -24,14 +35,16 @@
   }
 }
 
-.et--card-carousel__slide {
-  background: $green;
+.et--card-carousel__slider {
+  pointer-events: auto;
+  background: $white;
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
 }
 
 .et--card-carousel__image {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  @media (min-width: breakpoint('lg')) {
+    height: 600px;
+  }
 }

@@ -15,7 +15,7 @@ const Card = ({
     <p className="et--card__text">
       {text}
     </p>
-    <span className="et--crad__index">
+    <span className="et--card__index">
       {`${currentIndex} / ${maxIndex}`}
     </span>
   </article>

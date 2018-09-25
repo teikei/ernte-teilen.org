@@ -5,29 +5,19 @@
 .et--card {
   display: block;
   margin: 33vw 0 3rem 0;
-  top: 0;
-  right: 10px;
-  padding: 4rem 50px;
+  padding: 2rem 50px;
   background: $grey-light;
   color: $green-dark;
-  text-align: left;
-
-  @media (min-width: breakpoint('sm')) {
-    margin: 25vw 0 3rem 0;
-  }
+  text-align: center;
 
   @media (min-width: breakpoint('md')) {
-    margin: 4rem 0;
+    background: $white;
+    opacity: 0.95;
+    margin: 3rem 0;
   }
-}
 
-.et--card__tagline {
-  color: $green;
-  font-family: $font-family-serif;
-  font-size: 1rem;
-
-  @media (min-width: breakpoint('md')) {
-    font-size: 1.25rem;
+  @media (min-width: breakpoint('xl')) {
+    margin: 5rem 0;
   }
 }
 
@@ -36,20 +26,21 @@
   color: $green;
   font-family: $font-family-sans-serif;
   font-weight: bold;
-  text-transform: uppercase;
   font-size: 1.25rem;
 
-  @media (min-width: breakpoint('md')) {
+  @media (min-width: breakpoint('xl')) {
     font-size: 1.75rem;
   }
 }
 
-.et--card__text {
+.et--card__text,
+.et--card__index {
   color: $green-dark;
   font-family: $font-family-serif;
   margin: 1.75rem 0;
+  font-size: 1rem;
 
-  @media (min-width: breakpoint('md')) {
-    font-size: 1.25rem;
+  @media (min-width: breakpoint('xl')) {
+    font-size: 1.125rem;
   }
 }

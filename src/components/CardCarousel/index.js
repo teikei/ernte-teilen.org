@@ -11,33 +11,39 @@ import './styles.scss'
 class CardCarousel extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { currentIndex: 0 }
+    this.state = {
+      index: 0,
+      images: zipObject(
+        props.cardImages.map(({ node }) => node.name),
+        props.cardImages.map(({ node }) => node.childImageSharp),
+      ),
+    }
   }
 
-  onChange = currentIndex => this.setState({ currentIndex })
+  onChange = (index) => {
+    this.setState(() => ({ index }))
+  }
 
   render = () => {
-    const { cards, cardImages } = this.props
-    const { currentIndex } = this.state
-
-    const cardImagesOptimized = zipObject(
-      cardImages.map(({ node }) => node.name),
-      cardImages.map(({ node }) => node.childImageSharp),
-    )
+    const { cards } = this.props
+    const { index, images } = this.state
 
     return (
       <div className="et--card-carousel">
         <Carousel
+          className="et--card-carousel__slider"
           infiniteLoop
-          showThumbs={false}
           autoPlay
+          selectedItem={index}
+          showStatus={false}
+          showThumbs={false}
           interval={10000}
           onChange={this.onChange}
         >
           {cards.map(card => (
             <div className="et--card-carousel__slide" key={card.slug}>
               <div className="et--card-carousel__image">
-                <Img sizes={cardImagesOptimized[card.slug].sizes} alt="" />
+                <Img sizes={images[card.slug].fluid} alt="" />
               </div>
             </div>
           ))}
@@ -45,11 +51,11 @@ class CardCarousel extends React.Component {
 
         <div className="bx--grid">
           <div className="bx--row">
-            <div className="bx--offset-md-5 bx--col-md-7 bx--offset-lg-7 bx--col-lg-5">
+            <div className="bx--offset-md-5 bx--col-md-7 bx--offset-lg-7 bx--col-lg-5 bx--offset-xxl-8 bx--col-xxl-4">
               <Card
-                title={cards[currentIndex].title}
-                text={cards[currentIndex].text}
-                currentIndex={currentIndex + 1}
+                title={cards[index].title}
+                text={cards[index].text}
+                currentIndex={index + 1}
                 maxIndex={cards.length}
               />
             </div>
@@ -85,8 +91,8 @@ export const query = graphql`
         node {
           name
           childImageSharp {
-            sizes(quality: 70) {
-              ...GatsbyImageSharpSizes
+            fluid(maxWidth: 2000) {
+              ...GatsbyImageSharpFluid
             }
           }
         }
