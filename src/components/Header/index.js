@@ -1,31 +1,29 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
+import { graphql, Link } from 'gatsby'
 
 import './styles.scss'
 
-const Header = ({ openMenu, fixed }) => (
+const Header = ({ openMenu, fixed, t }) => (
   <header className={classNames({ 'et--header': true, 'et--header--fixed': fixed })}>
     <div className="bx--grid">
       <div className="et--header__container bx--row">
-        <a className="et--header__logo" href="/">
-          {'Ernte teilen'}
-        </a>
+        <Link className="et--header__logo" to="/">
+          {t.header.logo_alt}
+        </Link>
 
         <ul className="et--header__nav">
-          <li>
-            <a className="et--header__nav-item" href="/">
-              {'Was ist Solawi?'}
-            </a>
-          </li>
-          <li>
-            <a className="et--header__nav-item" href="/">
-              {'Mitmachen'}
-            </a>
-          </li>
+          {t.header.nav.map(({ text, href }) => (
+            <li>
+              <Link className="et--header__nav-item" to={href}>
+                {text}
+              </Link>
+            </li>
+          ))}
           <li>
             <a className="et--header__btn" href="/">
-              {'Login'}
+              {t.header.login}
             </a>
           </li>
           <li>
@@ -36,7 +34,7 @@ const Header = ({ openMenu, fixed }) => (
               aria-expanded="false"
               aria-controls="menu"
             >
-              {'Menu'}
+              {t.header.menu}
             </button>
           </li>
         </ul>
@@ -50,8 +48,24 @@ Header.defaultProps = {
 }
 
 Header.propTypes = {
+  t: PropTypes.shape().isRequired,
   openMenu: PropTypes.func.isRequired,
   fixed: PropTypes.bool,
 }
 
 export default Header
+
+export const query = graphql`
+  fragment header on LocalesYaml {
+    locale
+    header {
+      logo_alt
+      login
+      menu
+      nav {
+        text
+        href
+      }
+    }
+  }
+`

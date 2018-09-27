@@ -12,6 +12,15 @@ offCanvasMenu:
       href: 'impressum'
 search:
   label: 'Finde eine Solawi in deiner Nähe'
+header:
+  logo_alt: 'Ernte teilen!'
+  login: 'Anmelden'
+  menu: 'Menü'
+  nav:
+    - text: 'Was ist Solawi?'
+      href: 'was-ist-solawi'
+    - text: 'Finde eine Solawi in Deiner Nähe'
+      href: 'karte'
 footer:
   logo_alt: 'Ernte teilen!'
   nav:
