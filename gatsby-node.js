@@ -34,6 +34,7 @@ exports.createPages = ({ graphql, actions }) => {
             node {
               frontmatter {
                 template
+                image
               }
               fields {
                 slug
@@ -44,7 +45,7 @@ exports.createPages = ({ graphql, actions }) => {
       }
     `).then((result) => {
       result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-        const { template } = node.frontmatter
+        const { template, image } = node.frontmatter
         const customTemplate = template && getTemplate(template)
 
         createPage({
@@ -54,6 +55,7 @@ exports.createPages = ({ graphql, actions }) => {
             // Data passed to context is available
             // in page queries as GraphQL variables.
             slug: node.fields.slug,
+            image,
           },
         })
       })

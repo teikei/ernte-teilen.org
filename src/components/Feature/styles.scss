@@ -1,24 +1,49 @@
 @import '../../styles/variables';
 @import '../../../node_modules/carbon-components/scss/globals/grid/grid';
+@import '../../../node_modules/carbon-components/scss/globals/scss/typography';
+@import '../../../node_modules/carbon-components/scss/globals/scss/css--reset';
+@import '../../../node_modules/carbon-components/scss/components/button/mixins';
 
 .et--feature {
   background: $grey-light;
   color: $green-dark;
   font-family: $font-family-sans-serif;
+}
 
-  @media (min-width: breakpoint('md')) {
-    height: 400px;
-  }
+.et--feature__image {
+  margin: 3rem 0;
+  max-height: 400px;
+}
+
+.et--feature__content {
+  padding: 3rem;
 }
 
 .et--feature__title {
   display: block;
+  margin: 2rem 0;
+  font-size: 3rem;
+  line-height: 1.1;
+  color: $green;
+  font-family: $font-family-sans-serif;
 }
 
 .et--feature__teaser {
   display: block;
+  color: $green-dark;
+  font-family: $font-family-serif;
+  margin-bottom: 2rem;
 }
 
 .et--feature__link {
-  display: block;
+  @include button-base;
+  @include button-theme($green, $green, $white, transparent, $white);
+  font-size: 1.25rem;
+  padding: 0 1.25rem;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $green;
+  }
 }

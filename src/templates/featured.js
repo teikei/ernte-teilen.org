@@ -15,7 +15,7 @@ const FeaturedTemplate = ({ data }) => {
 
   return (
     <PageWrapper t={data.t}>
-      <Feature title={title} teaser={teaser} link={link} />
+      <Feature image={data.image} title={title} teaser={teaser} link={link} />
       <main>
         <div className="bx--grid">
           <div className="bx--row">
@@ -39,7 +39,7 @@ FeaturedTemplate.propTypes = {
 export default FeaturedTemplate
 
 export const query = graphql`
-  query($slug: String!) {
+  query($slug: String!, $image: String!) {
     content: markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
@@ -48,6 +48,14 @@ export const query = graphql`
         link {
           text
           href
+        }
+      }
+    }
+
+    image: file(relativePath: { eq: $image }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid_tracedSVG
         }
       }
     }

@@ -1,27 +1,40 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
+import Img from 'gatsby-image'
 
 import './styles.scss'
 
-const Feature = ({ title, teaser, link }) => (
-  <footer href="/" className="et--feature">
+const Feature = ({
+  title, teaser, link, image,
+}) => (
+  <section className="et--feature">
     <div className="bx--grid">
       <div className="bx--row">
-        <div className="bx--col-sm-6">
-          <h1 className="et--feature__title">
-            {title}
-          </h1>
-          <p className="et--feature__teaser">
-            {teaser}
-          </p>
-          <Link className="et--feature__link" to={link.href}>
-            {link.text}
-          </Link>
+        <div className="bx--col-sm-5">
+          <Img
+            className="et--feature__image"
+            fluid={image.childImageSharp.fluid}
+            imgStyle={{ objectFit: 'contain' }}
+            alt=""
+          />
+        </div>
+        <div className="bx--col-sm-7">
+          <div className=" et--feature__content">
+            <h1 className="et--feature__title">
+              {title}
+            </h1>
+            <p className="et--feature__teaser">
+              {teaser}
+            </p>
+            <Link className="et--feature__link" to={link.href}>
+              {link.text}
+            </Link>
+          </div>
         </div>
       </div>
     </div>
-  </footer>
+  </section>
 )
 
 Feature.propTypes = {
@@ -31,6 +44,7 @@ Feature.propTypes = {
     text: PropTypes.string.isRequired,
     href: PropTypes.string.isRequired,
   }).isRequired,
+  image: PropTypes.shape().isRequired,
 }
 
 export default Feature
