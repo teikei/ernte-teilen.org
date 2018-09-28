@@ -1,0 +1,24 @@
+@import '../../styles/variables';
+@import '../../../node_modules/carbon-components/scss/globals/grid/grid';
+
+.et--feature {
+  background: $grey-light;
+  color: $green-dark;
+  font-family: $font-family-sans-serif;
+
+  @media (min-width: breakpoint('md')) {
+    height: 400px;
+  }
+}
+
+.et--feature__title {
+  display: block;
+}
+
+.et--feature__teaser {
+  display: block;
+}
+
+.et--feature__link {
+  display: block;
+}
