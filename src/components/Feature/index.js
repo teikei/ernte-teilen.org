@@ -6,12 +6,12 @@ import Img from 'gatsby-image'
 import './styles.scss'
 
 const Feature = ({
-  title, teaser, link, image,
+  title, lead, link, image,
 }) => (
   <section className="et--feature">
     <div className="bx--grid">
       <div className="bx--row">
-        <div className="bx--col-sm-5">
+        <div className="bx--col-sm-4 bx--col-md-5">
           <Img
             className="et--feature__image"
             fluid={image.childImageSharp.fluid}
@@ -19,13 +19,13 @@ const Feature = ({
             alt=""
           />
         </div>
-        <div className="bx--col-sm-7">
+        <div className="bx--col-sm-8 bx--col-md-7">
           <div className=" et--feature__content">
             <h1 className="et--feature__title">
               {title}
             </h1>
-            <p className="et--feature__teaser">
-              {teaser}
+            <p className="et--feature__lead">
+              {lead}
             </p>
             <Link className="et--feature__link" to={link.href}>
               {link.text}
@@ -39,7 +39,7 @@ const Feature = ({
 
 Feature.propTypes = {
   title: PropTypes.string.isRequired,
-  teaser: PropTypes.string.isRequired,
+  lead: PropTypes.string.isRequired,
   link: PropTypes.shape({
     text: PropTypes.string.isRequired,
     href: PropTypes.string.isRequired,

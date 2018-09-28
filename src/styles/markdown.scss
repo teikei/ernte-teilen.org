@@ -1,0 +1,47 @@
+.et--markdown {
+  padding: 3rem 0;
+  margin: 0 auto;
+}
+
+.et--markdown--listing {
+  li {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 400px;
+
+    @media (min-width: breakpoint('md')) {
+      &:nth-child(even) {
+        padding-left: 50%;
+
+        img {
+          left: 0;
+        }
+      }
+
+      &:nth-child(odd) {
+        padding-right: 50%;
+
+        img {
+          right: 0;
+        }
+      }
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 300px;
+      object-fit: contain;
+
+      @media (min-width: breakpoint('md')) {
+        position: absolute;
+        width: 40%;
+        height: 100%;
+        object-fit: contain;
+        top: 0;
+      }
+    }
+  }
+}

@@ -11,12 +11,12 @@ import '../styles/index.scss'
 
 const FeaturedTemplate = ({ data }) => {
   const { frontmatter, html } = data.content
-  const { title, teaser, link } = frontmatter
+  const { title, lead, link } = frontmatter
 
   return (
     <PageWrapper t={data.t}>
-      <Feature image={data.image} title={title} teaser={teaser} link={link} />
-      <main>
+      <Feature image={data.image} title={title} lead={lead} link={link} />
+      <main className="et--markdown et--markdown--listing">
         <div className="bx--grid">
           <div className="bx--row">
             <div dangerouslySetInnerHTML={{ __html: html }} />
@@ -44,7 +44,7 @@ export const query = graphql`
       html
       frontmatter {
         title
-        teaser
+        lead
         link {
           text
           href

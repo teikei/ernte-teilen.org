@@ -1,6 +1,7 @@
 @import 'variables';
 @import 'fonts';
 @import '~carbon-components/scss/globals/scss/styles';
+@import 'markdown';
 @import 'teikei-legacy';
 
 body {
@@ -9,11 +10,6 @@ body {
 
 main {
   background: $white;
-}
-
-.et--main {
-  padding: 3rem 0;
-  margin: 0 auto;
 }
 
 .bx--grid {
