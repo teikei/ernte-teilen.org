@@ -14,10 +14,10 @@ const IndexTemplate = ({ data }) => {
       <main className="et--main">
         <div className="bx--grid">
           <div className="bx--row">
-            <h1>
-              {frontmatter.title}
-            </h1>
-            <div dangerouslySetInnerHTML={{ __html: html }} />
+            <div className="bx--col-sm-8">
+              <h1>{frontmatter.title}</h1>
+              <div dangerouslySetInnerHTML={{ __html: html }} />
+            </div>
           </div>
         </div>
       </main>
@@ -30,9 +30,9 @@ IndexTemplate.propTypes = {
   data: PropTypes.shape({
     html: PropTypes.string,
     frontmatter: PropTypes.shape({
-      title: PropTypes.string,
-    }),
-  }).isRequired,
+      title: PropTypes.string
+    })
+  }).isRequired
 }
 
 export default IndexTemplate
