@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 
 import PageWrapper from '../components/PageWrapper'
 import Hero from '../components/Hero'
+import Features from '../components/Features'
 import Search from '../components/Search'
 import Footer from '../components/Footer'
 
@@ -11,11 +12,14 @@ import '../styles/index.scss'
 
 const AboutTemplate = ({ data }) => {
   const { frontmatter, html } = data.content
-  const { title, lead, link } = frontmatter
+  const {
+    title, lead, link, features,
+  } = frontmatter
 
   return (
     <PageWrapper t={data.t}>
       <Hero title={title} lead={lead} link={link} />
+      <Features features={features} featureImages={data.featureImages} />
       <main className="et--markdown et--markdown--listing et--markdown--listing--wide">
         <div className="bx--grid">
           <div className="bx--row">
@@ -48,6 +52,11 @@ export const query = graphql`
           text
           href
         }
+        features {
+          slug
+          title
+          text
+        }
       }
     }
 
@@ -56,5 +65,7 @@ export const query = graphql`
       ...search
       ...footer
     }
+
+    ...featureImages
   }
 `

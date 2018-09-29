@@ -5,16 +5,16 @@ lead: 'Das Konzept ist ganz einfach: Ein Hof oder eine Gärtnerei versorgt eine 
 link:
   text: 'Mehr auf solidarische-landwitschaft.org'
   href: 'https://solidarische-landwitschaft.org'
-explainers:
+features:
   - slug: 'producers'
     title: 'Direkt von Produzenten'
     text: 'Ein landwirtschaftlicher Betrieb beliefert einen festen Kreis von Solawi-Mitgliedern mit Lebensmitteln.'
   - slug: 'support'
     title: 'Gemeinschaftliche Unterstützung'
     text: 'Die Solawi-Mitglieder binden sich vertraglich für ein Wirtschaftsjahr und zahlen einen festen monatlichen Beitrag. Sie helfen außerdem bei Mitmachtagen auf dem Betrieb mit.'
-  - slug: 'support'
-    title: 'Ernte und Verantwortung teilen'
-    text: 'Die Mitglieder erhalten einmal pro Woche ihren Ernteanteil. Der Ernteanteil besteht je nach Angebot und Jahreszeit aus Gemüße, Obst und manchmal auch aus verarbeiteten Produkten wie Saft, Brot oder Käse.'
+  - slug: 'consumers'
+    title: 'Dein Ernteanteil'
+    text: 'Die Mitglieder erhalten einmal pro Woche ihren Ernteanteil. Der Ernteanteil besteht je nach Angebot und Jahreszeit aus Gemüse, Obst und manchmal auch aus verarbeiteten Produkten wie Saft, Brot oder Käse.'
 ---
 
 - ## Mitglieder

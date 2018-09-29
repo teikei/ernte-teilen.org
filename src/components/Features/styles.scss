@@ -1,0 +1,21 @@
+@import '../../styles/variables';
+@import '../../../node_modules/carbon-components/scss/globals/grid/grid';
+@import '../../../node_modules/carbon-components/scss/globals/scss/typography';
+
+.et--features {
+  background: $grey-light;
+  font-family: $font-family-serif;
+}
+
+.et--features__image {
+  height: 100px;
+}
+
+.et--features__title {
+  padding-bottom: 1rem;
+  font-weight: bold;
+  font-family: $font-family-sans-serif;
+
+  @media (min-width: breakpoint('lg')) {
+  }
+}
