@@ -3,75 +3,45 @@
 @import '../../../node_modules/carbon-components/scss/globals/scss/typography';
 
 .et--hero {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: $white;
-  min-height: 65vh;
-  background: $green url('~/img/hero.png') no-repeat center 0;
-  background-size: 350px auto;
-
-  @media (min-width: breakpoint('sm')) {
-    margin-top: -2rem;
-    background-size: auto 40vh;
-  }
-
-  @media (min-width: breakpoint('md')) {
-    height: 65vh;
-    min-height: auto;
-    max-height: 65vw;
-    background-size: 480px auto;
-    margin-top: 1vw;
-  }
-
-  @media (min-width: breakpoint('lg')) {
-    max-height: 45vw;
-  }
+  color: $green-dark;
+  background: $white;
+  font-family: $font-family-sans-serif;
+  text-align: center;
 }
 
 .et--hero__content {
-  max-width: 520px;
-  margin: 0 auto;
-  padding: 180px 0.5rem 3rem 0.5rem;
-  color: $white;
-  font-family: $font-family-serif;
-  text-align: center;
-
-  @media (min-width: breakpoint('sm')) {
-    padding-top: 33%;
-  }
-
-  @media (min-width: breakpoint('md')) {
-    padding-top: 45%;
-  }
+  padding: 2rem 1rem;
 
   @media (min-width: breakpoint('lg')) {
-    padding-top: 260px;
-    max-width: 800px;
+    padding: 3rem;
   }
+}
 
-  p {
-    font-size: 1.25rem;
-    line-height: 1.375;
+.et--hero__title {
+  display: block;
+  margin: 1rem 0;
+  font-size: 2rem;
+  line-height: 1.1;
+  color: $green;
+  font-family: $font-family-sans-serif;
 
-    @media (min-width: breakpoint('md')) {
-      font-size: 1.5rem;
-    }
+  @media (min-width: breakpoint('xl')) {
+    margin: 2rem 0;
+    font-size: 3rem;
   }
+}
 
-  strong {
-    display: block;
-    font-weight: normal;
-    color: $piggy-light;
-  }
+.et--hero__lead {
+  display: block;
+  color: $green-dark;
+  font-family: $font-family-serif;
+  margin-bottom: 1.5rem;
+}
 
-  a {
-    color: $white;
-
-    &:hover,
-    &:active,
-    &:focus {
-      color: $piggy-light;
-    }
+.et--hero__link {
+  &:hover,
+  &:focus,
+  &:active {
+    color: $green;
   }
 }

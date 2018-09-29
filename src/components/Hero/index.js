@@ -3,12 +3,20 @@ import PropTypes from 'prop-types'
 
 import './styles.scss'
 
-const Hero = ({ content, claim }) => (
+const Hero = ({ title, lead, link }) => (
   <header className="et--hero">
     <div className="bx--grid">
       <div className="bx--row">
-        <div className="et--hero__content">
-          <div dangerouslySetInnerHTML={{ __html: content }} />
+        <div className=" et--hero__content">
+          <h1 className="et--hero__title">
+            {title}
+          </h1>
+          <p className="et--hero__lead">
+            {lead}
+          </p>
+          <a className="et--hero__link" href={link.href}>
+            {link.text}
+          </a>
         </div>
       </div>
     </div>
@@ -16,7 +24,12 @@ const Hero = ({ content, claim }) => (
 )
 
 Hero.propTypes = {
-  content: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  lead: PropTypes.string.isRequired,
+  link: PropTypes.shape({
+    text: PropTypes.string.isRequired,
+    href: PropTypes.string.isRequired,
+  }).isRequired,
 }
 
 export default Hero
