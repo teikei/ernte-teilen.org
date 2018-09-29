@@ -14,7 +14,7 @@ Ueckermünder Str.6 <br/>
 
 Vertreten durch: Simon Jockers<br/>
 Telefon: +49 (0)30 - 5557 802 23<br/>
-E-Mail: hello(ät)simonjockers.de<br/>
+E-Mail: hello(at)simonjockers.de<br/>
 [Impressum und Kontakt](https://ernte-teilen.org/impressum)
 
 ## Erhebung, Speicherung und Verwendung personenbezogener Daten
