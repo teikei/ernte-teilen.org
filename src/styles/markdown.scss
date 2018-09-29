@@ -1,17 +1,56 @@
 .et--markdown {
-  padding: 3rem 0;
+  padding: 1rem;
   margin: 0 auto;
+  font-family: $font-family-serif;
+
+  em {
+    font-style: italic;
+  }
+
+  strong {
+    font-weight: bold;
+  }
+
+  @media (min-width: breakpoint('md')) {
+    padding: 3rem 1rem;
+  }
 }
 
 .et--markdown--listing {
+  h1,
+  h2 {
+    margin: 1rem 0;
+    color: $green;
+    font-family: $font-family-sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 1.1;
+
+    @media (min-width: breakpoint('xl')) {
+      margin: 2rem 0;
+      font-size: 3rem;
+    }
+  }
+
+  p {
+    margin: 0 0 1rem 0;
+  }
+
+  a {
+    color: $green;
+    font-style: italic;
+  }
+
   li {
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: 400px;
+    margin-bottom: 2rem;
 
     @media (min-width: breakpoint('md')) {
+      min-height: 500px;
+
       &:nth-child(even) {
         padding-left: 50%;
 
@@ -34,10 +73,11 @@
       width: 100%;
       height: 300px;
       object-fit: contain;
+      margin: 1rem 0;
 
       @media (min-width: breakpoint('md')) {
         position: absolute;
-        width: 40%;
+        width: 50%;
         height: 100%;
         object-fit: contain;
         top: 0;
