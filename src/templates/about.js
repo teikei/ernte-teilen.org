@@ -16,7 +16,7 @@ const AboutTemplate = ({ data }) => {
   return (
     <PageWrapper t={data.t}>
       <Hero title={title} lead={lead} link={link} />
-      <main className="et--markdown et--markdown--listing">
+      <main className="et--markdown et--markdown--listing et--markdown--listing--wide">
         <div className="bx--grid">
           <div className="bx--row">
             <div dangerouslySetInnerHTML={{ __html: html }} />

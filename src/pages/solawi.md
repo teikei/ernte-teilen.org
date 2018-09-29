@@ -19,20 +19,20 @@ explainers:
 
 - ## Mitglieder
 
-  Das Konzept ist ganz einfach: Ein Hof oder eine Gärtnerei versorgt eine Gruppe von Menschen in der näheren Umgebung mit Lebensmitteln. Im Gegenzug stellt die Gruppe die nötigen Mittel für die Lebensmittel­erzeugung zur Verfügung. Alle Beteiligten teilen sich die Ernte und die Verantwortung. Dieses Konzept nennt man _Solidarische Landwirtschaft_ oder kurz _Solawi_.
   ![Solawi-Mitglieder beim Unkrautjäten](/img/about-members.jpg)
+  Das Konzept ist ganz einfach: Ein Hof oder eine Gärtnerei versorgt eine Gruppe von Menschen in der näheren Umgebung mit Lebensmitteln. Im Gegenzug stellt die Gruppe die nötigen Mittel für die Lebensmittel­erzeugung zur Verfügung. Alle Beteiligten teilen sich die Ernte und die Verantwortung. Dieses Konzept nennt man _Solidarische Landwirtschaft_ oder kurz _Solawi_.
 
 - ## Landwirt\*innen
 
-  Das Konzept ist ganz einfach: Ein Hof oder eine Gärtnerei versorgt eine Gruppe von Menschen in der näheren Umgebung mit Lebensmitteln. Im Gegenzug stellt die Gruppe die nötigen Mittel für die Lebensmittel­erzeugung zur Verfügung. Alle Beteiligten teilen sich die Ernte und die Verantwortung. Dieses Konzept nennt man _Solidarische Landwirtschaft_ oder kurz _Solawi_.
   ![Solawi-Mitglieder beim Unkrautjäten](/img/about-members.jpg)
+  Das Konzept ist ganz einfach: Ein Hof oder eine Gärtnerei versorgt eine Gruppe von Menschen in der näheren Umgebung mit Lebensmitteln. Im Gegenzug stellt die Gruppe die nötigen Mittel für die Lebensmittel­erzeugung zur Verfügung. Alle Beteiligten teilen sich die Ernte und die Verantwortung. Dieses Konzept nennt man _Solidarische Landwirtschaft_ oder kurz _Solawi_.
 
 - ## Höfe
 
-  Das Konzept ist ganz einfach: Ein Hof oder eine Gärtnerei versorgt eine Gruppe von Menschen in der näheren Umgebung mit Lebensmitteln. Im Gegenzug stellt die Gruppe die nötigen Mittel für die Lebensmittel­erzeugung zur Verfügung. Alle Beteiligten teilen sich die Ernte und die Verantwortung. Dieses Konzept nennt man _Solidarische Landwirtschaft_ oder kurz _Solawi_.
   ![Solawi-Mitglieder beim Unkrautjäten](/img/about-members.jpg)
+  Das Konzept ist ganz einfach: Ein Hof oder eine Gärtnerei versorgt eine Gruppe von Menschen in der näheren Umgebung mit Lebensmitteln. Im Gegenzug stellt die Gruppe die nötigen Mittel für die Lebensmittel­erzeugung zur Verfügung. Alle Beteiligten teilen sich die Ernte und die Verantwortung. Dieses Konzept nennt man _Solidarische Landwirtschaft_ oder kurz _Solawi_.
 
 - ## Regionen
 
-  Das Konzept ist ganz einfach: Ein Hof oder eine Gärtnerei versorgt eine Gruppe von Menschen in der näheren Umgebung mit Lebensmitteln. Im Gegenzug stellt die Gruppe die nötigen Mittel für die Lebensmittel­erzeugung zur Verfügung. Alle Beteiligten teilen sich die Ernte und die Verantwortung. Dieses Konzept nennt man _Solidarische Landwirtschaft_ oder kurz _Solawi_.
   ![Solawi-Mitglieder beim Unkrautjäten](/img/about-members.jpg)
+  Das Konzept ist ganz einfach: Ein Hof oder eine Gärtnerei versorgt eine Gruppe von Menschen in der näheren Umgebung mit Lebensmitteln. Im Gegenzug stellt die Gruppe die nötigen Mittel für die Lebensmittel­erzeugung zur Verfügung. Alle Beteiligten teilen sich die Ernte und die Verantwortung. Dieses Konzept nennt man _Solidarische Landwirtschaft_ oder kurz _Solawi_.
