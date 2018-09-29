@@ -11,7 +11,7 @@ const IndexTemplate = ({ data }) => {
 
   return (
     <PageWrapper t={data.t}>
-      <main className="et--main">
+      <main className="et--markdown">
         <div className="bx--grid">
           <div className="bx--row">
             <div className="bx--col-sm-8">

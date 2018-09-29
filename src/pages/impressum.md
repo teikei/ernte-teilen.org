@@ -3,7 +3,7 @@ title: 'Impressum'
 ---
 
 Falls du Fragen und Feedback zu Ernte teilen hast, kannst du per Email Kontakt mit uns aufnehmen: 
-<br>info@ernte-teilen.org
+<br><br>info(at)ernte-teilen.org
 
 
 ## Ernte teilen

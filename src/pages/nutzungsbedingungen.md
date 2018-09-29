@@ -107,4 +107,4 @@ Auf die vertraglichen Beziehungen zwischen dem Anbieter und dem Nutzer findet da
 
 ---
 
-*Quelle:* [http://www.kluge-recht.de/muster-nutzungsbedingungen-forum.php (Nutzungsbedingungen Forum)](http://www.kluge-recht.de/muster-nutzungsbedingungen-forum.php)
+*Quelle:* [http://www.kluge-recht.de/muster-nutzungsbedingungen-forum.php](http://www.kluge-recht.de/muster-nutzungsbedingungen-forum.php) (Nutzungsbedingungen Forum)

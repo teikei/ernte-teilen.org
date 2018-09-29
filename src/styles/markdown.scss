@@ -11,6 +11,33 @@
     font-weight: bold;
   }
 
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 1rem 0 1rem 0;
+    font-weight: bold;
+    color: $green;
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    list-style-type: disc;
+    margin-left: 1rem;
+    line-height: 1.5;
+    padding: 1rem;
+  }
+
+  li {
+    padding-left: 1rem;
+  }
+
+
   @media (min-width: breakpoint('md')) {
     padding: 3rem 1rem;
   }
