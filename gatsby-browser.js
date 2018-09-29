@@ -1,4 +1,4 @@
-exports.onInitialClientRender = () => {
+exports.onRouteUpdate = () => {
   const teikeiEmbed = document.getElementById('teikei-app') || document.getElementById('teikei-search')
 
   if (teikeiEmbed) {
