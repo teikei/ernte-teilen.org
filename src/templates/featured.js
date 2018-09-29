@@ -32,7 +32,8 @@ const FeaturedTemplate = ({ data }) => {
 FeaturedTemplate.propTypes = {
   data: PropTypes.shape({
     content: PropTypes.object,
-    files: PropTypes.object,
+    image: PropTypes.object,
+    t: PropTypes.object,
   }).isRequired,
 }
 
