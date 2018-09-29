@@ -16,24 +16,28 @@ const Features = ({ features, featureImages }) => {
 
   return (
     <section className="et--features">
-      <ul className="bx--grid">
-        {features.map(({ slug, title, text }) => (
-          <li key={slug} className="et--features__group">
-            <Img
-              className="et--features__image"
-              sizes={images[slug].resolutions}
-              imgStyle={{ objectFit: 'contain' }}
-              alt=""
-            />
-            <h3 className="et--features__title">
-              {title}
-            </h3>
-            <p className="et--features__text">
-              {text}
-            </p>
-          </li>
-        ))}
-      </ul>
+      <div className="bx--grid">
+        <ul className="bx--row">
+          {features.map(({ slug, title, text }) => (
+            <li className="bx--col-md-4" key={slug}>
+              <div className="et--features__item">
+                <Img
+                  className="et--features__image"
+                  sizes={images[slug].resolutions}
+                  imgStyle={{ objectFit: 'contain' }}
+                  alt=""
+                />
+                <h3 className="et--features__title">
+                  {title}
+                </h3>
+                <p className="et--features__text">
+                  {text}
+                </p>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
     </section>
   )
 }

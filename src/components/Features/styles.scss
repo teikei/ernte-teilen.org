@@ -4,18 +4,44 @@
 
 .et--features {
   background: $grey-light;
+  color: $green;
   font-family: $font-family-serif;
+  text-align: center;
+  padding-bottom: 2rem;
 }
 
 .et--features__image {
-  height: 100px;
+  height: 140px;
+  margin: 1.25rem auto;
+
+  @media (min-width: breakpoint('md')) {
+    width: 80%;
+  }
+
+  @media (min-width: breakpoint('xl')) {
+    width: 60%;
+  }
+}
+
+.et--features__item {
+  padding: 2rem 1rem;
+  max-width: 480px;
+  margin: 0 auto;
+
+  @media (min-width: breakpoint('md')) {
+    font-size: 0.875rem;
+  }
+
+  @media (min-width: breakpoint('xl')) {
+    padding: 5rem 2rem;
+    font-size: 1rem;
+  }
 }
 
 .et--features__title {
   padding-bottom: 1rem;
   font-weight: bold;
   font-family: $font-family-sans-serif;
-
-  @media (min-width: breakpoint('lg')) {
-  }
+  font-size: 1.5rem;
+  line-height: 1.1;
 }

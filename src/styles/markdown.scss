@@ -53,7 +53,7 @@
 
   p {
     margin-bottom: 1rem;
-      line-height: 1.5;
+    line-height: 1.5;
   }
 
   hr {
@@ -106,12 +106,18 @@
     font-style: italic;
   }
 
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
   li {
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-bottom: 1rem;
+    margin: 0 0 1rem;
+    padding: 0;
 
     @media (min-width: breakpoint('md')) {
       min-height: 500px;
@@ -165,8 +171,8 @@
     justify-content: center;
 
     @media (min-width: breakpoint('md')) {
-      min-height: 240px;
-      margin-bottom: 5rem;
+      min-height: 220px;
+      padding: 2rem 0;
 
       h1,
       h2 {
@@ -179,11 +185,11 @@
       }
 
       &:nth-child(even) img {
-        left: -15%;
+        left: -17.5%;
       }
 
       &:nth-child(odd) img {
-        right: -15%;
+        right: -17.5%;
       }
     }
   }
