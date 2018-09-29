@@ -5,29 +5,29 @@ import Img from 'gatsby-image'
 
 import './styles.scss'
 
-const Feature = ({
+const HeroFeatured = ({
   title, lead, link, image,
 }) => (
-  <section className="et--feature">
+  <section className="et--hero-featured">
     <div className="bx--grid">
       <div className="bx--row">
         <div className="bx--col-sm-4 bx--col-md-5">
           <Img
-            className="et--feature__image"
+            className="et--hero-featured__image"
             fluid={image.childImageSharp.fluid}
             imgStyle={{ objectFit: 'contain' }}
             alt=""
           />
         </div>
         <div className="bx--col-sm-8 bx--col-md-7">
-          <div className=" et--feature__content">
-            <h1 className="et--feature__title">
+          <div className=" et--hero-featured__content">
+            <h1 className="et--hero-featured__title">
               {title}
             </h1>
-            <p className="et--feature__lead">
+            <p className="et--hero-featured__lead">
               {lead}
             </p>
-            <Link className="et--feature__link" to={link.href}>
+            <Link className="et--hero-featured__link" to={link.href}>
               {link.text}
             </Link>
           </div>
@@ -37,7 +37,7 @@ const Feature = ({
   </section>
 )
 
-Feature.propTypes = {
+HeroFeatured.propTypes = {
   title: PropTypes.string.isRequired,
   lead: PropTypes.string.isRequired,
   link: PropTypes.shape({
@@ -47,4 +47,4 @@ Feature.propTypes = {
   image: PropTypes.shape().isRequired,
 }
 
-export default Feature
+export default HeroFeatured

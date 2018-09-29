@@ -4,19 +4,19 @@
 @import '../../../node_modules/carbon-components/scss/globals/scss/css--reset';
 @import '../../../node_modules/carbon-components/scss/components/button/mixins';
 
-.et--feature {
+.et--hero-featured {
   background: $grey-light;
   color: $green-dark;
   font-family: $font-family-sans-serif;
 }
 
-.et--feature__image-container {
+.et--hero-featured__image-container {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.et--feature__image {
+.et--hero-featured__image {
   display: none;
 
   @media (min-width: breakpoint('sm')) {
@@ -31,7 +31,7 @@
   }
 }
 
-.et--feature__content {
+.et--hero-featured__content {
   padding: 2rem 1rem;
 
   @media (min-width: breakpoint('lg')) {
@@ -39,7 +39,7 @@
   }
 }
 
-.et--feature__title {
+.et--hero-featured__title {
   display: block;
   margin: 1rem 0;
   font-size: 2rem;
@@ -53,14 +53,14 @@
   }
 }
 
-.et--feature__lead {
+.et--hero-featured__lead {
   display: block;
   color: $green-dark;
   font-family: $font-family-serif;
   margin-bottom: 1.5rem;
 }
 
-.et--feature__link {
+.et--hero-featured__link {
   @include button-base;
   @include button-theme($green, $green, $white, transparent, $white);
   font-size: 1.25rem;

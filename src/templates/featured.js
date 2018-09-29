@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
 import PageWrapper from '../components/PageWrapper'
-import Feature from '../components/Feature'
+import HeroFeatured from '../components/HeroFeatured'
 import Search from '../components/Search'
 import Footer from '../components/Footer'
 
@@ -15,7 +15,7 @@ const FeaturedTemplate = ({ data }) => {
 
   return (
     <PageWrapper t={data.t}>
-      <Feature image={data.image} title={title} lead={lead} link={link} />
+      <HeroFeatured image={data.image} title={title} lead={lead} link={link} />
       <main className="et--markdown et--markdown--listing">
         <div className="bx--grid">
           <div className="bx--row">

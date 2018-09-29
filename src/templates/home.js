@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
 import PageWrapper from '../components/PageWrapper'
-import Hero from '../components/Hero'
+import HeroHome from '../components/HeroHome'
 import Search from '../components/Search'
 import TeaserGroup from '../components/TeaserGroup'
 import CardCarousel from '../components/CardCarousel'
@@ -18,7 +18,7 @@ const IndexTemplate = ({ data }) => {
 
   return (
     <PageWrapper t={data.t}>
-      <Hero content={html} claim={frontmatter.claim} />
+      <HeroHome content={html} claim={frontmatter.claim} />
       <Search t={data.t} />
       <main>
         <TeaserGroup teasers={frontmatter.teasers} />
