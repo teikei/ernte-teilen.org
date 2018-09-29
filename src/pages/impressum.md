@@ -6,7 +6,7 @@ Falls du Fragen und Feedback zu Ernte teilen hast, kannst du per Email Kontakt m
 <br><br>info(at)ernte-teilen.org
 
 
-## Ernte teilen
+__Ernte teilen__<br>
 c/o Simon Jockers<br>
 Ueckermünder Str. 6<br> 
 10439 Berlin<br> 

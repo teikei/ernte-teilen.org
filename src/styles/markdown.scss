@@ -17,13 +17,47 @@
   h4,
   h5,
   h6 {
-    margin: 1rem 0 1rem 0;
-    font-weight: bold;
+    margin: 1rem 0;
     color: $green;
+    font-family: $font-family-sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 1.1;
+
+    @media (min-width: breakpoint('xl')) {
+      margin: 2rem 0;
+    }
+  }
+
+  h1 {
+    font-size: 2rem;
+    @media (min-width: breakpoint('xl')) {
+      font-size: 3rem;
+    }
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1.5rem;
+  }
+  h5 {
+    font-size: 1.25rem;
+  }
+  h6 {
+    font-size: 1.125rem;
   }
 
   p {
     margin-bottom: 1rem;
+      line-height: 1.5;
+  }
+
+  hr {
+    border-top: 1px solid $green;
   }
 
   ul {
@@ -37,6 +71,10 @@
     padding-left: 1rem;
   }
 
+  strong {
+    font-weight: bold;
+    line-height: 1.1;
+  }
 
   @media (min-width: breakpoint('md')) {
     padding: 3rem 1rem;
