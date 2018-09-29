@@ -10,7 +10,7 @@ Auf ernte-teilen.org kannst du Informationen über Initiativen und Betriebe ver�
 
 Wir werden deine persönlichen Daten nur im Rahmen der Anwendung ernte-teilen.org verwenden und nicht an Dritte weitergeben.
 
-Mehr über die Speicherung und Nutzung deiner persönlichen Daten kannst du in unserer [Datenschutzerklärung](/privacy) nachlesen.
+Mehr über die Speicherung und Nutzung deiner persönlichen Daten kannst du in unserer [Datenschutzerklärung](/datenschutz) nachlesen.
 
 ## 2. Kontaktaufnahme per E-Mail
 
@@ -37,7 +37,7 @@ Der Quellcode von ernte-teilen.org ist Open Source. Das bedeutet, dass ihn jeder
 Die nachfolgenden Nutzungsbedingungen haben in erster Linie die Funktion, uns als Betreiber dieser Plattform rechtlich abzusichern und gegen Abmahnungen oder Klagen zu schützen. Sie sind von einem frei erhältlichen [Muster für Nutzungsbedingungen](http://www.kluge-recht.de/muster-nutzungsbedingungen-forum.php) in Online-Foren abgeleitet.
 
 Wir sind sehr daran interessiert, diese Bedingungen einfacher und freundlicher zu gestalten. Wenn du uns dabei helfen möchtest, nimm
-[Kontakt](/contact) mit uns auf.
+[Kontakt](/impressum) mit uns auf.
 
 ### § 1 Geltungsbereich
 
