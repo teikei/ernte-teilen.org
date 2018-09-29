@@ -22,7 +22,7 @@
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.10.0",
     "gatsby": "^2.0.0-beta.92",
-    "gatsby-image": "^1.0.55",
+    "gatsby-image": "^2.0.11",
     "gatsby-plugin-sass": "^2.0.0-beta.10",
     "gatsby-plugin-sharp": "^2.0.0-beta.9",
     "gatsby-source-filesystem": "next",

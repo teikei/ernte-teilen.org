@@ -57,27 +57,24 @@
 }
 
 .et--header__nav-item {
-  @include button-base;
-  @include button-theme(
-    transparent,
-    transparent,
-    $white,
-    transparent,
-    transparent
-  );
+  padding-bottom: 0.1rem;
+  margin: 0 1rem;
+  color: $white;
+  font-size: 1.125rem;
+  font-family: $font-family-sans-serif;
+  font-weight: bold;
+  text-decoration: none;
 
-  @media (max-width: breakpoint('md')) {
+  @media (max-width: breakpoint('lg')) {
     display: none;
   }
 
   &:hover,
   &:focus,
   &:active {
-    text-decoration: underline;
     color: $white;
+    border-bottom: 2px solid $white;
   }
-
-  font-size: 1.125rem;
 }
 
 .et--header__btn {
@@ -106,7 +103,7 @@
   height: 1.5rem;
   text-indent: 1.5rem;
   border: none;
-  background: url('~/img/hamburger-menu.svg') no-repeat;
+  background: url('~/img/hamburger.svg') no-repeat;
   white-space: nowrap;
   overflow: hidden;
   text-decoration: none;

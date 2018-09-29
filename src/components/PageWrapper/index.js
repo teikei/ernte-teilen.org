@@ -58,6 +58,7 @@ export default PageWrapper
 
 export const query = graphql`
   fragment pageWrapper on LocalesYaml {
+    ...header
     ...offCanvasMenu
   }
 `

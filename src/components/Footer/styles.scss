@@ -46,16 +46,28 @@
   }
 }
 
+.et--footer__nav-item {
+  display: block;
+
+  @media (max-width: breakpoint('lg')) {
+    display: inline;
+  }
+}
+
 .et--footer__link {
   display: inline-block;
-  padding: 1rem;
+  padding-bottom: 0.1rem;
+  margin: 0 1rem;
   color: $white;
+  font-size: 1.125rem;
+  font-family: $font-family-sans-serif;
+  font-weight: bold;
   text-decoration: none;
 
   &:hover,
   &:focus,
   &:active {
     color: $white;
-    text-decoration: underline;
+    border-bottom: 2px solid $white;
   }
 }

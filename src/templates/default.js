@@ -47,6 +47,7 @@ export const query = graphql`
     }
 
     t: localesYaml(locale: { eq: "de" }) {
+      ...header
       ...pageWrapper
       ...footer
     }

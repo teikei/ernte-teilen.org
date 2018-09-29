@@ -1,5 +1,10 @@
 ---
+template: 'featured'
 title: 'Was ist Solawi?'
+teaser: 'Du möchtest bei einer Solawi mitmachen?'
+link:
+  text: 'Direkt zur Karte'
+  href: 'karte'
 ---
 
 Veniam ut dolor sint tempor minim do officia amet veniam fugiat irure. Lorem voluptate amet duis ipsum id officia qui nulla do aliquip commodo. Officia cillum aliquip culpa ipsum aliquip eiusmod minim nulla ipsum ullamco. Incididunt nostrud id aliquip dolore amet id cupidatat ex elit aliquip mollit laborum cupidatat qui.

@@ -1,0 +1,74 @@
+@import '../../styles/variables';
+@import '../../../node_modules/carbon-components/scss/globals/grid/grid';
+@import '../../../node_modules/carbon-components/scss/globals/scss/typography';
+@import '../../../node_modules/carbon-components/scss/globals/scss/css--reset';
+@import '../../../node_modules/carbon-components/scss/components/button/mixins';
+
+.et--feature {
+  background: $grey-light;
+  color: $green-dark;
+  font-family: $font-family-sans-serif;
+}
+
+.et--feature__image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.et--feature__image {
+  display: none;
+
+  @media (min-width: breakpoint('sm')) {
+    display: block;
+    margin: 3rem 0 3em -110%;
+    max-height: 400px;
+    margin-left: -120%;
+  }
+
+  @media (min-width: breakpoint('md')) {
+    margin-left: 0;
+  }
+}
+
+.et--feature__content {
+  padding: 2rem 1rem;
+
+  @media (min-width: breakpoint('lg')) {
+    padding: 3rem;
+  }
+}
+
+.et--feature__title {
+  display: block;
+  margin: 1rem 0;
+  font-size: 2rem;
+  line-height: 1.1;
+  color: $green;
+  font-family: $font-family-sans-serif;
+
+  @media (min-width: breakpoint('xl')) {
+    margin: 2rem 0;
+    font-size: 3rem;
+  }
+}
+
+.et--feature__lead {
+  display: block;
+  color: $green-dark;
+  font-family: $font-family-serif;
+  margin-bottom: 1.5rem;
+}
+
+.et--feature__link {
+  @include button-base;
+  @include button-theme($green, $green, $white, transparent, $white);
+  font-size: 1.25rem;
+  padding: 0 1.25rem;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $green;
+  }
+}
