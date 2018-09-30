@@ -5,12 +5,15 @@ teasers:
   - slug: consumers
     title: Beitreten
     text: Du möchtest bei einer Solawi mitmachen?
+    href: mitmachen
   - slug: farms
     title: Mitglieder finden
     text: Du suchst nach Mitgliedern für deinen Betrieb?
+    href: betriebe
   - slug: initiatives
     title: Gründen
     text: 'Du möchtest selbst eine Solawi gründen?'
+    href: initiativen
 cards:
   - slug: environment
     title: Bring dich mit ein bei Mitmachtagen vor Ort in deinem Betrieb
