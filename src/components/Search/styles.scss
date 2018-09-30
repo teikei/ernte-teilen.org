@@ -13,7 +13,6 @@
 
 .et--search__form {
   position: relative;
-  overflow: hidden;
 }
 
 .et--search__label {
@@ -39,5 +38,15 @@
   input {
     max-width: 80vw;
     margin: 0;
+  }
+}
+
+.teikei-embed {
+  .search-menu {
+    z-index: 2;
+  }
+  .search-result {
+    text-align: left;
+    padding-left: 5px;
   }
 }
