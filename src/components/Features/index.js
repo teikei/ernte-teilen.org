@@ -7,8 +7,6 @@ import Img from 'gatsby-image'
 import './styles.scss'
 
 const Features = ({ features, featureImages }) => {
-  console.log(featureImages)
-
   const images = zipObject(
     featureImages.edges.map(({ node }) => node.name),
     featureImages.edges.map(({ node }) => node.childImageSharp),
