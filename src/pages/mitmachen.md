@@ -10,7 +10,7 @@ link:
 
 - ## Das Solawi-Prinzip
 
-  Das Konzept ist ganz einfach: Ein Hof oder eine Gärtnerei versorgt eine Gruppe von Menschen in der näheren Umgebung mit Lebensmitteln. Im Gegenzug stellt die Gruppe die nötigen Mittel für die Lebensmittel­erzeugung zur Verfügung. Alle Beteiligten teilen sich die Ernte und die Verantwortung. Dieses Konzept nennt man _Solidarische Landwirtschaft_ oder kurz _Solawi_.
+  Das Prinzip ist ganz einfach: Ein Hof oder eine Gärtnerei versorgt eine feste Gruppe von Menschen in der näheren Umgebung mit Lebensmitteln. Im Gegenzug stellt die Gruppe die nötigen Mittel für die Lebensmittel­erzeugung zur Verfügung, indem ihre Mitglieder einen festen monatlichen Beitrag bezahlen. Alle Beteiligten teilen sich die Ernte und die Verantwortung. Dieses Konzept nennt man _Solidarische Landwirtschaft_ oder kurz _Solawi_.
 
-  _[Mehr über Solidarische Landwirtschaft](was-ist-solawi)_
+  _[Mehr über Solidarische Landwirtschaft](solawi)_
   ![Solidarische Landwirtschaft](/img/solawi_circle.png)
