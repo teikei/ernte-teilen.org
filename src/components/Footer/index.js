@@ -10,7 +10,7 @@ const Footer = ({ t }) => (
       <div className="bx--row">
         <ul className="et--footer__nav">
           {t.footer.nav.map(({ text, href }) => (
-            <li className="et--footer__nav__item" key={href}>
+            <li className="et--footer__nav-item" key={href}>
               <Link className="et--footer__link" to={href}>
                 {text}
               </Link>

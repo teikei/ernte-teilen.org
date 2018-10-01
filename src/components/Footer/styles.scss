@@ -33,31 +33,29 @@
   text-align: center;
   display: block;
   width: 100%;
+  margin: 0;
+  padding: 0;
 
   @media (min-width: breakpoint('md')) {
     top: 2rem;
     left: 0;
     right: 0;
     position: absolute;
-
-    li {
-      display: inline-block;
-    }
   }
 }
 
 .et--footer__nav-item {
   display: block;
+  margin: 1rem;
+  padding: 0;
 
-  @media (max-width: breakpoint('lg')) {
+  @media (min-width: breakpoint('lg')) {
     display: inline;
   }
 }
 
 .et--footer__link {
-  display: inline-block;
   padding-bottom: 0.1rem;
-  margin: 0 1rem;
   color: $white;
   font-size: 1.125rem;
   font-family: $font-family-sans-serif;
