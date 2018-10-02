@@ -21,9 +21,8 @@
 
   @media (min-width: breakpoint('sm')) {
     display: block;
-    margin: 3rem 0 3em -110%;
-    max-height: 400px;
-    margin-left: -120%;
+    margin: 3rem 0 3em -5rem;
+    max-height: 320px;
   }
 
   @media (min-width: breakpoint('md')) {
