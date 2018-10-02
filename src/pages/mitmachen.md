@@ -1,6 +1,6 @@
 ---
 template: 'featured'
-image: 'assets/pages/mitmachen.png'
+image: 'assets/pages/join.png'
 title: 'Du möchtest bei einer Solawi mitmachen?'
 lead: 'Solawis sind in der Regel um einen Hof herum organisiert und versorgen mehrere Abholstellen mit Lebensmitteln. Um teilzunehmen musst Du Mitglied einer Solawi werden, die eine Abholstelle in Deiner Nähe hat. Unsere interaktive Karte kann Dir dabei helfen, eine Solawi in Deiner Region zu finden.'
 link:
