@@ -22,7 +22,7 @@ const Header = ({ openMenu, fixed, t }) => (
             </li>
           ))}
           <li>
-            <a className="et--header__btn" href="/">
+            <a className="et--header__btn" href="karte#/users/sign-in">
               {t.header.login}
             </a>
           </li>
