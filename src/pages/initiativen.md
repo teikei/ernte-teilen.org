@@ -1,15 +1,19 @@
 ---
 template: 'featured'
-title: 'Du möchtest bei einer Solawi mitmachen?'
-lead: 'Solawis sind in der Regel um einen Hof herum organisiert und versorgen mehrere Abholstellen mit Lebensmitteln. Um teilzunehmen musst Du Mitglied einer Solawi werden, die eine Abholstelle in Deiner Nähe hat. Unsere interaktive Karte kann Dir dabei helfen, eine Solawi in Deiner Region zu finden.'
+image: 'assets/pages/initiatives.png'
+title: 'Ihr gründet Eine Solawi?'
+lead: 'Eine Solawi zu gründen ist sehr aufwendig. Ihr braucht einen Hof und Land, Know-How und Mitstreiter. Ein Eintrag auf ErnteTeilen kann dabei helfen, Euer Projekt voranzubringen indem Menschen aus Eurer Region auf Euch aufmerksam werden.'
 link:
-  text: 'Direkt zur Karte'
-  href: 'karte'
+  text: 'Initiative eintragen'
+  href: 'karte#/users/sign-in'
 ---
 
-- ## Das Solawi-Prinzip
+- ## So funktioniert’s
 
-  Das Konzept ist ganz einfach: Ein Hof oder eine Gärtnerei versorgt eine Gruppe von Menschen in der näheren Umgebung mit Lebensmitteln. Im Gegenzug stellt die Gruppe die nötigen Mittel für die Lebensmittel­erzeugung zur Verfügung. Alle Beteiligten teilen sich die Ernte und die Verantwortung. Dieses Konzept nennt man _Solidarische Landwirtschaft_ oder kurz _Solawi_.
+  Auf ErnteTeilen könnt Ihr Eure Initiative selbst eintragen, Euren Eintrag später bearbeiten und auch jederzeit wieder löschen. Dafür müsst Ihr Euch nur mit einer E-Mail-Adresse und einem Passwort [registrieren](/karte#/users/sign-in).
 
-  _[Mehr über Solidarische Landwirtschaft](was-ist-solawi)_
-  ![Solidarische Landwirtschaft](/img/solawi_circle.png)
+  Solawi-Gründer\*innen können außerdem Unterstützung vom [Netzwerk Solidarische Landwirtschaft](https://www.solidarische-landwirtschaft.org/mitmachen/eine-solawi-aufbauen/) (Deutschland) und der [Kooperationsstelle für solidarische Landwirtschaft](https://www.solawi.ch/unterlagen/uebersicht/) (Schweiz) erhalten.
+
+  Ihr habt bereits eine Solawi etabliert und seid auf der Suche nach neuen Mitgliedern? Auf ErnteTeilen können sich auch bestehende Solawi-Betriebe eintragen.
+
+  _[Informationen bestehende Solawi-Betriebe](betriebe)_
