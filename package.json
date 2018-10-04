@@ -11,8 +11,8 @@
   "dependencies": {
     "autoprefixer": "^9.0.1",
     "browserslist": "^4.0.1",
-    "carbon-components": "^9.3.0",
-    "carbon-components-react": "^6.14.1",
+    "carbon-components": "^9.26.0",
+    "carbon-components-react": "^6.38.1",
     "carbon-icons": "^7.0.7",
     "classnames": "^2.2.6",
     "eslint": "^4",
