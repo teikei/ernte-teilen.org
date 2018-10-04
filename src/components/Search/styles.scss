@@ -18,10 +18,11 @@
 .et--search__label {
   display: block;
   padding: 1rem;
-  font-size: 1.25rem;
-  line-height: 1;
-  text-align: center;
   color: $white;
+  line-height: 1;
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-align: center;
 
   @media (min-width: breakpoint('md')) {
     font-size: 1.5rem;
@@ -31,9 +32,10 @@
 .et--search__input {
   display: inline-block;
   position: relative;
-  font-size: 1.25rem;
-  color: $green;
   margin: 0.5rem 1rem;
+  color: $green;
+  font-size: 1.25rem;
+  font-weight: normal;
 
   input {
     max-width: 80vw;
