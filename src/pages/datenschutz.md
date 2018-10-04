@@ -6,14 +6,14 @@ Diese Datenschutzerklärung gilt für die Datenverarbeitung der Website Ernte-te
 
 Uns ist der Schutz und die Vertraulichkeit Eurer Daten sehr wichtig. Daher erheben, verarbeiten und nutzen wir Eure Daten ausschließlich in dem Rahmen, der notwendig ist um unsere Dienste zur Verfügung zu stellen. Dabei halten wir die geltenden Datenschutzgesetze der Bundesrepublik Deutschland und die Datenschutzbestimmungen der Europäischen Union ein.
 
-Soweit auf unseren Seiten personenbezogene Daten erhoben werden, erfolgt dies, soweit möglich, auf freiwilliger Basis. In keinem Fall werden wir Eure persönlichen Daten für Werbe- oder Marketingzwecke weitergeben oder verkaufen. Wir erheben, verarbeiten und nutzen keine personenbezogenen Daten, ohne dass dies durch ein Gesetz erlaubt ist oder Ihr uns hierfür Eure Einwilligung erklärt habt. 
+Soweit auf unseren Seiten personenbezogene Daten erhoben werden, erfolgt dies, soweit möglich, auf freiwilliger Basis. In keinem Fall werden wir Eure persönlichen Daten für Werbe- oder Marketingzwecke weitergeben oder verkaufen. Wir erheben, verarbeiten und nutzen keine personenbezogenen Daten, ohne dass dies durch ein Gesetz erlaubt ist oder Ihr uns hierfür Eure Einwilligung erklärt habt.
 
 Verantwortliche: Jockers, Braun, Dolecek, Rijke GbR<br/>
 Ueckermünder Str.6 <br/>
 10439 Berlin
 
 Vertreten durch: Simon Jockers<br/>
-Telefon: +49 (0)30 - 5557 802 23<br/>
+Telefon: +49 (0)175 - 59 25 122<br>
 E-Mail: hello(at)simonjockers.de<br/>
 [Impressum und Kontakt](https://ernte-teilen.org/impressum)
 
@@ -29,12 +29,12 @@ Arten der verarbeiteten Daten:
 
 ## Kategorien betroffener Personen
 
-Besucher*innen und Nutzer*innen des Onlineangebotes (Nachfolgend bezeichnen wir die betroffenen Personen zusammenfassend auch als „Nutzer*innen“).
+Besucher*innen und Nutzer*innen des Onlineangebotes (Nachfolgend bezeichnen wir die betroffenen Personen zusammenfassend auch als „Nutzer\*innen“).
 
 ## Zweck der Verarbeitung:
 
 - Zurverfügungstellung des Onlineangebotes, seiner Funktionen und Inhalte.
-- Beantwortung von Kontaktanfragen und Kommunikation mit Nutzer*innen.
+- Beantwortung von Kontaktanfragen und Kommunikation mit Nutzer\*innen.
 - Sicherheitsmaßnahmen.
 
 ## Verwendete Begriffe
@@ -63,7 +63,7 @@ Zu den Maßnahmen gehören insbesondere die Sicherung der Vertraulichkeit, Integ
 
 ## Zusammenarbeit mit Auftragsverarbeitern und Dritten
 
-Sofern wir im Rahmen unserer Verarbeitung Daten gegenüber anderen Personen und Unternehmen (Auftragsverarbeitern oder Dritten) offenbaren, sie an diese übermitteln oder ihnen sonst Zugriff auf die Daten gewähren, erfolgt dies nur auf Grundlage einer gesetzlichen Erlaubnis (z.B. wenn eine Übermittlung der Daten an Dritte, wie an Zahlungsdienstleister, gem. Art. 6 Abs. 1 lit. b DSGVO zur Vertragserfüllung erforderlich ist), Du eingewilligt hast, eine rechtliche Verpflichtung dies vorsieht oder auf Grundlage unserer berechtigten Interessen (z.B. beim Einsatz von Beauftragten, Webhostern, etc.). 
+Sofern wir im Rahmen unserer Verarbeitung Daten gegenüber anderen Personen und Unternehmen (Auftragsverarbeitern oder Dritten) offenbaren, sie an diese übermitteln oder ihnen sonst Zugriff auf die Daten gewähren, erfolgt dies nur auf Grundlage einer gesetzlichen Erlaubnis (z.B. wenn eine Übermittlung der Daten an Dritte, wie an Zahlungsdienstleister, gem. Art. 6 Abs. 1 lit. b DSGVO zur Vertragserfüllung erforderlich ist), Du eingewilligt hast, eine rechtliche Verpflichtung dies vorsieht oder auf Grundlage unserer berechtigten Interessen (z.B. beim Einsatz von Beauftragten, Webhostern, etc.).
 
 Sofern wir Dritte mit der Verarbeitung von Daten auf Grundlage eines sog. „Auftragsverarbeitungsvertrages“ beauftragen, geschieht dies auf Grundlage des Art. 28 DSGVO.
 
@@ -79,7 +79,7 @@ Du hast entsprechend. Art. 16 DSGVO das Recht, die Vervollständigung der Dich b
 
 Du hast nach Maßgabe des Art. 17 DSGVO das Recht zu verlangen, dass betreffende Daten unverzüglich gelöscht werden, bzw. alternativ nach Maßgabe des Art. 18 DSGVO eine Einschränkung der Verarbeitung der Daten zu verlangen.
 
-Du hast das Recht zu verlangen, dass die Dich betreffenden Daten, die Du uns bereitgestellt hast nach Maßgabe des Art. 20 DSGVO zu erhalten und deren Übermittlung an andere Verantwortliche zu fordern. 
+Du hast das Recht zu verlangen, dass die Dich betreffenden Daten, die Du uns bereitgestellt hast nach Maßgabe des Art. 20 DSGVO zu erhalten und deren Übermittlung an andere Verantwortliche zu fordern.
 
 Du hast ferner gem. Art. 77 DSGVO das Recht, eine Beschwerde bei der zuständigen Aufsichtsbehörde einzureichen.
 
@@ -95,35 +95,35 @@ Du kannst der künftigen Verarbeitung der Dich betreffenden Daten nach Maßgabe 
 
 Die von uns verarbeiteten Daten werden nach Maßgabe der Art. 17 und 18 DSGVO gelöscht oder in ihrer Verarbeitung eingeschränkt. Sofern nicht im Rahmen dieser Datenschutzerklärung ausdrücklich angegeben, werden die bei uns gespeicherten Daten gelöscht, sobald sie für ihre Zweckbestimmung nicht mehr erforderlich sind und der Löschung keine gesetzlichen Aufbewahrungspflichten entgegenstehen. Sofern die Daten nicht gelöscht werden, weil sie für andere und gesetzlich zulässige Zwecke erforderlich sind, wird deren Verarbeitung eingeschränkt. D.h. die Daten werden gesperrt und nicht für andere Zwecke verarbeitet. Das gilt z.B. für Daten, die aus handels- oder steuerrechtlichen Gründen aufbewahrt werden müssen.
 
-Nach gesetzlichen Vorgaben in Deutschland, erfolgt die Aufbewahrung insbesondere für 10 Jahre gemäß §§ 147 Abs. 1 AO, 257 Abs. 1 Nr. 1 und 4, Abs. 4 HGB (Bücher, Aufzeichnungen, Lageberichte, Buchungsbelege, Handelsbücher, für Besteuerung relevanter Unterlagen, etc.) und 6 Jahre gemäß § 257 Abs. 1 Nr. 2 und 3, Abs. 4 HGB (Handelsbriefe). 
+Nach gesetzlichen Vorgaben in Deutschland, erfolgt die Aufbewahrung insbesondere für 10 Jahre gemäß §§ 147 Abs. 1 AO, 257 Abs. 1 Nr. 1 und 4, Abs. 4 HGB (Bücher, Aufzeichnungen, Lageberichte, Buchungsbelege, Handelsbücher, für Besteuerung relevanter Unterlagen, etc.) und 6 Jahre gemäß § 257 Abs. 1 Nr. 2 und 3, Abs. 4 HGB (Handelsbriefe).
 
 ## Registrierfunktion
 
-Nutzer*innen können ein Nutzer*innenkonto anlegen. Im Rahmen der Registrierung werden die erforderlichen Pflichtangaben den Nutzer*innen mitgeteilt und auf Grundlage des Art. 6 Abs. 1 lit. b DSGVO zu Zwecken der Bereitstellung des Nutzer*innenkontos verarbeitet. Zu den verarbeiteten Daten gehören insbesondere die Login-Informationen (Name, Passwort sowie eine E-Mailadresse). Die im Rahmen der Registrierung eingegebenen Daten werden für die Zwecke der Nutzung des Nutzer*innenkontos und dessen Zwecks verwendet. 
+Nutzer*innen können ein Nutzer*innenkonto anlegen. Im Rahmen der Registrierung werden die erforderlichen Pflichtangaben den Nutzer*innen mitgeteilt und auf Grundlage des Art. 6 Abs. 1 lit. b DSGVO zu Zwecken der Bereitstellung des Nutzer*innenkontos verarbeitet. Zu den verarbeiteten Daten gehören insbesondere die Login-Informationen (Name, Passwort sowie eine E-Mailadresse). Die im Rahmen der Registrierung eingegebenen Daten werden für die Zwecke der Nutzung des Nutzer\*innenkontos und dessen Zwecks verwendet.
 
-Die Nutzer*innen können über Informationen, die für deren Nutzer*innenkonto relevant sind, wie z.B. technische Änderungen, per E-Mail informiert werden. Über diese E-Mailadresse können Euch außerdem Besucher von Ernt-teilen.org Nachrichten schicken. Dabei kommt ein Kontaktformular zum Einsatz. Eure E-Mail-Adresse wird nicht veröffentlicht oder weitergegeben. 
+Die Nutzer*innen können über Informationen, die für deren Nutzer*innenkonto relevant sind, wie z.B. technische Änderungen, per E-Mail informiert werden. Über diese E-Mailadresse können Euch außerdem Besucher von Ernt-teilen.org Nachrichten schicken. Dabei kommt ein Kontaktformular zum Einsatz. Eure E-Mail-Adresse wird nicht veröffentlicht oder weitergegeben.
 
-Wenn Nutzer*innen ihr Nutzer*innenkonto gekündigt haben, werden deren Daten im Hinblick auf das Nutzer*innenkonto, gelöscht. Es obliegt den Nutzer*innen, ihre Daten bei erfolgter Kündigung vor dem Vertragsende zu sichern. Wir sind berechtigt, sämtliche während der Vertragsdauer gespeicherten Daten des Nutzer*innens unwiederbringlich zu löschen.
+Wenn Nutzer*innen ihr Nutzer*innenkonto gekündigt haben, werden deren Daten im Hinblick auf das Nutzer*innenkonto, gelöscht. Es obliegt den Nutzer*innen, ihre Daten bei erfolgter Kündigung vor dem Vertragsende zu sichern. Wir sind berechtigt, sämtliche während der Vertragsdauer gespeicherten Daten des Nutzer\*innens unwiederbringlich zu löschen.
 
 ### Cookies
 
-Als „Cookies“ werden kleine Dateien bezeichnet, die auf Rechnern der Nutzer*innen gespeichert werden. Innerhalb der Cookies können unterschiedliche Angaben gespeichert werden. Wir benutzen Cookies lediglich, um bei der Anmeldung von Nutzer*innen deren Login-Status zu speichern. 
+Als „Cookies“ werden kleine Dateien bezeichnet, die auf Rechnern der Nutzer*innen gespeichert werden. Innerhalb der Cookies können unterschiedliche Angaben gespeichert werden. Wir benutzen Cookies lediglich, um bei der Anmeldung von Nutzer*innen deren Login-Status zu speichern.
 
 Falls Du nicht möchtest, dass Cookies auf ihrem Rechner gespeichert werden, werden sie gebeten die entsprechende Option in den Systemeinstellungen ihres Browsers zu deaktivieren. Gespeicherte Cookies können in den Systemeinstellungen des Browsers gelöscht werden. Der Ausschluss von Cookies kann zu Funktion dieses Onlineangebotes einschränken.
 
-## Von Nutzer*innen angelegte Einträge
+## Von Nutzer\*innen angelegte Einträge
 
-Die im Rahmen der Kommentare und Beiträge angegebenen Daten, werden von uns bis zum Widerspruch der Nutzer*innen dauerhaft gespeichert. Beim Anlegen eines erklärst Du dich damit einverstanden, ihn unter einer Creative-Commons-Lizenz ([CC-BY-SA 3.0 DE](https://creativecommons.org/licenses/by-nc-sa/3.0/de/)) zu veröffentlichen. Das bedeutet, dass jeder die hier veröffentlichten Informationen weiterverwenden und wiederveröffentlichen darf, wenn er dabei die in der entsprechenden Lizenz definierten Regeln einhält. 
+Die im Rahmen der Kommentare und Beiträge angegebenen Daten, werden von uns bis zum Widerspruch der Nutzer\*innen dauerhaft gespeichert. Beim Anlegen eines erklärst Du dich damit einverstanden, ihn unter einer Creative-Commons-Lizenz ([CC-BY-SA 3.0 DE](https://creativecommons.org/licenses/by-nc-sa/3.0/de/)) zu veröffentlichen. Das bedeutet, dass jeder die hier veröffentlichten Informationen weiterverwenden und wiederveröffentlichen darf, wenn er dabei die in der entsprechenden Lizenz definierten Regeln einhält.
 
 ## Hosting und E-Mail-Versand
 
-Die von uns in Anspruch genommenen Hosting-Leistungen dienen der Zurverfügungstellung der folgenden Leistungen: Infrastruktur- und Plattformdienstleistungen, Rechenkapazität, Speicherplatz und Datenbankdienste, E-Mail-Versand, Sicherheitsleistungen sowie technische Wartungsleistungen, die wir zum Zwecke des Betriebs dieses Onlineangebotes einsetzen. 
+Die von uns in Anspruch genommenen Hosting-Leistungen dienen der Zurverfügungstellung der folgenden Leistungen: Infrastruktur- und Plattformdienstleistungen, Rechenkapazität, Speicherplatz und Datenbankdienste, E-Mail-Versand, Sicherheitsleistungen sowie technische Wartungsleistungen, die wir zum Zwecke des Betriebs dieses Onlineangebotes einsetzen.
 
 Hierbei verarbeiten wir, bzw. unser Hostinganbieter Bestandsdaten, Kontaktdaten, Inhaltsdaten, Vertragsdaten, Nutzungsdaten, Meta- und Kommunikationsdaten von Kunden, Interessenten und Besuchern dieses Onlineangebotes auf Grundlage unserer berechtigten Interessen an einer effizienten und sicheren Zurverfügungstellung dieses Onlineangebotes gem. Art. 6 Abs. 1 lit. f DSGVO i.V.m. Art. 28 DSGVO (Abschluss Auftragsverarbeitungsvertrag).
 
 ## Erhebung von Zugriffsdaten und Logfiles
 
-Wir, bzw. unser Hostinganbieter, erhebt auf Grundlage unserer berechtigten Interessen im Sinne des Art. 6 Abs. 1 lit. f. DSGVO Daten über jeden Zugriff auf den Server, auf dem sich dieser Dienst befindet (sogenannte Serverlogfiles). Zu den Zugriffsdaten die Webadresse, Datum und Uhrzeit des Abrufs, übertragene Datenmenge, Meldung über erfolgreichen Abruf, Browsertyp nebst Version, das Betriebssystem des Nutzer*innens, Referrer URL (die zuvor besuchte Seite), IP-Adresse und der anfragende Provider. Datenschutzkonform werden dabei die letzte Stelle der IP-Adresse entfernt, so dass zwar noch eine Providerzugehörigkeit, aber keine Personenzugehörigkeit mehr nachvollzogen werden kann. 
+Wir, bzw. unser Hostinganbieter, erhebt auf Grundlage unserer berechtigten Interessen im Sinne des Art. 6 Abs. 1 lit. f. DSGVO Daten über jeden Zugriff auf den Server, auf dem sich dieser Dienst befindet (sogenannte Serverlogfiles). Zu den Zugriffsdaten die Webadresse, Datum und Uhrzeit des Abrufs, übertragene Datenmenge, Meldung über erfolgreichen Abruf, Browsertyp nebst Version, das Betriebssystem des Nutzer\*innens, Referrer URL (die zuvor besuchte Seite), IP-Adresse und der anfragende Provider. Datenschutzkonform werden dabei die letzte Stelle der IP-Adresse entfernt, so dass zwar noch eine Providerzugehörigkeit, aber keine Personenzugehörigkeit mehr nachvollzogen werden kann.
 
 Logfile-Informationen werden aus Sicherheitsgründen für die Dauer von vier Wochen gespeichert und danach gelöscht. Daten, deren weitere Aufbewahrung zu Beweiszwecken erforderlich ist, sind bis zur endgültigen Klärung des jeweiligen Vorfalls von der Löschung ausgenommen.
 

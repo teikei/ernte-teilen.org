@@ -13,5 +13,5 @@ Ueckermünder Str. 6<br>
 
 Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV: Simon Jockers
 
-Telefon: +49 (0)30 - 5557 802 23<br> 
+Telefon: +49 (0)175 - 59 25 122<br> 
 E-Mail: hello(at)simonjockers.de
