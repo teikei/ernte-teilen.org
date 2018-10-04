@@ -4,7 +4,7 @@ exports.onRouteUpdate = () => {
 
   if (teikeiEmbed && !teikeiScript) {
     const script = document.createElement('script')
-    script.src = 'https://map-staging.teikei.allmende.io/main.js'
+    script.src = process.env.GATSBY_TEIKEI_BUNDLE_URL
     script.id = 'teikei-bundle'
     script.async = true
     teikeiEmbed.insertAdjacentElement('afterend', script)
