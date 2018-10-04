@@ -1,0 +1,136 @@
+/* some horrible CSS to violently override default styles in the map app */
+
+.teikei-embed {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0 0 1rem 0 !important;
+    color: $green !important;
+    font-family: $font-family-sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 1.1;
+
+    @media (min-width: breakpoint('xl')) {
+      margin: 2rem 0;
+    }
+  }
+
+  background-color: $white;
+
+  p {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+    font-family: $font-family-serif;
+    font-size: 1rem;
+  }
+
+  label,
+  legend {
+    color: $green;
+  }
+
+  input.button {
+    @include button-base;
+    @include button-theme(transparent, $white, $white, $white, $white);
+
+    @media (max-width: breakpoint('md')) {
+      display: none;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $green;
+    }
+
+    background: $green;
+    font-size: 1.125rem;
+    padding: 0 2rem;
+    border-color: $green;
+    font-weight: bold;
+  }
+  @media (max-width: 759px) and (min-width: 0) {
+    background-color: $grey-light !important;
+  }
+
+  @media (min-width: 760px) {
+    .account-nav-toggle,
+    .entries-nav-toggle,
+    .account-nav-login,
+    .details-link {
+      border-radius: 0 !important;
+      border: solid 2px $green !important;
+      margin-top: 10px !important;
+      background-color: $grey-light !important;
+      color: $green !important;
+      font-size: 1rem;
+      &:hover,
+      &:focus,
+      &:active {
+        color: $white !important;
+        background-color: $green !important;
+      }
+    }
+  }
+
+  .details-link {
+    border-radius: 0 !important;
+    border: solid 2px $green !important;
+    margin-top: 10px !important;
+    background-color: $white !important;
+    color: $green !important;
+    font-size: 1rem;
+    font-family: $font-family-sans-serif;
+    &:hover,
+    &:focus,
+    &:active {
+      color: $white !important;
+      background-color: $green !important;
+    }
+  }
+
+  .dropdown-menu {
+    min-width: 200px;
+  }
+
+  .account-nav-signout {
+    font-family: $font-family-serif !important;
+    font-size: 1rem;
+    color: $green-light !important;
+  }
+
+  a {
+    color: $green-light !important;
+    font-size: 1rem !important;
+    font-family: $font-family-serif;
+  }
+
+  .map-footer a {
+    font-size: 0.75rem !important;
+    color: $grey-light !important;
+    font-family: $font-family-sans-serif;
+    text-decoration: none !important;
+    border-bottom: 0 !important;
+  }
+
+  @media (max-width: 759px) and (min-width: 0) {
+    .user-onboarding-intro {
+      background: $grey-light !important;
+    }
+  }
+
+  @media (min-width: 760px) {
+    .user-onboarding {
+      background-image: linear-gradient(
+        to right,
+        #fff,
+        #fff 50%,
+        $grey-light 50%
+      ) !important;
+    }
+  }
+}
