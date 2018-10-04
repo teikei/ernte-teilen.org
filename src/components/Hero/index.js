@@ -8,13 +8,9 @@ const Hero = ({ title, lead, link }) => (
     <div className="bx--grid">
       <div className="bx--row">
         <div className=" et--hero__content">
-          <h1 className="et--hero__title">
-            {title}
-          </h1>
-          <p className="et--hero__lead">
-            {lead}
-          </p>
-          <a className="et--hero__link" href={link.href}>
+          <h1 className="et--hero__title">{title}</h1>
+          <p className="et--hero__lead">{lead}</p>
+          <a className="et--hero__link" href={link.href} target="_blank" rel="noopener noreferrer">
             {link.text}
           </a>
         </div>
