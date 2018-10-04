@@ -16,4 +16,4 @@ link:
 
   Ihr habt bereits eine Solawi etabliert und seid auf der Suche nach neuen Mitgliedern? Auf ErnteTeilen können sich auch bestehende Solawi-Betriebe eintragen.
 
-  _[Informationen bestehende Solawi-Betriebe](betriebe)_
+  _[Informationen bestehende Solawi-Betriebe](/betriebe)_

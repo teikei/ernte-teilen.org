@@ -61,6 +61,6 @@ partners:
         name: Open Knowledge Foundation Deutschland
 ---
 
-Wir bringen Menschen zusammen, die sich gemeinsam in einer [Solawi](/was-ist-solawi) mit regionalen Lebensmitteln versorgen&nbsp;möchten.
+Wir bringen Menschen zusammen, die sich gemeinsam in einer [Solawi](/solawi) mit regionalen Lebensmitteln versorgen&nbsp;möchten.
 
 **Fair, ökologisch, nachhaltig**

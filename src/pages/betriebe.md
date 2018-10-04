@@ -5,7 +5,7 @@ title: 'Ihr sucht nach Mitgliedern für Eure Solawi?'
 lead: 'Auf ErnteTeilen könnt Ihr Eure Betriebe und Abholstellen auf einer interaktiven Karte eintragen. Durch Eure Einträge werdet Ihr von Verbraucher*innen aus Eurer Region einfacher gefunden.'
 link:
   text: 'Betrieb eintragen'
-  href: 'karte#/users/sign-in'
+  href: '/karte/#/users/sign-in'
 ---
 
 - ## So funktioniert’s
@@ -14,4 +14,4 @@ link:
 
   Ihr steht noch ganz am Anfang? Auf ErnteTeilen können sich auch Gründungsinitiativen eintragen.
 
-  _[Informationen für Gründungsinitiativen](was-ist-solawi)_
+  _[Informationen für Gründungsinitiativen](/initiativen)_

@@ -3,15 +3,15 @@ offCanvasMenu:
   close: 'Schließen'
   nav:
     - text: 'Solawi finden'
-      href: 'karte'
+      href: '/karte/#/'
     - text: 'Was ist Solawi?'
-      href: 'solawi'
+      href: '/solawi'
     - text: 'Mitmachen'
-      href: 'mitmachen'
+      href: '/mitmachen'
     - text: 'Mitglieder finden'
-      href: 'betriebe'
+      href: '/betriebe'
     - text: 'Gründen'
-      href: 'initiativen'
+      href: '/initiativen'
 search:
   label: 'Finde eine Solawi in deiner Nähe'
 header:
@@ -20,15 +20,15 @@ header:
   menu: 'Menü'
   nav:
     - text: 'Was ist Solawi?'
-      href: 'solawi'
+      href: '/solawi'
     - text: 'Finde eine Solawi in Deiner Nähe'
-      href: 'karte'
+      href: '/karte/#/'
 footer:
   logo_alt: 'Ernte teilen!'
   nav:
     - text: 'Über Solidarische Landwirtschaft'
-      href: 'solawi'
+      href: '/solawi'
     - text: 'Datenschutz'
-      href: 'datenschutz'
+      href: '/datenschutz'
     - text: 'Kontakt & Impressum'
-      href: 'impressum'
+      href: '/impressum'
