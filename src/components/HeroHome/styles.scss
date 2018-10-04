@@ -13,12 +13,12 @@
 
   @media (min-width: breakpoint('sm')) {
     margin-top: -2rem;
-    background-size: auto 40vh;
+    background-size: 480px auto;
   }
 
   @media (min-width: breakpoint('md')) {
     height: 65vh;
-    min-height: auto;
+    min-height: 400px;
     max-height: 65vw;
     background-size: 480px auto;
     margin-top: 1vw;
@@ -38,7 +38,7 @@
   text-align: center;
 
   @media (min-width: breakpoint('sm')) {
-    padding-top: 33%;
+    padding-top: 45%;
   }
 
   @media (min-width: breakpoint('md')) {
