@@ -9,32 +9,38 @@ import Footer from '../components/Footer'
 
 import '../styles/index.scss'
 
-const FeaturedTemplate = ({ data }) => {
-  const { frontmatter, html } = data.content
-  const { title, lead, link } = frontmatter
-
-  return (
-    <PageWrapper t={data.t}>
-      <HeroFeatured image={data.image} title={title} lead={lead} link={link} />
-      <main className="et--markdown et--markdown--listing">
-        <div className="bx--grid">
-          <div className="bx--row">
-            <div dangerouslySetInnerHTML={{ __html: html }} />
-          </div>
+const FeaturedTemplate = ({
+  data: {
+    t,
+    searchConfig,
+    image,
+    content: {
+      frontmatter: { title, lead, link },
+      html
+    }
+  }
+}) => (
+  <PageWrapper t={t}>
+    <HeroFeatured image={image} title={title} lead={lead} link={link} />
+    <main className="et--markdown et--markdown--listing">
+      <div className="bx--grid">
+        <div className="bx--row">
+          <div dangerouslySetInnerHTML={{ __html: html }} />
         </div>
-      </main>
-      <Search t={data.t} />
-      <Footer t={data.t} />
-    </PageWrapper>
-  )
-}
+      </div>
+    </main>
+    <Search t={t} searchConfig={searchConfig} />
+    <Footer t={t} />
+  </PageWrapper>
+)
 
 FeaturedTemplate.propTypes = {
   data: PropTypes.shape({
     content: PropTypes.object,
+    searchConfig: PropTypes.object,
     image: PropTypes.object,
-    t: PropTypes.object,
-  }).isRequired,
+    t: PropTypes.object
+  }).isRequired
 }
 
 export default FeaturedTemplate
@@ -59,6 +65,10 @@ export const query = graphql`
           ...GatsbyImageSharpFluid_tracedSVG
         }
       }
+    }
+
+    searchConfig: site {
+      ...searchConfig
     }
 
     t: localesYaml(locale: { eq: "de" }) {

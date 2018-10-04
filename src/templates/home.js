@@ -13,23 +13,36 @@ import Footer from '../components/Footer'
 
 import '../styles/index.scss'
 
-const IndexTemplate = ({ data }) => {
-  const { frontmatter, html } = data.content
-
+const IndexTemplate = ({
+  data: {
+    t,
+    content: { frontmatter, html },
+    partnerImages,
+    cardImages,
+    testimonialImages,
+    searchConfig
+  }
+}) => {
   return (
-    <PageWrapper t={data.t}>
+    <PageWrapper t={t}>
       <HeroHome content={html} claim={frontmatter.claim} />
-      <Search t={data.t} />
+      <Search t={t} searchConfig={searchConfig} />
       <main>
         <TeaserGroup teasers={frontmatter.teasers} />
-        <CardCarousel cards={frontmatter.cards} cardImages={data.cardImages.edges} />
+        <CardCarousel
+          cards={frontmatter.cards}
+          cardImages={cardImages.edges}
+        />
         <TestimonialGroup
           testimonials={frontmatter.testimonials}
-          testimonialImages={data.testimonialImages.edges}
+          testimonialImages={testimonialImages.edges}
         />
-        <Partners partners={frontmatter.partners} partnerImages={data.partnerImages} />
+        <Partners
+          partners={frontmatter.partners}
+          partnerImages={partnerImages}
+        />
       </main>
-      <Footer t={data.t} />
+      <Footer t={t} />
     </PageWrapper>
   )
 }
@@ -37,8 +50,8 @@ const IndexTemplate = ({ data }) => {
 IndexTemplate.propTypes = {
   data: PropTypes.shape({
     content: PropTypes.object,
-    files: PropTypes.object,
-  }).isRequired,
+    files: PropTypes.object
+  }).isRequired
 }
 
 export default IndexTemplate
@@ -57,6 +70,10 @@ export const query = graphql`
       ...pageWrapper
       ...search
       ...footer
+    }
+
+    searchConfig: site {
+      ...searchConfig
     }
 
     ...cardImages

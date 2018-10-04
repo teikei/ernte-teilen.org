@@ -6,21 +6,28 @@ import PageWrapper from '../components/PageWrapper'
 
 import '../styles/index.scss'
 
-const IndexTemplate = ({ data }) => (
-  <PageWrapper t={data.t} fixedHeader>
+const IndexTemplate = ({
+  data: {
+    t,
+    site: {
+      siteMetadata: { apiBaseUrl, assetsBaseUrl }
+    }
+  }
+}) => (
+  <PageWrapper t={t} fixedHeader>
     <div
       id="teikei-app"
       data-locale="de"
       data-base-url="/karte#"
       data-country="DE"
-      data-api-base-url="https://api-staging.teikei.allmende.io"
-      data-assets-base-url="https://map-staging.teikei.allmende.io/assets"
+      data-api-base-url={apiBaseUrl}
+      data-assets-base-url={assetsBaseUrl}
     />
   </PageWrapper>
 )
 
 IndexTemplate.propTypes = {
-  data: PropTypes.shape().isRequired,
+  data: PropTypes.shape().isRequired
 }
 
 export default IndexTemplate
@@ -30,7 +37,12 @@ export const query = graphql`
     content: markdownRemark(fields: { slug: { eq: $slug } }) {
       html
     }
-
+    site {
+      siteMetadata {
+        apiBaseUrl
+        assetsBaseUrl
+      }
+    }
     t: localesYaml(locale: { eq: "de" }) {
       ...pageWrapper
     }

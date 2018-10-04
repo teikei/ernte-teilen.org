@@ -10,33 +10,41 @@ import Footer from '../components/Footer'
 
 import '../styles/index.scss'
 
-const AboutTemplate = ({ data }) => {
-  const { frontmatter, html } = data.content
-  const {
-    title, lead, link, features,
-  } = frontmatter
-
-  return (
-    <PageWrapper t={data.t}>
-      <Hero title={title} lead={lead} link={link} />
-      <Features features={features} featureImages={data.featureImages} />
-      <main className="et--markdown et--markdown--listing et--markdown--listing--wide">
-        <div className="bx--grid">
-          <div className="bx--row">
-            <div dangerouslySetInnerHTML={{ __html: html }} />
-          </div>
+const AboutTemplate = ({
+  data: {
+    t,
+    searchConfig,
+    image,
+    featureImages,
+    content: {
+      frontmatter: { title, lead, link, features },
+      html
+    }
+  }
+}) => (
+  <PageWrapper t={t}>
+    <Hero title={title} lead={lead} link={link} />
+    <Features features={features} featureImages={featureImages} />
+    <main className="et--markdown et--markdown--listing et--markdown--listing--wide">
+      <div className="bx--grid">
+        <div className="bx--row">
+          <div dangerouslySetInnerHTML={{ __html: html }} />
         </div>
-      </main>
-      <Search t={data.t} />
-      <Footer t={data.t} />
-    </PageWrapper>
-  )
-}
+      </div>
+    </main>
+    <Search t={t} searchConfig={searchConfig}/>
+    <Footer t={t} />
+  </PageWrapper>
+)
 
 AboutTemplate.propTypes = {
   data: PropTypes.shape({
     content: PropTypes.object,
-  }).isRequired,
+    searchConfig: PropTypes.object,
+    image: PropTypes.object,
+    featureImages: PropTypes.object,
+    t: PropTypes.object
+  }).isRequired
 }
 
 export default AboutTemplate
@@ -58,6 +66,10 @@ export const query = graphql`
           text
         }
       }
+    }
+
+    searchConfig: site {
+      ...searchConfig
     }
 
     t: localesYaml(locale: { eq: "de" }) {

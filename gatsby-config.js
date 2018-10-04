@@ -24,4 +24,11 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
   ],
+  siteMetadata: {
+    title: 'Ernte Teilen',
+    siteUrl: 'https://ernte-teilen.org',
+    description: 'Hier finden Landwirte und Verbraucher zusammen, die sich an Solidarischer Landwirtschaft beteiligen möchten.',
+    apiBaseUrl: process.env.GATSBY_TEIKEI_API_BASE_URL,
+    assetsBaseUrl: process.env.GATSBY_TEIKEI_ASSETS_BASE_URL
+  },
 }
