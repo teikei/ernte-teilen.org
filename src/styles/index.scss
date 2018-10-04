@@ -7,11 +7,13 @@
 
 body {
   background: $green;
-  line-height: 1.5;
 }
 
 main {
   background: $white;
+  line-height: 1.5;
+  color: $green-dark;
+  font-family: $font-family-serif;
 }
 
 .bx--grid {

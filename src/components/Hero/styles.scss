@@ -44,8 +44,9 @@
   margin: 1rem 0;
   font-size: 2rem;
   line-height: 1.1;
-  color: $green;
   font-family: $font-family-sans-serif;
+  font-weight: bold;
+  color: $green;
 
   @media (min-width: breakpoint('xl')) {
     margin: 2rem 0;
@@ -57,6 +58,7 @@
   display: block;
   color: $green-dark;
   margin-bottom: 1.5rem;
+  line-height: 1.5;
 }
 
 .et--hero__link {
