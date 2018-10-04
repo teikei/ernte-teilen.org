@@ -16,6 +16,10 @@ main {
   font-family: $font-family-serif;
 }
 
+a {
+  color: $green-light;
+}
+
 .bx--grid {
   max-width: $grid-max-width;
 }
