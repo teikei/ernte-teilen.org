@@ -1,8 +1,5 @@
-@import '../../styles/variables';
-@import '../../../node_modules/carbon-components/scss/globals/grid/grid';
-@import '../../../node_modules/carbon-components/scss/globals/scss/typography';
-@import '../../../node_modules/carbon-components/scss/globals/scss/css--reset';
-@import '../../../node_modules/carbon-components/scss/components/button/mixins';
+@import '../../styles/theme';
+@import '~carbon-components/scss/components/button/mixins';
 
 .et--header {
   height: 75px;

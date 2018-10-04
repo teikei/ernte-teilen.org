@@ -1,16 +1,17 @@
-@import 'variables';
+@import 'theme';
 @import 'fonts';
-@import '~carbon-components/scss/globals/scss/styles';
 @import 'markdown';
 @import 'teikei-legacy';
 
+@import '~carbon-components/scss/globals/grid/grid';
+
 body {
   background: $green;
+  line-height: 1.5;
 }
 
 main {
   background: $white;
-  line-height: 1.5;
 }
 
 .bx--grid {
