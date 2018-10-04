@@ -1,6 +1,14 @@
 // Special styles for the legacy map embed.
 // To be removed with the teikei@next release.
 
+#teikei-app {
+  font-family: $font-family-sans-serif;
+}
+
+#teikei-app .button-help {
+  display: none;
+}
+
 @media screen and (min-width: 760px) {
   #teikei-app .user-nav {
     z-index: 10; // move z-index down so that it does not overlap the website nav
@@ -20,8 +28,8 @@
     padding-top: 210px;
   }
 
-  #teikei-app .button-help {
-    display: none;
+  #teikei-app .custom-controls {
+    margin-top: 10px;
   }
 }
 
