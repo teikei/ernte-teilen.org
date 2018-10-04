@@ -14,7 +14,6 @@ const html = ({
       <meta charSet="utf-8" />
       <meta httpEquiv="x-ua-compatible" content="ie=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-      <link href="https://map-staging.teikei.allmende.io/main.css" rel="stylesheet" />
       {headComponents}
     </head>
     <body {...bodyAttributes}>
@@ -22,8 +21,6 @@ const html = ({
       <div key="body" id="___gatsby" dangerouslySetInnerHTML={{ __html: body }} />
       {postBodyComponents}
     </body>
-    {/* FIXME this is just a dirty hack to make the header visible */}
-    {/* <style dangerouslySetInnerHTML={{ __html: '.teikei-embed .map-container { z-index: -1; }' }} /> */}
   </html>
 )
 

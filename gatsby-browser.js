@@ -3,10 +3,13 @@ exports.onRouteUpdate = () => {
   const teikeiScript = document.getElementById('teikei-bundle')
 
   if (teikeiEmbed && !teikeiScript) {
+    const styles = document.createElement('link')
     const script = document.createElement('script')
-    script.src = process.env.GATSBY_TEIKEI_BUNDLE_URL
+    styles.href = `${process.env.GATSBY_TEIKEI_BUNDLES_URL}/main.css`
+    script.src = `${process.env.GATSBY_TEIKEI_BUNDLES_URL}/main.js`
     script.id = 'teikei-bundle'
     script.async = true
     teikeiEmbed.insertAdjacentElement('afterend', script)
+    teikeiEmbed.insertAdjacentElement('afterend', styles)
   }
 }
