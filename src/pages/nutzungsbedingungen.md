@@ -18,7 +18,7 @@ Wenn du Betriebe oder Initiativen auf ernte-teilen.org einträgst, werden diese 
 
 ## 3. Veröffentlichung von Inhalten
 
-Sämtliche Inhalte auf ernte-teilen.org werden unter einer Creative-Commons-Lizenz [(CC-BY-SA 3.0 DE)](http://creativecommons.org/licenses/by-nc-sa/3.0/de/) veröffentlicht. Das bedeutet, dass jeder die hier veröffentlichten Informationen weiterverwenden und wiederveröffentlichen darf, wenn er dabei die in der entsprechenden Lizenz definierten Regeln einhält.
+Sämtliche Inhalte auf ernte-teilen.org werden unter einer Creative-Commons-Lizenz [(CC-BY-SA 3.0 DE)](http://creativecommons.org/licenses/by-sa/3.0/de/) veröffentlicht. Das bedeutet, dass jeder die hier veröffentlichten Informationen weiterverwenden und wiederveröffentlichen darf, wenn er dabei die in der entsprechenden Lizenz definierten Regeln einhält.
 
 Durch die Registrierung auf ernte-teilen.org erklärst du dich damit einverstanden, dass auch die von Dir eingetragenen Inhalte unter der genannten Creative-Commons-Lizenz veröffentlicht werden. Bitte veröffentliche keine Bilder und Texte, die Urheberrechte, Markenrechte, o.ä. von Dritten verletzen.
 
