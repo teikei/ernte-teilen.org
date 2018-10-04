@@ -10,24 +10,30 @@ const IndexTemplate = ({
   data: {
     t,
     site: {
-      siteMetadata: { apiBaseUrl, assetsBaseUrl }
-    }
-  }
+      siteMetadata: { apiBaseUrl, assetsBaseUrl },
+    },
+  },
 }) => (
-  <PageWrapper t={t} fixedHeader>
-    <div
-      id="teikei-app"
-      data-locale="de"
-      data-base-url="/karte#"
-      data-country="DE"
-      data-api-base-url={apiBaseUrl}
-      data-assets-base-url={assetsBaseUrl}
-    />
+  <PageWrapper t={t}>
+    <main className="et--markdown">
+      <div className="bx--grid">
+        <div className="bx--row">
+          <div className="bx--col-sm-8">
+            <div>
+              <h1>Wartungsmodus</h1>
+              <p>
+                Die Karte ist vorübergehend nicht erreichbar. Wir sind gleich wieder für Euch da!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
   </PageWrapper>
 )
 
 IndexTemplate.propTypes = {
-  data: PropTypes.shape().isRequired
+  data: PropTypes.shape().isRequired,
 }
 
 export default IndexTemplate
