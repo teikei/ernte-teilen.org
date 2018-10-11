@@ -1,7 +1,7 @@
 const browserslist = require('browserslist')
 const autoprefixer = require('autoprefixer')
 require('dotenv').config({
-  path: `.env.${process.env.NODE_ENV}`
+  path: `.env.${process.env.NODE_ENV}`,
 })
 
 module.exports = {
@@ -23,12 +23,14 @@ module.exports = {
     'gatsby-transformer-remark',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
+    'gatsby-plugin-react-helmet',
   ],
   siteMetadata: {
     title: 'Ernte Teilen',
     siteUrl: 'https://ernte-teilen.org',
-    description: 'Hier finden Landwirte und Verbraucher zusammen, die sich an Solidarischer Landwirtschaft beteiligen möchten.',
+    description:
+      'Hier finden Landwirte und Verbraucher zusammen, die sich an Solidarischer Landwirtschaft beteiligen möchten.',
     apiBaseUrl: process.env.GATSBY_TEIKEI_API_BASE_URL,
-    assetsBaseUrl: process.env.GATSBY_TEIKEI_ASSETS_BASE_URL
+    assetsBaseUrl: process.env.GATSBY_TEIKEI_ASSETS_BASE_URL,
   },
 }
