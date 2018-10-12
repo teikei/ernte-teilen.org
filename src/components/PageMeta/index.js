@@ -1,49 +1,80 @@
 import React from 'react'
 import Helmet from 'react-helmet'
+import { StaticQuery, graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 
-const PageMeta = ({ title, description, url }) => {
-  const image = '/img/about-farm.jpg'
-  const twitterAccount = '@ernteteilen'
+const PageMeta = ({
+  title, description, pathname, image,
+}) => (
+  <StaticQuery
+    query={graphql`
+      query {
+        site {
+          siteMetadata {
+            title
+            description
+            siteUrl
+            defaultImage
+            twitterAccount
+          }
+        }
+      }
+    `}
+    render={({ site: { siteMetadata } }) => {
+      const pageTitle = title || siteMetadata.title
+      const pageDescription = description || siteMetadata.description
+      const pageUrl = `${siteMetadata.siteUrl}${pathname}`
+      const pageImage = image || siteMetadata.defaultImage
 
-  const schemaOrgJSONLD = [
-    {
-      '@context': 'http://schema.org',
-      '@type': 'WebSite',
-      url,
-      name: title,
-    },
-  ]
+      const schemaOrgJSONLD = [
+        {
+          '@context': 'http://schema.org',
+          '@type': 'WebSite',
+          url: pageUrl,
+          name: pageTitle,
+        },
+      ]
 
-  return (
-    <Helmet>
-      {/* General tags */}
-      <meta name="description" content={description} />
-      <meta name="image" content={image} />
+      console.log(siteMetadata)
 
-      {/* Schema.org tags */}
-      <script type="application/ld+json">{JSON.stringify(schemaOrgJSONLD)}</script>
+      return (
+        <Helmet>
+          {/* General tags */}
+          <meta name="description" content={pageDescription} />
+          <meta name="image" content={pageImage} />
 
-      {/* OpenGraph tags */}
-      <meta property="og:url" content={url} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
+          {/* Schema.org tags */}
+          <script type="application/ld+json">{JSON.stringify(schemaOrgJSONLD)}</script>
 
-      {/* Twitter Card tags */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:creator" content={twitterAccount} />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
-    </Helmet>
-  )
-}
+          {/* OpenGraph tags */}
+          <meta property="og:url" content={pageUrl} />
+          <meta property="og:title" content={pageTitle} />
+          <meta property="og:description" content={pageDescription} />
+          <meta property="og:image" content={pageImage} />
+
+          {/* Twitter Card tags */}
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:creator" content={siteMetadata.twitterAccount} />
+          <meta name="twitter:title" content={pageTitle} />
+          <meta name="twitter:description" content={pageDescription} />
+          <meta name="twitter:image" content={pageImage} />
+        </Helmet>
+      )
+    }}
+  />
+)
 
 PageMeta.propTypes = {
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  url: PropTypes.string.isRequired,
+  title: PropTypes.string,
+  description: PropTypes.string,
+  pathname: PropTypes.string.isRequired,
+  image: PropTypes.string,
+}
+
+PageMeta.defaultProps = {
+  title: null,
+  description: null,
+  image: null,
 }
 
 export default PageMeta

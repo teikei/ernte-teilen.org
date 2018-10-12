@@ -28,6 +28,8 @@ module.exports = {
   siteMetadata: {
     title: 'Ernte Teilen',
     siteUrl: 'https://ernte-teilen.org',
+    defaultImage: '/img/about-farm.jpg',
+    twitterAccount: '@ernteteilen',
     description:
       'Hier finden Landwirte und Verbraucher zusammen, die sich an Solidarischer Landwirtschaft beteiligen möchten.',
     apiBaseUrl: process.env.GATSBY_TEIKEI_API_BASE_URL,

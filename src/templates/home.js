@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
-import Helmet from 'react-helmet'
 
 import PageMeta from '../components/PageMeta'
 import PageWrapper from '../components/PageWrapper'
@@ -27,12 +26,7 @@ const IndexTemplate = ({
   },
 }) => (
   <PageWrapper t={t}>
-    <PageMeta
-      title="Ernte teilen!"
-      description="Wir bringen Menschen zusammen, die sich gemeinsam in einer Solawi mit regionalen Lebensmitteln versorgen möchten."
-      url={`https://ernte-teilen.org${location.pathname}`}
-    />
-
+    <PageMeta pathname={location.pathname} />
     <HeroHome content={html} claim={frontmatter.claim} />
     <Search t={t} searchConfig={searchConfig} />
     <main>
