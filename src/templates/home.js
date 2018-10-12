@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 
+import PageMeta from '../components/PageMeta'
 import PageWrapper from '../components/PageWrapper'
 import HeroHome from '../components/HeroHome'
 import Search from '../components/Search'
@@ -26,13 +27,11 @@ const IndexTemplate = ({
   },
 }) => (
   <PageWrapper t={t}>
-    <Helmet defaultTitle="Ernte teilen!" titleTemplate="%s | Ernte teilen!">
-      <meta name="twitter:site" content="@ernteteilen" />
-      <meta name="og:type" content="website" />
-      <meta name="og:site_name" content="Ernte teilen!" />
-      <link rel="canonical" href={`https://ernteteilen.org${location.pathname}`} />
-      <html lang="de" />
-    </Helmet>
+    <PageMeta
+      title="Ernte teilen!"
+      description="Wir bringen Menschen zusammen, die sich gemeinsam in einer Solawi mit regionalen Lebensmitteln versorgen möchten."
+      url={`https://ernte-teilen.org${location.pathname}`}
+    />
 
     <HeroHome content={html} claim={frontmatter.claim} />
     <Search t={t} searchConfig={searchConfig} />
