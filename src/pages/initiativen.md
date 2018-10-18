@@ -6,6 +6,7 @@ lead: 'Eine Solawi zu gründen ist sehr aufwendig. Ihr braucht einen Hof und Lan
 link:
   text: 'Initiative eintragen'
   href: 'karte#/users/sign-in'
+metaImage: '/img/social_initiatives.jpg'
 ---
 
 - ## So funktioniert’s

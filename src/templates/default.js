@@ -13,7 +13,11 @@ const IndexTemplate = ({ location, data }) => {
 
   return (
     <PageWrapper t={data.t}>
-      <PageMeta pathname={location.pathname} title={frontmatter.title} />
+      <PageMeta
+        pathname={location.pathname}
+        title={frontmatter.title}
+        image={frontmatter.metaImage}
+      />
       <main className="et--markdown">
         <div className="bx--grid">
           <div className="bx--row">
@@ -37,6 +41,7 @@ IndexTemplate.propTypes = {
     html: PropTypes.string,
     frontmatter: PropTypes.shape({
       title: PropTypes.string,
+      metaImage: PropTypes.string,
     }),
   }).isRequired,
 }
@@ -49,6 +54,7 @@ export const query = graphql`
       html
       frontmatter {
         title
+        metaImage
       }
     }
 

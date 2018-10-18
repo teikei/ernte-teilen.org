@@ -1,6 +1,7 @@
 ---
 title: Ernte teilen
 template: home
+metaImage: '/img/social_farms.jpg'
 teasers:
   - slug: consumers
     title: Beitreten

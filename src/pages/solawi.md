@@ -15,6 +15,7 @@ features:
   - slug: 'consumers'
     title: 'Der Ernteanteil'
     text: 'Die Mitglieder erhalten regelmäßig einen Ernteanteil. Der Ernteanteil besteht je nach Jahreszeit und Angebot der Solawi aus Gemüse, Obst und manchmal auch aus verarbeiteten Produkten wie Saft, Brot oder Käse.'
+metaImage: '/img/social_solawi.jpg'
 ---
 
 - ## Gut für Verbraucher\*innen

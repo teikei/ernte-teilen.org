@@ -17,13 +17,15 @@ const FeaturedTemplate = ({
     searchConfig,
     image,
     content: {
-      frontmatter: { title, lead, link },
+      frontmatter: {
+        title, lead, link, metaImage,
+      },
       html,
     },
   },
 }) => (
   <PageWrapper t={t}>
-    <PageMeta pathname={location.pathname} title={title} description={lead} />
+    <PageMeta pathname={location.pathname} title={title} description={lead} image={metaImage} />
     <HeroFeatured image={image} title={title} lead={lead} link={link} />
     <main className="et--markdown et--markdown--listing">
       <div className="bx--grid">

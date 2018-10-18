@@ -6,6 +6,7 @@ lead: 'Solawis sind in der Regel um einen Hof herum organisiert und versorgen me
 link:
   text: 'Direkt zur Karte'
   href: 'karte'
+metaImage: '/img/social_consumers.jpg'
 ---
 
 - ## Das Solawi-Prinzip

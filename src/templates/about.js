@@ -19,14 +19,14 @@ const AboutTemplate = ({
     featureImages,
     content: {
       frontmatter: {
-        title, lead, link, features,
+        title, lead, link, features, metaImage,
       },
       html,
     },
   },
 }) => (
   <PageWrapper t={t}>
-    <PageMeta pathname={location.pathname} title={title} description={lead} />
+    <PageMeta pathname={location.pathname} title={title} description={lead} image={metaImage} />
     <Hero title={title} lead={lead} link={link} />
     <Features features={features} featureImages={featureImages} />
     <main className="et--markdown et--markdown--listing et--markdown--listing--wide">
@@ -62,6 +62,7 @@ export const query = graphql`
       frontmatter {
         title
         lead
+        metaImage
         link {
           text
           href
