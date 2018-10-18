@@ -3,18 +3,24 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
 import PageWrapper from '../components/PageWrapper'
+import PageMeta from '../components/PageMeta'
 
 import '../styles/index.scss'
 
-const IndexTemplate = ({
+const TeikeiTemplate = ({
+  location,
   data: {
     t,
+    content: {
+      frontmatter: { title },
+    },
     site: {
-      siteMetadata: { apiBaseUrl, assetsBaseUrl }
-    }
-  }
+      siteMetadata: { apiBaseUrl, assetsBaseUrl },
+    },
+  },
 }) => (
   <PageWrapper t={t} fixedHeader>
+    <PageMeta pathname={location.pathname} title={title} />
     <div
       id="teikei-app"
       data-locale="de"
@@ -26,16 +32,22 @@ const IndexTemplate = ({
   </PageWrapper>
 )
 
-IndexTemplate.propTypes = {
-  data: PropTypes.shape().isRequired
+TeikeiTemplate.propTypes = {
+  location: PropTypes.shape({
+    pathname: PropTypes.string,
+  }).isRequired,
+  data: PropTypes.shape().isRequired,
 }
 
-export default IndexTemplate
+export default TeikeiTemplate
 
 export const query = graphql`
   query($slug: String!) {
     content: markdownRemark(fields: { slug: { eq: $slug } }) {
       html
+      frontmatter {
+        title
+      }
     }
     site {
       siteMetadata {

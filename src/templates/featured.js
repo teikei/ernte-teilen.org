@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
 import PageWrapper from '../components/PageWrapper'
+import PageMeta from '../components/PageMeta'
 import HeroFeatured from '../components/HeroFeatured'
 import Search from '../components/Search'
 import Footer from '../components/Footer'
@@ -10,17 +11,19 @@ import Footer from '../components/Footer'
 import '../styles/index.scss'
 
 const FeaturedTemplate = ({
+  location,
   data: {
     t,
     searchConfig,
     image,
     content: {
       frontmatter: { title, lead, link },
-      html
-    }
-  }
+      html,
+    },
+  },
 }) => (
   <PageWrapper t={t}>
+    <PageMeta pathname={location.pathname} title={title} description={lead} />
     <HeroFeatured image={image} title={title} lead={lead} link={link} />
     <main className="et--markdown et--markdown--listing">
       <div className="bx--grid">
@@ -35,12 +38,15 @@ const FeaturedTemplate = ({
 )
 
 FeaturedTemplate.propTypes = {
+  location: PropTypes.shape({
+    pathname: PropTypes.string,
+  }).isRequired,
   data: PropTypes.shape({
     content: PropTypes.object,
     searchConfig: PropTypes.object,
     image: PropTypes.object,
-    t: PropTypes.object
-  }).isRequired
+    t: PropTypes.object,
+  }).isRequired,
 }
 
 export default FeaturedTemplate

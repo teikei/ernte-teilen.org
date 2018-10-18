@@ -35,10 +35,10 @@ const PageMeta = ({
         },
       ]
 
-      console.log(siteMetadata)
-
       return (
         <Helmet>
+          <title>{title ? `${title} | ${siteMetadata.title}` : pageTitle}</title>
+
           {/* General tags */}
           <meta name="description" content={pageDescription} />
           <meta name="image" content={pageImage} />

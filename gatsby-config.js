@@ -26,7 +26,7 @@ module.exports = {
     'gatsby-plugin-react-helmet',
   ],
   siteMetadata: {
-    title: 'Ernte Teilen',
+    title: 'ernte-teilen.org',
     siteUrl: 'https://ernte-teilen.org',
     defaultImage: '/img/about-farm.jpg',
     twitterAccount: '@ernteteilen',

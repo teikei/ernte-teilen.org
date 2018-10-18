@@ -1,4 +1,4 @@
 ---
-title: 'ErnteTeilen: Solidarische Landwirtschaft'
+title: 'Finde eine Solawi in Deiner Nähe!'
 template: teikei
 ---
