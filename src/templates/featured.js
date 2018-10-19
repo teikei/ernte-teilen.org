@@ -64,6 +64,7 @@ export const query = graphql`
           text
           href
         }
+        metaImage
       }
     }
 
