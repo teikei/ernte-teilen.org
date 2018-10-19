@@ -24,7 +24,7 @@ const PageMeta = ({
       const pageTitle = title || siteMetadata.title
       const pageDescription = description || siteMetadata.description
       const pageUrl = `${siteMetadata.siteUrl}${pathname}`
-      const pageImage = image || siteMetadata.defaultImage
+      const pageImage = `${siteMetadata.siteUrl}${image || siteMetadata.defaultImage}`
 
       const schemaOrgJSONLD = [
         {
