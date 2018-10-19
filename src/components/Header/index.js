@@ -15,7 +15,7 @@ const Header = ({ openMenu, fixed, t }) => (
 
         <ul className="et--header__nav">
           {t.header.nav.map(({ text, href }) => (
-            <li>
+            <li key={href}>
               <Link className="et--header__nav-item" to={href}>
                 {text}
               </Link>
