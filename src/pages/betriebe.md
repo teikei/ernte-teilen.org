@@ -6,6 +6,7 @@ lead: 'Auf ErnteTeilen könnt Ihr Eure Betriebe und Abholstellen auf einer inter
 link:
   text: 'Betrieb eintragen'
   href: '/karte/#/users/sign-in'
+metaImage: '/img/social_farms.jpg'
 ---
 
 - ## So funktioniert’s

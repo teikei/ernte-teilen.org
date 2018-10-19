@@ -3,14 +3,21 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
 import PageWrapper from '../components/PageWrapper'
+import PageMeta from '../components/PageMeta'
+
 import Footer from '../components/Footer'
 import '../styles/index.scss'
 
-const IndexTemplate = ({ data }) => {
+const IndexTemplate = ({ location, data }) => {
   const { frontmatter, html } = data.markdownRemark
 
   return (
     <PageWrapper t={data.t}>
+      <PageMeta
+        pathname={location.pathname}
+        title={frontmatter.title}
+        image={frontmatter.metaImage}
+      />
       <main className="et--markdown">
         <div className="bx--grid">
           <div className="bx--row">
@@ -27,12 +34,16 @@ const IndexTemplate = ({ data }) => {
 }
 
 IndexTemplate.propTypes = {
+  location: PropTypes.shape({
+    pathname: PropTypes.string,
+  }).isRequired,
   data: PropTypes.shape({
     html: PropTypes.string,
     frontmatter: PropTypes.shape({
-      title: PropTypes.string
-    })
-  }).isRequired
+      title: PropTypes.string,
+      metaImage: PropTypes.string,
+    }),
+  }).isRequired,
 }
 
 export default IndexTemplate
@@ -43,6 +54,7 @@ export const query = graphql`
       html
       frontmatter {
         title
+        metaImage
       }
     }
 
