@@ -16,9 +16,7 @@ const Partners = ({ partners, partnerImages }) => {
     <section className="et--partners bx--grid">
       {partners.map(({ title, items, id }) => (
         <div id={id} key={id} className="et--partners__group">
-          <h3 className="et--partners__title">
-            {title}
-          </h3>
+          <h3 className="et--partners__title">{title}</h3>
           <ul>
             {items.map(({ slug, name, url }) => (
               <li key={slug}>
@@ -30,7 +28,7 @@ const Partners = ({ partners, partnerImages }) => {
                 >
                   <Img
                     className="et--partners__logo"
-                    sizes={images[slug].resolutions}
+                    fluid={images[slug].fluid}
                     imgStyle={{ objectFit: 'contain' }}
                     alt={name}
                   />
@@ -73,8 +71,8 @@ export const query = graphql`
         node {
           name
           childImageSharp {
-            resolutions(width: 400) {
-              ...GatsbyImageSharpResolutions_tracedSVG
+            fluid(maxWidth: 400) {
+              ...GatsbyImageSharpFluid_tracedSVG
             }
           }
         }
