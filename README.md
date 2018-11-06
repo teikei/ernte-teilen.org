@@ -1,10 +1,17 @@
-# gatsby-starter-hello-world
-Starter with the bare essentials needed for a [Gatsby](https://www.gatsbyjs.org/) site
+## ernte-teilen.org
 
-Install this starter (assuming Gatsby is installed) by running from your CLI:
-```
-gatsby new gatsby-site https://github.com/gatsbyjs/gatsby-starter-hello-world
-```
+This website is built using [React](https://github.com/facebook/react) and [GatsbyJS](https://github.com/gatsbyjs/gatsby). 
 
-## Running in development
-`gatsby develop`
+It uses [Yarn](https://github.com/yarnpkg/yarn) for managing dependencies.
+
+### Install dependencies
+`yarn install`
+
+### Run in development
+`yarn dev`
+
+### Build for production
+`yarn build`
+
+### Serve production build
+`yarn serve`
