@@ -1,0 +1,4 @@
+# Redirect domain aliases to primary domain
+https://ernteteilen.org/* https://ernte-teilen.org/:splat 301!
+https://www.ernteteilen.org/* https://ernte-teilen.org/:splat 301!
+https://ernte-teilen.netlify.com/* https://ernte-teilen.org/:splat 301!
