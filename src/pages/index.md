@@ -4,7 +4,7 @@ template: home
 metaImage: '/img/social_farms.jpg'
 teasers:
   - slug: consumers
-    title: Beitreten
+    title: Mitmachen
     text: Du möchtest bei einer Solawi mitmachen?
     href: mitmachen
   - slug: farms
