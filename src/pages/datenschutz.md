@@ -101,9 +101,9 @@ Nach gesetzlichen Vorgaben in Deutschland, erfolgt die Aufbewahrung insbesondere
 
 Nutzer\*innen können ein Nutzerkonto anlegen. Im Rahmen der Registrierung werden die erforderlichen Pflichtangaben den Nutzer\*innen mitgeteilt und auf Grundlage des Art. 6 Abs. 1 lit. b DSGVO zu Zwecken der Bereitstellung des Nutzerkontos verarbeitet. Zu den verarbeiteten Daten gehören insbesondere die Login-Informationen (Name, Passwort sowie eine E-Mailadresse). Die im Rahmen der Registrierung eingegebenen Daten werden für die Zwecke der Nutzung des Nutzerkontos und dessen Zwecks verwendet.
 
-Die Nutzer\*innen können über Informationen, die für deren Nutzerkonto relevant sind, wie z.B. technische Änderungen, per E-Mail informiert werden. Über diese E-Mailadresse können Euch außerdem Besucher von Ernt-teilen.org Nachrichten schicken. Dabei kommt ein Kontaktformular zum Einsatz. Eure E-Mail-Adresse wird nicht veröffentlicht oder weitergegeben.
+Die Nutzer\*innen können über Informationen, die für deren Nutzerkonto relevant sind, wie z.B. technische Änderungen, per E-Mail informiert werden. Über diese E-Mail-Adresse können Nutzer\*innen außerdem Nachrichten von Besucher\*innen von ernte-teilen.org erhalten. Dabei kommt ein Kontaktformular zum Einsatz. Die E-Mail-Adressen der Nutzer\*innen werden nicht veröffentlicht oder weitergegeben.
 
-Wenn Nutzer\*innen ihr Nutzerkonto gekündigt haben, werden deren Daten im Hinblick auf das Nutzerkonto, gelöscht. Es obliegt den Nutzer\*innen, ihre Daten bei erfolgter Kündigung vor dem Vertragsende zu sichern. Wir sind berechtigt, sämtliche während der Vertragsdauer gespeicherten Daten des Nutzer\*innens unwiederbringlich zu löschen.
+Um ihr Nutzerkonto zu kündigen, kontaktieren Nutzer\*innen info@ernte-teilen.org mit der Bitte um Kündigung des Nutzerkontos. Wir bearbeiten dann schnellstmöglich die Kündigung. Wenn Nutzer\*innen ihr Nutzerkonto gekündigt haben, werden deren Daten im Hinblick auf das Nutzerkonto, gelöscht. Es obliegt den Nutzer\*innen, ihre Daten bei erfolgter Kündigung vor dem Vertragsende zu sichern. Wir sind berechtigt, sämtliche während der Vertragsdauer gespeicherten Daten des Nutzer\*innens unwiederbringlich zu löschen.
 
 ### Cookies
 
