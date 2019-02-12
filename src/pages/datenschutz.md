@@ -29,7 +29,7 @@ Arten der verarbeiteten Daten:
 
 ## Kategorien betroffener Personen
 
-Besucher*innen und Nutzer*innen des Onlineangebotes (Nachfolgend bezeichnen wir die betroffenen Personen zusammenfassend auch als „Nutzer\*innen“).
+Besucher\*innen und Nutzer\*innen des Onlineangebotes (Nachfolgend bezeichnen wir die betroffenen Personen zusammenfassend auch als „Nutzer\*innen“).
 
 ## Zweck der Verarbeitung:
 
@@ -99,15 +99,15 @@ Nach gesetzlichen Vorgaben in Deutschland, erfolgt die Aufbewahrung insbesondere
 
 ## Registrierfunktion
 
-Nutzer*innen können ein Nutzer*innenkonto anlegen. Im Rahmen der Registrierung werden die erforderlichen Pflichtangaben den Nutzer*innen mitgeteilt und auf Grundlage des Art. 6 Abs. 1 lit. b DSGVO zu Zwecken der Bereitstellung des Nutzer*innenkontos verarbeitet. Zu den verarbeiteten Daten gehören insbesondere die Login-Informationen (Name, Passwort sowie eine E-Mailadresse). Die im Rahmen der Registrierung eingegebenen Daten werden für die Zwecke der Nutzung des Nutzer\*innenkontos und dessen Zwecks verwendet.
+Nutzer\*innen können ein Nutzerkonto anlegen. Im Rahmen der Registrierung werden die erforderlichen Pflichtangaben den Nutzer\*innen mitgeteilt und auf Grundlage des Art. 6 Abs. 1 lit. b DSGVO zu Zwecken der Bereitstellung des Nutzerkontos verarbeitet. Zu den verarbeiteten Daten gehören insbesondere die Login-Informationen (Name, Passwort sowie eine E-Mailadresse). Die im Rahmen der Registrierung eingegebenen Daten werden für die Zwecke der Nutzung des Nutzerkontos und dessen Zwecks verwendet.
 
-Die Nutzer*innen können über Informationen, die für deren Nutzer*innenkonto relevant sind, wie z.B. technische Änderungen, per E-Mail informiert werden. Über diese E-Mailadresse können Euch außerdem Besucher von Ernt-teilen.org Nachrichten schicken. Dabei kommt ein Kontaktformular zum Einsatz. Eure E-Mail-Adresse wird nicht veröffentlicht oder weitergegeben.
+Die Nutzer\*innen können über Informationen, die für deren Nutzerkonto relevant sind, wie z.B. technische Änderungen, per E-Mail informiert werden. Über diese E-Mailadresse können Euch außerdem Besucher von Ernt-teilen.org Nachrichten schicken. Dabei kommt ein Kontaktformular zum Einsatz. Eure E-Mail-Adresse wird nicht veröffentlicht oder weitergegeben.
 
-Wenn Nutzer*innen ihr Nutzer*innenkonto gekündigt haben, werden deren Daten im Hinblick auf das Nutzer*innenkonto, gelöscht. Es obliegt den Nutzer*innen, ihre Daten bei erfolgter Kündigung vor dem Vertragsende zu sichern. Wir sind berechtigt, sämtliche während der Vertragsdauer gespeicherten Daten des Nutzer\*innens unwiederbringlich zu löschen.
+Wenn Nutzer\*innen ihr Nutzerkonto gekündigt haben, werden deren Daten im Hinblick auf das Nutzerkonto, gelöscht. Es obliegt den Nutzer\*innen, ihre Daten bei erfolgter Kündigung vor dem Vertragsende zu sichern. Wir sind berechtigt, sämtliche während der Vertragsdauer gespeicherten Daten des Nutzer\*innens unwiederbringlich zu löschen.
 
 ### Cookies
 
-Als „Cookies“ werden kleine Dateien bezeichnet, die auf Rechnern der Nutzer*innen gespeichert werden. Innerhalb der Cookies können unterschiedliche Angaben gespeichert werden. Wir benutzen Cookies lediglich, um bei der Anmeldung von Nutzer*innen deren Login-Status zu speichern.
+Als „Cookies“ werden kleine Dateien bezeichnet, die auf Rechnern der Nutzer\*innen gespeichert werden. Innerhalb der Cookies können unterschiedliche Angaben gespeichert werden. Wir benutzen Cookies lediglich, um bei der Anmeldung von Nutzer\*innen deren Login-Status zu speichern.
 
 Falls Du nicht möchtest, dass Cookies auf ihrem Rechner gespeichert werden, werden sie gebeten die entsprechende Option in den Systemeinstellungen ihres Browsers zu deaktivieren. Gespeicherte Cookies können in den Systemeinstellungen des Browsers gelöscht werden. Der Ausschluss von Cookies kann zu Funktion dieses Onlineangebotes einschränken.
 
