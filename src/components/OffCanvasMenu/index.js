@@ -28,6 +28,15 @@ const OffCanvasMenu = ({
         </li>
       ))}
     </ul>
+    <a
+      className="et--external-teaser"
+      href="https://www.startnext.com/de/ernte-teilen"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Crowdfunding:
+      <b>Solawi-Dokumentarfilm »Ernte&nbsp;teilen«</b>
+    </a>
   </Menu>
 )
 

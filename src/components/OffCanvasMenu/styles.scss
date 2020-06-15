@@ -49,3 +49,25 @@
     right: 1rem;
   }
 }
+
+.et--external-teaser {
+  border-top: 1px solid $green-dark;
+  padding: 1rem 3rem 1rem 1.5rem;
+  text-decoration: none;
+  font-family: $font-family-serif;
+  color: $piggy-light;
+
+  @media (min-width: breakpoint('md')) {
+    padding: 1.5rem 5rem 1.5rem 1.5rem;
+  }
+
+  b {
+    display: block;
+    padding-top: 0.5rem;
+    font-size: 1.125rem;
+    line-height: 1.25;
+    font-family: $font-family-sans-serif;
+    font-weight: bold;
+    color: $white;
+  }
+}
