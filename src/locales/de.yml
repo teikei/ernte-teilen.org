@@ -32,3 +32,7 @@ footer:
       href: '/datenschutz'
     - text: 'Kontakt & Impressum'
       href: '/impressum'
+  credits:
+    prefix: 'Ein Angebot des '
+    text: 'Netzwerks Solidarische Landwirtschaft e.V.'
+    href: 'https://www.solidarische-landwirtschaft.org'
