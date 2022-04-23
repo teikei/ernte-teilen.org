@@ -2,135 +2,108 @@
 title: 'Datenschutz'
 ---
 
-Diese Datenschutzerklärung gilt für die Datenverarbeitung der Website Ernte-teilen.org und der damit verbundenen Dienste. Mit ihr informieren wir Euch über Art, Umfang und Zweck der Erhebung und Verwendung personenbezogener Daten.
+_Erstellt mit dem Datenschutzgenerator von eRecht24 (Version 1.0.0 vom 12.02.2018)_
 
-Uns ist der Schutz und die Vertraulichkeit Eurer Daten sehr wichtig. Daher erheben, verarbeiten und nutzen wir Eure Daten ausschließlich in dem Rahmen, der notwendig ist um unsere Dienste zur Verfügung zu stellen. Dabei halten wir die geltenden Datenschutzgesetze der Bundesrepublik Deutschland und die Datenschutzbestimmungen der Europäischen Union ein.
+### Allgemeine Hinweise
 
-Soweit auf unseren Seiten personenbezogene Daten erhoben werden, erfolgt dies, soweit möglich, auf freiwilliger Basis. In keinem Fall werden wir Eure persönlichen Daten für Werbe- oder Marketingzwecke weitergeben oder verkaufen. Wir erheben, verarbeiten und nutzen keine personenbezogenen Daten, ohne dass dies durch ein Gesetz erlaubt ist oder Ihr uns hierfür Eure Einwilligung erklärt habt.
+Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie unsere Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können. Ausführliche Informationen zum Thema Datenschutz entnehmen Sie unserer unter diesem Text aufgeführten Datenschutzerklärung.
+Datenerfassung auf unserer Website
 
-Verantwortliche: Jockers, Braun, Dolecek, Rijke GbR<br/>
-Ueckermünder Str.6 <br/>
-10439 Berlin
+### Wer ist verantwortlich für die Datenerfassung auf dieser Website?
 
-Vertreten durch: Simon Jockers<br/>
-Telefon: +49 (0)175 - 59 25 122<br>
-E-Mail: hello(at)simonjockers.de<br/>
-[Impressum und Kontakt](https://ernte-teilen.org/impressum)
+Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten können Sie dem Impressum dieser Website entnehmen.
 
-## Erhebung, Speicherung und Verwendung personenbezogener Daten
+**Ansprechpartner Datenschutz**:\
+Michael Bakonyi\
+datenschutzsolidarische-landwirtschaft.org
 
-Arten der verarbeiteten Daten:
+### Wie erfassen wir Ihre Daten?
 
-- Bestandsdaten (z.B. Namen, Adressen).
-- Kontaktdaten (z.B. E-Mail, Telefonnummern).
-- Inhaltsdaten (z.B. Texteingaben, Fotografien, Videos).
-- Nutzungsdaten (z.B. besuchte Webseiten).
-- Meta-/Kommunikationsdaten (z.B. IP-Adressen).
+Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen. Hierbei kann es sich z.B. um Daten handeln, die Sie in ein Kontaktformular eingeben.
 
-## Kategorien betroffener Personen
+Andere Daten werden automatisch beim Besuch der Website durch unsere IT-Systeme erfasst. Das sind vor allem technische Daten (z.B. Internetbrowser, Betriebssystem oder Uhrzeit des Seitenaufrufs). Die Erfassung dieser Daten erfolgt automatisch, sobald Sie unsere Website betreten.
 
-Besucher\*innen und Nutzer\*innen des Onlineangebotes (Nachfolgend bezeichnen wir die betroffenen Personen zusammenfassend auch als „Nutzer\*innen“).
+### Wofür nutzen wir Ihre Daten?
 
-## Zweck der Verarbeitung:
+Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung der Website zu gewährleisten. Andere Daten können zur Analyse Ihres Nutzerverhaltens verwendet werden.
 
-- Zurverfügungstellung des Onlineangebotes, seiner Funktionen und Inhalte.
-- Beantwortung von Kontaktanfragen und Kommunikation mit Nutzer\*innen.
-- Sicherheitsmaßnahmen.
+### Welche Rechte haben Sie bezüglich Ihrer Daten?
 
-## Verwendete Begriffe
+Sie haben jederzeit das Recht unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten. Sie haben außerdem ein Recht, die Berichtigung, Sperrung oder Löschung dieser Daten zu verlangen. Hierzu sowie zu weiteren Fragen zum Thema Datenschutz können Sie sich jederzeit unter der im Impressum angegebenen Adresse an uns wenden. Des Weiteren steht Ihnen ein Beschwerderecht bei der zuständigen Aufsichtsbehörde zu.
 
-„Personenbezogene Daten“ sind alle Informationen, die sich auf eine identifizierte oder identifizierbare natürliche Person (im Folgenden „betroffene Person“) beziehen; als identifizierbar wird eine natürliche Person angesehen, die direkt oder indirekt, insbesondere mittels Zuordnung zu einer Kennung wie einem Namen, zu einer Kennnummer, zu Standortdaten, zu einer Online-Kennung (z.B. Cookie) oder zu einem oder mehreren besonderen Merkmalen identifiziert werden kann, die Ausdruck der physischen, physiologischen, genetischen, psychischen, wirtschaftlichen, kulturellen oder sozialen Identität dieser natürlichen Person sind.
+## Allgemeine Hinweise und Pflichtinformationen
 
-„Verarbeitung“ ist jeder mit oder ohne Hilfe automatisierter Verfahren ausgeführte Vorgang oder jede solche Vorgangsreihe im Zusammenhang mit personenbezogenen Daten. Der Begriff reicht weit und umfasst praktisch jeden Umgang mit Daten.
+Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.
 
-„Pseudonymisierung“ die Verarbeitung personenbezogener Daten in einer Weise, dass die personenbezogenen Daten ohne Hinzuziehung zusätzlicher Informationen nicht mehr einer spezifischen betroffenen Person zugeordnet werden können, sofern diese zusätzlichen Informationen gesondert aufbewahrt werden und technischen und organisatorischen Maßnahmen unterliegen, die gewährleisten, dass die personenbezogenen Daten nicht einer identifizierten oder identifizierbaren natürlichen Person zugewiesen werden.
+Wenn Sie diese Website benutzen, werden verschiedene personenbezogene Daten erhoben. Personenbezogene Daten sind Daten, mit denen Sie persönlich identifiziert werden können. Die vorliegende Datenschutzerklärung erläutert, welche Daten wir erheben und wofür wir sie nutzen. Sie erläutert auch, wie und zu welchem Zweck das geschieht.
 
-„Profiling“ jede Art der automatisierten Verarbeitung personenbezogener Daten, die darin besteht, dass diese personenbezogenen Daten verwendet werden, um bestimmte persönliche Aspekte, die sich auf eine natürliche Person beziehen, zu bewerten, insbesondere um Aspekte bezüglich Arbeitsleistung, wirtschaftliche Lage, Gesundheit, persönliche Vorlieben, Interessen, Zuverlässigkeit, Verhalten, Aufenthaltsort oder Ortswechsel dieser natürlichen Person zu analysieren oder vorherzusagen.
+Wir weisen darauf hin, dass die Datenübertragung im Internet (z.B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.
 
-Als „Verantwortlicher“ wird die natürliche oder juristische Person bezeichnet, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten entscheidet.
+Netzwerk Solidarische Landwirtschaft e.V.\
+Vorstand: Alina Reinartz, Lisa Haubner, Roman Best\
+c/o Stefanie Schulze Schleithoff\
+Stammheimerstr. 154\
+50735 Köln
 
-„Auftragsverarbeiter“ ist eine natürliche oder juristische Person, die personenbezogene Daten im Auftrag des Verantwortlichen verarbeitet.
+Steuernummer: 162 142 09938\
+Gemeinnütziger Verein; Registergericht Kassel: VR 4941
 
-## Maßgebliche Rechtsgrundlagen
+Der Verein Netzwerk Solidarische Landwirtschaft e.V. hält die Markenrechte an der Bezeichnung "Solidarische Landwirtschaft - sich die Ernte teilen" und dem Logo. Die Verwendung des Logos ist nur Mitgliedern gestattet.
 
-Nach Maßgabe des Art. 13 DSGVO teilen wir Ihnen die Rechtsgrundlagen unserer Datenverarbeitungen mit. Sofern die Rechtsgrundlage in der Datenschutzerklärung nicht genannt wird, gilt Folgendes: Die Rechtsgrundlage für die Einholung von Einwilligungen ist Art. 6 Abs. 1 lit. a und Art. 7 DSGVO, die Rechtsgrundlage für die Verarbeitung zur Erfüllung unserer Leistungen und Durchführung vertraglicher Maßnahmen sowie Beantwortung von Anfragen ist Art. 6 Abs. 1 lit. b DSGVO, die Rechtsgrundlage für die Verarbeitung zur Erfüllung unserer rechtlichen Verpflichtungen ist Art. 6 Abs. 1 lit. c DSGVO, und die Rechtsgrundlage für die Verarbeitung zur Wahrung unserer berechtigten Interessen ist Art. 6 Abs. 1 lit. f DSGVO. Für den Fall, dass lebenswichtige Interessen der betroffenen Person oder einer anderen natürlichen Person eine Verarbeitung personenbezogener Daten erforderlich machen, dient Art. 6 Abs. 1 lit. d DSGVO als Rechtsgrundlage.
+Inhaltlich Verantwortlicher gemäß § 18 Abs. 2 MStV: Netzwerk Solidarische Landwirtschaft e.V.
 
-## Sicherheitsmaßnahmen
+Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z.B. Namen, E-Mail-Adressen o. Ä.) entscheidet.
 
-Wir treffen nach Maßgabe des Art. 32 DSGVO unter Berücksichtigung des Stands der Technik, der Implementierungskosten und der Art, des Umfangs, der Umstände und der Zwecke der Verarbeitung sowie der unterschiedlichen Eintrittswahrscheinlichkeit und Schwere des Risikos für die Rechte und Freiheiten natürlicher Personen, geeignete technische und organisatorische Maßnahmen, um ein dem Risiko angemessenes Schutzniveau zu gewährleisten.
+### Recht auf Auskunft, Sperrung, Löschung
 
-Zu den Maßnahmen gehören insbesondere die Sicherung der Vertraulichkeit, Integrität und Verfügbarkeit von Daten durch Kontrolle des physischen Zugangs zu den Daten, als auch des sie betreffenden Zugriffs, der Eingabe, Weitergabe, der Sicherung der Verfügbarkeit und ihrer Trennung. Des Weiteren haben wir Verfahren eingerichtet, die eine Wahrnehmung von Betroffenenrechten, Löschung von Daten und Reaktion auf Gefährdung der Daten gewährleisten. Ferner berücksichtigen wir den Schutz personenbezogener Daten bereits bei der Entwicklung, bzw. Auswahl von Software und Verfahren, entsprechend dem Prinzip des Datenschutzes durch Technikgestaltung und durch datenschutzfreundliche Voreinstellungen (Art. 25 DSGVO).
+Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen jederzeit das Recht auf unentgeltliche Auskunft über Ihre gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger und den Zweck der Datenverarbeitung und ggf. ein Recht auf Berichtigung, Sperrung oder Löschung dieser Daten. Hierzu sowie zu weiteren Fragen zum Thema personenbezogene Daten können Sie sich jederzeit unter der im Impressum angegebenen Adresse an uns wenden.
+Recht auf Datenübertragbarkeit
 
-## Zusammenarbeit mit Auftragsverarbeitern und Dritten
+Sie haben das Recht, Daten, die wir auf Grundlage Ihrer Einwilligung oder in Erfüllung eines Vertrags automatisiert verarbeiten, an sich oder an einen Dritten in einem gängigen, maschinenlesbaren Format aushändigen zu lassen. Sofern Sie die direkte Übertragung der Daten an einen anderen Verantwortlichen verlangen, erfolgt dies nur, soweit es technisch machbar ist.
+Widerrufsrecht
 
-Sofern wir im Rahmen unserer Verarbeitung Daten gegenüber anderen Personen und Unternehmen (Auftragsverarbeitern oder Dritten) offenbaren, sie an diese übermitteln oder ihnen sonst Zugriff auf die Daten gewähren, erfolgt dies nur auf Grundlage einer gesetzlichen Erlaubnis (z.B. wenn eine Übermittlung der Daten an Dritte, wie an Zahlungsdienstleister, gem. Art. 6 Abs. 1 lit. b DSGVO zur Vertragserfüllung erforderlich ist), Du eingewilligt hast, eine rechtliche Verpflichtung dies vorsieht oder auf Grundlage unserer berechtigten Interessen (z.B. beim Einsatz von Beauftragten, Webhostern, etc.).
+Viele Datenverarbeitungsvorgänge sind nur mit Ihrer ausdrücklichen Einwilligung möglich. Sie können eine bereits erteilte Einwilligung jederzeit widerrufen. Hierzu können Sie uns gerne kontaktieren. Die Rechtmäßigkeit der bis zum Widerruf erfolgten Datenverarbeitung bleibt vom Widerruf unberührt. Die Rechtmäßigkeit der bereits erfolgten Datenverarbeitungsvorgänge bleibt vom Widerruf unberührt.
+Beschwerderecht bei der zuständigen Aufsichtsbehörde
 
-Sofern wir Dritte mit der Verarbeitung von Daten auf Grundlage eines sog. „Auftragsverarbeitungsvertrages“ beauftragen, geschieht dies auf Grundlage des Art. 28 DSGVO.
+Im Falle datenschutzrechtlicher Verstöße steht dem Betroffenen ein Beschwerderecht bei der zuständigen Aufsichtsbehörde zu. Zuständige Aufsichtsbehörde in datenschutzrechtlichen Fragen ist der Landesdatenschutzbeauftragte des Bundeslandes, in dem unser Unternehmen seinen Sitz hat. Eine Liste der Datenschutzbeauftragten sowie deren Kontaktdaten können folgendem Link entnommen werden: https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html.
 
-## Übermittlungen in Drittländer
+---
 
-Sofern wir Daten in einem Drittland (d.h. außerhalb der Europäischen Union (EU) oder des Europäischen Wirtschaftsraums (EWR)) verarbeiten oder dies im Rahmen der Inanspruchnahme von Diensten Dritter oder Offenlegung, bzw. Übermittlung von Daten an Dritte geschieht, erfolgt dies nur, wenn es zur Erfüllung unserer (vor)vertraglichen Pflichten, auf Grundlage Ihrer Einwilligung, aufgrund einer rechtlichen Verpflichtung oder auf Grundlage unserer berechtigten Interessen geschieht. Vorbehaltlich gesetzlicher oder vertraglicher Erlaubnisse, verarbeiten oder lassen wir die Daten in einem Drittland nur beim Vorliegen der besonderen Voraussetzungen der Art. 44 ff. DSGVO verarbeiten. D.h. die Verarbeitung erfolgt z.B. auf Grundlage besonderer Garantien, wie der offiziell anerkannten Feststellung eines der EU entsprechenden Datenschutzniveaus (z.B. für die USA durch das „Privacy Shield“) oder Beachtung offiziell anerkannter spezieller vertraglicher Verpflichtungen (so genannte „Standardvertragsklauseln“).
+## Technische Informationen
 
-## Rechte der betroffenen Personen
+_Erstellt mit [Datenschutz-Generator.de](https://datenschutz-generator.de) von RA Dr. Thomas Schwenke (vom Website-Betreiber angepasst)._
 
-Du hast das Recht, eine Bestätigung darüber zu verlangen, ob betreffende Daten verarbeitet werden und auf Auskunft über diese Daten sowie auf weitere Informationen und Kopie der Daten entsprechend Art. 15 DSGVO.
-
-Du hast entsprechend. Art. 16 DSGVO das Recht, die Vervollständigung der Dich betreffenden Daten oder die Berichtigung der Dich betreffenden unrichtigen Daten zu verlangen.
-
-Du hast nach Maßgabe des Art. 17 DSGVO das Recht zu verlangen, dass betreffende Daten unverzüglich gelöscht werden, bzw. alternativ nach Maßgabe des Art. 18 DSGVO eine Einschränkung der Verarbeitung der Daten zu verlangen.
-
-Du hast das Recht zu verlangen, dass die Dich betreffenden Daten, die Du uns bereitgestellt hast nach Maßgabe des Art. 20 DSGVO zu erhalten und deren Übermittlung an andere Verantwortliche zu fordern.
-
-Du hast ferner gem. Art. 77 DSGVO das Recht, eine Beschwerde bei der zuständigen Aufsichtsbehörde einzureichen.
-
-### Widerrufsrecht
-
-Du hast das Recht, erteilte Einwilligungen gem. Art. 7 Abs. 3 DSGVO mit Wirkung für die Zukunft zu widerrufen
-
-### Widerspruchsrecht
-
-Du kannst der künftigen Verarbeitung der Dich betreffenden Daten nach Maßgabe des Art. 21 DSGVO jederzeit widersprechen. Der Widerspruch kann insbesondere gegen die Verarbeitung für Zwecke der Direktwerbung erfolgen.
-
-### Löschung von Daten
-
-Die von uns verarbeiteten Daten werden nach Maßgabe der Art. 17 und 18 DSGVO gelöscht oder in ihrer Verarbeitung eingeschränkt. Sofern nicht im Rahmen dieser Datenschutzerklärung ausdrücklich angegeben, werden die bei uns gespeicherten Daten gelöscht, sobald sie für ihre Zweckbestimmung nicht mehr erforderlich sind und der Löschung keine gesetzlichen Aufbewahrungspflichten entgegenstehen. Sofern die Daten nicht gelöscht werden, weil sie für andere und gesetzlich zulässige Zwecke erforderlich sind, wird deren Verarbeitung eingeschränkt. D.h. die Daten werden gesperrt und nicht für andere Zwecke verarbeitet. Das gilt z.B. für Daten, die aus handels- oder steuerrechtlichen Gründen aufbewahrt werden müssen.
-
-Nach gesetzlichen Vorgaben in Deutschland, erfolgt die Aufbewahrung insbesondere für 10 Jahre gemäß §§ 147 Abs. 1 AO, 257 Abs. 1 Nr. 1 und 4, Abs. 4 HGB (Bücher, Aufzeichnungen, Lageberichte, Buchungsbelege, Handelsbücher, für Besteuerung relevanter Unterlagen, etc.) und 6 Jahre gemäß § 257 Abs. 1 Nr. 2 und 3, Abs. 4 HGB (Handelsbriefe).
-
-## Registrierfunktion
+### Registrierfunktion
 
 Nutzer\*innen können ein Nutzerkonto anlegen. Im Rahmen der Registrierung werden die erforderlichen Pflichtangaben den Nutzer\*innen mitgeteilt und auf Grundlage des Art. 6 Abs. 1 lit. b DSGVO zu Zwecken der Bereitstellung des Nutzerkontos verarbeitet. Zu den verarbeiteten Daten gehören insbesondere die Login-Informationen (Name, Passwort sowie eine E-Mailadresse). Die im Rahmen der Registrierung eingegebenen Daten werden für die Zwecke der Nutzung des Nutzerkontos und dessen Zwecks verwendet.
 
 Die Nutzer\*innen können über Informationen, die für deren Nutzerkonto relevant sind, wie z.B. technische Änderungen, per E-Mail informiert werden. Über diese E-Mail-Adresse können Nutzer\*innen außerdem Nachrichten von Besucher\*innen von ernte-teilen.org erhalten. Dabei kommt ein Kontaktformular zum Einsatz. Die E-Mail-Adressen der Nutzer\*innen werden nicht veröffentlicht oder weitergegeben.
 
-Um ihr Nutzerkonto zu kündigen, kontaktieren Nutzer\*innen info@ernte-teilen.org mit der Bitte um Kündigung des Nutzerkontos. Wir bearbeiten dann schnellstmöglich die Kündigung. Wenn Nutzer\*innen ihr Nutzerkonto gekündigt haben, werden deren Daten im Hinblick auf das Nutzerkonto, gelöscht. Es obliegt den Nutzer\*innen, ihre Daten bei erfolgter Kündigung vor dem Vertragsende zu sichern. Wir sind berechtigt, sämtliche während der Vertragsdauer gespeicherten Daten des Nutzer\*innens unwiederbringlich zu löschen.
+Um ihr Nutzerkonto zu kündigen, kontaktieren Nutzer\*innen info(at)ernte-teilen.org mit der Bitte um Kündigung des Nutzerkontos. Wir bearbeiten dann schnellstmöglich die Kündigung. Wenn Nutzer\*innen ihr Nutzerkonto gekündigt haben, werden deren Daten im Hinblick auf das Nutzerkonto, gelöscht. Es obliegt den Nutzer\*innen, ihre Daten bei erfolgter Kündigung vor dem Vertragsende zu sichern. Wir sind berechtigt, sämtliche während der Vertragsdauer gespeicherten Daten des Nutzer\*innens unwiederbringlich zu löschen.
 
 ### Cookies
 
 Als „Cookies“ werden kleine Dateien bezeichnet, die auf Rechnern der Nutzer\*innen gespeichert werden. Innerhalb der Cookies können unterschiedliche Angaben gespeichert werden. Wir benutzen Cookies lediglich, um bei der Anmeldung von Nutzer\*innen deren Login-Status zu speichern.
 
-Falls Du nicht möchtest, dass Cookies auf ihrem Rechner gespeichert werden, werden sie gebeten die entsprechende Option in den Systemeinstellungen ihres Browsers zu deaktivieren. Gespeicherte Cookies können in den Systemeinstellungen des Browsers gelöscht werden. Der Ausschluss von Cookies kann zu Funktion dieses Onlineangebotes einschränken.
+Falls Du nicht möchtest, dass Cookies auf ihrem Rechner gespeichert werden, werden sie gebeten die entsprechende Option in den Systemeinstellungen deines Browsers zu deaktivieren. Gespeicherte Cookies können in den Systemeinstellungen des Browsers gelöscht werden. Die Deaktivierung von Cookies kann zu Funktion dieses Onlineangebotes einschränken.
 
-## Von Nutzer\*innen angelegte Einträge
+### Von Nutzer\*innen angelegte Einträge
 
-Die im Rahmen der Kommentare und Beiträge angegebenen Daten, werden von uns bis zum Widerspruch der Nutzer\*innen dauerhaft gespeichert. Beim Anlegen eines erklärst Du dich damit einverstanden, ihn unter einer Creative-Commons-Lizenz ([CC-BY-SA 3.0 DE](https://creativecommons.org/licenses/by-nc-sa/3.0/de/)) zu veröffentlichen. Das bedeutet, dass jeder die hier veröffentlichten Informationen weiterverwenden und wiederveröffentlichen darf, wenn er dabei die in der entsprechenden Lizenz definierten Regeln einhält.
+Die im Rahmen der Kommentare und Beiträge angegebenen Daten, werden von uns bis zum Widerspruch der Nutzer\*innen dauerhaft gespeichert. Beim Anlegen eines erklärst Du dich damit einverstanden, ihn unter einer Creative-Commons-Lizenz (CC-BY-SA 3.0 DE) zu veröffentlichen. Das bedeutet, dass jeder die hier veröffentlichten Informationen weiterverwenden und wiederveröffentlichen darf, wenn er dabei die in der entsprechenden Lizenz definierten Regeln einhält.
 
-## Hosting und E-Mail-Versand
+### Hosting und E-Mail-Versand
 
 Die von uns in Anspruch genommenen Hosting-Leistungen dienen der Zurverfügungstellung der folgenden Leistungen: Infrastruktur- und Plattformdienstleistungen, Rechenkapazität, Speicherplatz und Datenbankdienste, E-Mail-Versand, Sicherheitsleistungen sowie technische Wartungsleistungen, die wir zum Zwecke des Betriebs dieses Onlineangebotes einsetzen.
 
 Hierbei verarbeiten wir, bzw. unser Hostinganbieter Bestandsdaten, Kontaktdaten, Inhaltsdaten, Vertragsdaten, Nutzungsdaten, Meta- und Kommunikationsdaten von Kunden, Interessenten und Besuchern dieses Onlineangebotes auf Grundlage unserer berechtigten Interessen an einer effizienten und sicheren Zurverfügungstellung dieses Onlineangebotes gem. Art. 6 Abs. 1 lit. f DSGVO i.V.m. Art. 28 DSGVO (Abschluss Auftragsverarbeitungsvertrag).
-
-## Erhebung von Zugriffsdaten und Logfiles
+Erhebung von Zugriffsdaten und Logfiles
 
 Wir, bzw. unser Hostinganbieter, erhebt auf Grundlage unserer berechtigten Interessen im Sinne des Art. 6 Abs. 1 lit. f. DSGVO Daten über jeden Zugriff auf den Server, auf dem sich dieser Dienst befindet (sogenannte Serverlogfiles). Zu den Zugriffsdaten die Webadresse, Datum und Uhrzeit des Abrufs, übertragene Datenmenge, Meldung über erfolgreichen Abruf, Browsertyp nebst Version, das Betriebssystem des Nutzer\*innens, Referrer URL (die zuvor besuchte Seite), IP-Adresse und der anfragende Provider. Datenschutzkonform werden dabei die letzte Stelle der IP-Adresse entfernt, so dass zwar noch eine Providerzugehörigkeit, aber keine Personenzugehörigkeit mehr nachvollzogen werden kann.
 
 Logfile-Informationen werden aus Sicherheitsgründen für die Dauer von vier Wochen gespeichert und danach gelöscht. Daten, deren weitere Aufbewahrung zu Beweiszwecken erforderlich ist, sind bis zur endgültigen Klärung des jeweiligen Vorfalls von der Löschung ausgenommen.
 
-Erstellt mit [Datenschutz-Generator.de](https://datenschutz-generator.de) von RA Dr. Thomas Schwenke (vom Websiteinhaber angepasst).
+### Aktualität und Änderung dieser Datenschutzerklärung
 
-## Aktualität und Änderung dieser Datenschutzerklärung
+Diese Datenschutzerklärung ist aktuell gültig und hat den Stand April 2022.
 
-Diese Datenschutzerklärung ist aktuell gültig und hat den Stand Mai 2018.
-
-Durch die Weiterentwicklung unserer Website und Dienste und aufgrund geänderter gesetzlicher oder behördlicher Vorgaben kann es notwendig werden, diese Datenschutzerklärung zu ändern. Die jeweils aktuelle Datenschutzerklärung kann jederzeit auf der Website unter https://ernte-teilen.org/privacy von Ihnen abgerufen werden.
+Durch die Weiterentwicklung unserer Website und Dienste und aufgrund geänderter gesetzlicher oder behördlicher Vorgaben kann es notwendig werden, diese Datenschutzerklärung zu ändern. Die jeweils aktuelle Datenschutzerklärung kann jederzeit auf der Website unter https://ernte-teilen.org/datenschutz abgerufen werden.
