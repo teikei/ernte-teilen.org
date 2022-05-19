@@ -2,16 +2,22 @@
 title: 'Impressum'
 ---
 
-Falls du Fragen und Feedback zu Ernte teilen hast, kannst du per Email Kontakt mit uns aufnehmen: 
-<br><br>info(at)ernte-teilen.org
+**Netzwerk Solidarische Landwirtschaft e.V.**\
+Vorstand: Alina Reinartz, Lisa Haubner, Roman Best\
+c/o Stefanie Schulze Schleithoff\
+Stammheimerstr. 154\
+50735 Köln
 
+Steuernummer: 162 142 09938\
+Gemeinnütziger Verein; Registergericht Kassel: VR 4941
 
-__Ernte teilen__<br>
-c/o Simon Jockers<br>
-Ueckermünder Str. 6<br> 
-10439 Berlin<br> 
+**Inhaltlich Verantwortliche gemäß § 18 Abs. 2 MStV:**\
+Netzwerk Solidarische Landwirtschaft e.V.\
+vertreten durch Alina Reinartz, Lisa Haubner, Roman Best
 
-Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV: Simon Jockers
+**Idee, Design, Umsetzung und technische Betreuung:**\
+Christian Rijke, Simon Jockers, Maria Dolecek
 
-Telefon: +49 (0)175 - 59 25 122<br> 
-E-Mail: hello(at)simonjockers.de
+Fragen und Feedback: info(at)ernte-teilen.org
+
+Dieses Projekt ist [open source](https://github.com/teikei).

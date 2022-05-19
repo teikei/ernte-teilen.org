@@ -68,3 +68,22 @@
     border-bottom: 2px solid $white;
   }
 }
+
+.et--footer__credits {
+  color: $white;
+  font-family: $font-family-serif;
+  text-align: center;
+  line-height: 1.4;
+
+  a {
+    color: $white;
+    display: inline-block;
+  }
+
+  @media (min-width: breakpoint('md')) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}

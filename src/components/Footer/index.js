@@ -21,6 +21,12 @@ const Footer = ({ t }) => (
           {t.footer.logo_alt}
         </a>
       </div>
+      <div className="et--footer__credits">
+        {t.footer.credits.prefix}
+        <Link to={t.footer.credits.href}>
+          {t.footer.credits.text}
+        </Link>
+      </div>
     </div>
   </footer>
 )
@@ -37,6 +43,11 @@ export const query = graphql`
     footer {
       logo_alt
       nav {
+        text
+        href
+      }
+      credits {
+        prefix
         text
         href
       }

@@ -57,7 +57,8 @@
   }
 
   hr {
-    border-top: 1px solid $green;
+    border: 0;
+    border-top: 1px solid $green-light;
   }
 
   ul {

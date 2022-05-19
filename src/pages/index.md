@@ -48,12 +48,12 @@ partners:
   - title: Partner
     id: partners
     items:
-      - slug: solawi_ch
-        url: https://solawi.ch
-        name: Kooperationsstelle für solidarische Landwirtschaft
       - slug: solawi_de
         url: https://solidarische-landwirtschaft.org
         name: Netzwerk Solidarische Landwirtschaft
+      - slug: solawi_ch
+        url: https://solawi.ch
+        name: Kooperationsstelle für solidarische Landwirtschaft
   - title: Förderer
     id: funders
     items:
