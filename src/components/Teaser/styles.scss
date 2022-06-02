@@ -30,7 +30,7 @@
     height: 50px;
     bottom: -0.75rem;
     right: 0.75rem;
-    background: $piggy-light url('~/img/arrow.svg');
+    background: $piggy-light url('/img/arrow.svg');
     background-size: contain;
 
     @media (min-width: breakpoint('md')) {
@@ -43,26 +43,26 @@
 }
 
 .et--teaser--consumers {
-  background-image: url('~/img/teaser_consumers.png');
+  background-image: url('/img/teaser_consumers.png');
 
   @media (min-width: breakpoint('sm')) {
-    background-image: url('~/img/teaser_consumers_lg.png');
+    background-image: url('/img/teaser_consumers_lg.png');
   }
 }
 
 .et--teaser--farms {
-  background-image: url('~/img/teaser_farms.png');
+  background-image: url('/img/teaser_farms.png');
 
   @media (min-width: breakpoint('sm')) {
-    background-image: url('~/img/teaser_farms_lg.png');
+    background-image: url('/img/teaser_farms_lg.png');
   }
 }
 
 .et--teaser--initiatives {
-  background-image: url('~/img/teaser_initiatives.png');
+  background-image: url('/img/teaser_initiatives.png');
 
   @media (min-width: breakpoint('sm')) {
-    background-image: url('~/img/teaser_initiatives_lg.png');
+    background-image: url('/img/teaser_initiatives_lg.png');
   }
 }
 

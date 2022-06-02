@@ -9,7 +9,7 @@
   display: block;
   box-sizing: border-box;
   padding: 3rem 2rem 5rem 2rem;
-  background-image: url('~/img/quote_left.png');
+  background-image: url('/img/quote_left.png');
   background-repeat: no-repeat;
   background-size: 100% 100%;
   line-height: 1.15;
@@ -95,7 +95,7 @@
   .et--testimonial:nth-child(even) {
     .et--testimonial__quote {
       left: 55%;
-      background-image: url('~/img/quote_right.png');
+      background-image: url('/img/quote_right.png');
     }
 
     .et--testimonial__figure {

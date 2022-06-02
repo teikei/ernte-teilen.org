@@ -6,7 +6,7 @@
   align-items: center;
   color: $white;
   min-height: 65vh;
-  background: $green url('~/img/hero.png') no-repeat center 0;
+  background: $green url('/img/hero.png') no-repeat center 0;
   background-size: 350px auto;
 
   @media (min-width: breakpoint('sm')) {
