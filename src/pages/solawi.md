@@ -23,7 +23,7 @@ metaImage: '/img/social_solawi.jpg'
   ![Solawi-Mitglieder beim Unkrautjäten](/img/about-members.jpg)
   Solawi-Mitglieder bekommen frische, saisonale, und regionale Lebensmittel direkt von ihrem Hof und können ab und zu in der Landwirtschaft mithelfen. Das bedeutet Transparenz und Ernährungsbildung: Die Mitglieder lernen, wie, wo und von wem die Lebensmittel erzeugt werden.
 
-* ## Gut für die Landwirtschaft
+- ## Gut für die Landwirtschaft
 
   ![Traktor und mit Gemüse beladene Palette](/img/about-farm.jpg)
   Durch ihre Mitglieder erhalten Solawi-Betriebe Planungssicherheit und können unabhängig von Marktzwängen wirtschaften. Das ermöglicht beispielsweise den Anbau von samenfesten Sorten, die Förderung der Bodenfruchtbarkeit, eine tiergerechtere Haltung und die Verwertung von Produkten, die sonst aufgrund von Marktnormen im Müll landen würden.
@@ -33,7 +33,7 @@ metaImage: '/img/social_solawi.jpg'
   ![Solawi-Landwirt im Gewächshaus](/img/about-farmer.jpg)
   Durch die Planungssicherheit und Marktunabhängigkeit einer Solawi erhalten Landwirt\*innen ein gesichertes Einkommen und einen größeren Gestaltungsspielraum in ihrer Arbeit. Sie können wirtschaften, ohne sich selbst und die Natur auszubeuten.
 
-* ## Gut für Regionen
+- ## Gut für Regionen
 
   ![Acker bestellt mit Feldsalat](/img/about-region.jpg)
   Solawi bedeutet bäuerliche, vielfältige und von einer Gemeinschaft getragene Landwirtschaft. Das ist gut für die nachhaltige Entwicklung einer Region. Solawi sorgt für lokale Wertschöpfung, schont die Umwelt und bringt Menschen in Stadt und Land zusammen.
