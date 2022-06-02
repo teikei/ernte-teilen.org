@@ -45,8 +45,7 @@
     "sass": "^1.52.1",
     "typeface-noto-serif": "^0.0.54",
     "typeface-roboto": "^0.0.54",
-    "typeface-roboto-condensed": "^0.0.54",
-    "webpack": "^4.16.1"
+    "typeface-roboto-condensed": "^0.0.54"
   },
   "devDependencies": {
     "prettier-eslint-cli": "^4.7.1"
