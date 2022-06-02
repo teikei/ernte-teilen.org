@@ -9,6 +9,9 @@
     "serve": "gatsby serve",
     "format": "prettier-eslint \"src/**/*.js\""
   },
+  "engines": {
+    "node": "16.x"
+  },
   "dependencies": {
     "autoprefixer": "^9.0.1",
     "browserslist": "^4.0.1",
