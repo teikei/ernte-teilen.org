@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
-import Img from 'gatsby-image'
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 import './styles.scss'
 
@@ -12,9 +12,9 @@ const HeroFeatured = ({
     <div className="bx--grid">
       <div className="bx--row">
         <div className="bx--col-sm-4 bx--col-md-5">
-          <Img
+          <GatsbyImage
+            image={image.childImageSharp.gatsbyImageData}
             className="et--hero-featured__image"
-            fluid={image.childImageSharp.fluid}
             imgStyle={{ objectFit: 'contain' }}
             alt=""
           />

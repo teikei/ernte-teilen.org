@@ -21,8 +21,9 @@ module.exports = {
     },
     'gatsby-transformer-yaml',
     'gatsby-transformer-remark',
-    'gatsby-transformer-sharp',
+    'gatsby-plugin-image',
     'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     'gatsby-plugin-react-helmet',
   ],
   siteMetadata: {

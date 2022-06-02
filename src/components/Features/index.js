@@ -1,16 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import zipObject from 'lodash/zipObject'
+// import zipObject from 'lodash/zipObject'
 import { graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 import './styles.scss'
 
 const Features = ({ features, featureImages }) => {
-  const images = zipObject(
-    featureImages.edges.map(({ node }) => node.name),
-    featureImages.edges.map(({ node }) => node.childImageSharp),
-  )
+  // const images = zipObject(
+  //   featureImages.edges.map(({ node }) => node.name),
+  //   featureImages.edges.map(({ node }) => node.childImageSharp),
+  // )
 
   return (
     <section className="et--features">
@@ -19,9 +19,9 @@ const Features = ({ features, featureImages }) => {
           {features.map(({ slug, title, text }) => (
             <li className="bx--col-md-4" key={slug}>
               <div className="et--features__item">
-                <Img
+                <GatsbyImage
                   className="et--features__image"
-                  sizes={images[slug].resolutions}
+                  image={getImage(featureImages)}
                   imgStyle={{ objectFit: 'contain' }}
                   alt=""
                 />
@@ -37,7 +37,7 @@ const Features = ({ features, featureImages }) => {
         </ul>
       </div>
     </section>
-  )
+  );
 }
 
 Features.propTypes = {
@@ -69,9 +69,7 @@ export const query = graphql`
         node {
           name
           childImageSharp {
-            resolutions(width: 400) {
-              ...GatsbyImageSharpResolutions_tracedSVG
-            }
+            gatsbyImageData(width: 400)
           }
         }
       }

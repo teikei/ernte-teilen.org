@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import zipObject from 'lodash/zipObject'
 import { graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 import './styles.scss'
 
@@ -26,9 +26,9 @@ const Partners = ({ partners, partnerImages }) => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Img
+                  <GatsbyImage
+                    image={getImage(images[slug])}
                     className="et--partners__logo"
-                    fluid={images[slug].fluid}
                     imgStyle={{ objectFit: 'contain' }}
                     alt={name}
                   />
@@ -39,7 +39,7 @@ const Partners = ({ partners, partnerImages }) => {
         </div>
       ))}
     </section>
-  )
+  );
 }
 
 Partners.propTypes = {
@@ -49,34 +49,32 @@ Partners.propTypes = {
 
 export default Partners
 
-export const query = graphql`
-  fragment partners on MarkdownRemark {
-    frontmatter {
-      partners {
-        id
-        title
-        items {
-          slug
-          name
-          url
+export const query = graphql`fragment partners on MarkdownRemark {
+  frontmatter {
+    partners {
+      id
+      title
+      items {
+        slug
+        name
+        url
+      }
+    }
+  }
+}
+
+fragment partnerImages on Query {
+  partnerImages: allFile(
+    filter: {relativeDirectory: {eq: "assets/partners"}, extension: {eq: "png"}}
+  ) {
+    edges {
+      node {
+        name
+        childImageSharp {
+          gatsbyImageData(width: 400, placeholder: TRACED_SVG, layout: CONSTRAINED)
         }
       }
     }
   }
-  fragment partnerImages on Query {
-    partnerImages: allFile(
-      filter: { relativeDirectory: { eq: "assets/partners" }, extension: { eq: "png" } }
-    ) {
-      edges {
-        node {
-          name
-          childImageSharp {
-            fluid(maxWidth: 400) {
-              ...GatsbyImageSharpFluid_tracedSVG
-            }
-          }
-        }
-      }
-    }
-  }
+}
 `

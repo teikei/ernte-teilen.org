@@ -7,8 +7,8 @@ import './styles.scss'
 const Search = ({
   t,
   searchConfig: {
-    siteMetadata: { assetsBaseUrl, apiBaseUrl }
-  }
+    siteMetadata: { assetsBaseUrl, apiBaseUrl },
+  },
 }) => (
   <div href="/" className="et--search">
     <div className="et--search__form">
@@ -30,7 +30,7 @@ const Search = ({
 )
 
 Search.propTypes = {
-  t: PropTypes.shape().isRequired
+  t: PropTypes.shape().isRequired,
 }
 
 export default Search

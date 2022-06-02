@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Img from 'gatsby-image'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 import './styles.scss'
 
@@ -17,7 +17,7 @@ const Testimonial = ({
         </div>
         <div className="bx--col-md-3">
           <figure className="et--testimonial__figure">
-            <Img className="et--testimonial__figure__image" sizes={image.sizes} alt="" />
+            <GatsbyImage className="et--testimonial__figure__image" image={getImage(image)} alt="" />
             <figcaption>
               <p className="et--testimonial__name">
                 {name}

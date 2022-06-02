@@ -53,37 +53,31 @@ FeaturedTemplate.propTypes = {
 
 export default FeaturedTemplate
 
-export const query = graphql`
-  query($slug: String!, $image: String!) {
-    content: markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
-      frontmatter {
-        title
-        lead
-        link {
-          text
-          href
-        }
-        metaImage
+export const query = graphql`query ($slug: String!, $image: String!) {
+  content: markdownRemark(fields: {slug: {eq: $slug}}) {
+    html
+    frontmatter {
+      title
+      lead
+      link {
+        text
+        href
       }
-    }
-
-    image: file(relativePath: { eq: $image }) {
-      childImageSharp {
-        fluid(maxWidth: 1000) {
-          ...GatsbyImageSharpFluid_tracedSVG
-        }
-      }
-    }
-
-    searchConfig: site {
-      ...searchConfig
-    }
-
-    t: localesYaml(locale: { eq: "de" }) {
-      ...pageWrapper
-      ...search
-      ...footer
+      metaImage
     }
   }
+  image: file(relativePath: {eq: $image}) {
+    childImageSharp {
+      gatsbyImageData(placeholder: TRACED_SVG, layout: FULL_WIDTH)
+    }
+  }
+  searchConfig: site {
+    ...searchConfig
+  }
+  t: localesYaml(locale: {eq: "de"}) {
+    ...pageWrapper
+    ...search
+    ...footer
+  }
+}
 `

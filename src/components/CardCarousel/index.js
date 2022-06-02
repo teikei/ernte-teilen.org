@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Img from 'gatsby-image'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { graphql } from 'gatsby'
 import { Carousel } from 'react-responsive-carousel'
 import zipObject from 'lodash/zipObject'
@@ -43,7 +43,7 @@ class CardCarousel extends React.Component {
           {cards.map(card => (
             <div className="et--card-carousel__slide" key={card.slug}>
               <div className="et--card-carousel__image">
-                <Img sizes={images[card.slug].fluid} alt="" />
+                <GatsbyImage image={getImage(images[card.slug])} alt="" />
               </div>
             </div>
           ))}
@@ -62,7 +62,7 @@ class CardCarousel extends React.Component {
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 
@@ -73,30 +73,28 @@ CardCarousel.propTypes = {
 
 export default CardCarousel
 
-export const query = graphql`
-  fragment cards on MarkdownRemark {
-    frontmatter {
-      cards {
-        slug
-        title
-        text
-      }
+export const query = graphql`fragment cards on MarkdownRemark {
+  frontmatter {
+    cards {
+      slug
+      title
+      text
     }
   }
-  fragment cardImages on Query {
-    cardImages: allFile(
-      filter: { relativeDirectory: { eq: "assets/cards" }, extension: { eq: "jpg" } }
-    ) {
-      edges {
-        node {
-          name
-          childImageSharp {
-            fluid(maxWidth: 2000) {
-              ...GatsbyImageSharpFluid
-            }
-          }
+}
+
+fragment cardImages on Query {
+  cardImages: allFile(
+    filter: {relativeDirectory: {eq: "assets/cards"}, extension: {eq: "jpg"}}
+  ) {
+    edges {
+      node {
+        name
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH)
         }
       }
     }
   }
+}
 `
