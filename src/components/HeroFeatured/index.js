@@ -1,13 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
-import { GatsbyImage } from 'gatsby-plugin-image';
+import { GatsbyImage } from 'gatsby-plugin-image'
 
 import './styles.scss'
 
-const HeroFeatured = ({
-  title, lead, link, image,
-}) => (
+const HeroFeatured = ({ title, lead, link, image }) => (
   <section className="et--hero-featured">
     <div className="bx--grid">
       <div className="bx--row">
@@ -21,12 +19,8 @@ const HeroFeatured = ({
         </div>
         <div className="bx--col-sm-8 bx--col-md-7">
           <div className=" et--hero-featured__content">
-            <h1 className="et--hero-featured__title">
-              {title}
-            </h1>
-            <p className="et--hero-featured__lead">
-              {lead}
-            </p>
+            <h1 className="et--hero-featured__title">{title}</h1>
+            <p className="et--hero-featured__lead">{lead}</p>
             <Link className="et--hero-featured__link" to={link.href}>
               {link.text}
             </Link>

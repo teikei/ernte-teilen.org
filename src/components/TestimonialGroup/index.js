@@ -9,14 +9,12 @@ import './styles.scss'
 const TestimonialGroup = ({ testimonials, testimonialImages }) => {
   const images = zipObject(
     testimonialImages.map(({ node }) => node.name),
-    testimonialImages.map(({ node }) => node.childImageSharp),
+    testimonialImages.map(({ node }) => node.childImageSharp)
   )
 
   return (
     <div className="et--testimonial-group">
-      {testimonials.map(({
-        slug, title, text, quote, name, description,
-      }) => (
+      {testimonials.map(({ slug, title, text, quote, name, description }) => (
         <Testimonal
           key={slug}
           title={title}
@@ -53,7 +51,10 @@ export const query = graphql`
   }
   fragment testimonialImages on Query {
     testimonialImages: allFile(
-      filter: { relativeDirectory: { eq: "assets/testimonials" }, extension: { eq: "jpg" } }
+      filter: {
+        relativeDirectory: { eq: "assets/testimonials" }
+        extension: { eq: "jpg" }
+      }
     ) {
       edges {
         node {

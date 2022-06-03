@@ -18,15 +18,18 @@ const AboutTemplate = ({
     searchConfig,
     featureImages,
     content: {
-      frontmatter: {
-        title, lead, link, features, metaImage,
-      },
+      frontmatter: { title, lead, link, features, metaImage },
       html,
     },
   },
 }) => (
   <PageWrapper t={t}>
-    <PageMeta pathname={location.pathname} title={title} description={lead} image={metaImage} />
+    <PageMeta
+      pathname={location.pathname}
+      title={title}
+      description={lead}
+      image={metaImage}
+    />
     <Hero title={title} lead={lead} link={link} />
     <Features features={features} featureImages={featureImages} />
     <main className="et--markdown et--markdown--listing et--markdown--listing--wide">
@@ -56,7 +59,7 @@ AboutTemplate.propTypes = {
 export default AboutTemplate
 
 export const query = graphql`
-  query($slug: String!) {
+  query ($slug: String!) {
     content: markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {

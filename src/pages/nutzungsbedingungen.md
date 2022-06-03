@@ -14,7 +14,7 @@ Mehr über die Speicherung und Nutzung deiner persönlichen Daten kannst du in u
 
 ## 2. Kontaktaufnahme per E-Mail
 
-Wenn du Betriebe oder Initiativen auf ernte-teilen.org einträgst, werden diese zusammen mit einem Kontaktformular veröffentlicht. Nachrichten, die über dieses Formular versendet werden, leiten wir per E-Mail an dich weiter. Optional kannst du zusätzlich eine Telefonnummer angeben, um es noch einfacher zu machen, dich zu kontaktieren. 
+Wenn du Betriebe oder Initiativen auf ernte-teilen.org einträgst, werden diese zusammen mit einem Kontaktformular veröffentlicht. Nachrichten, die über dieses Formular versendet werden, leiten wir per E-Mail an dich weiter. Optional kannst du zusätzlich eine Telefonnummer angeben, um es noch einfacher zu machen, dich zu kontaktieren.
 
 ## 3. Veröffentlichung von Inhalten
 
@@ -107,4 +107,4 @@ Auf die vertraglichen Beziehungen zwischen dem Anbieter und dem Nutzer findet da
 
 ---
 
-*Quelle:* [http://www.kluge-recht.de/muster-nutzungsbedingungen-forum.php](http://www.kluge-recht.de/muster-nutzungsbedingungen-forum.php) (Nutzungsbedingungen Forum)
+_Quelle:_ [http://www.kluge-recht.de/muster-nutzungsbedingungen-forum.php](http://www.kluge-recht.de/muster-nutzungsbedingungen-forum.php) (Nutzungsbedingungen Forum)

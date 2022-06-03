@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { graphql } from 'gatsby'
 import { Carousel } from 'react-responsive-carousel'
 import zipObject from 'lodash/zipObject'
@@ -15,7 +15,7 @@ class CardCarousel extends React.Component {
       index: 0,
       images: zipObject(
         props.cardImages.map(({ node }) => node.name),
-        props.cardImages.map(({ node }) => node.childImageSharp),
+        props.cardImages.map(({ node }) => node.childImageSharp)
       ),
     }
   }
@@ -38,9 +38,9 @@ class CardCarousel extends React.Component {
           showStatus={false}
           showThumbs={false}
           interval={10000}
-          onChange={this.onChange}
+          handleOnChange={this.onChange}
         >
-          {cards.map(card => (
+          {cards.map((card) => (
             <div className="et--card-carousel__slide" key={card.slug}>
               <div className="et--card-carousel__image">
                 <GatsbyImage image={getImage(images[card.slug])} alt="" />
@@ -62,7 +62,7 @@ class CardCarousel extends React.Component {
           </div>
         </div>
       </div>
-    );
+    )
   }
 }
 
@@ -73,28 +73,32 @@ CardCarousel.propTypes = {
 
 export default CardCarousel
 
-export const query = graphql`fragment cards on MarkdownRemark {
-  frontmatter {
-    cards {
-      slug
-      title
-      text
+export const query = graphql`
+  fragment cards on MarkdownRemark {
+    frontmatter {
+      cards {
+        slug
+        title
+        text
+      }
     }
   }
-}
 
-fragment cardImages on Query {
-  cardImages: allFile(
-    filter: {relativeDirectory: {eq: "assets/cards"}, extension: {eq: "jpg"}}
-  ) {
-    edges {
-      node {
-        name
-        childImageSharp {
-          gatsbyImageData(layout: FULL_WIDTH)
+  fragment cardImages on Query {
+    cardImages: allFile(
+      filter: {
+        relativeDirectory: { eq: "assets/cards" }
+        extension: { eq: "jpg" }
+      }
+    ) {
+      edges {
+        node {
+          name
+          childImageSharp {
+            gatsbyImageData(layout: FULL_WIDTH)
+          }
         }
       }
     }
   }
-}
 `

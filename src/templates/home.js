@@ -55,7 +55,7 @@ IndexTemplate.propTypes = {
 export default IndexTemplate
 
 export const query = graphql`
-  query($slug: String!) {
+  query ($slug: String!) {
     content: markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       ...teasers

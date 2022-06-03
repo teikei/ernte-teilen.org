@@ -50,7 +50,10 @@ PageWrapper.defaultProps = {
 
 PageWrapper.propTypes = {
   t: PropTypes.shape().isRequired,
-  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]).isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]).isRequired,
   fixedHeader: PropTypes.bool,
 }
 

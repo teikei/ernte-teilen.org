@@ -3,9 +3,7 @@ import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 
-const PageMeta = ({
-  title, description, pathname, image,
-}) => (
+const PageMeta = ({ title, description, pathname, image }) => (
   <StaticQuery
     query={graphql`
       query {
@@ -24,7 +22,9 @@ const PageMeta = ({
       const pageTitle = title || siteMetadata.title
       const pageDescription = description || siteMetadata.description
       const pageUrl = `${siteMetadata.siteUrl}${pathname}`
-      const pageImage = `${siteMetadata.siteUrl}${image || siteMetadata.defaultImage}`
+      const pageImage = `${siteMetadata.siteUrl}${
+        image || siteMetadata.defaultImage
+      }`
 
       const schemaOrgJSONLD = [
         {
@@ -37,14 +37,18 @@ const PageMeta = ({
 
       return (
         <Helmet>
-          <title>{title ? `${title} | ${siteMetadata.title}` : pageTitle}</title>
+          <title>
+            {title ? `${title} | ${siteMetadata.title}` : pageTitle}
+          </title>
 
           {/* General tags */}
           <meta name="description" content={pageDescription} />
           <meta name="image" content={pageImage} />
 
           {/* Schema.org tags */}
-          <script type="application/ld+json">{JSON.stringify(schemaOrgJSONLD)}</script>
+          <script type="application/ld+json">
+            {JSON.stringify(schemaOrgJSONLD)}
+          </script>
 
           {/* OpenGraph tags */}
           <meta property="og:url" content={pageUrl} />

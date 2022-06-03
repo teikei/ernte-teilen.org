@@ -6,7 +6,11 @@ import { slide as Menu } from 'react-burger-menu'
 import './styles.scss'
 
 const OffCanvasMenu = ({
-  t, isOpen, closeMenu, pageWrapId, outerContainerId,
+  t,
+  isOpen,
+  closeMenu,
+  pageWrapId,
+  outerContainerId,
 }) => (
   <Menu
     className="et--off-canvas-menu"
@@ -16,13 +20,21 @@ const OffCanvasMenu = ({
     right
     isOpen={isOpen}
   >
-    <button className="et--off-canvas-menu__close" type="button" onClick={closeMenu}>
+    <button
+      className="et--off-canvas-menu__close"
+      type="button"
+      onClick={closeMenu}
+    >
       {t.offCanvasMenu.close}
     </button>
     <ul className="et--off-canvas-menu__nav">
       {t.offCanvasMenu.nav.map(({ text, href }) => (
         <li className="et--off-canvas-menu__item" key={href}>
-          <Link className="et--off-canvas-menu__link" to={href} onClick={closeMenu}>
+          <Link
+            className="et--off-canvas-menu__link"
+            to={href}
+            onClick={closeMenu}
+          >
             {text}
           </Link>
         </li>

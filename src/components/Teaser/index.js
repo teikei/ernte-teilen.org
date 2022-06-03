@@ -3,16 +3,10 @@ import PropTypes from 'prop-types'
 import './styles.scss'
 import { Link } from 'gatsby'
 
-const Teaser = ({
-  title, text, slug, href,
-}) => (
+const Teaser = ({ title, text, slug, href }) => (
   <Link to={href} className={`et--teaser et--teaser--${slug}`}>
-    <h3 className="et--teaser__title">
-      {title}
-    </h3>
-    <p className="et--teaser__text">
-      {text}
-    </p>
+    <h3 className="et--teaser__title">{title}</h3>
+    <p className="et--teaser__text">{text}</p>
   </Link>
 )
 

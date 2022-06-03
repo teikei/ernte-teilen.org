@@ -12,7 +12,6 @@ const Search = ({
 }) => (
   <div href="/" className="et--search">
     <div className="et--search__form">
-      {/* eslint-disable-next-line jsx-a11y/label-has-for */}
       <label className="et--search__label">
         {t.search.label}
         <div

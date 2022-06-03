@@ -23,9 +23,7 @@ const Footer = ({ t }) => (
       </div>
       <div className="et--footer__credits">
         {t.footer.credits.prefix}
-        <Link to={t.footer.credits.href}>
-          {t.footer.credits.text}
-        </Link>
+        <Link to={t.footer.credits.href}>{t.footer.credits.text}</Link>
       </div>
     </div>
   </footer>

@@ -17,15 +17,18 @@ const FeaturedTemplate = ({
     searchConfig,
     image,
     content: {
-      frontmatter: {
-        title, lead, link, metaImage,
-      },
+      frontmatter: { title, lead, link, metaImage },
       html,
     },
   },
 }) => (
   <PageWrapper t={t}>
-    <PageMeta pathname={location.pathname} title={title} description={lead} image={metaImage} />
+    <PageMeta
+      pathname={location.pathname}
+      title={title}
+      description={lead}
+      image={metaImage}
+    />
     <HeroFeatured image={image} title={title} lead={lead} link={link} />
     <main className="et--markdown et--markdown--listing">
       <div className="bx--grid">
@@ -53,31 +56,32 @@ FeaturedTemplate.propTypes = {
 
 export default FeaturedTemplate
 
-export const query = graphql`query ($slug: String!, $image: String!) {
-  content: markdownRemark(fields: {slug: {eq: $slug}}) {
-    html
-    frontmatter {
-      title
-      lead
-      link {
-        text
-        href
+export const query = graphql`
+  query ($slug: String!, $image: String!) {
+    content: markdownRemark(fields: { slug: { eq: $slug } }) {
+      html
+      frontmatter {
+        title
+        lead
+        link {
+          text
+          href
+        }
+        metaImage
       }
-      metaImage
+    }
+    image: file(relativePath: { eq: $image }) {
+      childImageSharp {
+        gatsbyImageData(placeholder: TRACED_SVG, layout: FULL_WIDTH)
+      }
+    }
+    searchConfig: site {
+      ...searchConfig
+    }
+    t: localesYaml(locale: { eq: "de" }) {
+      ...pageWrapper
+      ...search
+      ...footer
     }
   }
-  image: file(relativePath: {eq: $image}) {
-    childImageSharp {
-      gatsbyImageData(placeholder: TRACED_SVG, layout: FULL_WIDTH)
-    }
-  }
-  searchConfig: site {
-    ...searchConfig
-  }
-  t: localesYaml(locale: {eq: "de"}) {
-    ...pageWrapper
-    ...search
-    ...footer
-  }
-}
 `

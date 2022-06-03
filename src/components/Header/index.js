@@ -6,7 +6,9 @@ import { graphql, Link } from 'gatsby'
 import './styles.scss'
 
 const Header = ({ openMenu, fixed, t }) => (
-  <header className={classNames({ 'et--header': true, 'et--header--fixed': fixed })}>
+  <header
+    className={classNames({ 'et--header': true, 'et--header--fixed': fixed })}
+  >
     <div className="bx--grid">
       <div className="et--header__container bx--row">
         <Link className="et--header__logo" to="/">

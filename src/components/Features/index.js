@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 // import zipObject from 'lodash/zipObject'
 import { graphql } from 'gatsby'
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 import './styles.scss'
 
@@ -25,19 +25,15 @@ const Features = ({ features, featureImages }) => {
                   imgStyle={{ objectFit: 'contain' }}
                   alt=""
                 />
-                <h3 className="et--features__title">
-                  {title}
-                </h3>
-                <p className="et--features__text">
-                  {text}
-                </p>
+                <h3 className="et--features__title">{title}</h3>
+                <p className="et--features__text">{text}</p>
               </div>
             </li>
           ))}
         </ul>
       </div>
     </section>
-  );
+  )
 }
 
 Features.propTypes = {
@@ -63,7 +59,10 @@ export const query = graphql`
   }
   fragment featureImages on Query {
     featureImages: allFile(
-      filter: { relativeDirectory: { eq: "assets/features" }, extension: { eq: "png" } }
+      filter: {
+        relativeDirectory: { eq: "assets/features" }
+        extension: { eq: "png" }
+      }
     ) {
       edges {
         node {

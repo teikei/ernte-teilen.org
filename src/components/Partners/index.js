@@ -2,14 +2,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import zipObject from 'lodash/zipObject'
 import { graphql } from 'gatsby'
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 import './styles.scss'
 
 const Partners = ({ partners, partnerImages }) => {
   const images = zipObject(
     partnerImages.edges.map(({ node }) => node.name),
-    partnerImages.edges.map(({ node }) => node.childImageSharp),
+    partnerImages.edges.map(({ node }) => node.childImageSharp)
   )
 
   return (
@@ -39,7 +39,7 @@ const Partners = ({ partners, partnerImages }) => {
         </div>
       ))}
     </section>
-  );
+  )
 }
 
 Partners.propTypes = {
@@ -49,32 +49,40 @@ Partners.propTypes = {
 
 export default Partners
 
-export const query = graphql`fragment partners on MarkdownRemark {
-  frontmatter {
-    partners {
-      id
-      title
-      items {
-        slug
-        name
-        url
-      }
-    }
-  }
-}
-
-fragment partnerImages on Query {
-  partnerImages: allFile(
-    filter: {relativeDirectory: {eq: "assets/partners"}, extension: {eq: "png"}}
-  ) {
-    edges {
-      node {
-        name
-        childImageSharp {
-          gatsbyImageData(width: 400, placeholder: TRACED_SVG, layout: CONSTRAINED)
+export const query = graphql`
+  fragment partners on MarkdownRemark {
+    frontmatter {
+      partners {
+        id
+        title
+        items {
+          slug
+          name
+          url
         }
       }
     }
   }
-}
+
+  fragment partnerImages on Query {
+    partnerImages: allFile(
+      filter: {
+        relativeDirectory: { eq: "assets/partners" }
+        extension: { eq: "png" }
+      }
+    ) {
+      edges {
+        node {
+          name
+          childImageSharp {
+            gatsbyImageData(
+              width: 400
+              placeholder: TRACED_SVG
+              layout: CONSTRAINED
+            )
+          }
+        }
+      }
+    }
+  }
 `
