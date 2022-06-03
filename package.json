@@ -10,6 +10,7 @@
     "lint": "npx eslint src/**/*.js --fix",
     "pretty-quick": "npx pretty-quick --staged",
     "prettier": "npx prettier 'src/**/*.js' --write",
+    "test": "echo no tests",
     "postinstall": "husky install"
   },
   "engines": {

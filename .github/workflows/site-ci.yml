@@ -4,8 +4,6 @@ on:
   push:
     branches-ignore:
       - dependabot/*
-    paths:
-      - 'admin/**'
   workflow_dispatch:
 jobs:
   test:
@@ -25,11 +23,8 @@ jobs:
         working-directory: ./
         run: npm test
       #     - name: Run Web Tests
-      #       working-directory: ./admin
+      #       working-directory: ./
       #       run: yarn cypress:run
-      #     - name: Deploy
-      #       working-directory: ./admin
-      #       run: - tbd -
       - name: Notify slack success
         if: success()
         env:
@@ -80,7 +75,7 @@ jobs:
           branch: master
           ci_branch_name: preview
           ssh_private_key: ${{ secrets.DOKKU_SSH_KEY }}
-          git_remote_url: ssh://dokku@${{ secrets.DOKKU_HOST }}:22/teikei-admin-preview
+          git_remote_url: ssh://dokku@${{ secrets.DOKKU_HOST }}:22/teikei-site-preview
       - name: Notify slack success
         if: success()
         env:
@@ -122,7 +117,7 @@ jobs:
           status: STARTED
           color: good
       - name: Install dependencies
-        working-directory: ./admin
+        working-directory: ./
         run: npm install
       - name: Deploy Production
         uses: dokku/github-action@v1.0.1
@@ -130,7 +125,7 @@ jobs:
           branch: master
           ci_branch_name: master
           ssh_private_key: ${{ secrets.DOKKU_SSH_KEY }}
-          git_remote_url: ssh://dokku@${{ secrets.DOKKU_HOST }}:22/teikei-admin
+          git_remote_url: ssh://dokku@${{ secrets.DOKKU_HOST }}:22/teikei-site
       - name: Notify slack success
         if: success()
         env:
