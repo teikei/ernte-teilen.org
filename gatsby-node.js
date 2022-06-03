@@ -1,7 +1,7 @@
 const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
 
-const getTemplate = slug => path.resolve(`./src/templates/${slug}.js`)
+const getTemplate = (slug) => path.resolve(`./src/templates/${slug}.js`)
 
 exports.onCreateWebpackConfig = ({ stage, actions }) => {
   if (stage === 'develop') {
