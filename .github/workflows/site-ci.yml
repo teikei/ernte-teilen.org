@@ -2,8 +2,9 @@ name: Ernte Teilen Site CI
 concurrency: ci-${{ github.ref }}
 on:
   push:
-    branches-ignore:
-      - dependabot/*
+    branches:
+      - '*'
+      - '!dependabot/**'
   workflow_dispatch:
 jobs:
   test:
