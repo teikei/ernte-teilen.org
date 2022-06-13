@@ -4,7 +4,7 @@
 @import 'teikei-legacy';
 @import 'teikei-embed';
 
-@import '~carbon-components/scss/globals/grid/grid';
+@import 'node_modules/carbon-components/scss/globals/grid/grid';
 
 body {
   background: $green;
