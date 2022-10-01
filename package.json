@@ -23,7 +23,7 @@
     "carbon-components-react": "^6.38.1",
     "carbon-icons": "^7.0.7",
     "classnames": "^2.2.6",
-    "dotenv": "^6.0.0",
+    "dotenv": "^16.0.3",
     "gatsby": "^4.15.2",
     "gatsby-image": "^2.0.13",
     "gatsby-plugin-image": "^2.15.1",
