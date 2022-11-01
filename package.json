@@ -17,7 +17,7 @@
     "node": "16.x"
   },
   "dependencies": {
-    "autoprefixer": "^9.0.1",
+    "autoprefixer": "^10.4.13",
     "browserslist": "^4.0.1",
     "carbon-components": "^9.26.0",
     "carbon-components-react": "^6.38.1",
