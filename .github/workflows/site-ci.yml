@@ -6,12 +6,11 @@ on:
       - '*'
       - '!dependabot/**'
   workflow_dispatch:
+env:
+  HUSKY: 0
 jobs:
   test:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        shell: bash
     steps:
       - uses: actions/checkout@v2.3.4
       - uses: actions/setup-node@v2.1.5
