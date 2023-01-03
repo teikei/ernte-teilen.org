@@ -9,7 +9,7 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    default:
+    defaults:
       run:
         shell: bash
     steps:
