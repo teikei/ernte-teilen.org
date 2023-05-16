@@ -3,7 +3,7 @@ title: 'Impressum'
 ---
 
 **Netzwerk Solidarische Landwirtschaft e.V.**\
-Vorstand: Alina Reinartz, Lisa Haubner, Roman Best\
+Vorstand: Alina Reinartz, Jochen Dindorf, Simone Ott, Tobias Hartkemeyer, Annalena Stuhlmann\
 c/o Stefanie Schulze Schleithoff\
 Stammheimerstr. 154\
 50735 Köln
