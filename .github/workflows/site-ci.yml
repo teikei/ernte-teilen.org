@@ -18,7 +18,7 @@ jobs:
           node-version: '18'
       - name: Install dependencies
         working-directory: ./
-        run: npm ci --legacy-peers-deps
+        run: npm ci --legacy-peer-deps
       - name: Code linting
         working-directory: ./
         run: npm run lint
@@ -70,7 +70,7 @@ jobs:
           color: good
       - name: Install dependencies
         working-directory: ./
-        run: npm ci --legacy-peers-deps
+        run: npm ci --legacy-peer-deps
       - name: Deploy Preview
         uses: dokku/github-action@v1.0.1
         with:
@@ -121,7 +121,7 @@ jobs:
           color: good
       - name: Install dependencies
         working-directory: ./
-        run: npm ci --legacy-peers-deps
+        run: npm ci --legacy-peer-deps
       - name: Deploy Production
         uses: dokku/github-action@v1.0.1
         with:
