@@ -12,13 +12,13 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2.3.4
-      - uses: actions/setup-node@v2.1.5
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
-          node-version: '16'
+          node-version: '18'
       - name: Install dependencies
         working-directory: ./
-        run: npm ci
+        run: npm ci --legacy-peers-deps
       - name: Code linting
         working-directory: ./
         run: npm run lint
@@ -53,12 +53,12 @@ jobs:
     needs: test
     if: github.ref == 'refs/heads/preview'
     steps:
-      - uses: actions/checkout@v2.3.4
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - uses: actions/setup-node@v2.1.5
+      - uses: actions/setup-node@v3
         with:
-          node-version: '14'
+          node-version: '18'
       - name: Notify slack started
         env:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_NOTIFICATIONS_BOT_TOKEN }}
@@ -70,7 +70,7 @@ jobs:
           color: good
       - name: Install dependencies
         working-directory: ./
-        run: npm ci
+        run: npm ci --legacy-peers-deps
       - name: Deploy Preview
         uses: dokku/github-action@v1.0.1
         with:
@@ -104,12 +104,12 @@ jobs:
     needs: test
     if: github.ref == 'refs/heads/master'
     steps:
-      - uses: actions/checkout@v2.3.4
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - uses: actions/setup-node@v2.1.5
+      - uses: actions/setup-node@v3
         with:
-          node-version: '14'
+          node-version: '18'
       - name: Notify slack started
         env:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_NOTIFICATIONS_BOT_TOKEN }}
@@ -121,7 +121,7 @@ jobs:
           color: good
       - name: Install dependencies
         working-directory: ./
-        run: npm ci
+        run: npm ci --legacy-peers-deps
       - name: Deploy Production
         uses: dokku/github-action@v1.0.1
         with:
