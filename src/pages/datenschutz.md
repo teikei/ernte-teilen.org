@@ -15,7 +15,7 @@ Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Des
 
 **Ansprechpartner Datenschutz**:\
 Michael Bakonyi\
-datenschutzsolidarische-landwirtschaft.org
+datenschutz[ät]solidarische-landwirtschaft.org
 
 ### Wie erfassen wir Ihre Daten?
 
@@ -39,11 +39,11 @@ Wenn Sie diese Website benutzen, werden verschiedene personenbezogene Daten erho
 
 Wir weisen darauf hin, dass die Datenübertragung im Internet (z.B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.
 
-Netzwerk Solidarische Landwirtschaft e.V.\
+**Netzwerk Solidarische Landwirtschaft e.V.**\
 Vorstand: Alina Reinartz, Lisa Haubner, Roman Best\
 c/o Stefanie Schulze Schleithoff\
-Stammheimerstr. 154\
-50735 Köln
+Mittelstr. 1\
+51149 Köln
 
 Steuernummer: 162 142 09938\
 Gemeinnütziger Verein; Registergericht Kassel: VR 4941
