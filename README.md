@@ -15,9 +15,7 @@ _Note:_ This web application uses [sharp](http://sharp.pixelplumbing.com) for im
 
 ### Install dependencies
 
---legacy-peer-deps is currently required for npm 8 (until Carbon component update)
-
-`npm install --legacy-peer-deps`
+`npm install`
 
 ### Run in development
 
