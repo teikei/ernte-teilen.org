@@ -13,7 +13,7 @@ Gemeinnütziger Verein; Registergericht Kassel: VR 4941
 
 **Inhaltlich Verantwortliche gemäß § 18 Abs. 2 MStV:**\
 Netzwerk Solidarische Landwirtschaft e.V.\
-vertreten durch Alina Reinartz, Lisa Haubner, Roman Best
+vertreten durch Alina Reinartz, Jochen Dindorf, Simone Ott, Tobias Hartkemeyer, Annalena Stuhlmann
 
 **Idee, Design, Umsetzung und technische Betreuung:**\
 Christian Rijke, Simon Jockers, Maria Dolecek
