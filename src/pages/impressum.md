@@ -13,10 +13,13 @@ Gemeinnütziger Verein; Registergericht Kassel: VR 4941
 
 **Inhaltlich Verantwortliche gemäß § 18 Abs. 2 MStV:**\
 Netzwerk Solidarische Landwirtschaft e.V.\
-vertreten durch Alina Reinartz, Jochen Dindorf, Simone Ott, Tobias Hartkemeyer, Annalena Stuhlmann
+vertreten durch Alina&nbsp;Reinartz, Jochen&nbsp;Dindorf, Simone&nbsp;Ott, Tobias&nbsp;Hartkemeyer, Annalena&nbsp;Stuhlmann
 
-**Idee, Design, Umsetzung und technische Betreuung:**\
-Christian Rijke, Simon Jockers, Maria Dolecek
+**Initiatoren, Umsetzung und technische Betreuung:**\
+[Christian Rijke](https://christianrijke.de/) und [Simon Jockers](https://simonjockers.de/)
+
+**Alumni:**\
+Charis&nbsp;Braun&nbsp;(Idee,&nbsp;inhaltliche&nbsp;Begleitung), Maria&nbsp;Dolecek&nbsp;(Design), Tobias&nbsp;Preuß&nbsp;(Programmierung), Daniel&nbsp;Mack&nbsp;(Programmierung)
 
 Fragen und Feedback: info[ät]ernte-teilen.org
 
