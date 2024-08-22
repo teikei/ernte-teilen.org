@@ -8,7 +8,7 @@ c/o Stefanie Schulze Schleithoff\
 Mittelstr. 1\
 51149 Köln
 
-Steuernummer: 162 142 09938\
+Steuernummer: 217/5959/3097\
 Gemeinnütziger Verein; Registergericht Kassel: VR 4941
 
 **Inhaltlich Verantwortliche gemäß § 18 Abs. 2 MStV:**\
