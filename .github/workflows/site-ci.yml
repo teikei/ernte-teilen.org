@@ -60,7 +60,7 @@ jobs:
       - name: Install dependencies
         working-directory: ./
         run: npm ci
-      - name: Deploy Preview
+      - name: Deploy Next
         uses: dokku/github-action@v1.0.1
         with:
           branch: main
