@@ -9,8 +9,16 @@
   display: none;
 }
 
-#teikei-app .user-nav {
-  top: 85px;
+@media screen and (max-width: 759px) {
+  #teikei-app .user-nav {
+    top: 85px;
+  }
+
+  #teikei-app .account-nav-login {
+    padding: 3px 6px;
+    color: white !important;
+    font-weight: bold;
+  }
 }
 
 @media screen and (min-width: 760px) {
@@ -22,5 +30,10 @@
   #teikei-app .account-nav {
     top: 120px;
     right: 140px;
+  }
+
+  #teikei-app .account-nav-login {
+    top: 120px;
+    right: 0;
   }
 }
