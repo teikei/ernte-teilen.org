@@ -9,29 +9,31 @@
   display: none;
 }
 
+@media screen and (max-width: 759px) {
+  #teikei-app .user-nav {
+    top: 85px;
+  }
+
+  #teikei-app .account-nav-login {
+    padding: 3px 6px;
+    color: white !important;
+    font-weight: bold;
+  }
+}
+
 @media screen and (min-width: 760px) {
   #teikei-app .user-nav {
-    z-index: 10; // move z-index down so that it does not overlap the website nav
+    top: 0;
+    padding-right: 40px;
   }
 
   #teikei-app .account-nav {
-    top: 180px;
-    right: 20px;
+    top: 120px;
+    right: 140px;
   }
 
   #teikei-app .account-nav-login {
     top: 120px;
-    right: 20px;
-  }
-
-  #teikei-app .details {
-    padding-top: 210px;
-  }
-}
-
-@media screen and (min-width: 960px) {
-  #teikei-app .account-nav {
-    top: 120px;
-    right: 320px;
+    right: 0;
   }
 }
