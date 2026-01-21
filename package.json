@@ -33,7 +33,7 @@
     "gatsby-transformer-remark": "^5.15.1",
     "gatsby-transformer-sharp": "^4.15.1",
     "gatsby-transformer-yaml": "^4.15.0",
-    "lodash": "^4.17.10",
+    "lodash": "^4.17.23",
     "prop-types": "^15.6.2",
     "react": "^16.14.0",
     "react-burger-menu": "^2.5.2",
