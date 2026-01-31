@@ -46,7 +46,7 @@
     "typeface-roboto-condensed": "^0.0.54"
   },
   "devDependencies": {
-    "eslint": "^7.30.0",
+    "eslint": "^9.26.0",
     "eslint-config-prettier": "8.3.0",
     "eslint-config-standard": "^16.0.3",
     "eslint-config-standard-jsx": "^10.0.0",
