@@ -1,3 +1,10 @@
+// Self-hosted via @fontsource packages (OFL-1.1; license files ship in each
+// package). We keep our own @font-face declarations rather than importing
+// @fontsource's prebuilt CSS, because the site maps a single 'Roboto' family
+// where the *bold* weight is actually Roboto Condensed 700. URLs use relative
+// node_modules paths so Vite resolves + fingerprints them (the webpack `~`
+// prefix did not work under Vite).
+
 /* noto-serif-400normal - latin */
 @font-face {
   font-family: 'Noto Serif';
@@ -5,8 +12,10 @@
   font-display: swap;
   font-weight: 400;
   src: local('Noto Serif Regular '), local('Noto Serif-Regular'),
-    url('/fonts/noto-serif-latin-400.woff2') format('woff2'),
-    url('/fonts/noto-serif-latin-400.woff') format('woff');
+    url('../../node_modules/@fontsource/noto-serif/files/noto-serif-latin-400-normal.woff2')
+      format('woff2'),
+    url('../../node_modules/@fontsource/noto-serif/files/noto-serif-latin-400-normal.woff')
+      format('woff');
 }
 
 /* noto-serif-400italic - latin */
@@ -16,8 +25,10 @@
   font-display: swap;
   font-weight: 400;
   src: local('Noto Serif Regular italic'), local('Noto Serif-Regularitalic'),
-    url('/fonts/noto-serif-latin-400italic.woff2') format('woff2'),
-    url('/fonts/noto-serif-latin-400italic.woff') format('woff');
+    url('../../node_modules/@fontsource/noto-serif/files/noto-serif-latin-400-italic.woff2')
+      format('woff2'),
+    url('../../node_modules/@fontsource/noto-serif/files/noto-serif-latin-400-italic.woff')
+      format('woff');
 }
 
 /* roboto-400normal - latin */
@@ -27,17 +38,21 @@
   font-display: swap;
   font-weight: normal;
   src: local('Roboto Regular '), local('Roboto-Regular'),
-    url('/fonts/roboto-latin-400.woff2') format('woff2'),
-    url('/fonts/roboto-latin-400.woff') format('woff');
+    url('../../node_modules/@fontsource/roboto/files/roboto-latin-400-normal.woff2')
+      format('woff2'),
+    url('../../node_modules/@fontsource/roboto/files/roboto-latin-400-normal.woff')
+      format('woff');
 }
 
-/* roboto-condensed-700normal - latin */
+/* roboto-condensed-700normal - latin (used as the BOLD weight of 'Roboto') */
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
   font-display: swap;
   font-weight: bold;
   src: local('Roboto Condensed Bold '), local('Roboto Condensed-Bold'),
-    url('/fonts/roboto-condensed-latin-700.woff2') format('woff2'),
-    url('/fonts/roboto-condensed-latin-700.woff') format('woff');
+    url('../../node_modules/@fontsource/roboto-condensed/files/roboto-condensed-latin-700-normal.woff2')
+      format('woff2'),
+    url('../../node_modules/@fontsource/roboto-condensed/files/roboto-condensed-latin-700-normal.woff')
+      format('woff');
 }
