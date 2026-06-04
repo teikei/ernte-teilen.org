@@ -5,7 +5,7 @@ title: 'Ihr gründet Eine Solawi?'
 lead: 'Eine Solawi zu gründen ist sehr aufwendig. Ihr braucht einen Hof und Land, Know-How und Mitstreiter. Ein Eintrag auf ErnteTeilen kann dabei helfen, Euer Projekt voranzubringen indem Menschen aus Eurer Region auf Euch aufmerksam werden.'
 link:
   text: 'Initiative eintragen'
-  href: 'karte#/users/sign-in'
+  href: '/karte#/users/sign-in'
 metaImage: '/img/social_initiatives.jpg'
 ---
 
