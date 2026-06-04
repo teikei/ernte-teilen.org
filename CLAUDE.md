@@ -4,53 +4,56 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-Marketing/content website for the *ernte-teilen.org* solidarity-farming (Solawi) project, built with **Gatsby 4 + React 16**. This repo is **content + presentation only**. The interactive map and data-management tools at `/karte` are a separate application (the [teikei](https://github.com/teikei/teikei) repo) that is injected at runtime — see "Teikei map embed" below.
+Marketing/content website for the *ernte-teilen.org* solidarity-farming (Solawi) project, built with **Astro 5** (static output). This repo is **content + presentation only**. The interactive map and data-management tools at `/karte` are a separate application (the [teikei](https://github.com/teikei/teikei) repo) that is injected at runtime — see "Teikei map embed" below.
 
-> **Planned migration:** a move off Gatsby to a simplified static **Astro** site is planned. See [`ASTRO_MIGRATION.md`](./ASTRO_MIGRATION.md) for the decision, rationale, repo/cutover strategy, and step-by-step plan. Read it before any large refactor or dependency work.
+> The site was migrated from Gatsby to Astro in 2026. See [`ASTRO_MIGRATION.md`](./ASTRO_MIGRATION.md) for the rationale and the deliberate "out of scope" cleanups still pending (notably: the SCSS still depends on the Carbon grid/mixins, kept as-is on purpose).
 
 ## Commands
 
-- `npm install` — install deps (requires Node 20.x / npm 10.x; needs `libvips` for `sharp` image processing)
-- `npm run dev` — Gatsby develop server (`localhost:8000`, GraphiQL at `/___graphql`)
-- `npm run build` — production build into `public/`
-- `npm run serve` — serve the production build
-- `npm run clean` — clear Gatsby cache (run this when GraphQL queries or source nodes behave unexpectedly)
-- `npm run lint` — `eslint src/**/*.js --fix`
-- `npm run prettier` — format all of `src`
+- `npm install` — install deps (Node 20.x / 22.x / 26.x)
+- `npm run dev` — Astro dev server on **http://localhost:3000** (port set in `astro.config.mjs` to match the test map server's CORS allowlist). Dev uses `.env.development` (preview map/API hosts).
+- `npm run build` — production build into `dist/` (uses `.env.production`)
+- `npm run preview` — serve the production build locally
+- `npm test` — no-op (`echo "no tests"`); wired into CI, must stay green
 
-There is **no test suite** — `npm test` is a no-op (`echo no tests`) but is wired into CI and must stay green.
-
-Git hooks (husky): `pre-commit` runs `pretty-quick`, `pre-push` runs lint + format.
+There is **no test suite** and no linter configured. CI (`.github/workflows/site-ci.yml`) runs `npm run build` as the gate before deploy.
 
 ## Architecture
 
-### Pages come from Markdown, not React routes
-Pages are authored as Markdown files in `src/pages/*.md`. `gatsby-node.js` queries all `MarkdownRemark` nodes and calls `createPage` for each, deriving the URL slug from the file path and choosing a React template from the `template:` frontmatter field (falling back to `templates/default.js`). **To add a page, add a Markdown file** — do not create routes manually.
+### Pages come from Markdown, not Astro file routes
+Page content is authored as Markdown in `src/content/pages/*.md` (a content collection defined in `src/content.config.ts`). A single catch-all route, `src/pages/[...slug].astro`, generates every page: `getStaticPaths` maps each entry to its URL (`index.md` → `/`, everything else → `/<id>/`) and selects a **layout from the `template:` frontmatter field**. **To add a page, add a Markdown file** — do not add `.astro` files under `src/pages/`.
 
-### Templates (`src/templates/`)
-The `template:` frontmatter value maps to a file here:
-- `default.js` — renders frontmatter `title` + Markdown `html` inside the standard page chrome
-- `home.js` — the landing page; pulls structured frontmatter (`teasers`, `cards`, `testimonials`, `partners`) and matching images into composed components
-- `about.js`, `featured.js` — other layouts
-- `teikei.js` — the `/karte` page; renders an empty `<div id="teikei-app" data-…>` placeholder that the external map bundle hydrates
+### Layouts (`src/layouts/`)
+The `template:` frontmatter value maps to a layout:
+- *(none)* → `DefaultLayout.astro` — frontmatter `title` + Markdown body in standard chrome (legal pages)
+- `home` → `HomeLayout.astro` — landing page; composes Hero/Search/Teasers/CardCarousel/Testimonials/Partners from frontmatter
+- `about` → `AboutLayout.astro`, `featured` → `FeaturedLayout.astro` — listing layouts with a Hero + Markdown body
+- `teikei` → `TeikeiLayout.astro` — the `/karte` page; renders the empty `#teikei-app` placeholder the external map hydrates
 
-Each template ends with an exported `graphql` page query keyed on `$slug`.
+All layouts wrap `BaseLayout.astro`, which holds the `<html>` shell, `<head>` meta tags (the old `PageMeta`/`html.js` equivalent), and the page chrome (`Header`, `OffCanvasMenu`). `[...slug].astro` renders the Markdown `<Content />` into the layout's default slot.
+
+### Components (`src/components/<Name>/index.astro`)
+Presentational `.astro` components, each with a colocated `styles.scss` imported for global (un-scoped) CSS. There are **no UI-framework islands**; the two interactive pieces — `CardCarousel` and `OffCanvasMenu` — are small vanilla-JS `<script>`s inside their components.
 
 ### Teikei map embed (the cross-app boundary)
-`gatsby-browser.js` `onRouteUpdate` looks for `#teikei-app` / `#teikei-search` in the DOM and, if present, injects `main.js` + `main.css` from `GATSBY_TEIKEI_BUNDLES_URL`. The map app reads its config from `data-*` attributes on that div (`data-api-base-url`, `data-assets-base-url`, etc.). The site itself does not bundle any map code.
-
-### i18n / locales
-UI strings live in `src/locales/de.yml` and `en.yml`, exposed as GraphQL `localesYaml` nodes via `gatsby-transformer-yaml`. Each component that needs strings defines a **GraphQL fragment** (e.g. `fragment footer on LocalesYaml`) in its own file; templates compose these fragments into their page query as `t: localesYaml(locale: { eq: "de" }) { ...header ...footer }` and pass the result down as the `t` prop. The site currently renders German only.
+`TeikeiBundle.astro` renders a `<link>` + `<script async>` pointing at `${PUBLIC_TEIKEI_BUNDLES_URL}/main.{css,js}`. It's included by the homepage `Search` embed (`#teikei-search`) and the `karte` page (`#teikei-app`). The map app reads its config from `data-*` attributes on those divs (`data-api-base-url`, `data-assets-base-url`, etc.). The site bundles no map code. URLs come from `PUBLIC_TEIKEI_*` env vars (`.env.development` = preview hosts, `.env.production` = production); see `src/config/site.ts`.
 
 ### Images
-Local images in `src/assets/**` are processed by `gatsby-plugin-sharp` / `gatsby-transformer-sharp` and resolved through `gatsby-plugin-image`. `static/img` and `static/_redirects` are copied verbatim to the site root.
+Content images live in `src/assets/**` and render through `astro:assets` (`<Image>`). `src/lib/images.ts` eagerly globs them and keys them by `<folder>/<slug>` (replacing Gatsby's `allFile` queries). Markdown body images and static assets (favicons, logo, social images, `_redirects`) live in `public/` and are served verbatim.
 
 ### Styling
-Sass via `gatsby-plugin-sass`, built on IBM **Carbon Design System** (`carbon-components-react`). Carbon's grid classes (`bx--grid`, `bx--row`, `bx--col-*`) are used in markup; project-specific styles use the `et--` prefix. Component styles live next to the component (`src/components/X/styles.scss`); global styles in `src/styles/`.
+Sass (built into Astro/Vite). **Still built on the IBM Carbon grid/mixins** (`carbon-components` is a dependency; Vite's Sass `loadPaths` is set to the project root in `astro.config.mjs` so `@import 'node_modules/carbon-components/...'` resolves). Carbon grid classes (`bx--grid`, `bx--row`, `bx--col-*`) appear in markup; project styles use the `et--` prefix. Global styles in `src/styles/`; component styles colocated. Decoupling from Carbon is a planned follow-up (see `ASTRO_MIGRATION.md`).
+
+### Config & i18n
+The site is **German only** — there is no i18n layer. UI strings and navigation live inline in `src/config/navigation.ts`; site metadata in `src/config/site.ts`.
+
+### Fonts
+Self-hosted via `@fontsource/*` packages (OFL-1.1). `src/styles/_fonts.scss` keeps **custom `@font-face` declarations** rather than importing `@fontsource`'s CSS, because the design maps a single `'Roboto'` family where the **bold weight is actually Roboto Condensed 700**. Font files are referenced by relative `node_modules` path (Vite fingerprints them); no font binaries are committed.
 
 ## Conventions
-- ESLint config (`standard` + `standard-react` + `prettier`) and Prettier config (no semicolons, single quotes, 2-space, double-quoted JSX) live inline in `package.json`. `react/prop-types` is disabled but most components still declare `propTypes`.
-- Components live in `src/components/<Name>/index.js` with a colocated `styles.scss`.
+- Components live in `src/components/<Name>/index.astro` with a colocated `styles.scss`.
+- Component `styles.scss` files `@import '../../styles/theme'` (Carbon functions/mixins + project variables); some also import Carbon button mixins by relative `node_modules` path.
+- Prettier-style formatting (no semicolons, single quotes, 2-space) is used in the `.ts`/`.astro` frontmatter but not enforced by a hook.
 
 ## Deployment
-CI (`.github/workflows/site-ci.yml`) runs lint + test on every branch, then deploys via **Dokku** based on branch: `preview` → teikei-site-preview, `next` → teikei-site-next, `main` → production (teikei-site). Each Dokku app runs `gatsby build` as its predeploy step. Env vars per environment are in `.env.development` / `.env.production` (all `GATSBY_TEIKEI_*` point at the staging vs. production map/API hosts).
+CI (`.github/workflows/site-ci.yml`) builds on every branch, then deploys via **Dokku** based on branch: `preview` → teikei-site-preview, `next` → teikei-site-next, `main` → production (teikei-site). Each Dokku app's predeploy step is `npm run build` (`app.json`), producing `dist/`, which the heroku static buildpack serves (`static.json` `root: dist/`). Env vars per environment are the committed `.env.development` / `.env.production` (`PUBLIC_TEIKEI_*`).

@@ -1,8 +1,37 @@
 @import '../../styles/theme';
 
+/* Off-canvas positioning + slide-in (formerly provided by react-burger-menu). */
+.et--off-canvas__overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.et--off-canvas.is-open .et--off-canvas__overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
 .et--off-canvas-menu {
   background: $green;
-  position: relative;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1100;
+  width: 300px;
+  max-width: 80vw;
+  overflow-y: auto;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+}
+
+.et--off-canvas.is-open .et--off-canvas-menu {
+  transform: translateX(0);
 }
 
 .et--off-canvas-menu__nav {
@@ -51,6 +80,9 @@
 }
 
 .et--external-teaser {
+  // react-burger-menu used to render menu items as block-level; without it the
+  // inline <a> only draws its border-top across the first line's text width.
+  display: block;
   border-top: 1px solid $green-dark;
   padding: 1rem 3rem 1rem 1.5rem;
   text-decoration: none;

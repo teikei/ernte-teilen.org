@@ -18,8 +18,13 @@
 
   @media (min-width: breakpoint('sm')) {
     display: block;
+    // astro:assets emits the intrinsic pixel size; keep the image fluid within
+    // its column (GatsbyImage's FULL_WIDTH/contain behaviour).
+    max-width: 100%;
+    height: auto;
     margin: 3rem 0 3em -5rem;
     max-height: 320px;
+    object-fit: contain;
   }
 
   @media (min-width: breakpoint('md')) {
