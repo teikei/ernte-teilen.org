@@ -55,11 +55,14 @@ typings/
 # Yarn Integrity file
 .yarn-integrity
 
-# dotenv environment variables file
+# dotenv environment variables file (.env.development / .env.production are
+# committed non-secret deploy targets and are intentionally NOT ignored)
 .env
+.env.local
 
-# gatsby exports (root build output only; astro/public is source and is tracked)
-/public
+# astro build output + generated types
+dist/
+.astro/
 
 # vscode configuration
 .vscode/

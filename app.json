@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "dokku": {
-      "predeploy": "gatsby build"
+      "predeploy": "npm run build"
     }
   }
 }

@@ -1,6 +1,15 @@
 # Astro Migration Plan
 
-Status: **implemented & manually verified in `astro/` (pre-cutover)** · Last updated: 2026-06-04
+Status: **cutover done — Astro is at repo root; pending preview deploy** · Last updated: 2026-06-04
+
+> **Cutover complete (on the cutover branch):** the Gatsby root files were
+> removed and the Astro app promoted from `astro/` to the repo root.
+> `npm run build` outputs to `dist/`; deploy config switched (`app.json`
+> predeploy `gatsby build` → `npm run build`; `static.json` root `public/` →
+> `dist/`; CI now builds instead of lint/test; build-critical `sass` +
+> `carbon-components` moved to `dependencies`). The pre-cutover state is tagged
+> **`gatsby-final`**. `CLAUDE.md` and `README.md` updated for Astro. Next: push,
+> open PR to `preview`, validate the live preview deploy, then `main`.
 
 > **Progress:** The full Astro app is built and passing in `astro/` on the
 > `feat/modernization` branch (migration steps 1–10 below). All 10 routes build
