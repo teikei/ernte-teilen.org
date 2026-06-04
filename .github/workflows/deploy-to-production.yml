@@ -1,0 +1,44 @@
+name: Deploy Preview to Production (Fast-Forward Merge)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write # push the fast-forwarded main branch
+  actions: write # dispatch the production deploy workflow
+
+jobs:
+  fast-forward-merge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main branch
+        uses: actions/checkout@v6
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Fetch all branches
+        run: git fetch origin
+
+      - name: Fast-forward merge preview into main
+        run: |
+          git checkout main
+          git merge --ff-only origin/preview
+          git push origin main
+
+      - name: Wait for merge to settle
+        run: sleep 10
+
+      # A push made with the default GITHUB_TOKEN does not trigger other
+      # workflows, so dispatch the production deploy explicitly. site-ci.yml's
+      # deploy-production job runs because the ref is main.
+      - name: Trigger Site CI production deployment
+        uses: actions/github-script@v9
+        with:
+          script: |
+            await github.rest.actions.createWorkflowDispatch({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              workflow_id: 'site-ci.yml',
+              ref: 'main'
+            });

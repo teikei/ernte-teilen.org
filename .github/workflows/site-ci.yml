@@ -12,74 +12,40 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
         with:
-          node-version: '20.9.0'
+          node-version: '24'
+          cache: 'npm'
       - name: Install dependencies
-        working-directory: ./
         run: npm ci
       - name: Build (Astro)
-        working-directory: ./
         run: npm run build
   deploy-preview:
     runs-on: ubuntu-latest
     needs: test
     if: github.ref == 'refs/heads/preview'
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v6
         with:
           fetch-depth: 0
-      - uses: actions/setup-node@v3
-        with:
-          node-version: '20.9.0'
-      - name: Install dependencies
-        working-directory: ./
-        run: npm ci
       - name: Deploy Preview
-        uses: dokku/github-action@v1.0.1
+        uses: dokku/github-action@v1.10.0
         with:
           branch: main
           ci_branch_name: preview
           ssh_private_key: ${{ secrets.DOKKU_SSH_KEY }}
           git_remote_url: ssh://dokku@${{ secrets.DOKKU_HOST }}:22/teikei-site-preview
-  deploy-next:
-    runs-on: ubuntu-latest
-    needs: test
-    if: github.ref == 'refs/heads/next'
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-      - uses: actions/setup-node@v3
-        with:
-          node-version: '20.9.0'
-      - name: Install dependencies
-        working-directory: ./
-        run: npm ci
-      - name: Deploy Preview
-        uses: dokku/github-action@v1.0.1
-        with:
-          branch: main
-          ci_branch_name: next
-          ssh_private_key: ${{ secrets.DOKKU_SSH_KEY }}
-          git_remote_url: ssh://dokku@${{ secrets.DOKKU_HOST }}:22/teikei-site-next
   deploy-production:
     runs-on: ubuntu-latest
     needs: test
     if: github.ref == 'refs/heads/main'
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v6
         with:
           fetch-depth: 0
-      - uses: actions/setup-node@v3
-        with:
-          node-version: '20.9.0'
-      - name: Install dependencies
-        working-directory: ./
-        run: npm ci
       - name: Deploy Production
-        uses: dokku/github-action@v1.0.1
+        uses: dokku/github-action@v1.10.0
         with:
           branch: main
           ci_branch_name: main
