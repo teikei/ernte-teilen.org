@@ -1,0 +1,147 @@
+---
+import { Image } from 'astro:assets'
+import type { ImageMetadata } from 'astro'
+import Card from '../Card/index.astro'
+import './styles.scss'
+
+interface CardItem {
+  slug: string
+  title: string
+  text: string
+}
+
+interface Props {
+  cards: CardItem[]
+  cardImages: Record<string, ImageMetadata>
+}
+
+const { cards, cardImages } = Astro.props
+
+// Card text data for the client-side carousel (title/text per slide).
+const cardData = cards.map(({ title, text }) => ({ title, text }))
+---
+
+<div class="et--card-carousel" data-card-carousel data-interval="10000">
+  <div class="et--card-carousel__slider">
+    <div class="et--card-carousel__viewport">
+      {
+        cards.map((card, i) => (
+          <div
+            class:list={[
+              'et--card-carousel__slide',
+              { 'is-active': i === 0 },
+            ]}
+            data-slide
+          >
+            <div class="et--card-carousel__image">
+              <Image
+                src={cardImages[card.slug]}
+                alt=""
+                widths={[640, 1024, 1560]}
+                sizes="100vw"
+              />
+            </div>
+          </div>
+        ))
+      }
+
+      <button
+        type="button"
+        class="control-arrow control-arrow--prev"
+        aria-label="Vorheriges"
+        data-prev>‹</button>
+      <button
+        type="button"
+        class="control-arrow control-arrow--next"
+        aria-label="Nächstes"
+        data-next>›</button>
+
+      <ul class="control-dots">
+        {
+          cards.map((_, i) => (
+            <li>
+              <button
+                type="button"
+                class:list={['dot', { 'is-active': i === 0 }]}
+                aria-label={`Slide ${i + 1}`}
+                data-dot={i}
+              />
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+
+  <div class="bx--grid">
+    <div class="bx--row">
+      <div
+        class="bx--offset-md-5 bx--col-md-7 bx--offset-lg-7 bx--col-lg-5 bx--offset-xxl-8 bx--col-xxl-4"
+      >
+        <Card
+          title={cards[0].title}
+          text={cards[0].text}
+          currentIndex={1}
+          maxIndex={cards.length}
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
+<script define:vars={{ cardData }}>
+  document.querySelectorAll('[data-card-carousel]').forEach((root) => {
+    const slides = [...root.querySelectorAll('[data-slide]')]
+    const dots = [...root.querySelectorAll('[data-dot]')]
+    const titleEl = root.querySelector('[data-card-title]')
+    const textEl = root.querySelector('[data-card-text]')
+    const indexEl = root.querySelector('[data-card-index]')
+    const interval = Number(root.dataset.interval) || 10000
+    const count = slides.length
+    let index = 0
+    let timer
+
+    function render() {
+      slides.forEach((s, i) => s.classList.toggle('is-active', i === index))
+      dots.forEach((d, i) => d.classList.toggle('is-active', i === index))
+      const card = cardData[index]
+      if (card) {
+        if (titleEl) titleEl.textContent = card.title
+        if (textEl) textEl.textContent = card.text
+        if (indexEl) indexEl.textContent = `${index + 1} / ${count}`
+      }
+    }
+
+    function go(next) {
+      index = (next + count) % count
+      render()
+    }
+
+    function start() {
+      stop()
+      timer = window.setInterval(() => go(index + 1), interval)
+    }
+
+    function stop() {
+      if (timer) window.clearInterval(timer)
+    }
+
+    root.querySelector('[data-prev]')?.addEventListener('click', () => {
+      go(index - 1)
+      start()
+    })
+    root.querySelector('[data-next]')?.addEventListener('click', () => {
+      go(index + 1)
+      start()
+    })
+    dots.forEach((d, i) =>
+      d.addEventListener('click', () => {
+        go(i)
+        start()
+      })
+    )
+
+    render()
+    start()
+  })
+</script>

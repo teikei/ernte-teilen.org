@@ -1,0 +1,25 @@
+---
+import BaseLayout from './BaseLayout.astro'
+import TeikeiBundle from '../components/TeikeiBundle.astro'
+import { teikeiConfig } from '../config/site'
+
+interface Props {
+  title?: string
+}
+
+const { title } = Astro.props
+const { apiBaseUrl, assetsBaseUrl } = teikeiConfig
+---
+
+<BaseLayout title={title} fixedHeader>
+  <div
+    id="teikei-app"
+    data-locale="de"
+    data-base-url="/karte#"
+    data-country="DE"
+    data-api-base-url={apiBaseUrl}
+    data-assets-base-url={assetsBaseUrl}
+  >
+  </div>
+  <TeikeiBundle />
+</BaseLayout>

@@ -1,0 +1,29 @@
+---
+import Teaser from '../Teaser/index.astro'
+import './styles.scss'
+
+interface TeaserItem {
+  slug: string
+  title: string
+  text: string
+  href: string
+}
+
+interface Props {
+  teasers: TeaserItem[]
+}
+
+const { teasers } = Astro.props
+---
+
+<div class="et--teaser-group bx--grid">
+  <div class="bx--row">
+    {
+      teasers.map(({ title, text, slug, href }) => (
+        <div class="bx--col-sm-4">
+          <Teaser title={title} text={text} slug={slug} href={href} />
+        </div>
+      ))
+    }
+  </div>
+</div>

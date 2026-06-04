@@ -1,0 +1,20 @@
+---
+import './styles.scss'
+
+interface Props {
+  title: string
+  text: string
+  currentIndex: number
+  maxIndex: number
+}
+
+const { title, text, currentIndex, maxIndex } = Astro.props
+---
+
+<article class="et--card">
+  <h2>
+    <span class="et--card__title" data-card-title>{title}</span>
+  </h2>
+  <p class="et--card__text" data-card-text>{text}</p>
+  <span class="et--card__index" data-card-index>{`${currentIndex} / ${maxIndex}`}</span>
+</article>

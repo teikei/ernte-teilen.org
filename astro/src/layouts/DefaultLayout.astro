@@ -1,0 +1,25 @@
+---
+import BaseLayout from './BaseLayout.astro'
+import Footer from '../components/Footer/index.astro'
+
+interface Props {
+  title?: string
+  image?: string
+}
+
+const { title, image } = Astro.props
+---
+
+<BaseLayout title={title} image={image}>
+  <main class="et--markdown">
+    <div class="bx--grid">
+      <div class="bx--row">
+        <div class="bx--col-sm-8">
+          <h1>{title}</h1>
+          <slot />
+        </div>
+      </div>
+    </div>
+  </main>
+  <Footer />
+</BaseLayout>

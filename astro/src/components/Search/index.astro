@@ -1,0 +1,28 @@
+---
+import { search } from '../../config/navigation'
+import { teikeiConfig } from '../../config/site'
+import TeikeiBundle from '../TeikeiBundle.astro'
+import './styles.scss'
+
+const { apiBaseUrl, assetsBaseUrl } = teikeiConfig
+---
+
+<div class="et--search">
+  <div class="et--search__form">
+    <label class="et--search__label">
+      {search.label}
+      <div
+        class="et--search__input"
+        id="teikei-search"
+        data-locale="de"
+        data-country="DE"
+        data-base-url="/karte/#"
+        data-api-base-url={apiBaseUrl}
+        data-assets-base-url={assetsBaseUrl}
+      >
+      </div>
+    </label>
+  </div>
+</div>
+
+<TeikeiBundle />

@@ -1,0 +1,39 @@
+---
+import { Image } from 'astro:assets'
+import type { ImageMetadata } from 'astro'
+import type { NavItem } from '../../config/navigation'
+import './styles.scss'
+
+interface Props {
+  title: string
+  lead: string
+  link: NavItem
+  image: ImageMetadata
+}
+
+const { title, lead, link, image } = Astro.props
+---
+
+<section class="et--hero-featured">
+  <div class="bx--grid">
+    <div class="bx--row">
+      <div class="bx--col-sm-4 bx--col-md-5">
+        <Image
+          src={image}
+          class="et--hero-featured__image"
+          style="object-fit: contain;"
+          alt=""
+          widths={[400, 800, 1200]}
+          sizes="(min-width: 672px) 42vw, 100vw"
+        />
+      </div>
+      <div class="bx--col-sm-8 bx--col-md-7">
+        <div class="et--hero-featured__content">
+          <h1 class="et--hero-featured__title">{title}</h1>
+          <p class="et--hero-featured__lead">{lead}</p>
+          <a class="et--hero-featured__link" href={link.href}>{link.text}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

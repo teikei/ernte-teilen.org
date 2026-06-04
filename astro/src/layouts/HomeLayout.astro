@@ -1,0 +1,38 @@
+---
+import type { ImageMetadata } from 'astro'
+import type { CollectionEntry } from 'astro:content'
+import BaseLayout from './BaseLayout.astro'
+import HeroHome from '../components/HeroHome/index.astro'
+import Search from '../components/Search/index.astro'
+import TeaserGroup from '../components/TeaserGroup/index.astro'
+import CardCarousel from '../components/CardCarousel/index.astro'
+import TestimonialGroup from '../components/TestimonialGroup/index.astro'
+import Partners from '../components/Partners/index.astro'
+import Footer from '../components/Footer/index.astro'
+
+interface Props {
+  data: CollectionEntry<'pages'>['data']
+  cardImages: Record<string, ImageMetadata>
+  testimonialImages: Record<string, ImageMetadata>
+  partnerImages: Record<string, ImageMetadata>
+}
+
+const { data, cardImages, testimonialImages, partnerImages } = Astro.props
+---
+
+<BaseLayout>
+  <HeroHome>
+    <slot />
+  </HeroHome>
+  <Search />
+  <main>
+    <TeaserGroup teasers={data.teasers ?? []} />
+    <CardCarousel cards={data.cards ?? []} cardImages={cardImages} />
+    <TestimonialGroup
+      testimonials={data.testimonials ?? []}
+      testimonialImages={testimonialImages}
+    />
+    <Partners partners={data.partners ?? []} partnerImages={partnerImages} />
+  </main>
+  <Footer />
+</BaseLayout>

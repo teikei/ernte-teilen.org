@@ -1,0 +1,42 @@
+---
+import { Image } from 'astro:assets'
+import type { ImageMetadata } from 'astro'
+import './styles.scss'
+
+interface FeatureItem {
+  slug: string
+  title: string
+  text: string
+}
+
+interface Props {
+  features: FeatureItem[]
+  featureImages: Record<string, ImageMetadata>
+}
+
+const { features, featureImages } = Astro.props
+---
+
+<section class="et--features">
+  <div class="bx--grid">
+    <ul class="bx--row">
+      {
+        features.map(({ slug, title, text }) => (
+          <li class="bx--col-md-4">
+            <div class="et--features__item">
+              <Image
+                class="et--features__image"
+                src={featureImages[slug]}
+                style="object-fit: contain;"
+                alt=""
+                width={400}
+              />
+              <h3 class="et--features__title">{title}</h3>
+              <p class="et--features__text">{text}</p>
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>

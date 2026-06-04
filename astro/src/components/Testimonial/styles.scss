@@ -1,0 +1,111 @@
+@import '../../styles/theme';
+
+.et--testimonial {
+  margin: 2rem 0;
+}
+
+.et--testimonial__quote {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  padding: 3rem 2rem 5rem 2rem;
+  background-image: url('/img/quote_left.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  line-height: 1.15;
+  font-family: $font-family-sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.25rem;
+
+  @media (min-width: breakpoint('md')) {
+    margin-bottom: 2rem;
+    width: 105%;
+  }
+
+  @media (min-width: breakpoint('lg')) {
+    padding: 3rem 4rem 5rem 4rem;
+    font-size: 1.5rem;
+  }
+}
+
+.et--testimonial__figure {
+  position: relative;
+  margin: 1rem 0;
+
+  @media (min-width: breakpoint('sm')) {
+    text-align: right;
+  }
+
+  @media (min-width: breakpoint('md')) {
+    margin: 3rem 0;
+    left: -10%;
+    text-align: left;
+  }
+}
+
+.et--testimonial__figure__image {
+  // astro:assets emits the intrinsic pixel size; GatsbyImage used to make the
+  // image fill its column. Restore that so it stays inside col-md-3 at desktop.
+  display: block;
+  width: 100%;
+  height: auto;
+
+  @media (max-width: breakpoint('md')-1) {
+    width: 8rem;
+    margin: -7rem 0 0 1rem;
+    float: right;
+  }
+
+  @media (max-width: breakpoint('sm')-1) {
+    width: 8rem;
+    margin: -4rem 1rem 0 0;
+    float: left;
+  }
+}
+
+.et--testimonial__name {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  font-family: $font-family-sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.et--testimonial__description {
+  font-size: 0.875rem;
+  font-family: $font-family-serif;
+}
+
+.et--testimonial__title {
+  margin-top: 2rem;
+  font-size: 1rem;
+  font-family: $font-family-sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  @media (min-width: breakpoint('md')) {
+    margin-top: 3rem;
+  }
+}
+
+.et--testimonial__text {
+  font-size: 1rem;
+  font-family: $font-family-serif;
+}
+
+/* ---------   Alternating rows:   --------- */
+
+@media (min-width: breakpoint('md')) {
+  .et--testimonial:nth-child(even) {
+    .et--testimonial__quote {
+      left: 55%;
+      background-image: url('/img/quote_right.png');
+    }
+
+    .et--testimonial__figure {
+      left: -175%;
+    }
+  }
+}

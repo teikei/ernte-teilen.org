@@ -1,0 +1,36 @@
+---
+import type { ImageMetadata } from 'astro'
+import Testimonial from '../Testimonial/index.astro'
+import './styles.scss'
+
+interface TestimonialItem {
+  slug: string
+  title: string
+  text: string
+  quote: string
+  name: string
+  description: string
+}
+
+interface Props {
+  testimonials: TestimonialItem[]
+  testimonialImages: Record<string, ImageMetadata>
+}
+
+const { testimonials, testimonialImages } = Astro.props
+---
+
+<div class="et--testimonial-group">
+  {
+    testimonials.map(({ slug, title, text, quote, name, description }) => (
+      <Testimonial
+        title={title}
+        text={text}
+        quote={quote}
+        name={name}
+        description={description}
+        image={testimonialImages[slug]}
+      />
+    ))
+  }
+</div>
