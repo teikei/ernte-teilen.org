@@ -1,0 +1,10 @@
+---
+// Injects the externally maintained teikei map/search bundle (JS + CSS).
+// Hydrates any #teikei-app / #teikei-search element present on the page.
+import { teikeiConfig } from '../config/site'
+
+const { bundlesUrl } = teikeiConfig
+---
+
+<link rel="stylesheet" type="text/css" href={`${bundlesUrl}/main.css`} />
+<script is:inline async id="teikei-bundle" src={`${bundlesUrl}/main.js`}></script>

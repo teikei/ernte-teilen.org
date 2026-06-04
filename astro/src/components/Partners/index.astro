@@ -1,0 +1,54 @@
+---
+import { Image } from 'astro:assets'
+import type { ImageMetadata } from 'astro'
+import './styles.scss'
+
+interface PartnerItem {
+  slug: string
+  name: string
+  url: string
+}
+
+interface PartnerGroup {
+  id: string
+  title: string
+  items: PartnerItem[]
+}
+
+interface Props {
+  partners: PartnerGroup[]
+  partnerImages: Record<string, ImageMetadata>
+}
+
+const { partners, partnerImages } = Astro.props
+---
+
+<section class="et--partners bx--grid">
+  {
+    partners.map(({ title, items, id }) => (
+      <div id={id} class="et--partners__group">
+        <h3 class="et--partners__title">{title}</h3>
+        <ul>
+          {items.map(({ slug, name, url }) => (
+            <li>
+              <a
+                class="et--partners__link"
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src={partnerImages[slug]}
+                  class="et--partners__logo"
+                  style="object-fit: contain;"
+                  alt={name}
+                  width={400}
+                />
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    ))
+  }
+</section>

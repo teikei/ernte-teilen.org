@@ -1,0 +1,31 @@
+---
+import type { NavItem } from '../../config/navigation'
+import './styles.scss'
+
+interface Props {
+  title: string
+  lead: string
+  link: NavItem
+}
+
+const { title, lead, link } = Astro.props
+---
+
+<header class="et--hero">
+  <div class="bx--grid">
+    <div class="bx--row">
+      <div class="et--hero__content">
+        <h1 class="et--hero__title">{title}</h1>
+        <p class="et--hero__lead">{lead}</p>
+        <a
+          class="et--hero__link"
+          href={link.href}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {link.text}
+        </a>
+      </div>
+    </div>
+  </div>
+</header>

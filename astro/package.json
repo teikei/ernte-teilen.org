@@ -1,0 +1,23 @@
+{
+  "name": "ernte-teilen.org",
+  "description": "Source code for the ernte-teilen.org website (Astro)",
+  "license": "AGPL-3.0",
+  "type": "module",
+  "engines": {
+    "node": "20.x || 22.x || 26.x"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^5.6.1"
+  },
+  "devDependencies": {
+    "carbon-components": "^9.26.0",
+    "sass": "^1.77.8"
+  }
+}

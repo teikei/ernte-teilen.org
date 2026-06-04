@@ -1,0 +1,27 @@
+---
+import { footer } from '../../config/navigation'
+import './styles.scss'
+---
+
+<footer class="et--footer">
+  <div class="bx--grid">
+    <div class="bx--row">
+      <ul class="et--footer__nav">
+        {
+          footer.nav.map(({ text, href }) => (
+            <li class="et--footer__nav-item">
+              <a class="et--footer__link" href={href}>
+                {text}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+      <a class="et--footer__logo" href="/">{footer.logo_alt}</a>
+    </div>
+    <div class="et--footer__credits">
+      {footer.credits.prefix}
+      <a href={footer.credits.href}>{footer.credits.text}</a>
+    </div>
+  </div>
+</footer>

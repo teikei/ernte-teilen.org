@@ -1,0 +1,17 @@
+---
+import './styles.scss'
+
+interface Props {
+  slug: string
+  title: string
+  text: string
+  href: string
+}
+
+const { slug, title, text, href } = Astro.props
+---
+
+<a href={href} class:list={['et--teaser', `et--teaser--${slug}`]}>
+  <h3 class="et--teaser__title">{title}</h3>
+  <p class="et--teaser__text">{text}</p>
+</a>

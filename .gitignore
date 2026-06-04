@@ -58,8 +58,8 @@ typings/
 # dotenv environment variables file
 .env
 
-# gatsby exports
-public
+# gatsby exports (root build output only; astro/public is source and is tracked)
+/public
 
 # vscode configuration
 .vscode/

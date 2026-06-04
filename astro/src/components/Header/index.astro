@@ -1,0 +1,44 @@
+---
+import { header } from '../../config/navigation'
+import './styles.scss'
+
+interface Props {
+  fixed?: boolean
+}
+
+const { fixed = false } = Astro.props
+---
+
+<header class:list={['et--header', { 'et--header--fixed': fixed }]}>
+  <div class="bx--grid">
+    <div class="et--header__container bx--row">
+      <a class="et--header__logo" href="/">{header.logo_alt}</a>
+
+      <ul class="et--header__nav">
+        {
+          header.nav.map(({ text, href }) => (
+            <li>
+              <a class="et--header__nav-item" href={href}>
+                {text}
+              </a>
+            </li>
+          ))
+        }
+        <li>
+          <a class="et--header__btn" href="/karte#/users/sign-in">{header.login}</a>
+        </li>
+        <li>
+          <button
+            type="button"
+            class="et--header__hamburger"
+            aria-expanded="false"
+            aria-controls="et-off-canvas-menu"
+            data-menu-open
+          >
+            {header.menu}
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>

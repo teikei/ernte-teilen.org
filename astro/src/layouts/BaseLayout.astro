@@ -1,0 +1,77 @@
+---
+import Header from '../components/Header/index.astro'
+import OffCanvasMenu from '../components/OffCanvasMenu/index.astro'
+import { siteMetadata } from '../config/site'
+import '../styles/index.scss'
+
+interface Props {
+  title?: string
+  description?: string
+  /** Absolute path under /public for the social/OpenGraph image. */
+  image?: string
+  fixedHeader?: boolean
+}
+
+const { title, description, image, fixedHeader = false } = Astro.props
+
+const pathname = Astro.url.pathname
+const pageTitle = title ?? siteMetadata.title
+const pageDescription = description ?? siteMetadata.description
+const pageUrl = `${siteMetadata.siteUrl}${pathname}`
+const pageImage = `${siteMetadata.siteUrl}${image ?? siteMetadata.defaultImage}`
+const documentTitle = title ? `${title} | ${siteMetadata.title}` : pageTitle
+
+const schemaOrgJSONLD = [
+  {
+    '@context': 'http://schema.org',
+    '@type': 'WebSite',
+    url: pageUrl,
+    name: pageTitle,
+  },
+]
+---
+
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="shortcut icon" type="image/png" href="/img/icon.png" />
+    <link rel="shortcut icon" sizes="196x196" href="/img/icon.png" />
+    <link rel="apple-touch-icon" href="/img/icon.png" />
+
+    <title>{documentTitle}</title>
+
+    <meta name="description" content={pageDescription} />
+    <meta name="image" content={pageImage} />
+
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(schemaOrgJSONLD)}
+    />
+
+    <meta property="og:url" content={pageUrl} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={pageDescription} />
+    <meta property="og:image" content={pageImage} />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:creator" content={siteMetadata.twitterAccount} />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={pageDescription} />
+    <meta name="twitter:image" content={pageImage} />
+  </head>
+  <body>
+    <div id="outer-container">
+      <OffCanvasMenu />
+      <div id="page-wrap">
+        <Header fixed={fixedHeader} />
+        <slot />
+      </div>
+    </div>
+  </body>
+</html>

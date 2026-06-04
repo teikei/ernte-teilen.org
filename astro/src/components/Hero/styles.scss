@@ -1,0 +1,69 @@
+@import '../../styles/theme';
+
+.et--hero {
+  color: $green-dark;
+  background: $white;
+  font-family: $font-family-serif;
+  text-align: center;
+}
+
+.et--hero__content {
+  position: relative;
+  padding: 2rem 1rem;
+
+  @media (min-width: breakpoint('lg')) {
+    padding: 4rem 17.5%;
+    font-size: 1.125rem;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 240px;
+      height: 200px;
+      left: -8%;
+      top: 15%;
+      background: url('/img/cucumber.png') no-repeat;
+      background-size: contain;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 120px;
+      height: 280px;
+      right: -2%;
+      top: 15%;
+      background: url('/img/beetroot.png') no-repeat;
+      background-size: contain;
+    }
+  }
+}
+
+.et--hero__title {
+  display: block;
+  margin: 1rem 0;
+  font-size: 2rem;
+  line-height: 1.1;
+  font-family: $font-family-sans-serif;
+  font-weight: bold;
+  color: $green;
+
+  @media (min-width: breakpoint('xl')) {
+    margin: 2rem 0;
+    font-size: 3rem;
+  }
+}
+
+.et--hero__lead {
+  display: block;
+  color: $green-dark;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.et--hero__link {
+  display: inline-block;
+  margin-bottom: 2rem;
+  color: $green;
+  font-style: italic;
+}

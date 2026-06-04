@@ -1,0 +1,68 @@
+---
+import { offCanvasMenu } from '../../config/navigation'
+import './styles.scss'
+---
+
+<div class="et--off-canvas" id="et-off-canvas">
+  <div class="et--off-canvas__overlay" data-menu-close></div>
+  <aside
+    class="et--off-canvas-menu"
+    id="et-off-canvas-menu"
+    aria-hidden="true"
+  >
+    <button class="et--off-canvas-menu__close" type="button" data-menu-close>
+      {offCanvasMenu.close}
+    </button>
+    <ul class="et--off-canvas-menu__nav">
+      {
+        offCanvasMenu.nav.map(({ text, href }) => (
+          <li class="et--off-canvas-menu__item">
+            <a class="et--off-canvas-menu__link" href={href} data-menu-close>
+              {text}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+    <a
+      class="et--external-teaser"
+      href="https://ernteteilen-der-film.de/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Jetzt ansehen:
+      <b>Solawi-Dokumentarfilm »Ernte&nbsp;teilen«</b>
+    </a>
+  </aside>
+</div>
+
+<script>
+  const root = document.getElementById('et-off-canvas')
+  const menu = document.getElementById('et-off-canvas-menu')
+
+  function open() {
+    root?.classList.add('is-open')
+    menu?.setAttribute('aria-hidden', 'false')
+    document
+      .querySelector('[data-menu-open]')
+      ?.setAttribute('aria-expanded', 'true')
+  }
+
+  function close() {
+    root?.classList.remove('is-open')
+    menu?.setAttribute('aria-hidden', 'true')
+    document
+      .querySelector('[data-menu-open]')
+      ?.setAttribute('aria-expanded', 'false')
+  }
+
+  document
+    .querySelectorAll('[data-menu-open]')
+    .forEach((el) => el.addEventListener('click', open))
+  document
+    .querySelectorAll('[data-menu-close]')
+    .forEach((el) => el.addEventListener('click', close))
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') close()
+  })
+</script>
