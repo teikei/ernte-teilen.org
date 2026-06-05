@@ -1,6 +1,6 @@
 ---
 template: 'featured'
-image: 'assets/pages/farms.png'
+image: '../../assets/pages/farms.png'
 title: 'Ihr sucht nach Mitgliedern für Eure Solawi?'
 lead: 'Auf ErnteTeilen könnt Ihr Eure Betriebe und Abholstellen auf einer interaktiven Karte eintragen. Durch Eure Einträge werdet Ihr von Verbraucher*innen aus Eurer Region einfacher gefunden.'
 link:

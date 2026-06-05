@@ -1,5 +1,4 @@
-@import '../../styles/theme';
-@import 'node_modules/carbon-components/scss/components/button/mixins';
+@use '../../styles/theme' as *;
 
 .et--header {
   height: 75px;
@@ -76,7 +75,7 @@
 
 .et--header__btn {
   @include button-base;
-  @include button-theme(transparent, $white, $white, $white, $white);
+  @include button-theme(transparent, $white, $white, $white);
 
   @media (max-width: breakpoint('md')) {
     display: none;

@@ -1,34 +1,28 @@
 # Astro Migration Plan
 
-Status: **cutover done — Astro is at repo root; pending preview deploy** · Last updated: 2026-06-04
+Status: **✅ COMPLETE — Astro is live in production** · Last updated: 2026-06-05
 
-> **Cutover complete (on the cutover branch):** the Gatsby root files were
-> removed and the Astro app promoted from `astro/` to the repo root.
-> `npm run build` outputs to `dist/`; deploy config switched (`app.json`
-> predeploy `gatsby build` → `npm run build`; `static.json` root `public/` →
-> `dist/`; CI now builds instead of lint/test; build-critical `sass` +
-> `carbon-components` moved to `dependencies`). The pre-cutover state is tagged
-> **`gatsby-final`**. `CLAUDE.md` and `README.md` updated for Astro. Next: push,
-> open PR to `preview`, validate the live preview deploy, then `main`.
-
-> **Progress:** The full Astro app is built and passing in `astro/` on the
-> `feat/modernization` branch (migration steps 1–10 below). All 10 routes build
-> with URL parity, both teikei embeds are wired, and `astro build` + `astro dev`
-> both run clean. **Manual review complete (2026-06-04): every page is visually
-> identical to production and the external map/search bundle loads successfully
-> in the dev server** (run on port 3000 to match the test map server's CORS
-> allowlist — see `server.port` in `astro.config.mjs`). Remaining: commit, then
-> cutover (steps 11–13) — promote `astro/` to repo root and switch the Dokku
-> build command. See "Implementation notes & deviations" for the intentional
-> changes from a literal port.
+> **Migration complete. The Astro site is live.** The cutover landed on `main`
+> (PR #213, "Cut over to Astro: promote astro/ to repo root, retire Gatsby"):
+> the Gatsby root files were removed and the Astro app promoted from `astro/` to
+> the repo root, `npm run build` outputs to `dist/`, and the Dokku deploy was
+> switched to the nodejs + `dokku/buildpack-nginx` buildpacks serving the static
+> `dist/`. The preview deploy validated the build, and production followed. The
+> pre-cutover Gatsby state is preserved at the **`gatsby-final`** tag for
+> rollback; everything below is retained as a historical record of how the
+> migration was carried out.
 >
-> A handful of `styles.scss` files gained small fixes during review where
-> GatsbyImage / react-burger-menu had provided implicit behaviour (image
-> `width:100%` fill; block-level off-canvas menu items).
+> All 10 routes ship with URL parity, both teikei embeds (map at `/karte` and
+> the homepage search) are wired and mount against the external bundle, and
+> `astro build` / `astro dev` run clean. The 2026-06-04 manual review confirmed
+> every page is visually identical to the old production site. See
+> "Implementation notes & deviations" for where the rebuild intentionally
+> departs from a literal port, and "Out of scope" for the follow-ups (chiefly
+> the Carbon/SCSS decoupling) deliberately left for after the cutover.
 
 This document records the decision to migrate the ernte-teilen.org website from
-Gatsby to Astro, the rationale, and the broad migration steps. It exists so that
-any future session (human or agent) can pick up the work with full context.
+Gatsby to Astro, the rationale, and the migration steps that were carried out.
+It is kept as a historical reference now that the migration has shipped.
 
 ## Goal
 
@@ -209,16 +203,38 @@ differs from a literal port:
 
 ## Out of scope (deliberate follow-ups)
 
-- Removing the Carbon grid / migrating SCSS to plain CSS.
+- ~~Removing the Carbon grid / decoupling from `carbon-components`.~~ **Done
+  post-launch:** the `carbon-components` dependency was dropped — its grid was
+  replaced by a local 12-column flex grid (`src/styles/_grid.scss`) and its
+  button/typography/breakpoint helpers inlined into `src/styles/_theme.scss`,
+  all reproducing Carbon's exact output so the change was visually a no-op.
+- ~~Migrating the SCSS off legacy `@import` (and the global `darken`/`map-get`
+  functions) to the `@use` module system.~~ **Done post-launch:** all SCSS uses
+  `@use`/`@forward`; `darken` → `color.adjust`, `map-get`/`map-has-key` →
+  `map.*`. No Sass deprecation warnings remain, so `silenceDeprecations` was
+  removed from `astro.config.mjs`.
 - Any visual redesign or content changes.
 - Re-introducing localization.
 
 Do these only after the Astro site is at feature parity and shipped.
 
-## Verification checklist before production
+### Decision: keep SCSS (no flatten to plain CSS)
 
-Checked items were confirmed during the 2026-06-04 manual review (dev server +
-`astro build` output inspection).
+An earlier note floated flattening the styles to plain CSS once Carbon was
+gone. **Decided against it (2026-06-05).** Sass is not deprecated — only the
+legacy features we removed (`@import`, global `darken`/`map-get`) were, and the
+styles now use the current `@use` module system. The two things this codebase
+relies on have no plain-CSS equivalent: `_grid.scss` generates the 12-column
+grid with `@for`/`@each` loops (≈60 rules from a dozen lines), and `_theme.scss`
+provides the `breakpoint()` function and `button-*` mixins. Native CSS nesting
+and custom properties don't cover compile-time loops or mixins, so flattening
+would cost capability for no real gain — and Sass is already built into
+Astro/Vite, so there is no toolchain cost to keeping it.
+
+## Verification checklist (all confirmed — site is live)
+
+Items were confirmed during the 2026-06-04 manual review (dev server +
+`astro build` output inspection) and the subsequent preview/production deploys.
 
 - [x] Every current URL resolves to the equivalent page; no path changes.
 - [x] `static/_redirects` behavior preserved (copied verbatim to `public/`).
@@ -226,5 +242,6 @@ Checked items were confirmed during the 2026-06-04 manual review (dev server +
 - [x] Homepage search mounts and works.
 - [x] Legal pages render faithfully.
 - [x] Meta tags / social images (`PageMeta` equivalent) present per page.
-- [ ] Dokku build succeeds with `astro build` and serves from `dist/` —
-      pending cutover; verified locally that `astro build` emits to `dist/`.
+- [x] Dokku build succeeds with `npm run build` and serves the static `dist/`
+      via `dokku/buildpack-nginx` (`NGINX_ROOT=dist`) — confirmed on the live
+      preview and production deploys.

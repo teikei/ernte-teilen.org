@@ -1,0 +1,84 @@
+// Local 12-column flex grid. Reproduces the exact output of Carbon's classic
+// grid — breakpoints, percentage gutters and column math — so dropping the
+// carbon-components dependency is visually a no-op. Classes use the et-- prefix.
+//
+// Depends on breakpoint() and $grid-max-width from _theme.scss.
+@use 'sass:math';
+@use 'theme' as *;
+
+$grid-columns: 12;
+$grid-gutter: 5px; // column padding / container padding (< sm)
+$grid-gutter-sm: 10px; // column padding / container padding (>= sm)
+$grid-margin: 3%; // container side margin (< sm)
+$grid-margin-sm: 5%; // container side margin (>= sm)
+
+.et--grid {
+  margin-left: $grid-margin;
+  margin-right: $grid-margin;
+  padding-left: $grid-gutter;
+  padding-right: $grid-gutter;
+  max-width: $grid-max-width;
+
+  @media (min-width: breakpoint('sm')) {
+    margin-left: $grid-margin-sm;
+    margin-right: $grid-margin-sm;
+    padding-left: $grid-gutter-sm;
+    padding-right: $grid-gutter-sm;
+  }
+
+  @media (min-width: breakpoint('xxl')) {
+    margin: 0 auto;
+  }
+}
+
+.et--row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 (-$grid-gutter);
+
+  @media (min-width: breakpoint('sm')) {
+    margin: 0 (-$grid-gutter-sm);
+  }
+}
+
+[class*='et--col'] {
+  position: relative;
+  width: 100%;
+  padding: 0 $grid-gutter;
+
+  @media (min-width: breakpoint('sm')) {
+    padding: 0 $grid-gutter-sm;
+  }
+}
+
+@function col-width($i) {
+  @return math.div(100% * $i, $grid-columns);
+}
+
+// Unprefixed (xs) columns + offsets apply at all widths.
+@for $i from 1 through $grid-columns {
+  .et--col-xs-#{$i} {
+    flex: 0 0 col-width($i);
+    max-width: col-width($i);
+  }
+
+  .et--offset-xs-#{$i} {
+    margin-left: col-width($i);
+  }
+}
+
+// Per-breakpoint columns + offsets.
+@each $name in (sm, md, lg, xl, xxl) {
+  @media (min-width: breakpoint($name)) {
+    @for $i from 1 through $grid-columns {
+      .et--col-#{$name}-#{$i} {
+        flex: 0 0 col-width($i);
+        max-width: col-width($i);
+      }
+
+      .et--offset-#{$name}-#{$i} {
+        margin-left: col-width($i);
+      }
+    }
+  }
+}

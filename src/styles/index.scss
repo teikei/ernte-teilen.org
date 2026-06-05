@@ -1,10 +1,10 @@
-@import 'theme';
-@import 'fonts';
-@import 'markdown';
-@import 'teikei-legacy';
-@import 'teikei-embed';
-
-@import 'node_modules/carbon-components/scss/globals/grid/grid';
+@use 'reset';
+@use 'theme' as *;
+@use 'grid';
+@use 'fonts';
+@use 'markdown';
+@use 'teikei-legacy';
+@use 'teikei-embed';
 
 body {
   background: $green;
@@ -19,8 +19,4 @@ main {
 
 a {
   color: $green-light;
-}
-
-.bx--grid {
-  max-width: $grid-max-width;
 }

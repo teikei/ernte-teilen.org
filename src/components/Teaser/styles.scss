@@ -1,4 +1,4 @@
-@import '../../styles/theme';
+@use '../../styles/theme' as *;
 
 .et--teaser {
   position: relative;
@@ -74,8 +74,8 @@
   font-family: $font-family-sans-serif;
   font-weight: bold;
   z-index: 1;
-  @include font-size('18');
-  @include line-height('heading');
+  font-size: 1.125rem;
+  line-height: 1.25;
 
   @media (min-width: breakpoint('sm')) and (max-width: breakpoint('lg')) {
     top: 1rem;
@@ -83,11 +83,11 @@
   }
 
   @media (min-width: breakpoint('md')) {
-    @include font-size('20');
+    font-size: 1.25rem;
   }
 
   @media (min-width: breakpoint('xl')) {
-    @include font-size('28');
+    font-size: 1.75rem;
   }
 }
 
@@ -98,7 +98,7 @@
   left: 1.5rem;
   z-index: 1;
   font-family: $font-family-serif;
-  @include font-size('18');
+  font-size: 1.125rem;
 
   @media (min-width: breakpoint('sm')) and (max-width: breakpoint('lg')) {
     display: none;
@@ -106,6 +106,6 @@
 
   @media (min-width: breakpoint('xl')) {
     right: 1.5rem;
-    @include font-size('20');
+    font-size: 1.25rem;
   }
 }

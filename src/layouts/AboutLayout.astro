@@ -1,5 +1,4 @@
 ---
-import type { ImageMetadata } from 'astro'
 import type { CollectionEntry } from 'astro:content'
 import BaseLayout from './BaseLayout.astro'
 import Hero from '../components/Hero/index.astro'
@@ -9,20 +8,19 @@ import Footer from '../components/Footer/index.astro'
 
 interface Props {
   data: CollectionEntry<'pages'>['data']
-  featureImages: Record<string, ImageMetadata>
 }
 
-const { data, featureImages } = Astro.props
+const { data } = Astro.props
 ---
 
 <BaseLayout title={data.title} description={data.lead} image={data.metaImage}>
   <Hero title={data.title!} lead={data.lead!} link={data.link!} />
-  <Features features={data.features ?? []} featureImages={featureImages} />
+  <Features features={data.features ?? []} />
   <main
     class="et--markdown et--markdown--listing et--markdown--listing--wide"
   >
-    <div class="bx--grid">
-      <div class="bx--row">
+    <div class="et--grid">
+      <div class="et--row">
         <slot />
       </div>
     </div>

@@ -1,5 +1,4 @@
-@import '../../styles/theme';
-@import '../../../node_modules/carbon-components/scss/components/button/mixins';
+@use '../../styles/theme' as *;
 
 .et--hero-featured {
   background: $grey-light;
@@ -18,8 +17,8 @@
 
   @media (min-width: breakpoint('sm')) {
     display: block;
-    // astro:assets emits the intrinsic pixel size; keep the image fluid within
-    // its column (GatsbyImage's FULL_WIDTH/contain behaviour).
+    // astro:assets emits the intrinsic pixel size; keep the image fluid and
+    // contained within its column.
     max-width: 100%;
     height: auto;
     margin: 3rem 0 3em -5rem;
@@ -65,7 +64,7 @@
 
 .et--hero-featured__link {
   @include button-base;
-  @include button-theme($green, $green, $white, transparent, $white);
+  @include button-theme($green, $green, $white, transparent);
   font-size: 1.25rem;
   padding: 0 1.25rem;
 
