@@ -5,7 +5,6 @@ import HomeLayout from '../layouts/HomeLayout.astro'
 import AboutLayout from '../layouts/AboutLayout.astro'
 import FeaturedLayout from '../layouts/FeaturedLayout.astro'
 import TeikeiLayout from '../layouts/TeikeiLayout.astro'
-import { getAssetImage, getAssetImages } from '../lib/images'
 
 export async function getStaticPaths() {
   const pages = await getCollection('pages')
@@ -16,38 +15,21 @@ export async function getStaticPaths() {
   }))
 }
 
+// Map the `template` frontmatter field to a layout; pages without one fall back
+// to DefaultLayout. Every layout takes the page's frontmatter as `data`.
+const layouts = {
+  home: HomeLayout,
+  about: AboutLayout,
+  featured: FeaturedLayout,
+  teikei: TeikeiLayout,
+}
+
 const { entry } = Astro.props
 const { Content } = await render(entry)
 const data = entry.data
-
-// "assets/pages/farms.png" -> "pages/farms" (the getAssetImage key format).
-const heroImageKey = data.image?.replace(/^assets\//, '').replace(/\.[^.]+$/, '')
-const heroImage = heroImageKey ? getAssetImage(heroImageKey) : undefined
+const Layout = (data.template && layouts[data.template]) || DefaultLayout
 ---
 
-{
-  data.template === 'home' ? (
-    <HomeLayout
-      data={data}
-      cardImages={getAssetImages('cards')}
-      testimonialImages={getAssetImages('testimonials')}
-      partnerImages={getAssetImages('partners')}
-    >
-      <Content />
-    </HomeLayout>
-  ) : data.template === 'about' ? (
-    <AboutLayout data={data} featureImages={getAssetImages('features')}>
-      <Content />
-    </AboutLayout>
-  ) : data.template === 'featured' ? (
-    <FeaturedLayout data={data} image={heroImage!}>
-      <Content />
-    </FeaturedLayout>
-  ) : data.template === 'teikei' ? (
-    <TeikeiLayout title={data.title} />
-  ) : (
-    <DefaultLayout title={data.title} image={data.metaImage}>
-      <Content />
-    </DefaultLayout>
-  )
-}
+<Layout data={data}>
+  <Content />
+</Layout>

@@ -12,6 +12,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
+    "check": "astro check",
     "test": "echo \"no tests\""
   },
   "dependencies": {
@@ -21,5 +22,9 @@
     "astro": "^5.6.1",
     "carbon-components": "^9.26.0",
     "sass": "^1.77.8"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.9",
+    "typescript": "^5.9.3"
   }
 }

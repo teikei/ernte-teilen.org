@@ -1,6 +1,6 @@
 ---
 template: 'featured'
-image: 'assets/pages/initiatives.png'
+image: '../../assets/pages/initiatives.png'
 title: 'Ihr gründet Eine Solawi?'
 lead: 'Eine Solawi zu gründen ist sehr aufwendig. Ihr braucht einen Hof und Land, Know-How und Mitstreiter. Ein Eintrag auf ErnteTeilen kann dabei helfen, Euer Projekt voranzubringen indem Menschen aus Eurer Region auf Euch aufmerksam werden.'
 link:

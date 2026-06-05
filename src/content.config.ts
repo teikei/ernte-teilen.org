@@ -4,18 +4,20 @@ import { glob } from 'astro/loaders'
 const link = z.object({ text: z.string(), href: z.string() })
 
 // Markdown pages live in src/content/pages/*.md. Each page selects a layout via
-// its `template` frontmatter field (replacing the gatsby-node.js logic).
+// its `template` frontmatter field (see src/pages/[...slug].astro).
 const pages = defineCollection({
   loader: glob({ pattern: '*.md', base: './src/content/pages' }),
-  schema: z.object({
+  schema: ({ image }) =>
+    z.object({
     template: z
       .enum(['home', 'about', 'featured', 'teikei'])
       .optional(),
     title: z.string().optional(),
     lead: z.string().optional(),
     link: link.optional(),
-    // Path (relative to src/assets) of the featured hero image.
-    image: z.string().optional(),
+    // The featured hero image, referenced relative to the markdown file.
+    // Astro's image() helper validates it and yields ImageMetadata.
+    image: image().optional(),
     // Absolute path under /public for the social/OpenGraph image.
     metaImage: z.string().optional(),
     teasers: z

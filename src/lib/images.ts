@@ -1,7 +1,9 @@
 import type { ImageMetadata } from 'astro'
 
-// Eagerly import every processed asset image. Replaces Gatsby's `allFile`
-// GraphQL queries + lodash `zipObject` slug-keying.
+// Eagerly import every processed asset image and key it by slug, so components
+// can look up a folder's images by name (see getAssetImages). Used for the
+// slug-keyed collections (cards, testimonials, partners, features); single
+// frontmatter images use Astro's image() schema helper instead.
 const modules = import.meta.glob<{ default: ImageMetadata }>(
   '../assets/**/*.{jpg,jpeg,png}',
   { eager: true }
@@ -13,11 +15,6 @@ const byKey: Record<string, ImageMetadata> = {}
 for (const [path, mod] of Object.entries(modules)) {
   const match = path.match(/\/assets\/(.+)\.(jpg|jpeg|png)$/)
   if (match) byKey[match[1]] = mod.default
-}
-
-/** Look up a processed image by "<folder>/<slug>" (without extension). */
-export function getAssetImage(key: string): ImageMetadata | undefined {
-  return byKey[key]
 }
 
 /** All images in a folder, keyed by slug (basename without extension). */

@@ -46,8 +46,8 @@
 }
 
 .et--testimonial__figure__image {
-  // astro:assets emits the intrinsic pixel size; GatsbyImage used to make the
-  // image fill its column. Restore that so it stays inside col-md-3 at desktop.
+  // astro:assets emits the intrinsic pixel size; make the image fill its
+  // column so it stays inside col-md-3 at desktop.
   display: block;
   width: 100%;
   height: auto;

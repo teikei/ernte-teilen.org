@@ -1,17 +1,18 @@
 ---
+import type { CollectionEntry } from 'astro:content'
 import BaseLayout from './BaseLayout.astro'
 import TeikeiBundle from '../components/TeikeiBundle.astro'
 import { teikeiConfig } from '../config/site'
 
 interface Props {
-  title?: string
+  data: CollectionEntry<'pages'>['data']
 }
 
-const { title } = Astro.props
+const { data } = Astro.props
 const { apiBaseUrl, assetsBaseUrl } = teikeiConfig
 ---
 
-<BaseLayout title={title} fixedHeader>
+<BaseLayout title={data.title} fixedHeader>
   <div
     id="teikei-app"
     data-locale="de"
