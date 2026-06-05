@@ -1,9 +1,4 @@
 import { defineConfig } from 'astro/config'
-import { fileURLToPath } from 'node:url'
-
-// Project root, so `@import 'node_modules/carbon-components/...'` in the
-// Carbon-based SCSS resolves from the project root.
-const projectRoot = fileURLToPath(new URL('./', import.meta.url))
 
 // https://astro.build
 export default defineConfig({
@@ -18,19 +13,11 @@ export default defineConfig({
     css: {
       preprocessorOptions: {
         scss: {
-          loadPaths: [projectRoot],
-          // The carbon-components v9 SCSS predates Dart Sass and emits a lot of
-          // deprecation noise. Silence it; modernising the styles is a separate,
-          // out-of-scope follow-up (see ASTRO_MIGRATION.md).
-          quietDeps: true,
-          silenceDeprecations: [
-            'import',
-            'global-builtin',
-            'color-functions',
-            'slash-div',
-            'if-function',
-            'legacy-js-api',
-          ],
+          // Our own SCSS still uses the legacy `@import` rule and a few global
+          // Sass functions; silence those until it migrates to `@use` / the
+          // module system (a planned follow-up). Carbon is gone, so the grid
+          // `loadPaths` and dependency `quietDeps` are no longer needed.
+          silenceDeprecations: ['import', 'global-builtin', 'color-functions'],
         },
       },
     },

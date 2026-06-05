@@ -16,11 +16,11 @@ interface Props {
 const { teasers } = Astro.props
 ---
 
-<div class="et--teaser-group bx--grid">
-  <div class="bx--row">
+<div class="et--teaser-group et--grid">
+  <div class="et--row">
     {
       teasers.map(({ title, text, slug, href }) => (
-        <div class="bx--col-sm-4">
+        <div class="et--col-sm-4">
           <Teaser title={title} text={text} slug={slug} href={href} />
         </div>
       ))

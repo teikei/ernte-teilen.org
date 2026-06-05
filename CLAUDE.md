@@ -49,7 +49,7 @@ Content images live in `src/assets/**` and render through `astro:assets` (`<Imag
 
 ### Styling
 
-Sass (built into Astro/Vite). **Still built on the IBM Carbon grid/mixins** (`carbon-components` is a dependency; Vite's Sass `loadPaths` is set to the project root in `astro.config.mjs` so `@import 'node_modules/carbon-components/...'` resolves). Carbon grid classes (`bx--grid`, `bx--row`, `bx--col-*`) appear in markup; project styles use the `et--` prefix. Global styles in `src/styles/`; component styles colocated. Decoupling from Carbon is a planned follow-up (see `ASTRO_MIGRATION.md`).
+Sass (built into Astro/Vite), **no Carbon dependency**. The layout grid is a small local 12-column flex grid in `src/styles/_grid.scss` (`et--grid`/`et--row`/`et--col-*`/`et--offset-*`), generated to reproduce the exact output of the IBM Carbon classic grid it replaced. Breakpoints and the former Carbon button/typography mixins are also local (in `src/styles/_theme.scss`). All project styles use the `et--` prefix. Global styles in `src/styles/`; component styles colocated. Remaining cleanup (a planned follow-up): the SCSS still uses legacy `@import` + a few global Sass functions (`darken`, `map-get`) — silenced in `astro.config.mjs` — pending a migration to the `@use` module system.
 
 ### Config & i18n
 

@@ -12,9 +12,9 @@ const { data } = Astro.props
 
 <BaseLayout title={data.title} image={data.metaImage}>
   <main class="et--markdown">
-    <div class="bx--grid">
-      <div class="bx--row">
-        <div class="bx--col-sm-8">
+    <div class="et--grid">
+      <div class="et--row">
+        <div class="et--col-sm-8">
           <h1>{data.title}</h1>
           <slot />
         </div>

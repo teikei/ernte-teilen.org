@@ -16,12 +16,12 @@ const { title, text, quote, name, description, image } = Astro.props
 ---
 
 <article class="et--testimonial">
-  <div class="bx--grid">
-    <div class="bx--row">
-      <div class="bx--col-sm-10 bx--col-md-5">
+  <div class="et--grid">
+    <div class="et--row">
+      <div class="et--col-sm-10 et--col-md-5">
         <blockquote class="et--testimonial__quote">{quote}</blockquote>
       </div>
-      <div class="bx--col-md-3">
+      <div class="et--col-md-3">
         <figure class="et--testimonial__figure">
           <Image
             class="et--testimonial__figure__image"
@@ -36,7 +36,7 @@ const { title, text, quote, name, description, image } = Astro.props
           </figcaption>
         </figure>
       </div>
-      <div class="bx--col-md-4">
+      <div class="et--col-md-4">
         <h3 class="et--testimonial__title">{title}</h3>
         <p class="et--testimonial__text">{text}</p>
       </div>

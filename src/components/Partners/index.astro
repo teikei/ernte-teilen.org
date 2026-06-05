@@ -23,7 +23,7 @@ const { partners } = Astro.props
 const partnerImages = getAssetImages('partners')
 ---
 
-<section class="et--partners bx--grid">
+<section class="et--partners et--grid">
   {
     partners.map(({ title, items, id }) => (
       <div id={id} class="et--partners__group">

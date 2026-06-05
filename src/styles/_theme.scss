@@ -1,6 +1,5 @@
-// Project design tokens and local Sass helpers. This file no longer depends on
-// carbon-components: the only remaining Carbon usage is the grid, imported
-// separately in index.scss (a planned follow-up replaces that too).
+// Project design tokens and local Sass helpers. The site no longer depends on
+// carbon-components; the grid it used to provide is now local (see _grid.scss).
 
 // Color palette
 $green: #266050;
@@ -19,9 +18,9 @@ $font-family-mono: 'Menlo', 'DejaVu Sans Mono', Courier, monospace;
 $font-family-sans-serif: 'Roboto', Arial, sans-serif;
 $font-family-serif: 'Noto Serif', 'Georgia', Times, serif;
 
-// Responsive breakpoints — the exact values from Carbon's classic grid, kept
-// local so component styles no longer depend on carbon-components. The grid
-// classes in index.scss still use Carbon's (identical) values for now.
+// Responsive breakpoints — the exact values from Carbon's former classic grid,
+// now the single local source of truth (used by component media queries and by
+// the grid in _grid.scss).
 $breakpoints: (
   sm: 576px,
   md: 768px,

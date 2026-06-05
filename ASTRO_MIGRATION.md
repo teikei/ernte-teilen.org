@@ -203,7 +203,14 @@ differs from a literal port:
 
 ## Out of scope (deliberate follow-ups)
 
-- Removing the Carbon grid / migrating SCSS to plain CSS.
+- ~~Removing the Carbon grid / decoupling from `carbon-components`.~~ **Done
+  post-launch:** the `carbon-components` dependency was dropped — its grid was
+  replaced by a local 12-column flex grid (`src/styles/_grid.scss`) and its
+  button/typography/breakpoint helpers inlined into `src/styles/_theme.scss`,
+  all reproducing Carbon's exact output so the change was visually a no-op.
+- Migrating the SCSS off legacy `@import` (and the global `darken`/`map-get`
+  functions) to the `@use` module system — then dropping the remaining
+  `silenceDeprecations` in `astro.config.mjs`. Optionally flattening to plain CSS.
 - Any visual redesign or content changes.
 - Re-introducing localization.
 
