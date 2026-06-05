@@ -1,5 +1,4 @@
 @import '../../styles/theme';
-@import '../../../node_modules/carbon-components/scss/components/button/mixins';
 
 .et--hero-featured {
   background: $grey-light;
@@ -65,7 +64,7 @@
 
 .et--hero-featured__link {
   @include button-base;
-  @include button-theme($green, $green, $white, transparent, $white);
+  @include button-theme($green, $green, $white, transparent);
   font-size: 1.25rem;
   padding: 0 1.25rem;
 

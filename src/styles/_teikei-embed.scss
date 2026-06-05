@@ -35,7 +35,7 @@
 
   input.button {
     @include button-base;
-    @include button-theme(transparent, $white, $white, $white, $white);
+    @include button-theme(transparent, $white, $white, $white);
 
     @media (max-width: breakpoint('md')) {
       display: none;

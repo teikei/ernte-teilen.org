@@ -1,9 +1,8 @@
-@import 'node_modules/carbon-components/scss/globals/scss/functions';
-@import 'node_modules/carbon-components/scss/globals/scss/mixins';
-@import 'node_modules/carbon-components/scss/globals/scss/typography';
-@import 'node_modules/carbon-components/scss/globals/grid/_classic';
+// Project design tokens and local Sass helpers. This file no longer depends on
+// carbon-components: the only remaining Carbon usage is the grid, imported
+// separately in index.scss (a planned follow-up replaces that too).
 
-// Color Variables
+// Color palette
 $green: #266050;
 $green-dark: #0f3c3d;
 $green-light: #548f7e;
@@ -11,35 +10,91 @@ $piggy-light: #ffc8ad;
 $grey-light: #eaf1ef;
 $white: #ffffff;
 
+// Layout
 $grid-max-width: 1400px;
 
-$button-font-weight: 600;
-$button-font-size: 0.875rem;
-$button-border-radius: 0;
-$button-height: 40px;
-$button-padding: 0 $spacing-md;
-$button-padding-sm: 0 $spacing-xs;
-$button-border-width: 2px;
-
+// Fonts. The design maps a single 'Roboto' family where the bold weight is
+// actually Roboto Condensed 700 (see _fonts.scss).
 $font-family-mono: 'Menlo', 'DejaVu Sans Mono', Courier, monospace;
 $font-family-sans-serif: 'Roboto', Arial, sans-serif;
 $font-family-serif: 'Noto Serif', 'Georgia', Times, serif;
-$css--plex: true;
 
-$brand-01: $green;
-$brand-02: #5596e6;
-$brand-03: #41d6c3;
-$inverse-01: #ffffff;
-$ui-01: #ffffff;
-$ui-02: #f4f7fb;
-$ui-03: #dfe3e6;
-$ui-04: #8897a2;
-$ui-05: #5a6872;
-$text-01: $green-dark;
-$text-02: #5a6872;
-$text-03: #cdd1d4;
-$field-01: #ebf0f7;
-$support-01: #e0182d;
-$support-02: #5aa700;
-$support-03: #efc100;
-$support-04: #5aaafa;
+// Responsive breakpoints — the exact values from Carbon's classic grid, kept
+// local so component styles no longer depend on carbon-components. The grid
+// classes in index.scss still use Carbon's (identical) values for now.
+$breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1600px,
+);
+
+@function breakpoint($name) {
+  @if not map-has-key($breakpoints, $name) {
+    @warn 'Unknown breakpoint: #{$name}';
+  }
+  @return map-get($breakpoints, $name);
+}
+
+// Button styles, formerly Carbon's button-base / button-theme mixins, inlined
+// here. (Carbon's `.bx--btn__icon` child rules are dropped — no button in this
+// site has an icon child.)
+@mixin button-base {
+  box-sizing: border-box;
+  margin: 0;
+  border: 0;
+  vertical-align: baseline;
+  font-family: $font-family-sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+  min-height: 2.5rem;
+  padding: 0 1rem;
+  border-radius: 0;
+  text-align: center;
+  text-decoration: none;
+  transition-duration: 0.25s;
+  transition-timing-function: ease-in;
+  white-space: nowrap;
+  line-height: 16px;
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}
+
+@mixin button-theme($bg-color, $border-color, $font-color, $hover-bg-color) {
+  background-color: $bg-color;
+  border-width: 2px;
+  border-style: solid;
+  border-color: $border-color;
+  color: $font-color;
+
+  &:focus,
+  &:hover {
+    background-color: $hover-bg-color;
+  }
+
+  &:focus {
+    border: 2px solid #f4f7fb;
+    outline: 2px solid $hover-bg-color;
+  }
+
+  &:disabled:hover,
+  &:disabled:focus {
+    background-color: $bg-color;
+  }
+
+  &:active {
+    background-color: darken($bg-color, 20%);
+  }
+}
