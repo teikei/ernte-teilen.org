@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Marketing/content website for the _ernte-teilen.org_ solidarity-farming (Solawi) project, built with **Astro 5** (static output). This repo is **content + presentation only**. The interactive map and data-management tools at `/karte` are a separate application (the [teikei](https://github.com/teikei/teikei) repo) that is injected at runtime — see "Teikei map embed" below.
 
-> The site was migrated from Gatsby to Astro in 2026. See [`ASTRO_MIGRATION.md`](./ASTRO_MIGRATION.md) for the rationale and the deliberate "out of scope" cleanups still pending (notably: the SCSS still depends on the Carbon grid/mixins, kept as-is on purpose).
+> The site was migrated from Gatsby to Astro in 2026, and subsequently decoupled from the IBM Carbon dependency. See [`docs/migrations/ASTRO_MIGRATION.md`](./docs/migrations/ASTRO_MIGRATION.md) for the rationale and the record of the post-launch cleanups (Carbon removal, the local grid, the `@use` migration, and the decision to keep SCSS).
 
 ## Commands
 

@@ -212,11 +212,24 @@ differs from a literal port:
   functions) to the `@use` module system.~~ **Done post-launch:** all SCSS uses
   `@use`/`@forward`; `darken` → `color.adjust`, `map-get`/`map-has-key` →
   `map.*`. No Sass deprecation warnings remain, so `silenceDeprecations` was
-  removed from `astro.config.mjs`. (Optionally flattening to plain CSS later.)
+  removed from `astro.config.mjs`.
 - Any visual redesign or content changes.
 - Re-introducing localization.
 
 Do these only after the Astro site is at feature parity and shipped.
+
+### Decision: keep SCSS (no flatten to plain CSS)
+
+An earlier note floated flattening the styles to plain CSS once Carbon was
+gone. **Decided against it (2026-06-05).** Sass is not deprecated — only the
+legacy features we removed (`@import`, global `darken`/`map-get`) were, and the
+styles now use the current `@use` module system. The two things this codebase
+relies on have no plain-CSS equivalent: `_grid.scss` generates the 12-column
+grid with `@for`/`@each` loops (≈60 rules from a dozen lines), and `_theme.scss`
+provides the `breakpoint()` function and `button-*` mixins. Native CSS nesting
+and custom properties don't cover compile-time loops or mixins, so flattening
+would cost capability for no real gain — and Sass is already built into
+Astro/Vite, so there is no toolchain cost to keeping it.
 
 ## Verification checklist (all confirmed — site is live)
 
