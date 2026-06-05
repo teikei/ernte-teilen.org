@@ -2,9 +2,9 @@
 // grid — breakpoints, percentage gutters and column math — so dropping the
 // carbon-components dependency is visually a no-op. Classes use the et-- prefix.
 //
-// Depends on $breakpoints / breakpoint() and $grid-max-width from _theme.scss
-// (imported before this partial in index.scss).
+// Depends on breakpoint() and $grid-max-width from _theme.scss.
 @use 'sass:math';
+@use 'theme' as *;
 
 $grid-columns: 12;
 $grid-gutter: 5px; // column padding / container padding (< sm)

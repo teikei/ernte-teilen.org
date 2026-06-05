@@ -49,7 +49,7 @@ Content images live in `src/assets/**` and render through `astro:assets` (`<Imag
 
 ### Styling
 
-Sass (built into Astro/Vite), **no Carbon dependency**. The layout grid is a small local 12-column flex grid in `src/styles/_grid.scss` (`et--grid`/`et--row`/`et--col-*`/`et--offset-*`), generated to reproduce the exact output of the IBM Carbon classic grid it replaced. Breakpoints and the former Carbon button/typography mixins are also local (in `src/styles/_theme.scss`). All project styles use the `et--` prefix. Global styles in `src/styles/`; component styles colocated. Remaining cleanup (a planned follow-up): the SCSS still uses legacy `@import` + a few global Sass functions (`darken`, `map-get`) — silenced in `astro.config.mjs` — pending a migration to the `@use` module system.
+Sass (built into Astro/Vite, using the modern `@use`/`@forward` module system — no `@import`, no deprecated globals), **no Carbon dependency**. The layout grid is a small local 12-column flex grid in `src/styles/_grid.scss` (`et--grid`/`et--row`/`et--col-*`/`et--offset-*`), generated to reproduce the exact output of the IBM Carbon classic grid it replaced. Design tokens, breakpoints, and the former Carbon button/typography mixins live in `src/styles/_theme.scss`, which other files load via `@use '../../styles/theme' as *`. A global reset (`src/styles/_reset.scss`, the Eric-Meyer reset + `box-sizing: border-box` Carbon used to provide) is imported first in `src/styles/index.scss`. All project styles use the `et--` prefix; component styles are colocated.
 
 ### Config & i18n
 

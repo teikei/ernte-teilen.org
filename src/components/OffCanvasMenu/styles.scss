@@ -1,4 +1,4 @@
-@import '../../styles/theme';
+@use '../../styles/theme' as *;
 
 /* Off-canvas positioning + slide-in (formerly provided by react-burger-menu). */
 .et--off-canvas__overlay {

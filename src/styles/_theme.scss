@@ -1,3 +1,6 @@
+@use 'sass:color';
+@use 'sass:map';
+
 // Project design tokens and local Sass helpers. The site no longer depends on
 // carbon-components; the grid it used to provide is now local (see _grid.scss).
 
@@ -30,10 +33,10 @@ $breakpoints: (
 );
 
 @function breakpoint($name) {
-  @if not map-has-key($breakpoints, $name) {
+  @if not map.has-key($breakpoints, $name) {
     @warn 'Unknown breakpoint: #{$name}';
   }
-  @return map-get($breakpoints, $name);
+  @return map.get($breakpoints, $name);
 }
 
 // Button styles, formerly Carbon's button-base / button-theme mixins, inlined
@@ -94,6 +97,6 @@ $breakpoints: (
   }
 
   &:active {
-    background-color: darken($bg-color, 20%);
+    background-color: color.adjust($bg-color, $lightness: -20%);
   }
 }

@@ -208,9 +208,11 @@ differs from a literal port:
   replaced by a local 12-column flex grid (`src/styles/_grid.scss`) and its
   button/typography/breakpoint helpers inlined into `src/styles/_theme.scss`,
   all reproducing Carbon's exact output so the change was visually a no-op.
-- Migrating the SCSS off legacy `@import` (and the global `darken`/`map-get`
-  functions) to the `@use` module system — then dropping the remaining
-  `silenceDeprecations` in `astro.config.mjs`. Optionally flattening to plain CSS.
+- ~~Migrating the SCSS off legacy `@import` (and the global `darken`/`map-get`
+  functions) to the `@use` module system.~~ **Done post-launch:** all SCSS uses
+  `@use`/`@forward`; `darken` → `color.adjust`, `map-get`/`map-has-key` →
+  `map.*`. No Sass deprecation warnings remain, so `silenceDeprecations` was
+  removed from `astro.config.mjs`. (Optionally flattening to plain CSS later.)
 - Any visual redesign or content changes.
 - Re-introducing localization.
 
