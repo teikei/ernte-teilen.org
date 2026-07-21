@@ -19,7 +19,7 @@
     "@fontsource/noto-serif": "^5.2.9",
     "@fontsource/roboto": "^5.2.10",
     "@fontsource/roboto-condensed": "^5.2.8",
-    "astro": "^7.0.3",
+    "astro": "^7.1.0",
     "sass": "^1.77.8"
   },
   "devDependencies": {
