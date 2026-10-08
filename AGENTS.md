@@ -41,7 +41,7 @@ Presentational `.astro` components, each with a colocated `styles.scss` imported
 
 ### Teikei map embed (the cross-app boundary)
 
-`TeikeiBundle.astro` renders a `<link>` + `<script async>` pointing at `${PUBLIC_TEIKEI_BUNDLES_URL}/main.{css,js}`. It's included by the homepage `Search` embed (`#teikei-search`) and the `karte` page (`#teikei-app`). The map app reads its config from `data-*` attributes on those divs (`data-api-base-url`, `data-assets-base-url`, etc.). The site bundles no map code. URLs come from `PUBLIC_TEIKEI_*` env vars (`.env.development` = preview hosts, `.env.production` = production); see `src/config/site.ts`.
+`TeikeiBundle.astro` (prop `host="app" | "search"`) renders a `<link rel="modulepreload">` for the bundle plus a `<script type="module">` for `${PUBLIC_TEIKEI_BUNDLES_URL}/teikei-loader.js`. The loader reads `data-js` (the bundle: `main.js` for the map, `widgets/search-widget.js` for the search widget) and `data-host` (`#teikei-app` / `#teikei-search`) from its own script tag and mounts the app there. It's included by the homepage `Search` embed (`#teikei-search`) and the `karte` page (`#teikei-app`). The map app reads its config from `data-*` attributes on those divs (`data-api-base-url`, `data-assets-base-url`, etc.). The site bundles no map code. URLs come from `PUBLIC_TEIKEI_*` env vars (on the `next` branch both `.env.development` and `.env.production` point at the `*-next` hosts); see `src/config/site.ts`.
 
 ### Images
 
@@ -67,7 +67,7 @@ Self-hosted via `@fontsource/*` packages (OFL-1.1). `src/styles/_fonts.scss` kee
 
 ## Deployment
 
-CI (`.github/workflows/site-ci.yml`) builds (`npm run build`) on every branch, then deploys via **Dokku** based on branch: `preview` → teikei-site-preview, `main` → production (teikei-site). A separate manual workflow (`deploy-to-production.yml`, `workflow_dispatch`) fast-forward-merges `preview` → `main` and dispatches the production deploy.
+CI (`.github/workflows/site-ci.yml`) builds (`npm run build`) on every branch, then deploys via **Dokku** based on branch: `preview` → teikei-site-preview, `next` → teikei-site-next, `main` → production (teikei-site). A separate manual workflow (`deploy-to-production.yml`, `workflow_dispatch`) fast-forward-merges `preview` → `main` and dispatches the production deploy.
 
 Each Dokku app builds with two buildpacks (`.buildpacks` / `app.json`): the **nodejs** buildpack runs `npm ci` and auto-runs the `build` script (`astro build`) during compile → `dist/`; then **`dokku/buildpack-nginx`** relocates the project into `www/` and serves `root /app/www/$NGINX_ROOT`. So each app needs the Dokku config var **`NGINX_ROOT=dist`**, and an empty **`.static`** file in the repo triggers that buildpack's detection. There is **no `app.json` predeploy** — the build must happen during the nodejs compile (before the `www/` move), not at release time.
 

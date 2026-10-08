@@ -38,6 +38,21 @@ jobs:
           ci_branch_name: preview
           ssh_private_key: ${{ secrets.DOKKU_SSH_KEY }}
           git_remote_url: ssh://dokku@${{ secrets.DOKKU_HOST }}:22/teikei-site-preview
+  deploy-next:
+    runs-on: ubuntu-latest
+    needs: test
+    if: github.ref == 'refs/heads/next'
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      - name: Deploy Next
+        uses: dokku/github-action@v1.10.0
+        with:
+          branch: main
+          ci_branch_name: next
+          ssh_private_key: ${{ secrets.DOKKU_SSH_KEY }}
+          git_remote_url: ssh://dokku@${{ secrets.DOKKU_HOST }}:22/teikei-site-next
   deploy-production:
     runs-on: ubuntu-latest
     needs: test
