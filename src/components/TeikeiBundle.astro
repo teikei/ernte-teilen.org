@@ -1,10 +1,45 @@
 ---
-// Injects the externally maintained teikei map/search bundle (JS + CSS).
-// Hydrates any #teikei-app / #teikei-search element present on the page.
+// Injects the externally maintained teikei map/search app.
+//
+// Two embed modes, selected at build time by PUBLIC_TEIKEI_EMBED (see
+// src/config/site.ts):
+// - `legacy` (default): the old map.* bundle (main.js + main.css), which
+//   hydrates any #teikei-app / #teikei-search element present on the page.
+// - `loader`: the new embed.* app. `teikei-loader.js` mounts the bundle given
+//   in `data-js` into the element matched by `data-host` (#teikei-app for the
+//   map, #teikei-search for the homepage search widget).
 import { teikeiConfig } from '../config/site'
 
-const { bundlesUrl } = teikeiConfig
+interface Props {
+  host: 'app' | 'search'
+}
+
+const { host } = Astro.props
+const { embed, bundlesUrl, embedUrl } = teikeiConfig
+
+const bundleUrl =
+  host === 'app'
+    ? `${embedUrl}/main.js`
+    : `${embedUrl}/widgets/search-widget.js`
 ---
 
-<link rel="stylesheet" type="text/css" href={`${bundlesUrl}/main.css`} />
-<script is:inline async id="teikei-bundle" src={`${bundlesUrl}/main.js`}></script>
+{
+  embed === 'loader' ? (
+    <>
+      <link rel="modulepreload" href={bundleUrl} />
+      <script
+        is:inline
+        type="module"
+        src={`${embedUrl}/teikei-loader.js`}
+        data-teikei-loader="true"
+        data-js={bundleUrl}
+        data-host={`#teikei-${host}`}
+      />
+    </>
+  ) : (
+    <>
+      <link rel="stylesheet" type="text/css" href={`${bundlesUrl}/main.css`} />
+      <script is:inline async id="teikei-bundle" src={`${bundlesUrl}/main.js`} />
+    </>
+  )
+}
