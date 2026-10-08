@@ -9,7 +9,7 @@ interface Props {
 }
 
 const { data } = Astro.props
-const { apiBaseUrl, assetsBaseUrl } = teikeiConfig
+const { embed, apiBaseUrl, assetsBaseUrl } = teikeiConfig
 ---
 
 <BaseLayout title={data.title} fixedHeader>
@@ -20,7 +20,8 @@ const { apiBaseUrl, assetsBaseUrl } = teikeiConfig
     data-country="DE"
     data-api-base-url={apiBaseUrl}
     data-assets-base-url={assetsBaseUrl}
+    style={embed === 'loader' ? 'height: 100vh; padding-top: 100px' : undefined}
   >
   </div>
-  <TeikeiBundle />
+  <TeikeiBundle host="app" />
 </BaseLayout>
