@@ -72,7 +72,7 @@ Self-hosted via `@fontsource/*` packages (OFL-1.1). `src/styles/_fonts.scss` kee
 
 ## Deployment
 
-CI (`.github/workflows/site-ci.yml`) builds (`npm run build`) on every branch, then deploys via **Dokku** based on branch: `preview` → teikei-site-preview, `main` → production (teikei-site). A separate manual workflow (`deploy-to-production.yml`, `workflow_dispatch`) fast-forward-merges `preview` → `main` and dispatches the production deploy.
+CI (`.github/workflows/site-ci.yml`) builds (`npm run build`) on every branch, then deploys via **Dokku** based on branch: `preview` → teikei-site-preview **and** teikei-site-next, `main` → production (teikei-site). teikei-site-next is the same code as preview built with `PUBLIC_TEIKEI_EMBED=loader`, i.e. a preview of the new map embed. A separate manual workflow (`deploy-to-production.yml`, `workflow_dispatch`) fast-forward-merges `preview` → `main` and dispatches the production deploy.
 
 Each Dokku app builds with two buildpacks (`.buildpacks` / `app.json`): the **nodejs** buildpack runs `npm ci` and auto-runs the `build` script (`astro build`) during compile → `dist/`; then **`dokku/buildpack-nginx`** relocates the project into `www/` and serves `root /app/www/$NGINX_ROOT`. So each app needs the Dokku config var **`NGINX_ROOT=dist`**, and an empty **`.static`** file in the repo triggers that buildpack's detection. There is **no `app.json` predeploy** — the build must happen during the nodejs compile (before the `www/` move), not at release time.
 
