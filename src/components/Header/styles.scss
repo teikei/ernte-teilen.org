@@ -22,6 +22,7 @@
 
 .et--header__container {
   justify-content: space-between;
+  align-content: center;
 }
 
 .et--header__logo {
@@ -45,6 +46,7 @@
   margin: 0.5rem 0;
   padding: 0;
   list-style: none;
+  align-content: center;
   justify-content: center;
 
   li {
